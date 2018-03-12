@@ -20,362 +20,502 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "Lightsail" :: String
-
 
 -- | <p>Allocates a static IP address.</p>
 allocateStaticIp :: forall eff. AllocateStaticIpRequest -> Aff (exception :: EXCEPTION | eff) AllocateStaticIpResult
-allocateStaticIp = Request.request serviceName "allocateStaticIp" 
+allocateStaticIp = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "allocateStaticIp"
 
 
 -- | <p>Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the specified disk name.</p>
 attachDisk :: forall eff. AttachDiskRequest -> Aff (exception :: EXCEPTION | eff) AttachDiskResult
-attachDisk = Request.request serviceName "attachDisk" 
+attachDisk = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "attachDisk"
 
 
 -- | <p>Attaches one or more Lightsail instances to a load balancer.</p>
 attachInstancesToLoadBalancer :: forall eff. AttachInstancesToLoadBalancerRequest -> Aff (exception :: EXCEPTION | eff) AttachInstancesToLoadBalancerResult
-attachInstancesToLoadBalancer = Request.request serviceName "attachInstancesToLoadBalancer" 
+attachInstancesToLoadBalancer = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "attachInstancesToLoadBalancer"
 
 
 -- | <p>Attaches a Transport Layer Security (TLS) certificate to your load balancer.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
 attachLoadBalancerTlsCertificate :: forall eff. AttachLoadBalancerTlsCertificateRequest -> Aff (exception :: EXCEPTION | eff) AttachLoadBalancerTlsCertificateResult
-attachLoadBalancerTlsCertificate = Request.request serviceName "attachLoadBalancerTlsCertificate" 
+attachLoadBalancerTlsCertificate = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "attachLoadBalancerTlsCertificate"
 
 
 -- | <p>Attaches a static IP address to a specific Amazon Lightsail instance.</p>
 attachStaticIp :: forall eff. AttachStaticIpRequest -> Aff (exception :: EXCEPTION | eff) AttachStaticIpResult
-attachStaticIp = Request.request serviceName "attachStaticIp" 
+attachStaticIp = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "attachStaticIp"
 
 
 -- | <p>Closes the public ports on a specific Amazon Lightsail instance.</p>
 closeInstancePublicPorts :: forall eff. CloseInstancePublicPortsRequest -> Aff (exception :: EXCEPTION | eff) CloseInstancePublicPortsResult
-closeInstancePublicPorts = Request.request serviceName "closeInstancePublicPorts" 
+closeInstancePublicPorts = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "closeInstancePublicPorts"
 
 
 -- | <p>Creates a block storage disk that can be attached to a Lightsail instance in the same Availability Zone (e.g., <code>us-east-2a</code>). The disk is created in the regional endpoint that you send the HTTP request to. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions and Availability Zones in Lightsail</a>.</p>
 createDisk :: forall eff. CreateDiskRequest -> Aff (exception :: EXCEPTION | eff) CreateDiskResult
-createDisk = Request.request serviceName "createDisk" 
+createDisk = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createDisk"
 
 
 -- | <p>Creates a block storage disk from a disk snapshot that can be attached to a Lightsail instance in the same Availability Zone (e.g., <code>us-east-2a</code>). The disk is created in the regional endpoint that you send the HTTP request to. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions and Availability Zones in Lightsail</a>.</p>
 createDiskFromSnapshot :: forall eff. CreateDiskFromSnapshotRequest -> Aff (exception :: EXCEPTION | eff) CreateDiskFromSnapshotResult
-createDiskFromSnapshot = Request.request serviceName "createDiskFromSnapshot" 
+createDiskFromSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createDiskFromSnapshot"
 
 
 -- | <p>Creates a snapshot of a block storage disk. You can use snapshots for backups, to make copies of disks, and to save data before shutting down a Lightsail instance.</p> <p>You can take a snapshot of an attached disk that is in use; however, snapshots only capture data that has been written to your disk at the time the snapshot command is issued. This may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the disk long enough to take a snapshot, your snapshot should be complete. Nevertheless, if you cannot pause all file writes to the disk, you should unmount the disk from within the Lightsail instance, issue the create disk snapshot command, and then remount the disk to ensure a consistent and complete snapshot. You may remount and use your disk while the snapshot status is pending.</p>
 createDiskSnapshot :: forall eff. CreateDiskSnapshotRequest -> Aff (exception :: EXCEPTION | eff) CreateDiskSnapshotResult
-createDiskSnapshot = Request.request serviceName "createDiskSnapshot" 
+createDiskSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createDiskSnapshot"
 
 
 -- | <p>Creates a domain resource for the specified domain (e.g., example.com).</p>
 createDomain :: forall eff. CreateDomainRequest -> Aff (exception :: EXCEPTION | eff) CreateDomainResult
-createDomain = Request.request serviceName "createDomain" 
+createDomain = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createDomain"
 
 
 -- | <p>Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX record.</p>
 createDomainEntry :: forall eff. CreateDomainEntryRequest -> Aff (exception :: EXCEPTION | eff) CreateDomainEntryResult
-createDomainEntry = Request.request serviceName "createDomainEntry" 
+createDomainEntry = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createDomainEntry"
 
 
 -- | <p>Creates a snapshot of a specific virtual private server, or <i>instance</i>. You can use a snapshot to create a new instance that is based on that snapshot.</p>
 createInstanceSnapshot :: forall eff. CreateInstanceSnapshotRequest -> Aff (exception :: EXCEPTION | eff) CreateInstanceSnapshotResult
-createInstanceSnapshot = Request.request serviceName "createInstanceSnapshot" 
+createInstanceSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createInstanceSnapshot"
 
 
 -- | <p>Creates one or more Amazon Lightsail virtual private servers, or <i>instances</i>.</p>
 createInstances :: forall eff. CreateInstancesRequest -> Aff (exception :: EXCEPTION | eff) CreateInstancesResult
-createInstances = Request.request serviceName "createInstances" 
+createInstances = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createInstances"
 
 
 -- | <p>Uses a specific snapshot as a blueprint for creating one or more new instances that are based on that identical configuration.</p>
 createInstancesFromSnapshot :: forall eff. CreateInstancesFromSnapshotRequest -> Aff (exception :: EXCEPTION | eff) CreateInstancesFromSnapshotResult
-createInstancesFromSnapshot = Request.request serviceName "createInstancesFromSnapshot" 
+createInstancesFromSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createInstancesFromSnapshot"
 
 
 -- | <p>Creates sn SSH key pair.</p>
 createKeyPair :: forall eff. CreateKeyPairRequest -> Aff (exception :: EXCEPTION | eff) CreateKeyPairResult
-createKeyPair = Request.request serviceName "createKeyPair" 
+createKeyPair = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createKeyPair"
 
 
 -- | <p>Creates a Lightsail load balancer.</p> <p>When you create a load balancer, you can specify certificates and port settings. You can create up to 5 load balancers per AWS Region in your account.</p>
 createLoadBalancer :: forall eff. CreateLoadBalancerRequest -> Aff (exception :: EXCEPTION | eff) CreateLoadBalancerResult
-createLoadBalancer = Request.request serviceName "createLoadBalancer" 
+createLoadBalancer = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createLoadBalancer"
 
 
 -- | <p>Creates a Lightsail load balancer TLS certificate.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
 createLoadBalancerTlsCertificate :: forall eff. CreateLoadBalancerTlsCertificateRequest -> Aff (exception :: EXCEPTION | eff) CreateLoadBalancerTlsCertificateResult
-createLoadBalancerTlsCertificate = Request.request serviceName "createLoadBalancerTlsCertificate" 
+createLoadBalancerTlsCertificate = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "createLoadBalancerTlsCertificate"
 
 
 -- | <p>Deletes the specified block storage disk. The disk must be in the <code>available</code> state (not attached to a Lightsail instance).</p> <note> <p>The disk may remain in the <code>deleting</code> state for several minutes.</p> </note>
 deleteDisk :: forall eff. DeleteDiskRequest -> Aff (exception :: EXCEPTION | eff) DeleteDiskResult
-deleteDisk = Request.request serviceName "deleteDisk" 
+deleteDisk = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteDisk"
 
 
 -- | <p>Deletes the specified disk snapshot.</p> <p>When you make periodic snapshots of a disk, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the disk.</p>
 deleteDiskSnapshot :: forall eff. DeleteDiskSnapshotRequest -> Aff (exception :: EXCEPTION | eff) DeleteDiskSnapshotResult
-deleteDiskSnapshot = Request.request serviceName "deleteDiskSnapshot" 
+deleteDiskSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteDiskSnapshot"
 
 
 -- | <p>Deletes the specified domain recordset and all of its domain records.</p>
 deleteDomain :: forall eff. DeleteDomainRequest -> Aff (exception :: EXCEPTION | eff) DeleteDomainResult
-deleteDomain = Request.request serviceName "deleteDomain" 
+deleteDomain = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteDomain"
 
 
 -- | <p>Deletes a specific domain entry.</p>
 deleteDomainEntry :: forall eff. DeleteDomainEntryRequest -> Aff (exception :: EXCEPTION | eff) DeleteDomainEntryResult
-deleteDomainEntry = Request.request serviceName "deleteDomainEntry" 
+deleteDomainEntry = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteDomainEntry"
 
 
 -- | <p>Deletes a specific Amazon Lightsail virtual private server, or <i>instance</i>.</p>
 deleteInstance :: forall eff. DeleteInstanceRequest -> Aff (exception :: EXCEPTION | eff) DeleteInstanceResult
-deleteInstance = Request.request serviceName "deleteInstance" 
+deleteInstance = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteInstance"
 
 
 -- | <p>Deletes a specific snapshot of a virtual private server (or <i>instance</i>).</p>
 deleteInstanceSnapshot :: forall eff. DeleteInstanceSnapshotRequest -> Aff (exception :: EXCEPTION | eff) DeleteInstanceSnapshotResult
-deleteInstanceSnapshot = Request.request serviceName "deleteInstanceSnapshot" 
+deleteInstanceSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteInstanceSnapshot"
 
 
 -- | <p>Deletes a specific SSH key pair.</p>
 deleteKeyPair :: forall eff. DeleteKeyPairRequest -> Aff (exception :: EXCEPTION | eff) DeleteKeyPairResult
-deleteKeyPair = Request.request serviceName "deleteKeyPair" 
+deleteKeyPair = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteKeyPair"
 
 
 -- | <p>Deletes a Lightsail load balancer.</p>
 deleteLoadBalancer :: forall eff. DeleteLoadBalancerRequest -> Aff (exception :: EXCEPTION | eff) DeleteLoadBalancerResult
-deleteLoadBalancer = Request.request serviceName "deleteLoadBalancer" 
+deleteLoadBalancer = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteLoadBalancer"
 
 
 -- | <p>Deletes a TLS/SSL certificate associated with a Lightsail load balancer.</p>
 deleteLoadBalancerTlsCertificate :: forall eff. DeleteLoadBalancerTlsCertificateRequest -> Aff (exception :: EXCEPTION | eff) DeleteLoadBalancerTlsCertificateResult
-deleteLoadBalancerTlsCertificate = Request.request serviceName "deleteLoadBalancerTlsCertificate" 
+deleteLoadBalancerTlsCertificate = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "deleteLoadBalancerTlsCertificate"
 
 
 -- | <p>Detaches a stopped block storage disk from a Lightsail instance. Make sure to unmount any file systems on the device within your operating system before stopping the instance and detaching the disk.</p>
 detachDisk :: forall eff. DetachDiskRequest -> Aff (exception :: EXCEPTION | eff) DetachDiskResult
-detachDisk = Request.request serviceName "detachDisk" 
+detachDisk = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "detachDisk"
 
 
 -- | <p>Detaches the specified instances from a Lightsail load balancer.</p>
 detachInstancesFromLoadBalancer :: forall eff. DetachInstancesFromLoadBalancerRequest -> Aff (exception :: EXCEPTION | eff) DetachInstancesFromLoadBalancerResult
-detachInstancesFromLoadBalancer = Request.request serviceName "detachInstancesFromLoadBalancer" 
+detachInstancesFromLoadBalancer = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "detachInstancesFromLoadBalancer"
 
 
 -- | <p>Detaches a static IP from the Amazon Lightsail instance to which it is attached.</p>
 detachStaticIp :: forall eff. DetachStaticIpRequest -> Aff (exception :: EXCEPTION | eff) DetachStaticIpResult
-detachStaticIp = Request.request serviceName "detachStaticIp" 
+detachStaticIp = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "detachStaticIp"
 
 
 -- | <p>Downloads the default SSH key pair from the user's account.</p>
 downloadDefaultKeyPair :: forall eff. DownloadDefaultKeyPairRequest -> Aff (exception :: EXCEPTION | eff) DownloadDefaultKeyPairResult
-downloadDefaultKeyPair = Request.request serviceName "downloadDefaultKeyPair" 
+downloadDefaultKeyPair = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "downloadDefaultKeyPair"
 
 
 -- | <p>Returns the names of all active (not deleted) resources.</p>
 getActiveNames :: forall eff. GetActiveNamesRequest -> Aff (exception :: EXCEPTION | eff) GetActiveNamesResult
-getActiveNames = Request.request serviceName "getActiveNames" 
+getActiveNames = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getActiveNames"
 
 
 -- | <p>Returns the list of available instance images, or <i>blueprints</i>. You can use a blueprint to create a new virtual private server already running a specific operating system, as well as a preinstalled app or development stack. The software each instance is running depends on the blueprint image you choose.</p>
 getBlueprints :: forall eff. GetBlueprintsRequest -> Aff (exception :: EXCEPTION | eff) GetBlueprintsResult
-getBlueprints = Request.request serviceName "getBlueprints" 
+getBlueprints = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getBlueprints"
 
 
 -- | <p>Returns the list of bundles that are available for purchase. A bundle describes the specs for your virtual private server (or <i>instance</i>).</p>
 getBundles :: forall eff. GetBundlesRequest -> Aff (exception :: EXCEPTION | eff) GetBundlesResult
-getBundles = Request.request serviceName "getBundles" 
+getBundles = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getBundles"
 
 
 -- | <p>Returns information about a specific block storage disk.</p>
 getDisk :: forall eff. GetDiskRequest -> Aff (exception :: EXCEPTION | eff) GetDiskResult
-getDisk = Request.request serviceName "getDisk" 
+getDisk = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDisk"
 
 
 -- | <p>Returns information about a specific block storage disk snapshot.</p>
 getDiskSnapshot :: forall eff. GetDiskSnapshotRequest -> Aff (exception :: EXCEPTION | eff) GetDiskSnapshotResult
-getDiskSnapshot = Request.request serviceName "getDiskSnapshot" 
+getDiskSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDiskSnapshot"
 
 
 -- | <p>Returns information about all block storage disk snapshots in your AWS account and region.</p> <p>If you are describing a long list of disk snapshots, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the list.</p>
 getDiskSnapshots :: forall eff. GetDiskSnapshotsRequest -> Aff (exception :: EXCEPTION | eff) GetDiskSnapshotsResult
-getDiskSnapshots = Request.request serviceName "getDiskSnapshots" 
+getDiskSnapshots = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDiskSnapshots"
 
 
 -- | <p>Returns information about all block storage disks in your AWS account and region.</p> <p>If you are describing a long list of disks, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the list.</p>
 getDisks :: forall eff. GetDisksRequest -> Aff (exception :: EXCEPTION | eff) GetDisksResult
-getDisks = Request.request serviceName "getDisks" 
+getDisks = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDisks"
 
 
 -- | <p>Returns information about a specific domain recordset.</p>
 getDomain :: forall eff. GetDomainRequest -> Aff (exception :: EXCEPTION | eff) GetDomainResult
-getDomain = Request.request serviceName "getDomain" 
+getDomain = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDomain"
 
 
 -- | <p>Returns a list of all domains in the user's account.</p>
 getDomains :: forall eff. GetDomainsRequest -> Aff (exception :: EXCEPTION | eff) GetDomainsResult
-getDomains = Request.request serviceName "getDomains" 
+getDomains = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getDomains"
 
 
 -- | <p>Returns information about a specific Amazon Lightsail instance, which is a virtual private server.</p>
 getInstance :: forall eff. GetInstanceRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceResult
-getInstance = Request.request serviceName "getInstance" 
+getInstance = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstance"
 
 
 -- | <p>Returns temporary SSH keys you can use to connect to a specific virtual private server, or <i>instance</i>.</p>
 getInstanceAccessDetails :: forall eff. GetInstanceAccessDetailsRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceAccessDetailsResult
-getInstanceAccessDetails = Request.request serviceName "getInstanceAccessDetails" 
+getInstanceAccessDetails = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstanceAccessDetails"
 
 
 -- | <p>Returns the data points for the specified Amazon Lightsail instance metric, given an instance name.</p>
 getInstanceMetricData :: forall eff. GetInstanceMetricDataRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceMetricDataResult
-getInstanceMetricData = Request.request serviceName "getInstanceMetricData" 
+getInstanceMetricData = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstanceMetricData"
 
 
 -- | <p>Returns the port states for a specific virtual private server, or <i>instance</i>.</p>
 getInstancePortStates :: forall eff. GetInstancePortStatesRequest -> Aff (exception :: EXCEPTION | eff) GetInstancePortStatesResult
-getInstancePortStates = Request.request serviceName "getInstancePortStates" 
+getInstancePortStates = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstancePortStates"
 
 
 -- | <p>Returns information about a specific instance snapshot.</p>
 getInstanceSnapshot :: forall eff. GetInstanceSnapshotRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceSnapshotResult
-getInstanceSnapshot = Request.request serviceName "getInstanceSnapshot" 
+getInstanceSnapshot = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstanceSnapshot"
 
 
 -- | <p>Returns all instance snapshots for the user's account.</p>
 getInstanceSnapshots :: forall eff. GetInstanceSnapshotsRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceSnapshotsResult
-getInstanceSnapshots = Request.request serviceName "getInstanceSnapshots" 
+getInstanceSnapshots = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstanceSnapshots"
 
 
 -- | <p>Returns the state of a specific instance. Works on one instance at a time.</p>
 getInstanceState :: forall eff. GetInstanceStateRequest -> Aff (exception :: EXCEPTION | eff) GetInstanceStateResult
-getInstanceState = Request.request serviceName "getInstanceState" 
+getInstanceState = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstanceState"
 
 
 -- | <p>Returns information about all Amazon Lightsail virtual private servers, or <i>instances</i>.</p>
 getInstances :: forall eff. GetInstancesRequest -> Aff (exception :: EXCEPTION | eff) GetInstancesResult
-getInstances = Request.request serviceName "getInstances" 
+getInstances = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getInstances"
 
 
 -- | <p>Returns information about a specific key pair.</p>
 getKeyPair :: forall eff. GetKeyPairRequest -> Aff (exception :: EXCEPTION | eff) GetKeyPairResult
-getKeyPair = Request.request serviceName "getKeyPair" 
+getKeyPair = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getKeyPair"
 
 
 -- | <p>Returns information about all key pairs in the user's account.</p>
 getKeyPairs :: forall eff. GetKeyPairsRequest -> Aff (exception :: EXCEPTION | eff) GetKeyPairsResult
-getKeyPairs = Request.request serviceName "getKeyPairs" 
+getKeyPairs = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getKeyPairs"
 
 
 -- | <p>Returns information about the specified Lightsail load balancer.</p>
 getLoadBalancer :: forall eff. GetLoadBalancerRequest -> Aff (exception :: EXCEPTION | eff) GetLoadBalancerResult
-getLoadBalancer = Request.request serviceName "getLoadBalancer" 
+getLoadBalancer = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getLoadBalancer"
 
 
 -- | <p>Returns information about health metrics for your Lightsail load balancer.</p>
 getLoadBalancerMetricData :: forall eff. GetLoadBalancerMetricDataRequest -> Aff (exception :: EXCEPTION | eff) GetLoadBalancerMetricDataResult
-getLoadBalancerMetricData = Request.request serviceName "getLoadBalancerMetricData" 
+getLoadBalancerMetricData = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getLoadBalancerMetricData"
 
 
 -- | <p>Returns information about the TLS certificates that are associated with the specified Lightsail load balancer.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
 getLoadBalancerTlsCertificates :: forall eff. GetLoadBalancerTlsCertificatesRequest -> Aff (exception :: EXCEPTION | eff) GetLoadBalancerTlsCertificatesResult
-getLoadBalancerTlsCertificates = Request.request serviceName "getLoadBalancerTlsCertificates" 
+getLoadBalancerTlsCertificates = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getLoadBalancerTlsCertificates"
 
 
 -- | <p>Returns information about all load balancers in an account.</p> <p>If you are describing a long list of load balancers, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the list.</p>
 getLoadBalancers :: forall eff. GetLoadBalancersRequest -> Aff (exception :: EXCEPTION | eff) GetLoadBalancersResult
-getLoadBalancers = Request.request serviceName "getLoadBalancers" 
+getLoadBalancers = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getLoadBalancers"
 
 
 -- | <p>Returns information about a specific operation. Operations include events such as when you create an instance, allocate a static IP, attach a static IP, and so on.</p>
 getOperation :: forall eff. GetOperationRequest -> Aff (exception :: EXCEPTION | eff) GetOperationResult
-getOperation = Request.request serviceName "getOperation" 
+getOperation = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getOperation"
 
 
 -- | <p>Returns information about all operations.</p> <p>Results are returned from oldest to newest, up to a maximum of 200. Results can be paged by making each subsequent call to <code>GetOperations</code> use the maximum (last) <code>statusChangedAt</code> value from the previous request.</p>
 getOperations :: forall eff. GetOperationsRequest -> Aff (exception :: EXCEPTION | eff) GetOperationsResult
-getOperations = Request.request serviceName "getOperations" 
+getOperations = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getOperations"
 
 
 -- | <p>Gets operations for a specific resource (e.g., an instance or a static IP).</p>
 getOperationsForResource :: forall eff. GetOperationsForResourceRequest -> Aff (exception :: EXCEPTION | eff) GetOperationsForResourceResult
-getOperationsForResource = Request.request serviceName "getOperationsForResource" 
+getOperationsForResource = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getOperationsForResource"
 
 
 -- | <p>Returns a list of all valid regions for Amazon Lightsail. Use the <code>include availability zones</code> parameter to also return the availability zones in a region.</p>
 getRegions :: forall eff. GetRegionsRequest -> Aff (exception :: EXCEPTION | eff) GetRegionsResult
-getRegions = Request.request serviceName "getRegions" 
+getRegions = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getRegions"
 
 
 -- | <p>Returns information about a specific static IP.</p>
 getStaticIp :: forall eff. GetStaticIpRequest -> Aff (exception :: EXCEPTION | eff) GetStaticIpResult
-getStaticIp = Request.request serviceName "getStaticIp" 
+getStaticIp = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getStaticIp"
 
 
 -- | <p>Returns information about all static IPs in the user's account.</p>
 getStaticIps :: forall eff. GetStaticIpsRequest -> Aff (exception :: EXCEPTION | eff) GetStaticIpsResult
-getStaticIps = Request.request serviceName "getStaticIps" 
+getStaticIps = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "getStaticIps"
 
 
 -- | <p>Imports a public SSH key from a specific key pair.</p>
 importKeyPair :: forall eff. ImportKeyPairRequest -> Aff (exception :: EXCEPTION | eff) ImportKeyPairResult
-importKeyPair = Request.request serviceName "importKeyPair" 
+importKeyPair = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "importKeyPair"
 
 
 -- | <p>Returns a Boolean value indicating whether your Lightsail VPC is peered.</p>
 isVpcPeered :: forall eff. IsVpcPeeredRequest -> Aff (exception :: EXCEPTION | eff) IsVpcPeeredResult
-isVpcPeered = Request.request serviceName "isVpcPeered" 
+isVpcPeered = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "isVpcPeered"
 
 
 -- | <p>Adds public ports to an Amazon Lightsail instance.</p>
 openInstancePublicPorts :: forall eff. OpenInstancePublicPortsRequest -> Aff (exception :: EXCEPTION | eff) OpenInstancePublicPortsResult
-openInstancePublicPorts = Request.request serviceName "openInstancePublicPorts" 
+openInstancePublicPorts = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "openInstancePublicPorts"
 
 
 -- | <p>Tries to peer the Lightsail VPC with the user's default VPC.</p>
 peerVpc :: forall eff. PeerVpcRequest -> Aff (exception :: EXCEPTION | eff) PeerVpcResult
-peerVpc = Request.request serviceName "peerVpc" 
+peerVpc = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "peerVpc"
 
 
 -- | <p>Sets the specified open ports for an Amazon Lightsail instance, and closes all ports for every protocol not included in the current request.</p>
 putInstancePublicPorts :: forall eff. PutInstancePublicPortsRequest -> Aff (exception :: EXCEPTION | eff) PutInstancePublicPortsResult
-putInstancePublicPorts = Request.request serviceName "putInstancePublicPorts" 
+putInstancePublicPorts = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "putInstancePublicPorts"
 
 
 -- | <p>Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public IP address. To use the same IP address after restarting, create a static IP address and attach it to the instance.</p>
 rebootInstance :: forall eff. RebootInstanceRequest -> Aff (exception :: EXCEPTION | eff) RebootInstanceResult
-rebootInstance = Request.request serviceName "rebootInstance" 
+rebootInstance = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "rebootInstance"
 
 
 -- | <p>Deletes a specific static IP from your account.</p>
 releaseStaticIp :: forall eff. ReleaseStaticIpRequest -> Aff (exception :: EXCEPTION | eff) ReleaseStaticIpResult
-releaseStaticIp = Request.request serviceName "releaseStaticIp" 
+releaseStaticIp = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "releaseStaticIp"
 
 
 -- | <p>Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance operation.</p>
 startInstance :: forall eff. StartInstanceRequest -> Aff (exception :: EXCEPTION | eff) StartInstanceResult
-startInstance = Request.request serviceName "startInstance" 
+startInstance = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "startInstance"
 
 
 -- | <p>Stops a specific Amazon Lightsail instance that is currently running.</p>
 stopInstance :: forall eff. StopInstanceRequest -> Aff (exception :: EXCEPTION | eff) StopInstanceResult
-stopInstance = Request.request serviceName "stopInstance" 
+stopInstance = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "stopInstance"
 
 
 -- | <p>Attempts to unpeer the Lightsail VPC from the user's default VPC.</p>
 unpeerVpc :: forall eff. UnpeerVpcRequest -> Aff (exception :: EXCEPTION | eff) UnpeerVpcResult
-unpeerVpc = Request.request serviceName "unpeerVpc" 
+unpeerVpc = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "unpeerVpc"
 
 
 -- | <p>Updates a domain recordset after it is created.</p>
 updateDomainEntry :: forall eff. UpdateDomainEntryRequest -> Aff (exception :: EXCEPTION | eff) UpdateDomainEntryResult
-updateDomainEntry = Request.request serviceName "updateDomainEntry" 
+updateDomainEntry = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "updateDomainEntry"
 
 
 -- | <p>Updates the specified attribute for a load balancer.</p>
 updateLoadBalancerAttribute :: forall eff. UpdateLoadBalancerAttributeRequest -> Aff (exception :: EXCEPTION | eff) UpdateLoadBalancerAttributeResult
-updateLoadBalancerAttribute = Request.request serviceName "updateLoadBalancerAttribute" 
+updateLoadBalancerAttribute = Request.request service method  where
+    service = Request.ServiceName "Lightsail"
+    method = Request.MethodName "updateLoadBalancerAttribute"
 
 
 -- | <p>Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to access a resource.</p>
