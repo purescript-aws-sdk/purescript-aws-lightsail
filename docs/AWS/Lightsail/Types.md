@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype AccessDeniedException
-  = AccessDeniedException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = AccessDeniedException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to access a resource.</p>
@@ -35,7 +35,7 @@ Constructs AccessDeniedException from required parameters
 #### `newAccessDeniedException'`
 
 ``` purescript
-newAccessDeniedException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> AccessDeniedException
+newAccessDeniedException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> AccessDeniedException
 ```
 
 Constructs AccessDeniedException's fields from required parameters
@@ -60,7 +60,7 @@ Encode AccessDirection
 
 ``` purescript
 newtype AccountSetupInProgressException
-  = AccountSetupInProgressException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = AccountSetupInProgressException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when an account is still in the setup in progress state.</p>
@@ -85,7 +85,7 @@ Constructs AccountSetupInProgressException from required parameters
 #### `newAccountSetupInProgressException'`
 
 ``` purescript
-newAccountSetupInProgressException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> AccountSetupInProgressException
+newAccountSetupInProgressException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> AccountSetupInProgressException
 ```
 
 Constructs AccountSetupInProgressException's fields from required parameters
@@ -126,7 +126,7 @@ Constructs AllocateStaticIpRequest's fields from required parameters
 
 ``` purescript
 newtype AllocateStaticIpResult
-  = AllocateStaticIpResult { operations :: NullOrUndefined (OperationList) }
+  = AllocateStaticIpResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -149,7 +149,7 @@ Constructs AllocateStaticIpResult from required parameters
 #### `newAllocateStaticIpResult'`
 
 ``` purescript
-newAllocateStaticIpResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> AllocateStaticIpResult
+newAllocateStaticIpResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> AllocateStaticIpResult
 ```
 
 Constructs AllocateStaticIpResult's fields from required parameters
@@ -190,7 +190,7 @@ Constructs AttachDiskRequest's fields from required parameters
 
 ``` purescript
 newtype AttachDiskResult
-  = AttachDiskResult { operations :: NullOrUndefined (OperationList) }
+  = AttachDiskResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -213,7 +213,7 @@ Constructs AttachDiskResult from required parameters
 #### `newAttachDiskResult'`
 
 ``` purescript
-newAttachDiskResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> AttachDiskResult
+newAttachDiskResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> AttachDiskResult
 ```
 
 Constructs AttachDiskResult's fields from required parameters
@@ -254,7 +254,7 @@ Constructs AttachInstancesToLoadBalancerRequest's fields from required parameter
 
 ``` purescript
 newtype AttachInstancesToLoadBalancerResult
-  = AttachInstancesToLoadBalancerResult { operations :: NullOrUndefined (OperationList) }
+  = AttachInstancesToLoadBalancerResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -277,7 +277,7 @@ Constructs AttachInstancesToLoadBalancerResult from required parameters
 #### `newAttachInstancesToLoadBalancerResult'`
 
 ``` purescript
-newAttachInstancesToLoadBalancerResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> AttachInstancesToLoadBalancerResult
+newAttachInstancesToLoadBalancerResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> AttachInstancesToLoadBalancerResult
 ```
 
 Constructs AttachInstancesToLoadBalancerResult's fields from required parameters
@@ -318,7 +318,7 @@ Constructs AttachLoadBalancerTlsCertificateRequest's fields from required parame
 
 ``` purescript
 newtype AttachLoadBalancerTlsCertificateResult
-  = AttachLoadBalancerTlsCertificateResult { operations :: NullOrUndefined (OperationList) }
+  = AttachLoadBalancerTlsCertificateResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -341,7 +341,7 @@ Constructs AttachLoadBalancerTlsCertificateResult from required parameters
 #### `newAttachLoadBalancerTlsCertificateResult'`
 
 ``` purescript
-newAttachLoadBalancerTlsCertificateResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> AttachLoadBalancerTlsCertificateResult
+newAttachLoadBalancerTlsCertificateResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> AttachLoadBalancerTlsCertificateResult
 ```
 
 Constructs AttachLoadBalancerTlsCertificateResult's fields from required parameters
@@ -382,7 +382,7 @@ Constructs AttachStaticIpRequest's fields from required parameters
 
 ``` purescript
 newtype AttachStaticIpResult
-  = AttachStaticIpResult { operations :: NullOrUndefined (OperationList) }
+  = AttachStaticIpResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -405,7 +405,7 @@ Constructs AttachStaticIpResult from required parameters
 #### `newAttachStaticIpResult'`
 
 ``` purescript
-newAttachStaticIpResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> AttachStaticIpResult
+newAttachStaticIpResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> AttachStaticIpResult
 ```
 
 Constructs AttachStaticIpResult's fields from required parameters
@@ -430,7 +430,7 @@ Encode AttachedDiskMap
 
 ``` purescript
 newtype AvailabilityZone
-  = AvailabilityZone { zoneName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (NonEmptyString) }
+  = AvailabilityZone { zoneName :: Maybe (NonEmptyString), state :: Maybe (NonEmptyString) }
 ```
 
 <p>Describes an Availability Zone.</p>
@@ -455,7 +455,7 @@ Constructs AvailabilityZone from required parameters
 #### `newAvailabilityZone'`
 
 ``` purescript
-newAvailabilityZone' :: ({ zoneName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (NonEmptyString) } -> { zoneName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (NonEmptyString) }) -> AvailabilityZone
+newAvailabilityZone' :: ({ zoneName :: Maybe (NonEmptyString), state :: Maybe (NonEmptyString) } -> { zoneName :: Maybe (NonEmptyString), state :: Maybe (NonEmptyString) }) -> AvailabilityZone
 ```
 
 Constructs AvailabilityZone's fields from required parameters
@@ -496,7 +496,7 @@ Encode Base64
 
 ``` purescript
 newtype Blueprint
-  = Blueprint { blueprintId :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (ResourceName), group :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (BlueprintType), description :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), minPower :: NullOrUndefined (Int), version :: NullOrUndefined (String), versionCode :: NullOrUndefined (String), productUrl :: NullOrUndefined (String), licenseUrl :: NullOrUndefined (String), platform :: NullOrUndefined (InstancePlatform) }
+  = Blueprint { blueprintId :: Maybe (NonEmptyString), name :: Maybe (ResourceName), group :: Maybe (NonEmptyString), "type" :: Maybe (BlueprintType), description :: Maybe (String), isActive :: Maybe (Boolean), minPower :: Maybe (Int), version :: Maybe (String), versionCode :: Maybe (String), productUrl :: Maybe (String), licenseUrl :: Maybe (String), platform :: Maybe (InstancePlatform) }
 ```
 
 <p>Describes a blueprint (a virtual private server image).</p>
@@ -521,7 +521,7 @@ Constructs Blueprint from required parameters
 #### `newBlueprint'`
 
 ``` purescript
-newBlueprint' :: ({ blueprintId :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (ResourceName), group :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (BlueprintType), description :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), minPower :: NullOrUndefined (Int), version :: NullOrUndefined (String), versionCode :: NullOrUndefined (String), productUrl :: NullOrUndefined (String), licenseUrl :: NullOrUndefined (String), platform :: NullOrUndefined (InstancePlatform) } -> { blueprintId :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (ResourceName), group :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (BlueprintType), description :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), minPower :: NullOrUndefined (Int), version :: NullOrUndefined (String), versionCode :: NullOrUndefined (String), productUrl :: NullOrUndefined (String), licenseUrl :: NullOrUndefined (String), platform :: NullOrUndefined (InstancePlatform) }) -> Blueprint
+newBlueprint' :: ({ blueprintId :: Maybe (NonEmptyString), name :: Maybe (ResourceName), group :: Maybe (NonEmptyString), "type" :: Maybe (BlueprintType), description :: Maybe (String), isActive :: Maybe (Boolean), minPower :: Maybe (Int), version :: Maybe (String), versionCode :: Maybe (String), productUrl :: Maybe (String), licenseUrl :: Maybe (String), platform :: Maybe (InstancePlatform) } -> { blueprintId :: Maybe (NonEmptyString), name :: Maybe (ResourceName), group :: Maybe (NonEmptyString), "type" :: Maybe (BlueprintType), description :: Maybe (String), isActive :: Maybe (Boolean), minPower :: Maybe (Int), version :: Maybe (String), versionCode :: Maybe (String), productUrl :: Maybe (String), licenseUrl :: Maybe (String), platform :: Maybe (InstancePlatform) }) -> Blueprint
 ```
 
 Constructs Blueprint's fields from required parameters
@@ -562,7 +562,7 @@ Encode BlueprintType
 
 ``` purescript
 newtype Bundle
-  = Bundle { price :: NullOrUndefined (Number), cpuCount :: NullOrUndefined (Int), diskSizeInGb :: NullOrUndefined (Int), bundleId :: NullOrUndefined (NonEmptyString), instanceType :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), name :: NullOrUndefined (String), power :: NullOrUndefined (Int), ramSizeInGb :: NullOrUndefined (Number), transferPerMonthInGb :: NullOrUndefined (Int), supportedPlatforms :: NullOrUndefined (InstancePlatformList) }
+  = Bundle { price :: Maybe (Number), cpuCount :: Maybe (Int), diskSizeInGb :: Maybe (Int), bundleId :: Maybe (NonEmptyString), instanceType :: Maybe (String), isActive :: Maybe (Boolean), name :: Maybe (String), power :: Maybe (Int), ramSizeInGb :: Maybe (Number), transferPerMonthInGb :: Maybe (Int), supportedPlatforms :: Maybe (InstancePlatformList) }
 ```
 
 <p>Describes a bundle, which is a set of specs describing your virtual private server (or <i>instance</i>).</p>
@@ -587,7 +587,7 @@ Constructs Bundle from required parameters
 #### `newBundle'`
 
 ``` purescript
-newBundle' :: ({ price :: NullOrUndefined (Number), cpuCount :: NullOrUndefined (Int), diskSizeInGb :: NullOrUndefined (Int), bundleId :: NullOrUndefined (NonEmptyString), instanceType :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), name :: NullOrUndefined (String), power :: NullOrUndefined (Int), ramSizeInGb :: NullOrUndefined (Number), transferPerMonthInGb :: NullOrUndefined (Int), supportedPlatforms :: NullOrUndefined (InstancePlatformList) } -> { price :: NullOrUndefined (Number), cpuCount :: NullOrUndefined (Int), diskSizeInGb :: NullOrUndefined (Int), bundleId :: NullOrUndefined (NonEmptyString), instanceType :: NullOrUndefined (String), isActive :: NullOrUndefined (Boolean), name :: NullOrUndefined (String), power :: NullOrUndefined (Int), ramSizeInGb :: NullOrUndefined (Number), transferPerMonthInGb :: NullOrUndefined (Int), supportedPlatforms :: NullOrUndefined (InstancePlatformList) }) -> Bundle
+newBundle' :: ({ price :: Maybe (Number), cpuCount :: Maybe (Int), diskSizeInGb :: Maybe (Int), bundleId :: Maybe (NonEmptyString), instanceType :: Maybe (String), isActive :: Maybe (Boolean), name :: Maybe (String), power :: Maybe (Int), ramSizeInGb :: Maybe (Number), transferPerMonthInGb :: Maybe (Int), supportedPlatforms :: Maybe (InstancePlatformList) } -> { price :: Maybe (Number), cpuCount :: Maybe (Int), diskSizeInGb :: Maybe (Int), bundleId :: Maybe (NonEmptyString), instanceType :: Maybe (String), isActive :: Maybe (Boolean), name :: Maybe (String), power :: Maybe (Int), ramSizeInGb :: Maybe (Number), transferPerMonthInGb :: Maybe (Int), supportedPlatforms :: Maybe (InstancePlatformList) }) -> Bundle
 ```
 
 Constructs Bundle's fields from required parameters
@@ -644,7 +644,7 @@ Constructs CloseInstancePublicPortsRequest's fields from required parameters
 
 ``` purescript
 newtype CloseInstancePublicPortsResult
-  = CloseInstancePublicPortsResult { operation :: NullOrUndefined (Operation) }
+  = CloseInstancePublicPortsResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -667,7 +667,7 @@ Constructs CloseInstancePublicPortsResult from required parameters
 #### `newCloseInstancePublicPortsResult'`
 
 ``` purescript
-newCloseInstancePublicPortsResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> CloseInstancePublicPortsResult
+newCloseInstancePublicPortsResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> CloseInstancePublicPortsResult
 ```
 
 Constructs CloseInstancePublicPortsResult's fields from required parameters
@@ -708,7 +708,7 @@ Constructs CreateDiskFromSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDiskFromSnapshotResult
-  = CreateDiskFromSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = CreateDiskFromSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -731,7 +731,7 @@ Constructs CreateDiskFromSnapshotResult from required parameters
 #### `newCreateDiskFromSnapshotResult'`
 
 ``` purescript
-newCreateDiskFromSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateDiskFromSnapshotResult
+newCreateDiskFromSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateDiskFromSnapshotResult
 ```
 
 Constructs CreateDiskFromSnapshotResult's fields from required parameters
@@ -772,7 +772,7 @@ Constructs CreateDiskRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDiskResult
-  = CreateDiskResult { operations :: NullOrUndefined (OperationList) }
+  = CreateDiskResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -795,7 +795,7 @@ Constructs CreateDiskResult from required parameters
 #### `newCreateDiskResult'`
 
 ``` purescript
-newCreateDiskResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateDiskResult
+newCreateDiskResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateDiskResult
 ```
 
 Constructs CreateDiskResult's fields from required parameters
@@ -836,7 +836,7 @@ Constructs CreateDiskSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDiskSnapshotResult
-  = CreateDiskSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = CreateDiskSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -859,7 +859,7 @@ Constructs CreateDiskSnapshotResult from required parameters
 #### `newCreateDiskSnapshotResult'`
 
 ``` purescript
-newCreateDiskSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateDiskSnapshotResult
+newCreateDiskSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateDiskSnapshotResult
 ```
 
 Constructs CreateDiskSnapshotResult's fields from required parameters
@@ -900,7 +900,7 @@ Constructs CreateDomainEntryRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDomainEntryResult
-  = CreateDomainEntryResult { operation :: NullOrUndefined (Operation) }
+  = CreateDomainEntryResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -923,7 +923,7 @@ Constructs CreateDomainEntryResult from required parameters
 #### `newCreateDomainEntryResult'`
 
 ``` purescript
-newCreateDomainEntryResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> CreateDomainEntryResult
+newCreateDomainEntryResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> CreateDomainEntryResult
 ```
 
 Constructs CreateDomainEntryResult's fields from required parameters
@@ -964,7 +964,7 @@ Constructs CreateDomainRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDomainResult
-  = CreateDomainResult { operation :: NullOrUndefined (Operation) }
+  = CreateDomainResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -987,7 +987,7 @@ Constructs CreateDomainResult from required parameters
 #### `newCreateDomainResult'`
 
 ``` purescript
-newCreateDomainResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> CreateDomainResult
+newCreateDomainResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> CreateDomainResult
 ```
 
 Constructs CreateDomainResult's fields from required parameters
@@ -1028,7 +1028,7 @@ Constructs CreateInstanceSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype CreateInstanceSnapshotResult
-  = CreateInstanceSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = CreateInstanceSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1051,7 +1051,7 @@ Constructs CreateInstanceSnapshotResult from required parameters
 #### `newCreateInstanceSnapshotResult'`
 
 ``` purescript
-newCreateInstanceSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateInstanceSnapshotResult
+newCreateInstanceSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateInstanceSnapshotResult
 ```
 
 Constructs CreateInstanceSnapshotResult's fields from required parameters
@@ -1060,7 +1060,7 @@ Constructs CreateInstanceSnapshotResult's fields from required parameters
 
 ``` purescript
 newtype CreateInstancesFromSnapshotRequest
-  = CreateInstancesFromSnapshotRequest { instanceNames :: StringList, attachedDiskMapping :: NullOrUndefined (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }
+  = CreateInstancesFromSnapshotRequest { instanceNames :: StringList, attachedDiskMapping :: Maybe (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) }
 ```
 
 ##### Instances
@@ -1083,7 +1083,7 @@ Constructs CreateInstancesFromSnapshotRequest from required parameters
 #### `newCreateInstancesFromSnapshotRequest'`
 
 ``` purescript
-newCreateInstancesFromSnapshotRequest' :: String -> NonEmptyString -> StringList -> ResourceName -> ({ instanceNames :: StringList, attachedDiskMapping :: NullOrUndefined (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) } -> { instanceNames :: StringList, attachedDiskMapping :: NullOrUndefined (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }) -> CreateInstancesFromSnapshotRequest
+newCreateInstancesFromSnapshotRequest' :: String -> NonEmptyString -> StringList -> ResourceName -> ({ instanceNames :: StringList, attachedDiskMapping :: Maybe (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) } -> { instanceNames :: StringList, attachedDiskMapping :: Maybe (AttachedDiskMap), availabilityZone :: String, instanceSnapshotName :: ResourceName, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) }) -> CreateInstancesFromSnapshotRequest
 ```
 
 Constructs CreateInstancesFromSnapshotRequest's fields from required parameters
@@ -1092,7 +1092,7 @@ Constructs CreateInstancesFromSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype CreateInstancesFromSnapshotResult
-  = CreateInstancesFromSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = CreateInstancesFromSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1115,7 +1115,7 @@ Constructs CreateInstancesFromSnapshotResult from required parameters
 #### `newCreateInstancesFromSnapshotResult'`
 
 ``` purescript
-newCreateInstancesFromSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateInstancesFromSnapshotResult
+newCreateInstancesFromSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateInstancesFromSnapshotResult
 ```
 
 Constructs CreateInstancesFromSnapshotResult's fields from required parameters
@@ -1124,7 +1124,7 @@ Constructs CreateInstancesFromSnapshotResult's fields from required parameters
 
 ``` purescript
 newtype CreateInstancesRequest
-  = CreateInstancesRequest { instanceNames :: StringList, availabilityZone :: String, customImageName :: NullOrUndefined (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }
+  = CreateInstancesRequest { instanceNames :: StringList, availabilityZone :: String, customImageName :: Maybe (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) }
 ```
 
 ##### Instances
@@ -1147,7 +1147,7 @@ Constructs CreateInstancesRequest from required parameters
 #### `newCreateInstancesRequest'`
 
 ``` purescript
-newCreateInstancesRequest' :: String -> NonEmptyString -> NonEmptyString -> StringList -> ({ instanceNames :: StringList, availabilityZone :: String, customImageName :: NullOrUndefined (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) } -> { instanceNames :: StringList, availabilityZone :: String, customImageName :: NullOrUndefined (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }) -> CreateInstancesRequest
+newCreateInstancesRequest' :: String -> NonEmptyString -> NonEmptyString -> StringList -> ({ instanceNames :: StringList, availabilityZone :: String, customImageName :: Maybe (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) } -> { instanceNames :: StringList, availabilityZone :: String, customImageName :: Maybe (ResourceName), blueprintId :: NonEmptyString, bundleId :: NonEmptyString, userData :: Maybe (String), keyPairName :: Maybe (ResourceName) }) -> CreateInstancesRequest
 ```
 
 Constructs CreateInstancesRequest's fields from required parameters
@@ -1156,7 +1156,7 @@ Constructs CreateInstancesRequest's fields from required parameters
 
 ``` purescript
 newtype CreateInstancesResult
-  = CreateInstancesResult { operations :: NullOrUndefined (OperationList) }
+  = CreateInstancesResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1179,7 +1179,7 @@ Constructs CreateInstancesResult from required parameters
 #### `newCreateInstancesResult'`
 
 ``` purescript
-newCreateInstancesResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateInstancesResult
+newCreateInstancesResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateInstancesResult
 ```
 
 Constructs CreateInstancesResult's fields from required parameters
@@ -1220,7 +1220,7 @@ Constructs CreateKeyPairRequest's fields from required parameters
 
 ``` purescript
 newtype CreateKeyPairResult
-  = CreateKeyPairResult { keyPair :: NullOrUndefined (KeyPair), publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64), operation :: NullOrUndefined (Operation) }
+  = CreateKeyPairResult { keyPair :: Maybe (KeyPair), publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64), operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -1243,7 +1243,7 @@ Constructs CreateKeyPairResult from required parameters
 #### `newCreateKeyPairResult'`
 
 ``` purescript
-newCreateKeyPairResult' :: ({ keyPair :: NullOrUndefined (KeyPair), publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64), operation :: NullOrUndefined (Operation) } -> { keyPair :: NullOrUndefined (KeyPair), publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64), operation :: NullOrUndefined (Operation) }) -> CreateKeyPairResult
+newCreateKeyPairResult' :: ({ keyPair :: Maybe (KeyPair), publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64), operation :: Maybe (Operation) } -> { keyPair :: Maybe (KeyPair), publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64), operation :: Maybe (Operation) }) -> CreateKeyPairResult
 ```
 
 Constructs CreateKeyPairResult's fields from required parameters
@@ -1252,7 +1252,7 @@ Constructs CreateKeyPairResult's fields from required parameters
 
 ``` purescript
 newtype CreateLoadBalancerRequest
-  = CreateLoadBalancerRequest { loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: NullOrUndefined (String), certificateName :: NullOrUndefined (ResourceName), certificateDomainName :: NullOrUndefined (DomainName), certificateAlternativeNames :: NullOrUndefined (DomainNameList) }
+  = CreateLoadBalancerRequest { loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: Maybe (String), certificateName :: Maybe (ResourceName), certificateDomainName :: Maybe (DomainName), certificateAlternativeNames :: Maybe (DomainNameList) }
 ```
 
 ##### Instances
@@ -1275,7 +1275,7 @@ Constructs CreateLoadBalancerRequest from required parameters
 #### `newCreateLoadBalancerRequest'`
 
 ``` purescript
-newCreateLoadBalancerRequest' :: Port -> ResourceName -> ({ loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: NullOrUndefined (String), certificateName :: NullOrUndefined (ResourceName), certificateDomainName :: NullOrUndefined (DomainName), certificateAlternativeNames :: NullOrUndefined (DomainNameList) } -> { loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: NullOrUndefined (String), certificateName :: NullOrUndefined (ResourceName), certificateDomainName :: NullOrUndefined (DomainName), certificateAlternativeNames :: NullOrUndefined (DomainNameList) }) -> CreateLoadBalancerRequest
+newCreateLoadBalancerRequest' :: Port -> ResourceName -> ({ loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: Maybe (String), certificateName :: Maybe (ResourceName), certificateDomainName :: Maybe (DomainName), certificateAlternativeNames :: Maybe (DomainNameList) } -> { loadBalancerName :: ResourceName, instancePort :: Port, healthCheckPath :: Maybe (String), certificateName :: Maybe (ResourceName), certificateDomainName :: Maybe (DomainName), certificateAlternativeNames :: Maybe (DomainNameList) }) -> CreateLoadBalancerRequest
 ```
 
 Constructs CreateLoadBalancerRequest's fields from required parameters
@@ -1284,7 +1284,7 @@ Constructs CreateLoadBalancerRequest's fields from required parameters
 
 ``` purescript
 newtype CreateLoadBalancerResult
-  = CreateLoadBalancerResult { operations :: NullOrUndefined (OperationList) }
+  = CreateLoadBalancerResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1307,7 +1307,7 @@ Constructs CreateLoadBalancerResult from required parameters
 #### `newCreateLoadBalancerResult'`
 
 ``` purescript
-newCreateLoadBalancerResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateLoadBalancerResult
+newCreateLoadBalancerResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateLoadBalancerResult
 ```
 
 Constructs CreateLoadBalancerResult's fields from required parameters
@@ -1316,7 +1316,7 @@ Constructs CreateLoadBalancerResult's fields from required parameters
 
 ``` purescript
 newtype CreateLoadBalancerTlsCertificateRequest
-  = CreateLoadBalancerTlsCertificateRequest { loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: NullOrUndefined (DomainNameList) }
+  = CreateLoadBalancerTlsCertificateRequest { loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: Maybe (DomainNameList) }
 ```
 
 ##### Instances
@@ -1339,7 +1339,7 @@ Constructs CreateLoadBalancerTlsCertificateRequest from required parameters
 #### `newCreateLoadBalancerTlsCertificateRequest'`
 
 ``` purescript
-newCreateLoadBalancerTlsCertificateRequest' :: DomainName -> ResourceName -> ResourceName -> ({ loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: NullOrUndefined (DomainNameList) } -> { loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: NullOrUndefined (DomainNameList) }) -> CreateLoadBalancerTlsCertificateRequest
+newCreateLoadBalancerTlsCertificateRequest' :: DomainName -> ResourceName -> ResourceName -> ({ loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: Maybe (DomainNameList) } -> { loadBalancerName :: ResourceName, certificateName :: ResourceName, certificateDomainName :: DomainName, certificateAlternativeNames :: Maybe (DomainNameList) }) -> CreateLoadBalancerTlsCertificateRequest
 ```
 
 Constructs CreateLoadBalancerTlsCertificateRequest's fields from required parameters
@@ -1348,7 +1348,7 @@ Constructs CreateLoadBalancerTlsCertificateRequest's fields from required parame
 
 ``` purescript
 newtype CreateLoadBalancerTlsCertificateResult
-  = CreateLoadBalancerTlsCertificateResult { operations :: NullOrUndefined (OperationList) }
+  = CreateLoadBalancerTlsCertificateResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1371,7 +1371,7 @@ Constructs CreateLoadBalancerTlsCertificateResult from required parameters
 #### `newCreateLoadBalancerTlsCertificateResult'`
 
 ``` purescript
-newCreateLoadBalancerTlsCertificateResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> CreateLoadBalancerTlsCertificateResult
+newCreateLoadBalancerTlsCertificateResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> CreateLoadBalancerTlsCertificateResult
 ```
 
 Constructs CreateLoadBalancerTlsCertificateResult's fields from required parameters
@@ -1412,7 +1412,7 @@ Constructs DeleteDiskRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteDiskResult
-  = DeleteDiskResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteDiskResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1435,7 +1435,7 @@ Constructs DeleteDiskResult from required parameters
 #### `newDeleteDiskResult'`
 
 ``` purescript
-newDeleteDiskResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteDiskResult
+newDeleteDiskResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteDiskResult
 ```
 
 Constructs DeleteDiskResult's fields from required parameters
@@ -1476,7 +1476,7 @@ Constructs DeleteDiskSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteDiskSnapshotResult
-  = DeleteDiskSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteDiskSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1499,7 +1499,7 @@ Constructs DeleteDiskSnapshotResult from required parameters
 #### `newDeleteDiskSnapshotResult'`
 
 ``` purescript
-newDeleteDiskSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteDiskSnapshotResult
+newDeleteDiskSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteDiskSnapshotResult
 ```
 
 Constructs DeleteDiskSnapshotResult's fields from required parameters
@@ -1540,7 +1540,7 @@ Constructs DeleteDomainEntryRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteDomainEntryResult
-  = DeleteDomainEntryResult { operation :: NullOrUndefined (Operation) }
+  = DeleteDomainEntryResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -1563,7 +1563,7 @@ Constructs DeleteDomainEntryResult from required parameters
 #### `newDeleteDomainEntryResult'`
 
 ``` purescript
-newDeleteDomainEntryResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> DeleteDomainEntryResult
+newDeleteDomainEntryResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> DeleteDomainEntryResult
 ```
 
 Constructs DeleteDomainEntryResult's fields from required parameters
@@ -1604,7 +1604,7 @@ Constructs DeleteDomainRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteDomainResult
-  = DeleteDomainResult { operation :: NullOrUndefined (Operation) }
+  = DeleteDomainResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -1627,7 +1627,7 @@ Constructs DeleteDomainResult from required parameters
 #### `newDeleteDomainResult'`
 
 ``` purescript
-newDeleteDomainResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> DeleteDomainResult
+newDeleteDomainResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> DeleteDomainResult
 ```
 
 Constructs DeleteDomainResult's fields from required parameters
@@ -1668,7 +1668,7 @@ Constructs DeleteInstanceRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteInstanceResult
-  = DeleteInstanceResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteInstanceResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1691,7 +1691,7 @@ Constructs DeleteInstanceResult from required parameters
 #### `newDeleteInstanceResult'`
 
 ``` purescript
-newDeleteInstanceResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteInstanceResult
+newDeleteInstanceResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteInstanceResult
 ```
 
 Constructs DeleteInstanceResult's fields from required parameters
@@ -1732,7 +1732,7 @@ Constructs DeleteInstanceSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteInstanceSnapshotResult
-  = DeleteInstanceSnapshotResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteInstanceSnapshotResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1755,7 +1755,7 @@ Constructs DeleteInstanceSnapshotResult from required parameters
 #### `newDeleteInstanceSnapshotResult'`
 
 ``` purescript
-newDeleteInstanceSnapshotResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteInstanceSnapshotResult
+newDeleteInstanceSnapshotResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteInstanceSnapshotResult
 ```
 
 Constructs DeleteInstanceSnapshotResult's fields from required parameters
@@ -1796,7 +1796,7 @@ Constructs DeleteKeyPairRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteKeyPairResult
-  = DeleteKeyPairResult { operation :: NullOrUndefined (Operation) }
+  = DeleteKeyPairResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -1819,7 +1819,7 @@ Constructs DeleteKeyPairResult from required parameters
 #### `newDeleteKeyPairResult'`
 
 ``` purescript
-newDeleteKeyPairResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> DeleteKeyPairResult
+newDeleteKeyPairResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> DeleteKeyPairResult
 ```
 
 Constructs DeleteKeyPairResult's fields from required parameters
@@ -1860,7 +1860,7 @@ Constructs DeleteLoadBalancerRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteLoadBalancerResult
-  = DeleteLoadBalancerResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteLoadBalancerResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1883,7 +1883,7 @@ Constructs DeleteLoadBalancerResult from required parameters
 #### `newDeleteLoadBalancerResult'`
 
 ``` purescript
-newDeleteLoadBalancerResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteLoadBalancerResult
+newDeleteLoadBalancerResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteLoadBalancerResult
 ```
 
 Constructs DeleteLoadBalancerResult's fields from required parameters
@@ -1892,7 +1892,7 @@ Constructs DeleteLoadBalancerResult's fields from required parameters
 
 ``` purescript
 newtype DeleteLoadBalancerTlsCertificateRequest
-  = DeleteLoadBalancerTlsCertificateRequest { loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: NullOrUndefined (Boolean) }
+  = DeleteLoadBalancerTlsCertificateRequest { loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -1915,7 +1915,7 @@ Constructs DeleteLoadBalancerTlsCertificateRequest from required parameters
 #### `newDeleteLoadBalancerTlsCertificateRequest'`
 
 ``` purescript
-newDeleteLoadBalancerTlsCertificateRequest' :: ResourceName -> ResourceName -> ({ loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: NullOrUndefined (Boolean) } -> { loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: NullOrUndefined (Boolean) }) -> DeleteLoadBalancerTlsCertificateRequest
+newDeleteLoadBalancerTlsCertificateRequest' :: ResourceName -> ResourceName -> ({ loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: Maybe (Boolean) } -> { loadBalancerName :: ResourceName, certificateName :: ResourceName, force :: Maybe (Boolean) }) -> DeleteLoadBalancerTlsCertificateRequest
 ```
 
 Constructs DeleteLoadBalancerTlsCertificateRequest's fields from required parameters
@@ -1924,7 +1924,7 @@ Constructs DeleteLoadBalancerTlsCertificateRequest's fields from required parame
 
 ``` purescript
 newtype DeleteLoadBalancerTlsCertificateResult
-  = DeleteLoadBalancerTlsCertificateResult { operations :: NullOrUndefined (OperationList) }
+  = DeleteLoadBalancerTlsCertificateResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -1947,7 +1947,7 @@ Constructs DeleteLoadBalancerTlsCertificateResult from required parameters
 #### `newDeleteLoadBalancerTlsCertificateResult'`
 
 ``` purescript
-newDeleteLoadBalancerTlsCertificateResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DeleteLoadBalancerTlsCertificateResult
+newDeleteLoadBalancerTlsCertificateResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DeleteLoadBalancerTlsCertificateResult
 ```
 
 Constructs DeleteLoadBalancerTlsCertificateResult's fields from required parameters
@@ -1988,7 +1988,7 @@ Constructs DetachDiskRequest's fields from required parameters
 
 ``` purescript
 newtype DetachDiskResult
-  = DetachDiskResult { operations :: NullOrUndefined (OperationList) }
+  = DetachDiskResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -2011,7 +2011,7 @@ Constructs DetachDiskResult from required parameters
 #### `newDetachDiskResult'`
 
 ``` purescript
-newDetachDiskResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DetachDiskResult
+newDetachDiskResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DetachDiskResult
 ```
 
 Constructs DetachDiskResult's fields from required parameters
@@ -2052,7 +2052,7 @@ Constructs DetachInstancesFromLoadBalancerRequest's fields from required paramet
 
 ``` purescript
 newtype DetachInstancesFromLoadBalancerResult
-  = DetachInstancesFromLoadBalancerResult { operations :: NullOrUndefined (OperationList) }
+  = DetachInstancesFromLoadBalancerResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -2075,7 +2075,7 @@ Constructs DetachInstancesFromLoadBalancerResult from required parameters
 #### `newDetachInstancesFromLoadBalancerResult'`
 
 ``` purescript
-newDetachInstancesFromLoadBalancerResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DetachInstancesFromLoadBalancerResult
+newDetachInstancesFromLoadBalancerResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DetachInstancesFromLoadBalancerResult
 ```
 
 Constructs DetachInstancesFromLoadBalancerResult's fields from required parameters
@@ -2116,7 +2116,7 @@ Constructs DetachStaticIpRequest's fields from required parameters
 
 ``` purescript
 newtype DetachStaticIpResult
-  = DetachStaticIpResult { operations :: NullOrUndefined (OperationList) }
+  = DetachStaticIpResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -2139,7 +2139,7 @@ Constructs DetachStaticIpResult from required parameters
 #### `newDetachStaticIpResult'`
 
 ``` purescript
-newDetachStaticIpResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> DetachStaticIpResult
+newDetachStaticIpResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> DetachStaticIpResult
 ```
 
 Constructs DetachStaticIpResult's fields from required parameters
@@ -2148,7 +2148,7 @@ Constructs DetachStaticIpResult's fields from required parameters
 
 ``` purescript
 newtype Disk
-  = Disk { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), isSystemDisk :: NullOrUndefined (Boolean), iops :: NullOrUndefined (Int), path :: NullOrUndefined (String), state :: NullOrUndefined (DiskState), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), attachmentState :: NullOrUndefined (String), gbInUse :: NullOrUndefined (Int) }
+  = Disk { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), isSystemDisk :: Maybe (Boolean), iops :: Maybe (Int), path :: Maybe (String), state :: Maybe (DiskState), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean), attachmentState :: Maybe (String), gbInUse :: Maybe (Int) }
 ```
 
 <p>Describes a system disk or an block storage disk.</p>
@@ -2173,7 +2173,7 @@ Constructs Disk from required parameters
 #### `newDisk'`
 
 ``` purescript
-newDisk' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), isSystemDisk :: NullOrUndefined (Boolean), iops :: NullOrUndefined (Int), path :: NullOrUndefined (String), state :: NullOrUndefined (DiskState), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), attachmentState :: NullOrUndefined (String), gbInUse :: NullOrUndefined (Int) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), isSystemDisk :: NullOrUndefined (Boolean), iops :: NullOrUndefined (Int), path :: NullOrUndefined (String), state :: NullOrUndefined (DiskState), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), attachmentState :: NullOrUndefined (String), gbInUse :: NullOrUndefined (Int) }) -> Disk
+newDisk' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), isSystemDisk :: Maybe (Boolean), iops :: Maybe (Int), path :: Maybe (String), state :: Maybe (DiskState), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean), attachmentState :: Maybe (String), gbInUse :: Maybe (Int) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), isSystemDisk :: Maybe (Boolean), iops :: Maybe (Int), path :: Maybe (String), state :: Maybe (DiskState), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean), attachmentState :: Maybe (String), gbInUse :: Maybe (Int) }) -> Disk
 ```
 
 Constructs Disk's fields from required parameters
@@ -2198,7 +2198,7 @@ Encode DiskList
 
 ``` purescript
 newtype DiskMap
-  = DiskMap { originalDiskPath :: NullOrUndefined (NonEmptyString), newDiskName :: NullOrUndefined (ResourceName) }
+  = DiskMap { originalDiskPath :: Maybe (NonEmptyString), newDiskName :: Maybe (ResourceName) }
 ```
 
 <p>Describes a block storage disk mapping.</p>
@@ -2223,7 +2223,7 @@ Constructs DiskMap from required parameters
 #### `newDiskMap'`
 
 ``` purescript
-newDiskMap' :: ({ originalDiskPath :: NullOrUndefined (NonEmptyString), newDiskName :: NullOrUndefined (ResourceName) } -> { originalDiskPath :: NullOrUndefined (NonEmptyString), newDiskName :: NullOrUndefined (ResourceName) }) -> DiskMap
+newDiskMap' :: ({ originalDiskPath :: Maybe (NonEmptyString), newDiskName :: Maybe (ResourceName) } -> { originalDiskPath :: Maybe (NonEmptyString), newDiskName :: Maybe (ResourceName) }) -> DiskMap
 ```
 
 Constructs DiskMap's fields from required parameters
@@ -2248,7 +2248,7 @@ Encode DiskMapList
 
 ``` purescript
 newtype DiskSnapshot
-  = DiskSnapshot { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), state :: NullOrUndefined (DiskSnapshotState), progress :: NullOrUndefined (String), fromDiskName :: NullOrUndefined (ResourceName), fromDiskArn :: NullOrUndefined (NonEmptyString) }
+  = DiskSnapshot { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), state :: Maybe (DiskSnapshotState), progress :: Maybe (String), fromDiskName :: Maybe (ResourceName), fromDiskArn :: Maybe (NonEmptyString) }
 ```
 
 <p>Describes a block storage disk snapshot.</p>
@@ -2273,7 +2273,7 @@ Constructs DiskSnapshot from required parameters
 #### `newDiskSnapshot'`
 
 ``` purescript
-newDiskSnapshot' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), state :: NullOrUndefined (DiskSnapshotState), progress :: NullOrUndefined (String), fromDiskName :: NullOrUndefined (ResourceName), fromDiskArn :: NullOrUndefined (NonEmptyString) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), sizeInGb :: NullOrUndefined (Int), state :: NullOrUndefined (DiskSnapshotState), progress :: NullOrUndefined (String), fromDiskName :: NullOrUndefined (ResourceName), fromDiskArn :: NullOrUndefined (NonEmptyString) }) -> DiskSnapshot
+newDiskSnapshot' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), state :: Maybe (DiskSnapshotState), progress :: Maybe (String), fromDiskName :: Maybe (ResourceName), fromDiskArn :: Maybe (NonEmptyString) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), sizeInGb :: Maybe (Int), state :: Maybe (DiskSnapshotState), progress :: Maybe (String), fromDiskName :: Maybe (ResourceName), fromDiskArn :: Maybe (NonEmptyString) }) -> DiskSnapshot
 ```
 
 Constructs DiskSnapshot's fields from required parameters
@@ -2330,7 +2330,7 @@ Encode DiskState
 
 ``` purescript
 newtype Domain
-  = Domain { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), domainEntries :: NullOrUndefined (DomainEntryList) }
+  = Domain { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), domainEntries :: Maybe (DomainEntryList) }
 ```
 
 <p>Describes a domain where you are storing recordsets in Lightsail.</p>
@@ -2355,7 +2355,7 @@ Constructs Domain from required parameters
 #### `newDomain'`
 
 ``` purescript
-newDomain' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), domainEntries :: NullOrUndefined (DomainEntryList) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), domainEntries :: NullOrUndefined (DomainEntryList) }) -> Domain
+newDomain' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), domainEntries :: Maybe (DomainEntryList) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), domainEntries :: Maybe (DomainEntryList) }) -> Domain
 ```
 
 Constructs Domain's fields from required parameters
@@ -2364,7 +2364,7 @@ Constructs Domain's fields from required parameters
 
 ``` purescript
 newtype DomainEntry
-  = DomainEntry { id :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (DomainName), target :: NullOrUndefined (String), isAlias :: NullOrUndefined (Boolean), "type" :: NullOrUndefined (DomainEntryType), options :: NullOrUndefined (DomainEntryOptions) }
+  = DomainEntry { id :: Maybe (NonEmptyString), name :: Maybe (DomainName), target :: Maybe (String), isAlias :: Maybe (Boolean), "type" :: Maybe (DomainEntryType), options :: Maybe (DomainEntryOptions) }
 ```
 
 <p>Describes a domain recordset entry.</p>
@@ -2389,7 +2389,7 @@ Constructs DomainEntry from required parameters
 #### `newDomainEntry'`
 
 ``` purescript
-newDomainEntry' :: ({ id :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (DomainName), target :: NullOrUndefined (String), isAlias :: NullOrUndefined (Boolean), "type" :: NullOrUndefined (DomainEntryType), options :: NullOrUndefined (DomainEntryOptions) } -> { id :: NullOrUndefined (NonEmptyString), name :: NullOrUndefined (DomainName), target :: NullOrUndefined (String), isAlias :: NullOrUndefined (Boolean), "type" :: NullOrUndefined (DomainEntryType), options :: NullOrUndefined (DomainEntryOptions) }) -> DomainEntry
+newDomainEntry' :: ({ id :: Maybe (NonEmptyString), name :: Maybe (DomainName), target :: Maybe (String), isAlias :: Maybe (Boolean), "type" :: Maybe (DomainEntryType), options :: Maybe (DomainEntryOptions) } -> { id :: Maybe (NonEmptyString), name :: Maybe (DomainName), target :: Maybe (String), isAlias :: Maybe (Boolean), "type" :: Maybe (DomainEntryType), options :: Maybe (DomainEntryOptions) }) -> DomainEntry
 ```
 
 Constructs DomainEntry's fields from required parameters
@@ -2526,7 +2526,7 @@ Encode DownloadDefaultKeyPairRequest
 
 ``` purescript
 newtype DownloadDefaultKeyPairResult
-  = DownloadDefaultKeyPairResult { publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64) }
+  = DownloadDefaultKeyPairResult { publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64) }
 ```
 
 ##### Instances
@@ -2549,7 +2549,7 @@ Constructs DownloadDefaultKeyPairResult from required parameters
 #### `newDownloadDefaultKeyPairResult'`
 
 ``` purescript
-newDownloadDefaultKeyPairResult' :: ({ publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64) } -> { publicKeyBase64 :: NullOrUndefined (Base64), privateKeyBase64 :: NullOrUndefined (Base64) }) -> DownloadDefaultKeyPairResult
+newDownloadDefaultKeyPairResult' :: ({ publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64) } -> { publicKeyBase64 :: Maybe (Base64), privateKeyBase64 :: Maybe (Base64) }) -> DownloadDefaultKeyPairResult
 ```
 
 Constructs DownloadDefaultKeyPairResult's fields from required parameters
@@ -2558,7 +2558,7 @@ Constructs DownloadDefaultKeyPairResult's fields from required parameters
 
 ``` purescript
 newtype GetActiveNamesRequest
-  = GetActiveNamesRequest { pageToken :: NullOrUndefined (String) }
+  = GetActiveNamesRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2581,7 +2581,7 @@ Constructs GetActiveNamesRequest from required parameters
 #### `newGetActiveNamesRequest'`
 
 ``` purescript
-newGetActiveNamesRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetActiveNamesRequest
+newGetActiveNamesRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetActiveNamesRequest
 ```
 
 Constructs GetActiveNamesRequest's fields from required parameters
@@ -2590,7 +2590,7 @@ Constructs GetActiveNamesRequest's fields from required parameters
 
 ``` purescript
 newtype GetActiveNamesResult
-  = GetActiveNamesResult { activeNames :: NullOrUndefined (StringList), nextPageToken :: NullOrUndefined (String) }
+  = GetActiveNamesResult { activeNames :: Maybe (StringList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2613,7 +2613,7 @@ Constructs GetActiveNamesResult from required parameters
 #### `newGetActiveNamesResult'`
 
 ``` purescript
-newGetActiveNamesResult' :: ({ activeNames :: NullOrUndefined (StringList), nextPageToken :: NullOrUndefined (String) } -> { activeNames :: NullOrUndefined (StringList), nextPageToken :: NullOrUndefined (String) }) -> GetActiveNamesResult
+newGetActiveNamesResult' :: ({ activeNames :: Maybe (StringList), nextPageToken :: Maybe (String) } -> { activeNames :: Maybe (StringList), nextPageToken :: Maybe (String) }) -> GetActiveNamesResult
 ```
 
 Constructs GetActiveNamesResult's fields from required parameters
@@ -2622,7 +2622,7 @@ Constructs GetActiveNamesResult's fields from required parameters
 
 ``` purescript
 newtype GetBlueprintsRequest
-  = GetBlueprintsRequest { includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) }
+  = GetBlueprintsRequest { includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2645,7 +2645,7 @@ Constructs GetBlueprintsRequest from required parameters
 #### `newGetBlueprintsRequest'`
 
 ``` purescript
-newGetBlueprintsRequest' :: ({ includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) } -> { includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) }) -> GetBlueprintsRequest
+newGetBlueprintsRequest' :: ({ includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) } -> { includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) }) -> GetBlueprintsRequest
 ```
 
 Constructs GetBlueprintsRequest's fields from required parameters
@@ -2654,7 +2654,7 @@ Constructs GetBlueprintsRequest's fields from required parameters
 
 ``` purescript
 newtype GetBlueprintsResult
-  = GetBlueprintsResult { blueprints :: NullOrUndefined (BlueprintList), nextPageToken :: NullOrUndefined (String) }
+  = GetBlueprintsResult { blueprints :: Maybe (BlueprintList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2677,7 +2677,7 @@ Constructs GetBlueprintsResult from required parameters
 #### `newGetBlueprintsResult'`
 
 ``` purescript
-newGetBlueprintsResult' :: ({ blueprints :: NullOrUndefined (BlueprintList), nextPageToken :: NullOrUndefined (String) } -> { blueprints :: NullOrUndefined (BlueprintList), nextPageToken :: NullOrUndefined (String) }) -> GetBlueprintsResult
+newGetBlueprintsResult' :: ({ blueprints :: Maybe (BlueprintList), nextPageToken :: Maybe (String) } -> { blueprints :: Maybe (BlueprintList), nextPageToken :: Maybe (String) }) -> GetBlueprintsResult
 ```
 
 Constructs GetBlueprintsResult's fields from required parameters
@@ -2686,7 +2686,7 @@ Constructs GetBlueprintsResult's fields from required parameters
 
 ``` purescript
 newtype GetBundlesRequest
-  = GetBundlesRequest { includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) }
+  = GetBundlesRequest { includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2709,7 +2709,7 @@ Constructs GetBundlesRequest from required parameters
 #### `newGetBundlesRequest'`
 
 ``` purescript
-newGetBundlesRequest' :: ({ includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) } -> { includeInactive :: NullOrUndefined (Boolean), pageToken :: NullOrUndefined (String) }) -> GetBundlesRequest
+newGetBundlesRequest' :: ({ includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) } -> { includeInactive :: Maybe (Boolean), pageToken :: Maybe (String) }) -> GetBundlesRequest
 ```
 
 Constructs GetBundlesRequest's fields from required parameters
@@ -2718,7 +2718,7 @@ Constructs GetBundlesRequest's fields from required parameters
 
 ``` purescript
 newtype GetBundlesResult
-  = GetBundlesResult { bundles :: NullOrUndefined (BundleList), nextPageToken :: NullOrUndefined (String) }
+  = GetBundlesResult { bundles :: Maybe (BundleList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2741,7 +2741,7 @@ Constructs GetBundlesResult from required parameters
 #### `newGetBundlesResult'`
 
 ``` purescript
-newGetBundlesResult' :: ({ bundles :: NullOrUndefined (BundleList), nextPageToken :: NullOrUndefined (String) } -> { bundles :: NullOrUndefined (BundleList), nextPageToken :: NullOrUndefined (String) }) -> GetBundlesResult
+newGetBundlesResult' :: ({ bundles :: Maybe (BundleList), nextPageToken :: Maybe (String) } -> { bundles :: Maybe (BundleList), nextPageToken :: Maybe (String) }) -> GetBundlesResult
 ```
 
 Constructs GetBundlesResult's fields from required parameters
@@ -2782,7 +2782,7 @@ Constructs GetDiskRequest's fields from required parameters
 
 ``` purescript
 newtype GetDiskResult
-  = GetDiskResult { disk :: NullOrUndefined (Disk) }
+  = GetDiskResult { disk :: Maybe (Disk) }
 ```
 
 ##### Instances
@@ -2805,7 +2805,7 @@ Constructs GetDiskResult from required parameters
 #### `newGetDiskResult'`
 
 ``` purescript
-newGetDiskResult' :: ({ disk :: NullOrUndefined (Disk) } -> { disk :: NullOrUndefined (Disk) }) -> GetDiskResult
+newGetDiskResult' :: ({ disk :: Maybe (Disk) } -> { disk :: Maybe (Disk) }) -> GetDiskResult
 ```
 
 Constructs GetDiskResult's fields from required parameters
@@ -2846,7 +2846,7 @@ Constructs GetDiskSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype GetDiskSnapshotResult
-  = GetDiskSnapshotResult { diskSnapshot :: NullOrUndefined (DiskSnapshot) }
+  = GetDiskSnapshotResult { diskSnapshot :: Maybe (DiskSnapshot) }
 ```
 
 ##### Instances
@@ -2869,7 +2869,7 @@ Constructs GetDiskSnapshotResult from required parameters
 #### `newGetDiskSnapshotResult'`
 
 ``` purescript
-newGetDiskSnapshotResult' :: ({ diskSnapshot :: NullOrUndefined (DiskSnapshot) } -> { diskSnapshot :: NullOrUndefined (DiskSnapshot) }) -> GetDiskSnapshotResult
+newGetDiskSnapshotResult' :: ({ diskSnapshot :: Maybe (DiskSnapshot) } -> { diskSnapshot :: Maybe (DiskSnapshot) }) -> GetDiskSnapshotResult
 ```
 
 Constructs GetDiskSnapshotResult's fields from required parameters
@@ -2878,7 +2878,7 @@ Constructs GetDiskSnapshotResult's fields from required parameters
 
 ``` purescript
 newtype GetDiskSnapshotsRequest
-  = GetDiskSnapshotsRequest { pageToken :: NullOrUndefined (String) }
+  = GetDiskSnapshotsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2901,7 +2901,7 @@ Constructs GetDiskSnapshotsRequest from required parameters
 #### `newGetDiskSnapshotsRequest'`
 
 ``` purescript
-newGetDiskSnapshotsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetDiskSnapshotsRequest
+newGetDiskSnapshotsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetDiskSnapshotsRequest
 ```
 
 Constructs GetDiskSnapshotsRequest's fields from required parameters
@@ -2910,7 +2910,7 @@ Constructs GetDiskSnapshotsRequest's fields from required parameters
 
 ``` purescript
 newtype GetDiskSnapshotsResult
-  = GetDiskSnapshotsResult { diskSnapshots :: NullOrUndefined (DiskSnapshotList), nextPageToken :: NullOrUndefined (String) }
+  = GetDiskSnapshotsResult { diskSnapshots :: Maybe (DiskSnapshotList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2933,7 +2933,7 @@ Constructs GetDiskSnapshotsResult from required parameters
 #### `newGetDiskSnapshotsResult'`
 
 ``` purescript
-newGetDiskSnapshotsResult' :: ({ diskSnapshots :: NullOrUndefined (DiskSnapshotList), nextPageToken :: NullOrUndefined (String) } -> { diskSnapshots :: NullOrUndefined (DiskSnapshotList), nextPageToken :: NullOrUndefined (String) }) -> GetDiskSnapshotsResult
+newGetDiskSnapshotsResult' :: ({ diskSnapshots :: Maybe (DiskSnapshotList), nextPageToken :: Maybe (String) } -> { diskSnapshots :: Maybe (DiskSnapshotList), nextPageToken :: Maybe (String) }) -> GetDiskSnapshotsResult
 ```
 
 Constructs GetDiskSnapshotsResult's fields from required parameters
@@ -2942,7 +2942,7 @@ Constructs GetDiskSnapshotsResult's fields from required parameters
 
 ``` purescript
 newtype GetDisksRequest
-  = GetDisksRequest { pageToken :: NullOrUndefined (String) }
+  = GetDisksRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2965,7 +2965,7 @@ Constructs GetDisksRequest from required parameters
 #### `newGetDisksRequest'`
 
 ``` purescript
-newGetDisksRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetDisksRequest
+newGetDisksRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetDisksRequest
 ```
 
 Constructs GetDisksRequest's fields from required parameters
@@ -2974,7 +2974,7 @@ Constructs GetDisksRequest's fields from required parameters
 
 ``` purescript
 newtype GetDisksResult
-  = GetDisksResult { disks :: NullOrUndefined (DiskList), nextPageToken :: NullOrUndefined (String) }
+  = GetDisksResult { disks :: Maybe (DiskList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2997,7 +2997,7 @@ Constructs GetDisksResult from required parameters
 #### `newGetDisksResult'`
 
 ``` purescript
-newGetDisksResult' :: ({ disks :: NullOrUndefined (DiskList), nextPageToken :: NullOrUndefined (String) } -> { disks :: NullOrUndefined (DiskList), nextPageToken :: NullOrUndefined (String) }) -> GetDisksResult
+newGetDisksResult' :: ({ disks :: Maybe (DiskList), nextPageToken :: Maybe (String) } -> { disks :: Maybe (DiskList), nextPageToken :: Maybe (String) }) -> GetDisksResult
 ```
 
 Constructs GetDisksResult's fields from required parameters
@@ -3038,7 +3038,7 @@ Constructs GetDomainRequest's fields from required parameters
 
 ``` purescript
 newtype GetDomainResult
-  = GetDomainResult { domain :: NullOrUndefined (Domain) }
+  = GetDomainResult { domain :: Maybe (Domain) }
 ```
 
 ##### Instances
@@ -3061,7 +3061,7 @@ Constructs GetDomainResult from required parameters
 #### `newGetDomainResult'`
 
 ``` purescript
-newGetDomainResult' :: ({ domain :: NullOrUndefined (Domain) } -> { domain :: NullOrUndefined (Domain) }) -> GetDomainResult
+newGetDomainResult' :: ({ domain :: Maybe (Domain) } -> { domain :: Maybe (Domain) }) -> GetDomainResult
 ```
 
 Constructs GetDomainResult's fields from required parameters
@@ -3070,7 +3070,7 @@ Constructs GetDomainResult's fields from required parameters
 
 ``` purescript
 newtype GetDomainsRequest
-  = GetDomainsRequest { pageToken :: NullOrUndefined (String) }
+  = GetDomainsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3093,7 +3093,7 @@ Constructs GetDomainsRequest from required parameters
 #### `newGetDomainsRequest'`
 
 ``` purescript
-newGetDomainsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetDomainsRequest
+newGetDomainsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetDomainsRequest
 ```
 
 Constructs GetDomainsRequest's fields from required parameters
@@ -3102,7 +3102,7 @@ Constructs GetDomainsRequest's fields from required parameters
 
 ``` purescript
 newtype GetDomainsResult
-  = GetDomainsResult { domains :: NullOrUndefined (DomainList), nextPageToken :: NullOrUndefined (String) }
+  = GetDomainsResult { domains :: Maybe (DomainList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3125,7 +3125,7 @@ Constructs GetDomainsResult from required parameters
 #### `newGetDomainsResult'`
 
 ``` purescript
-newGetDomainsResult' :: ({ domains :: NullOrUndefined (DomainList), nextPageToken :: NullOrUndefined (String) } -> { domains :: NullOrUndefined (DomainList), nextPageToken :: NullOrUndefined (String) }) -> GetDomainsResult
+newGetDomainsResult' :: ({ domains :: Maybe (DomainList), nextPageToken :: Maybe (String) } -> { domains :: Maybe (DomainList), nextPageToken :: Maybe (String) }) -> GetDomainsResult
 ```
 
 Constructs GetDomainsResult's fields from required parameters
@@ -3134,7 +3134,7 @@ Constructs GetDomainsResult's fields from required parameters
 
 ``` purescript
 newtype GetInstanceAccessDetailsRequest
-  = GetInstanceAccessDetailsRequest { instanceName :: ResourceName, protocol :: NullOrUndefined (InstanceAccessProtocol) }
+  = GetInstanceAccessDetailsRequest { instanceName :: ResourceName, protocol :: Maybe (InstanceAccessProtocol) }
 ```
 
 ##### Instances
@@ -3157,7 +3157,7 @@ Constructs GetInstanceAccessDetailsRequest from required parameters
 #### `newGetInstanceAccessDetailsRequest'`
 
 ``` purescript
-newGetInstanceAccessDetailsRequest' :: ResourceName -> ({ instanceName :: ResourceName, protocol :: NullOrUndefined (InstanceAccessProtocol) } -> { instanceName :: ResourceName, protocol :: NullOrUndefined (InstanceAccessProtocol) }) -> GetInstanceAccessDetailsRequest
+newGetInstanceAccessDetailsRequest' :: ResourceName -> ({ instanceName :: ResourceName, protocol :: Maybe (InstanceAccessProtocol) } -> { instanceName :: ResourceName, protocol :: Maybe (InstanceAccessProtocol) }) -> GetInstanceAccessDetailsRequest
 ```
 
 Constructs GetInstanceAccessDetailsRequest's fields from required parameters
@@ -3166,7 +3166,7 @@ Constructs GetInstanceAccessDetailsRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceAccessDetailsResult
-  = GetInstanceAccessDetailsResult { accessDetails :: NullOrUndefined (InstanceAccessDetails) }
+  = GetInstanceAccessDetailsResult { accessDetails :: Maybe (InstanceAccessDetails) }
 ```
 
 ##### Instances
@@ -3189,7 +3189,7 @@ Constructs GetInstanceAccessDetailsResult from required parameters
 #### `newGetInstanceAccessDetailsResult'`
 
 ``` purescript
-newGetInstanceAccessDetailsResult' :: ({ accessDetails :: NullOrUndefined (InstanceAccessDetails) } -> { accessDetails :: NullOrUndefined (InstanceAccessDetails) }) -> GetInstanceAccessDetailsResult
+newGetInstanceAccessDetailsResult' :: ({ accessDetails :: Maybe (InstanceAccessDetails) } -> { accessDetails :: Maybe (InstanceAccessDetails) }) -> GetInstanceAccessDetailsResult
 ```
 
 Constructs GetInstanceAccessDetailsResult's fields from required parameters
@@ -3230,7 +3230,7 @@ Constructs GetInstanceMetricDataRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceMetricDataResult
-  = GetInstanceMetricDataResult { metricName :: NullOrUndefined (InstanceMetricName), metricData :: NullOrUndefined (MetricDatapointList) }
+  = GetInstanceMetricDataResult { metricName :: Maybe (InstanceMetricName), metricData :: Maybe (MetricDatapointList) }
 ```
 
 ##### Instances
@@ -3253,7 +3253,7 @@ Constructs GetInstanceMetricDataResult from required parameters
 #### `newGetInstanceMetricDataResult'`
 
 ``` purescript
-newGetInstanceMetricDataResult' :: ({ metricName :: NullOrUndefined (InstanceMetricName), metricData :: NullOrUndefined (MetricDatapointList) } -> { metricName :: NullOrUndefined (InstanceMetricName), metricData :: NullOrUndefined (MetricDatapointList) }) -> GetInstanceMetricDataResult
+newGetInstanceMetricDataResult' :: ({ metricName :: Maybe (InstanceMetricName), metricData :: Maybe (MetricDatapointList) } -> { metricName :: Maybe (InstanceMetricName), metricData :: Maybe (MetricDatapointList) }) -> GetInstanceMetricDataResult
 ```
 
 Constructs GetInstanceMetricDataResult's fields from required parameters
@@ -3294,7 +3294,7 @@ Constructs GetInstancePortStatesRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstancePortStatesResult
-  = GetInstancePortStatesResult { portStates :: NullOrUndefined (InstancePortStateList) }
+  = GetInstancePortStatesResult { portStates :: Maybe (InstancePortStateList) }
 ```
 
 ##### Instances
@@ -3317,7 +3317,7 @@ Constructs GetInstancePortStatesResult from required parameters
 #### `newGetInstancePortStatesResult'`
 
 ``` purescript
-newGetInstancePortStatesResult' :: ({ portStates :: NullOrUndefined (InstancePortStateList) } -> { portStates :: NullOrUndefined (InstancePortStateList) }) -> GetInstancePortStatesResult
+newGetInstancePortStatesResult' :: ({ portStates :: Maybe (InstancePortStateList) } -> { portStates :: Maybe (InstancePortStateList) }) -> GetInstancePortStatesResult
 ```
 
 Constructs GetInstancePortStatesResult's fields from required parameters
@@ -3358,7 +3358,7 @@ Constructs GetInstanceRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceResult
-  = GetInstanceResult { "instance" :: NullOrUndefined (Instance) }
+  = GetInstanceResult { "instance" :: Maybe (Instance) }
 ```
 
 ##### Instances
@@ -3381,7 +3381,7 @@ Constructs GetInstanceResult from required parameters
 #### `newGetInstanceResult'`
 
 ``` purescript
-newGetInstanceResult' :: ({ "instance" :: NullOrUndefined (Instance) } -> { "instance" :: NullOrUndefined (Instance) }) -> GetInstanceResult
+newGetInstanceResult' :: ({ "instance" :: Maybe (Instance) } -> { "instance" :: Maybe (Instance) }) -> GetInstanceResult
 ```
 
 Constructs GetInstanceResult's fields from required parameters
@@ -3422,7 +3422,7 @@ Constructs GetInstanceSnapshotRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceSnapshotResult
-  = GetInstanceSnapshotResult { instanceSnapshot :: NullOrUndefined (InstanceSnapshot) }
+  = GetInstanceSnapshotResult { instanceSnapshot :: Maybe (InstanceSnapshot) }
 ```
 
 ##### Instances
@@ -3445,7 +3445,7 @@ Constructs GetInstanceSnapshotResult from required parameters
 #### `newGetInstanceSnapshotResult'`
 
 ``` purescript
-newGetInstanceSnapshotResult' :: ({ instanceSnapshot :: NullOrUndefined (InstanceSnapshot) } -> { instanceSnapshot :: NullOrUndefined (InstanceSnapshot) }) -> GetInstanceSnapshotResult
+newGetInstanceSnapshotResult' :: ({ instanceSnapshot :: Maybe (InstanceSnapshot) } -> { instanceSnapshot :: Maybe (InstanceSnapshot) }) -> GetInstanceSnapshotResult
 ```
 
 Constructs GetInstanceSnapshotResult's fields from required parameters
@@ -3454,7 +3454,7 @@ Constructs GetInstanceSnapshotResult's fields from required parameters
 
 ``` purescript
 newtype GetInstanceSnapshotsRequest
-  = GetInstanceSnapshotsRequest { pageToken :: NullOrUndefined (String) }
+  = GetInstanceSnapshotsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3477,7 +3477,7 @@ Constructs GetInstanceSnapshotsRequest from required parameters
 #### `newGetInstanceSnapshotsRequest'`
 
 ``` purescript
-newGetInstanceSnapshotsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetInstanceSnapshotsRequest
+newGetInstanceSnapshotsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetInstanceSnapshotsRequest
 ```
 
 Constructs GetInstanceSnapshotsRequest's fields from required parameters
@@ -3486,7 +3486,7 @@ Constructs GetInstanceSnapshotsRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceSnapshotsResult
-  = GetInstanceSnapshotsResult { instanceSnapshots :: NullOrUndefined (InstanceSnapshotList), nextPageToken :: NullOrUndefined (String) }
+  = GetInstanceSnapshotsResult { instanceSnapshots :: Maybe (InstanceSnapshotList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3509,7 +3509,7 @@ Constructs GetInstanceSnapshotsResult from required parameters
 #### `newGetInstanceSnapshotsResult'`
 
 ``` purescript
-newGetInstanceSnapshotsResult' :: ({ instanceSnapshots :: NullOrUndefined (InstanceSnapshotList), nextPageToken :: NullOrUndefined (String) } -> { instanceSnapshots :: NullOrUndefined (InstanceSnapshotList), nextPageToken :: NullOrUndefined (String) }) -> GetInstanceSnapshotsResult
+newGetInstanceSnapshotsResult' :: ({ instanceSnapshots :: Maybe (InstanceSnapshotList), nextPageToken :: Maybe (String) } -> { instanceSnapshots :: Maybe (InstanceSnapshotList), nextPageToken :: Maybe (String) }) -> GetInstanceSnapshotsResult
 ```
 
 Constructs GetInstanceSnapshotsResult's fields from required parameters
@@ -3550,7 +3550,7 @@ Constructs GetInstanceStateRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstanceStateResult
-  = GetInstanceStateResult { state :: NullOrUndefined (InstanceState) }
+  = GetInstanceStateResult { state :: Maybe (InstanceState) }
 ```
 
 ##### Instances
@@ -3573,7 +3573,7 @@ Constructs GetInstanceStateResult from required parameters
 #### `newGetInstanceStateResult'`
 
 ``` purescript
-newGetInstanceStateResult' :: ({ state :: NullOrUndefined (InstanceState) } -> { state :: NullOrUndefined (InstanceState) }) -> GetInstanceStateResult
+newGetInstanceStateResult' :: ({ state :: Maybe (InstanceState) } -> { state :: Maybe (InstanceState) }) -> GetInstanceStateResult
 ```
 
 Constructs GetInstanceStateResult's fields from required parameters
@@ -3582,7 +3582,7 @@ Constructs GetInstanceStateResult's fields from required parameters
 
 ``` purescript
 newtype GetInstancesRequest
-  = GetInstancesRequest { pageToken :: NullOrUndefined (String) }
+  = GetInstancesRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3605,7 +3605,7 @@ Constructs GetInstancesRequest from required parameters
 #### `newGetInstancesRequest'`
 
 ``` purescript
-newGetInstancesRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetInstancesRequest
+newGetInstancesRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetInstancesRequest
 ```
 
 Constructs GetInstancesRequest's fields from required parameters
@@ -3614,7 +3614,7 @@ Constructs GetInstancesRequest's fields from required parameters
 
 ``` purescript
 newtype GetInstancesResult
-  = GetInstancesResult { instances :: NullOrUndefined (InstanceList), nextPageToken :: NullOrUndefined (String) }
+  = GetInstancesResult { instances :: Maybe (InstanceList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3637,7 +3637,7 @@ Constructs GetInstancesResult from required parameters
 #### `newGetInstancesResult'`
 
 ``` purescript
-newGetInstancesResult' :: ({ instances :: NullOrUndefined (InstanceList), nextPageToken :: NullOrUndefined (String) } -> { instances :: NullOrUndefined (InstanceList), nextPageToken :: NullOrUndefined (String) }) -> GetInstancesResult
+newGetInstancesResult' :: ({ instances :: Maybe (InstanceList), nextPageToken :: Maybe (String) } -> { instances :: Maybe (InstanceList), nextPageToken :: Maybe (String) }) -> GetInstancesResult
 ```
 
 Constructs GetInstancesResult's fields from required parameters
@@ -3678,7 +3678,7 @@ Constructs GetKeyPairRequest's fields from required parameters
 
 ``` purescript
 newtype GetKeyPairResult
-  = GetKeyPairResult { keyPair :: NullOrUndefined (KeyPair) }
+  = GetKeyPairResult { keyPair :: Maybe (KeyPair) }
 ```
 
 ##### Instances
@@ -3701,7 +3701,7 @@ Constructs GetKeyPairResult from required parameters
 #### `newGetKeyPairResult'`
 
 ``` purescript
-newGetKeyPairResult' :: ({ keyPair :: NullOrUndefined (KeyPair) } -> { keyPair :: NullOrUndefined (KeyPair) }) -> GetKeyPairResult
+newGetKeyPairResult' :: ({ keyPair :: Maybe (KeyPair) } -> { keyPair :: Maybe (KeyPair) }) -> GetKeyPairResult
 ```
 
 Constructs GetKeyPairResult's fields from required parameters
@@ -3710,7 +3710,7 @@ Constructs GetKeyPairResult's fields from required parameters
 
 ``` purescript
 newtype GetKeyPairsRequest
-  = GetKeyPairsRequest { pageToken :: NullOrUndefined (String) }
+  = GetKeyPairsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3733,7 +3733,7 @@ Constructs GetKeyPairsRequest from required parameters
 #### `newGetKeyPairsRequest'`
 
 ``` purescript
-newGetKeyPairsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetKeyPairsRequest
+newGetKeyPairsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetKeyPairsRequest
 ```
 
 Constructs GetKeyPairsRequest's fields from required parameters
@@ -3742,7 +3742,7 @@ Constructs GetKeyPairsRequest's fields from required parameters
 
 ``` purescript
 newtype GetKeyPairsResult
-  = GetKeyPairsResult { keyPairs :: NullOrUndefined (KeyPairList), nextPageToken :: NullOrUndefined (String) }
+  = GetKeyPairsResult { keyPairs :: Maybe (KeyPairList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3765,7 +3765,7 @@ Constructs GetKeyPairsResult from required parameters
 #### `newGetKeyPairsResult'`
 
 ``` purescript
-newGetKeyPairsResult' :: ({ keyPairs :: NullOrUndefined (KeyPairList), nextPageToken :: NullOrUndefined (String) } -> { keyPairs :: NullOrUndefined (KeyPairList), nextPageToken :: NullOrUndefined (String) }) -> GetKeyPairsResult
+newGetKeyPairsResult' :: ({ keyPairs :: Maybe (KeyPairList), nextPageToken :: Maybe (String) } -> { keyPairs :: Maybe (KeyPairList), nextPageToken :: Maybe (String) }) -> GetKeyPairsResult
 ```
 
 Constructs GetKeyPairsResult's fields from required parameters
@@ -3806,7 +3806,7 @@ Constructs GetLoadBalancerMetricDataRequest's fields from required parameters
 
 ``` purescript
 newtype GetLoadBalancerMetricDataResult
-  = GetLoadBalancerMetricDataResult { metricName :: NullOrUndefined (LoadBalancerMetricName), metricData :: NullOrUndefined (MetricDatapointList) }
+  = GetLoadBalancerMetricDataResult { metricName :: Maybe (LoadBalancerMetricName), metricData :: Maybe (MetricDatapointList) }
 ```
 
 ##### Instances
@@ -3829,7 +3829,7 @@ Constructs GetLoadBalancerMetricDataResult from required parameters
 #### `newGetLoadBalancerMetricDataResult'`
 
 ``` purescript
-newGetLoadBalancerMetricDataResult' :: ({ metricName :: NullOrUndefined (LoadBalancerMetricName), metricData :: NullOrUndefined (MetricDatapointList) } -> { metricName :: NullOrUndefined (LoadBalancerMetricName), metricData :: NullOrUndefined (MetricDatapointList) }) -> GetLoadBalancerMetricDataResult
+newGetLoadBalancerMetricDataResult' :: ({ metricName :: Maybe (LoadBalancerMetricName), metricData :: Maybe (MetricDatapointList) } -> { metricName :: Maybe (LoadBalancerMetricName), metricData :: Maybe (MetricDatapointList) }) -> GetLoadBalancerMetricDataResult
 ```
 
 Constructs GetLoadBalancerMetricDataResult's fields from required parameters
@@ -3870,7 +3870,7 @@ Constructs GetLoadBalancerRequest's fields from required parameters
 
 ``` purescript
 newtype GetLoadBalancerResult
-  = GetLoadBalancerResult { loadBalancer :: NullOrUndefined (LoadBalancer) }
+  = GetLoadBalancerResult { loadBalancer :: Maybe (LoadBalancer) }
 ```
 
 ##### Instances
@@ -3893,7 +3893,7 @@ Constructs GetLoadBalancerResult from required parameters
 #### `newGetLoadBalancerResult'`
 
 ``` purescript
-newGetLoadBalancerResult' :: ({ loadBalancer :: NullOrUndefined (LoadBalancer) } -> { loadBalancer :: NullOrUndefined (LoadBalancer) }) -> GetLoadBalancerResult
+newGetLoadBalancerResult' :: ({ loadBalancer :: Maybe (LoadBalancer) } -> { loadBalancer :: Maybe (LoadBalancer) }) -> GetLoadBalancerResult
 ```
 
 Constructs GetLoadBalancerResult's fields from required parameters
@@ -3934,7 +3934,7 @@ Constructs GetLoadBalancerTlsCertificatesRequest's fields from required paramete
 
 ``` purescript
 newtype GetLoadBalancerTlsCertificatesResult
-  = GetLoadBalancerTlsCertificatesResult { tlsCertificates :: NullOrUndefined (LoadBalancerTlsCertificateList) }
+  = GetLoadBalancerTlsCertificatesResult { tlsCertificates :: Maybe (LoadBalancerTlsCertificateList) }
 ```
 
 ##### Instances
@@ -3957,7 +3957,7 @@ Constructs GetLoadBalancerTlsCertificatesResult from required parameters
 #### `newGetLoadBalancerTlsCertificatesResult'`
 
 ``` purescript
-newGetLoadBalancerTlsCertificatesResult' :: ({ tlsCertificates :: NullOrUndefined (LoadBalancerTlsCertificateList) } -> { tlsCertificates :: NullOrUndefined (LoadBalancerTlsCertificateList) }) -> GetLoadBalancerTlsCertificatesResult
+newGetLoadBalancerTlsCertificatesResult' :: ({ tlsCertificates :: Maybe (LoadBalancerTlsCertificateList) } -> { tlsCertificates :: Maybe (LoadBalancerTlsCertificateList) }) -> GetLoadBalancerTlsCertificatesResult
 ```
 
 Constructs GetLoadBalancerTlsCertificatesResult's fields from required parameters
@@ -3966,7 +3966,7 @@ Constructs GetLoadBalancerTlsCertificatesResult's fields from required parameter
 
 ``` purescript
 newtype GetLoadBalancersRequest
-  = GetLoadBalancersRequest { pageToken :: NullOrUndefined (String) }
+  = GetLoadBalancersRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3989,7 +3989,7 @@ Constructs GetLoadBalancersRequest from required parameters
 #### `newGetLoadBalancersRequest'`
 
 ``` purescript
-newGetLoadBalancersRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetLoadBalancersRequest
+newGetLoadBalancersRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetLoadBalancersRequest
 ```
 
 Constructs GetLoadBalancersRequest's fields from required parameters
@@ -3998,7 +3998,7 @@ Constructs GetLoadBalancersRequest's fields from required parameters
 
 ``` purescript
 newtype GetLoadBalancersResult
-  = GetLoadBalancersResult { loadBalancers :: NullOrUndefined (LoadBalancerList), nextPageToken :: NullOrUndefined (String) }
+  = GetLoadBalancersResult { loadBalancers :: Maybe (LoadBalancerList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4021,7 +4021,7 @@ Constructs GetLoadBalancersResult from required parameters
 #### `newGetLoadBalancersResult'`
 
 ``` purescript
-newGetLoadBalancersResult' :: ({ loadBalancers :: NullOrUndefined (LoadBalancerList), nextPageToken :: NullOrUndefined (String) } -> { loadBalancers :: NullOrUndefined (LoadBalancerList), nextPageToken :: NullOrUndefined (String) }) -> GetLoadBalancersResult
+newGetLoadBalancersResult' :: ({ loadBalancers :: Maybe (LoadBalancerList), nextPageToken :: Maybe (String) } -> { loadBalancers :: Maybe (LoadBalancerList), nextPageToken :: Maybe (String) }) -> GetLoadBalancersResult
 ```
 
 Constructs GetLoadBalancersResult's fields from required parameters
@@ -4062,7 +4062,7 @@ Constructs GetOperationRequest's fields from required parameters
 
 ``` purescript
 newtype GetOperationResult
-  = GetOperationResult { operation :: NullOrUndefined (Operation) }
+  = GetOperationResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -4085,7 +4085,7 @@ Constructs GetOperationResult from required parameters
 #### `newGetOperationResult'`
 
 ``` purescript
-newGetOperationResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> GetOperationResult
+newGetOperationResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> GetOperationResult
 ```
 
 Constructs GetOperationResult's fields from required parameters
@@ -4094,7 +4094,7 @@ Constructs GetOperationResult's fields from required parameters
 
 ``` purescript
 newtype GetOperationsForResourceRequest
-  = GetOperationsForResourceRequest { resourceName :: ResourceName, pageToken :: NullOrUndefined (String) }
+  = GetOperationsForResourceRequest { resourceName :: ResourceName, pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4117,7 +4117,7 @@ Constructs GetOperationsForResourceRequest from required parameters
 #### `newGetOperationsForResourceRequest'`
 
 ``` purescript
-newGetOperationsForResourceRequest' :: ResourceName -> ({ resourceName :: ResourceName, pageToken :: NullOrUndefined (String) } -> { resourceName :: ResourceName, pageToken :: NullOrUndefined (String) }) -> GetOperationsForResourceRequest
+newGetOperationsForResourceRequest' :: ResourceName -> ({ resourceName :: ResourceName, pageToken :: Maybe (String) } -> { resourceName :: ResourceName, pageToken :: Maybe (String) }) -> GetOperationsForResourceRequest
 ```
 
 Constructs GetOperationsForResourceRequest's fields from required parameters
@@ -4126,7 +4126,7 @@ Constructs GetOperationsForResourceRequest's fields from required parameters
 
 ``` purescript
 newtype GetOperationsForResourceResult
-  = GetOperationsForResourceResult { operations :: NullOrUndefined (OperationList), nextPageCount :: NullOrUndefined (String), nextPageToken :: NullOrUndefined (String) }
+  = GetOperationsForResourceResult { operations :: Maybe (OperationList), nextPageCount :: Maybe (String), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4149,7 +4149,7 @@ Constructs GetOperationsForResourceResult from required parameters
 #### `newGetOperationsForResourceResult'`
 
 ``` purescript
-newGetOperationsForResourceResult' :: ({ operations :: NullOrUndefined (OperationList), nextPageCount :: NullOrUndefined (String), nextPageToken :: NullOrUndefined (String) } -> { operations :: NullOrUndefined (OperationList), nextPageCount :: NullOrUndefined (String), nextPageToken :: NullOrUndefined (String) }) -> GetOperationsForResourceResult
+newGetOperationsForResourceResult' :: ({ operations :: Maybe (OperationList), nextPageCount :: Maybe (String), nextPageToken :: Maybe (String) } -> { operations :: Maybe (OperationList), nextPageCount :: Maybe (String), nextPageToken :: Maybe (String) }) -> GetOperationsForResourceResult
 ```
 
 Constructs GetOperationsForResourceResult's fields from required parameters
@@ -4158,7 +4158,7 @@ Constructs GetOperationsForResourceResult's fields from required parameters
 
 ``` purescript
 newtype GetOperationsRequest
-  = GetOperationsRequest { pageToken :: NullOrUndefined (String) }
+  = GetOperationsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4181,7 +4181,7 @@ Constructs GetOperationsRequest from required parameters
 #### `newGetOperationsRequest'`
 
 ``` purescript
-newGetOperationsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetOperationsRequest
+newGetOperationsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetOperationsRequest
 ```
 
 Constructs GetOperationsRequest's fields from required parameters
@@ -4190,7 +4190,7 @@ Constructs GetOperationsRequest's fields from required parameters
 
 ``` purescript
 newtype GetOperationsResult
-  = GetOperationsResult { operations :: NullOrUndefined (OperationList), nextPageToken :: NullOrUndefined (String) }
+  = GetOperationsResult { operations :: Maybe (OperationList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4213,7 +4213,7 @@ Constructs GetOperationsResult from required parameters
 #### `newGetOperationsResult'`
 
 ``` purescript
-newGetOperationsResult' :: ({ operations :: NullOrUndefined (OperationList), nextPageToken :: NullOrUndefined (String) } -> { operations :: NullOrUndefined (OperationList), nextPageToken :: NullOrUndefined (String) }) -> GetOperationsResult
+newGetOperationsResult' :: ({ operations :: Maybe (OperationList), nextPageToken :: Maybe (String) } -> { operations :: Maybe (OperationList), nextPageToken :: Maybe (String) }) -> GetOperationsResult
 ```
 
 Constructs GetOperationsResult's fields from required parameters
@@ -4222,7 +4222,7 @@ Constructs GetOperationsResult's fields from required parameters
 
 ``` purescript
 newtype GetRegionsRequest
-  = GetRegionsRequest { includeAvailabilityZones :: NullOrUndefined (Boolean) }
+  = GetRegionsRequest { includeAvailabilityZones :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -4245,7 +4245,7 @@ Constructs GetRegionsRequest from required parameters
 #### `newGetRegionsRequest'`
 
 ``` purescript
-newGetRegionsRequest' :: ({ includeAvailabilityZones :: NullOrUndefined (Boolean) } -> { includeAvailabilityZones :: NullOrUndefined (Boolean) }) -> GetRegionsRequest
+newGetRegionsRequest' :: ({ includeAvailabilityZones :: Maybe (Boolean) } -> { includeAvailabilityZones :: Maybe (Boolean) }) -> GetRegionsRequest
 ```
 
 Constructs GetRegionsRequest's fields from required parameters
@@ -4254,7 +4254,7 @@ Constructs GetRegionsRequest's fields from required parameters
 
 ``` purescript
 newtype GetRegionsResult
-  = GetRegionsResult { regions :: NullOrUndefined (RegionList) }
+  = GetRegionsResult { regions :: Maybe (RegionList) }
 ```
 
 ##### Instances
@@ -4277,7 +4277,7 @@ Constructs GetRegionsResult from required parameters
 #### `newGetRegionsResult'`
 
 ``` purescript
-newGetRegionsResult' :: ({ regions :: NullOrUndefined (RegionList) } -> { regions :: NullOrUndefined (RegionList) }) -> GetRegionsResult
+newGetRegionsResult' :: ({ regions :: Maybe (RegionList) } -> { regions :: Maybe (RegionList) }) -> GetRegionsResult
 ```
 
 Constructs GetRegionsResult's fields from required parameters
@@ -4318,7 +4318,7 @@ Constructs GetStaticIpRequest's fields from required parameters
 
 ``` purescript
 newtype GetStaticIpResult
-  = GetStaticIpResult { staticIp :: NullOrUndefined (StaticIp) }
+  = GetStaticIpResult { staticIp :: Maybe (StaticIp) }
 ```
 
 ##### Instances
@@ -4341,7 +4341,7 @@ Constructs GetStaticIpResult from required parameters
 #### `newGetStaticIpResult'`
 
 ``` purescript
-newGetStaticIpResult' :: ({ staticIp :: NullOrUndefined (StaticIp) } -> { staticIp :: NullOrUndefined (StaticIp) }) -> GetStaticIpResult
+newGetStaticIpResult' :: ({ staticIp :: Maybe (StaticIp) } -> { staticIp :: Maybe (StaticIp) }) -> GetStaticIpResult
 ```
 
 Constructs GetStaticIpResult's fields from required parameters
@@ -4350,7 +4350,7 @@ Constructs GetStaticIpResult's fields from required parameters
 
 ``` purescript
 newtype GetStaticIpsRequest
-  = GetStaticIpsRequest { pageToken :: NullOrUndefined (String) }
+  = GetStaticIpsRequest { pageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4373,7 +4373,7 @@ Constructs GetStaticIpsRequest from required parameters
 #### `newGetStaticIpsRequest'`
 
 ``` purescript
-newGetStaticIpsRequest' :: ({ pageToken :: NullOrUndefined (String) } -> { pageToken :: NullOrUndefined (String) }) -> GetStaticIpsRequest
+newGetStaticIpsRequest' :: ({ pageToken :: Maybe (String) } -> { pageToken :: Maybe (String) }) -> GetStaticIpsRequest
 ```
 
 Constructs GetStaticIpsRequest's fields from required parameters
@@ -4382,7 +4382,7 @@ Constructs GetStaticIpsRequest's fields from required parameters
 
 ``` purescript
 newtype GetStaticIpsResult
-  = GetStaticIpsResult { staticIps :: NullOrUndefined (StaticIpList), nextPageToken :: NullOrUndefined (String) }
+  = GetStaticIpsResult { staticIps :: Maybe (StaticIpList), nextPageToken :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4405,7 +4405,7 @@ Constructs GetStaticIpsResult from required parameters
 #### `newGetStaticIpsResult'`
 
 ``` purescript
-newGetStaticIpsResult' :: ({ staticIps :: NullOrUndefined (StaticIpList), nextPageToken :: NullOrUndefined (String) } -> { staticIps :: NullOrUndefined (StaticIpList), nextPageToken :: NullOrUndefined (String) }) -> GetStaticIpsResult
+newGetStaticIpsResult' :: ({ staticIps :: Maybe (StaticIpList), nextPageToken :: Maybe (String) } -> { staticIps :: Maybe (StaticIpList), nextPageToken :: Maybe (String) }) -> GetStaticIpsResult
 ```
 
 Constructs GetStaticIpsResult's fields from required parameters
@@ -4446,7 +4446,7 @@ Constructs ImportKeyPairRequest's fields from required parameters
 
 ``` purescript
 newtype ImportKeyPairResult
-  = ImportKeyPairResult { operation :: NullOrUndefined (Operation) }
+  = ImportKeyPairResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -4469,7 +4469,7 @@ Constructs ImportKeyPairResult from required parameters
 #### `newImportKeyPairResult'`
 
 ``` purescript
-newImportKeyPairResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> ImportKeyPairResult
+newImportKeyPairResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> ImportKeyPairResult
 ```
 
 Constructs ImportKeyPairResult's fields from required parameters
@@ -4478,7 +4478,7 @@ Constructs ImportKeyPairResult's fields from required parameters
 
 ``` purescript
 newtype Instance
-  = Instance { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), blueprintId :: NullOrUndefined (NonEmptyString), blueprintName :: NullOrUndefined (NonEmptyString), bundleId :: NullOrUndefined (NonEmptyString), isStaticIp :: NullOrUndefined (Boolean), privateIpAddress :: NullOrUndefined (IpAddress), publicIpAddress :: NullOrUndefined (IpAddress), ipv6Address :: NullOrUndefined (IpV6Address), hardware :: NullOrUndefined (InstanceHardware), networking :: NullOrUndefined (InstanceNetworking), state :: NullOrUndefined (InstanceState), username :: NullOrUndefined (NonEmptyString), sshKeyName :: NullOrUndefined (ResourceName) }
+  = Instance { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), blueprintId :: Maybe (NonEmptyString), blueprintName :: Maybe (NonEmptyString), bundleId :: Maybe (NonEmptyString), isStaticIp :: Maybe (Boolean), privateIpAddress :: Maybe (IpAddress), publicIpAddress :: Maybe (IpAddress), ipv6Address :: Maybe (IpV6Address), hardware :: Maybe (InstanceHardware), networking :: Maybe (InstanceNetworking), state :: Maybe (InstanceState), username :: Maybe (NonEmptyString), sshKeyName :: Maybe (ResourceName) }
 ```
 
 <p>Describes an instance (a virtual private server).</p>
@@ -4503,7 +4503,7 @@ Constructs Instance from required parameters
 #### `newInstance'`
 
 ``` purescript
-newInstance' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), blueprintId :: NullOrUndefined (NonEmptyString), blueprintName :: NullOrUndefined (NonEmptyString), bundleId :: NullOrUndefined (NonEmptyString), isStaticIp :: NullOrUndefined (Boolean), privateIpAddress :: NullOrUndefined (IpAddress), publicIpAddress :: NullOrUndefined (IpAddress), ipv6Address :: NullOrUndefined (IpV6Address), hardware :: NullOrUndefined (InstanceHardware), networking :: NullOrUndefined (InstanceNetworking), state :: NullOrUndefined (InstanceState), username :: NullOrUndefined (NonEmptyString), sshKeyName :: NullOrUndefined (ResourceName) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), blueprintId :: NullOrUndefined (NonEmptyString), blueprintName :: NullOrUndefined (NonEmptyString), bundleId :: NullOrUndefined (NonEmptyString), isStaticIp :: NullOrUndefined (Boolean), privateIpAddress :: NullOrUndefined (IpAddress), publicIpAddress :: NullOrUndefined (IpAddress), ipv6Address :: NullOrUndefined (IpV6Address), hardware :: NullOrUndefined (InstanceHardware), networking :: NullOrUndefined (InstanceNetworking), state :: NullOrUndefined (InstanceState), username :: NullOrUndefined (NonEmptyString), sshKeyName :: NullOrUndefined (ResourceName) }) -> Instance
+newInstance' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), blueprintId :: Maybe (NonEmptyString), blueprintName :: Maybe (NonEmptyString), bundleId :: Maybe (NonEmptyString), isStaticIp :: Maybe (Boolean), privateIpAddress :: Maybe (IpAddress), publicIpAddress :: Maybe (IpAddress), ipv6Address :: Maybe (IpV6Address), hardware :: Maybe (InstanceHardware), networking :: Maybe (InstanceNetworking), state :: Maybe (InstanceState), username :: Maybe (NonEmptyString), sshKeyName :: Maybe (ResourceName) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), blueprintId :: Maybe (NonEmptyString), blueprintName :: Maybe (NonEmptyString), bundleId :: Maybe (NonEmptyString), isStaticIp :: Maybe (Boolean), privateIpAddress :: Maybe (IpAddress), publicIpAddress :: Maybe (IpAddress), ipv6Address :: Maybe (IpV6Address), hardware :: Maybe (InstanceHardware), networking :: Maybe (InstanceNetworking), state :: Maybe (InstanceState), username :: Maybe (NonEmptyString), sshKeyName :: Maybe (ResourceName) }) -> Instance
 ```
 
 Constructs Instance's fields from required parameters
@@ -4512,7 +4512,7 @@ Constructs Instance's fields from required parameters
 
 ``` purescript
 newtype InstanceAccessDetails
-  = InstanceAccessDetails { certKey :: NullOrUndefined (String), expiresAt :: NullOrUndefined (IsoDate), ipAddress :: NullOrUndefined (IpAddress), password :: NullOrUndefined (String), passwordData :: NullOrUndefined (PasswordData), privateKey :: NullOrUndefined (String), protocol :: NullOrUndefined (InstanceAccessProtocol), instanceName :: NullOrUndefined (ResourceName), username :: NullOrUndefined (String) }
+  = InstanceAccessDetails { certKey :: Maybe (String), expiresAt :: Maybe (IsoDate), ipAddress :: Maybe (IpAddress), password :: Maybe (String), passwordData :: Maybe (PasswordData), privateKey :: Maybe (String), protocol :: Maybe (InstanceAccessProtocol), instanceName :: Maybe (ResourceName), username :: Maybe (String) }
 ```
 
 <p>The parameters for gaining temporary access to one of your Amazon Lightsail instances.</p>
@@ -4537,7 +4537,7 @@ Constructs InstanceAccessDetails from required parameters
 #### `newInstanceAccessDetails'`
 
 ``` purescript
-newInstanceAccessDetails' :: ({ certKey :: NullOrUndefined (String), expiresAt :: NullOrUndefined (IsoDate), ipAddress :: NullOrUndefined (IpAddress), password :: NullOrUndefined (String), passwordData :: NullOrUndefined (PasswordData), privateKey :: NullOrUndefined (String), protocol :: NullOrUndefined (InstanceAccessProtocol), instanceName :: NullOrUndefined (ResourceName), username :: NullOrUndefined (String) } -> { certKey :: NullOrUndefined (String), expiresAt :: NullOrUndefined (IsoDate), ipAddress :: NullOrUndefined (IpAddress), password :: NullOrUndefined (String), passwordData :: NullOrUndefined (PasswordData), privateKey :: NullOrUndefined (String), protocol :: NullOrUndefined (InstanceAccessProtocol), instanceName :: NullOrUndefined (ResourceName), username :: NullOrUndefined (String) }) -> InstanceAccessDetails
+newInstanceAccessDetails' :: ({ certKey :: Maybe (String), expiresAt :: Maybe (IsoDate), ipAddress :: Maybe (IpAddress), password :: Maybe (String), passwordData :: Maybe (PasswordData), privateKey :: Maybe (String), protocol :: Maybe (InstanceAccessProtocol), instanceName :: Maybe (ResourceName), username :: Maybe (String) } -> { certKey :: Maybe (String), expiresAt :: Maybe (IsoDate), ipAddress :: Maybe (IpAddress), password :: Maybe (String), passwordData :: Maybe (PasswordData), privateKey :: Maybe (String), protocol :: Maybe (InstanceAccessProtocol), instanceName :: Maybe (ResourceName), username :: Maybe (String) }) -> InstanceAccessDetails
 ```
 
 Constructs InstanceAccessDetails's fields from required parameters
@@ -4562,7 +4562,7 @@ Encode InstanceAccessProtocol
 
 ``` purescript
 newtype InstanceHardware
-  = InstanceHardware { cpuCount :: NullOrUndefined (Int), disks :: NullOrUndefined (DiskList), ramSizeInGb :: NullOrUndefined (Number) }
+  = InstanceHardware { cpuCount :: Maybe (Int), disks :: Maybe (DiskList), ramSizeInGb :: Maybe (Number) }
 ```
 
 <p>Describes the hardware for the instance.</p>
@@ -4587,7 +4587,7 @@ Constructs InstanceHardware from required parameters
 #### `newInstanceHardware'`
 
 ``` purescript
-newInstanceHardware' :: ({ cpuCount :: NullOrUndefined (Int), disks :: NullOrUndefined (DiskList), ramSizeInGb :: NullOrUndefined (Number) } -> { cpuCount :: NullOrUndefined (Int), disks :: NullOrUndefined (DiskList), ramSizeInGb :: NullOrUndefined (Number) }) -> InstanceHardware
+newInstanceHardware' :: ({ cpuCount :: Maybe (Int), disks :: Maybe (DiskList), ramSizeInGb :: Maybe (Number) } -> { cpuCount :: Maybe (Int), disks :: Maybe (DiskList), ramSizeInGb :: Maybe (Number) }) -> InstanceHardware
 ```
 
 Constructs InstanceHardware's fields from required parameters
@@ -4628,7 +4628,7 @@ Encode InstanceHealthState
 
 ``` purescript
 newtype InstanceHealthSummary
-  = InstanceHealthSummary { instanceName :: NullOrUndefined (ResourceName), instanceHealth :: NullOrUndefined (InstanceHealthState), instanceHealthReason :: NullOrUndefined (InstanceHealthReason) }
+  = InstanceHealthSummary { instanceName :: Maybe (ResourceName), instanceHealth :: Maybe (InstanceHealthState), instanceHealthReason :: Maybe (InstanceHealthReason) }
 ```
 
 <p>Describes information about the health of the instance.</p>
@@ -4653,7 +4653,7 @@ Constructs InstanceHealthSummary from required parameters
 #### `newInstanceHealthSummary'`
 
 ``` purescript
-newInstanceHealthSummary' :: ({ instanceName :: NullOrUndefined (ResourceName), instanceHealth :: NullOrUndefined (InstanceHealthState), instanceHealthReason :: NullOrUndefined (InstanceHealthReason) } -> { instanceName :: NullOrUndefined (ResourceName), instanceHealth :: NullOrUndefined (InstanceHealthState), instanceHealthReason :: NullOrUndefined (InstanceHealthReason) }) -> InstanceHealthSummary
+newInstanceHealthSummary' :: ({ instanceName :: Maybe (ResourceName), instanceHealth :: Maybe (InstanceHealthState), instanceHealthReason :: Maybe (InstanceHealthReason) } -> { instanceName :: Maybe (ResourceName), instanceHealth :: Maybe (InstanceHealthState), instanceHealthReason :: Maybe (InstanceHealthReason) }) -> InstanceHealthSummary
 ```
 
 Constructs InstanceHealthSummary's fields from required parameters
@@ -4710,7 +4710,7 @@ Encode InstanceMetricName
 
 ``` purescript
 newtype InstanceNetworking
-  = InstanceNetworking { monthlyTransfer :: NullOrUndefined (MonthlyTransfer), ports :: NullOrUndefined (InstancePortInfoList) }
+  = InstanceNetworking { monthlyTransfer :: Maybe (MonthlyTransfer), ports :: Maybe (InstancePortInfoList) }
 ```
 
 <p>Describes monthly data transfer rates and port information for an instance.</p>
@@ -4735,7 +4735,7 @@ Constructs InstanceNetworking from required parameters
 #### `newInstanceNetworking'`
 
 ``` purescript
-newInstanceNetworking' :: ({ monthlyTransfer :: NullOrUndefined (MonthlyTransfer), ports :: NullOrUndefined (InstancePortInfoList) } -> { monthlyTransfer :: NullOrUndefined (MonthlyTransfer), ports :: NullOrUndefined (InstancePortInfoList) }) -> InstanceNetworking
+newInstanceNetworking' :: ({ monthlyTransfer :: Maybe (MonthlyTransfer), ports :: Maybe (InstancePortInfoList) } -> { monthlyTransfer :: Maybe (MonthlyTransfer), ports :: Maybe (InstancePortInfoList) }) -> InstanceNetworking
 ```
 
 Constructs InstanceNetworking's fields from required parameters
@@ -4776,7 +4776,7 @@ Encode InstancePlatformList
 
 ``` purescript
 newtype InstancePortInfo
-  = InstancePortInfo { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), accessFrom :: NullOrUndefined (String), accessType :: NullOrUndefined (PortAccessType), commonName :: NullOrUndefined (String), accessDirection :: NullOrUndefined (AccessDirection) }
+  = InstancePortInfo { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), accessFrom :: Maybe (String), accessType :: Maybe (PortAccessType), commonName :: Maybe (String), accessDirection :: Maybe (AccessDirection) }
 ```
 
 <p>Describes information about the instance ports.</p>
@@ -4801,7 +4801,7 @@ Constructs InstancePortInfo from required parameters
 #### `newInstancePortInfo'`
 
 ``` purescript
-newInstancePortInfo' :: ({ fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), accessFrom :: NullOrUndefined (String), accessType :: NullOrUndefined (PortAccessType), commonName :: NullOrUndefined (String), accessDirection :: NullOrUndefined (AccessDirection) } -> { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), accessFrom :: NullOrUndefined (String), accessType :: NullOrUndefined (PortAccessType), commonName :: NullOrUndefined (String), accessDirection :: NullOrUndefined (AccessDirection) }) -> InstancePortInfo
+newInstancePortInfo' :: ({ fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), accessFrom :: Maybe (String), accessType :: Maybe (PortAccessType), commonName :: Maybe (String), accessDirection :: Maybe (AccessDirection) } -> { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), accessFrom :: Maybe (String), accessType :: Maybe (PortAccessType), commonName :: Maybe (String), accessDirection :: Maybe (AccessDirection) }) -> InstancePortInfo
 ```
 
 Constructs InstancePortInfo's fields from required parameters
@@ -4826,7 +4826,7 @@ Encode InstancePortInfoList
 
 ``` purescript
 newtype InstancePortState
-  = InstancePortState { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), state :: NullOrUndefined (PortState) }
+  = InstancePortState { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), state :: Maybe (PortState) }
 ```
 
 <p>Describes the port state.</p>
@@ -4851,7 +4851,7 @@ Constructs InstancePortState from required parameters
 #### `newInstancePortState'`
 
 ``` purescript
-newInstancePortState' :: ({ fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), state :: NullOrUndefined (PortState) } -> { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol), state :: NullOrUndefined (PortState) }) -> InstancePortState
+newInstancePortState' :: ({ fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), state :: Maybe (PortState) } -> { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol), state :: Maybe (PortState) }) -> InstancePortState
 ```
 
 Constructs InstancePortState's fields from required parameters
@@ -4876,7 +4876,7 @@ Encode InstancePortStateList
 
 ``` purescript
 newtype InstanceSnapshot
-  = InstanceSnapshot { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), state :: NullOrUndefined (InstanceSnapshotState), progress :: NullOrUndefined (String), fromAttachedDisks :: NullOrUndefined (DiskList), fromInstanceName :: NullOrUndefined (ResourceName), fromInstanceArn :: NullOrUndefined (NonEmptyString), fromBlueprintId :: NullOrUndefined (String), fromBundleId :: NullOrUndefined (String), sizeInGb :: NullOrUndefined (Int) }
+  = InstanceSnapshot { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), state :: Maybe (InstanceSnapshotState), progress :: Maybe (String), fromAttachedDisks :: Maybe (DiskList), fromInstanceName :: Maybe (ResourceName), fromInstanceArn :: Maybe (NonEmptyString), fromBlueprintId :: Maybe (String), fromBundleId :: Maybe (String), sizeInGb :: Maybe (Int) }
 ```
 
 <p>Describes the snapshot of the virtual private server, or <i>instance</i>.</p>
@@ -4901,7 +4901,7 @@ Constructs InstanceSnapshot from required parameters
 #### `newInstanceSnapshot'`
 
 ``` purescript
-newInstanceSnapshot' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), state :: NullOrUndefined (InstanceSnapshotState), progress :: NullOrUndefined (String), fromAttachedDisks :: NullOrUndefined (DiskList), fromInstanceName :: NullOrUndefined (ResourceName), fromInstanceArn :: NullOrUndefined (NonEmptyString), fromBlueprintId :: NullOrUndefined (String), fromBundleId :: NullOrUndefined (String), sizeInGb :: NullOrUndefined (Int) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), state :: NullOrUndefined (InstanceSnapshotState), progress :: NullOrUndefined (String), fromAttachedDisks :: NullOrUndefined (DiskList), fromInstanceName :: NullOrUndefined (ResourceName), fromInstanceArn :: NullOrUndefined (NonEmptyString), fromBlueprintId :: NullOrUndefined (String), fromBundleId :: NullOrUndefined (String), sizeInGb :: NullOrUndefined (Int) }) -> InstanceSnapshot
+newInstanceSnapshot' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), state :: Maybe (InstanceSnapshotState), progress :: Maybe (String), fromAttachedDisks :: Maybe (DiskList), fromInstanceName :: Maybe (ResourceName), fromInstanceArn :: Maybe (NonEmptyString), fromBlueprintId :: Maybe (String), fromBundleId :: Maybe (String), sizeInGb :: Maybe (Int) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), state :: Maybe (InstanceSnapshotState), progress :: Maybe (String), fromAttachedDisks :: Maybe (DiskList), fromInstanceName :: Maybe (ResourceName), fromInstanceArn :: Maybe (NonEmptyString), fromBlueprintId :: Maybe (String), fromBundleId :: Maybe (String), sizeInGb :: Maybe (Int) }) -> InstanceSnapshot
 ```
 
 Constructs InstanceSnapshot's fields from required parameters
@@ -4942,7 +4942,7 @@ Encode InstanceSnapshotState
 
 ``` purescript
 newtype InstanceState
-  = InstanceState { code :: NullOrUndefined (Int), name :: NullOrUndefined (String) }
+  = InstanceState { code :: Maybe (Int), name :: Maybe (String) }
 ```
 
 <p>Describes the virtual private server (or <i>instance</i>) status.</p>
@@ -4967,7 +4967,7 @@ Constructs InstanceState from required parameters
 #### `newInstanceState'`
 
 ``` purescript
-newInstanceState' :: ({ code :: NullOrUndefined (Int), name :: NullOrUndefined (String) } -> { code :: NullOrUndefined (Int), name :: NullOrUndefined (String) }) -> InstanceState
+newInstanceState' :: ({ code :: Maybe (Int), name :: Maybe (String) } -> { code :: Maybe (Int), name :: Maybe (String) }) -> InstanceState
 ```
 
 Constructs InstanceState's fields from required parameters
@@ -4976,7 +4976,7 @@ Constructs InstanceState's fields from required parameters
 
 ``` purescript
 newtype InvalidInputException
-  = InvalidInputException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = InvalidInputException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when user input does not conform to the validation rules of an input field.</p> <note> <p>Domain-related APIs are only available in the N. Virginia (us-east-1) Region. Please set your Region configuration to us-east-1 to create, view, or edit these resources.</p> </note>
@@ -5001,7 +5001,7 @@ Constructs InvalidInputException from required parameters
 #### `newInvalidInputException'`
 
 ``` purescript
-newInvalidInputException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> InvalidInputException
+newInvalidInputException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> InvalidInputException
 ```
 
 Constructs InvalidInputException's fields from required parameters
@@ -5058,7 +5058,7 @@ Encode IsVpcPeeredRequest
 
 ``` purescript
 newtype IsVpcPeeredResult
-  = IsVpcPeeredResult { isPeered :: NullOrUndefined (Boolean) }
+  = IsVpcPeeredResult { isPeered :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -5081,7 +5081,7 @@ Constructs IsVpcPeeredResult from required parameters
 #### `newIsVpcPeeredResult'`
 
 ``` purescript
-newIsVpcPeeredResult' :: ({ isPeered :: NullOrUndefined (Boolean) } -> { isPeered :: NullOrUndefined (Boolean) }) -> IsVpcPeeredResult
+newIsVpcPeeredResult' :: ({ isPeered :: Maybe (Boolean) } -> { isPeered :: Maybe (Boolean) }) -> IsVpcPeeredResult
 ```
 
 Constructs IsVpcPeeredResult's fields from required parameters
@@ -5106,7 +5106,7 @@ Encode IsoDate
 
 ``` purescript
 newtype KeyPair
-  = KeyPair { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), fingerprint :: NullOrUndefined (Base64) }
+  = KeyPair { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), fingerprint :: Maybe (Base64) }
 ```
 
 <p>Describes the SSH key pair.</p>
@@ -5131,7 +5131,7 @@ Constructs KeyPair from required parameters
 #### `newKeyPair'`
 
 ``` purescript
-newKeyPair' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), fingerprint :: NullOrUndefined (Base64) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), fingerprint :: NullOrUndefined (Base64) }) -> KeyPair
+newKeyPair' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), fingerprint :: Maybe (Base64) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), fingerprint :: Maybe (Base64) }) -> KeyPair
 ```
 
 Constructs KeyPair's fields from required parameters
@@ -5156,7 +5156,7 @@ Encode KeyPairList
 
 ``` purescript
 newtype LoadBalancer
-  = LoadBalancer { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), dnsName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (LoadBalancerState), protocol :: NullOrUndefined (LoadBalancerProtocol), publicPorts :: NullOrUndefined (PortList), healthCheckPath :: NullOrUndefined (NonEmptyString), instancePort :: NullOrUndefined (Int), instanceHealthSummary :: NullOrUndefined (InstanceHealthSummaryList), tlsCertificateSummaries :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList), configurationOptions :: NullOrUndefined (LoadBalancerConfigurationOptions) }
+  = LoadBalancer { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), dnsName :: Maybe (NonEmptyString), state :: Maybe (LoadBalancerState), protocol :: Maybe (LoadBalancerProtocol), publicPorts :: Maybe (PortList), healthCheckPath :: Maybe (NonEmptyString), instancePort :: Maybe (Int), instanceHealthSummary :: Maybe (InstanceHealthSummaryList), tlsCertificateSummaries :: Maybe (LoadBalancerTlsCertificateSummaryList), configurationOptions :: Maybe (LoadBalancerConfigurationOptions) }
 ```
 
 <p>Describes the Lightsail load balancer.</p>
@@ -5181,7 +5181,7 @@ Constructs LoadBalancer from required parameters
 #### `newLoadBalancer'`
 
 ``` purescript
-newLoadBalancer' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), dnsName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (LoadBalancerState), protocol :: NullOrUndefined (LoadBalancerProtocol), publicPorts :: NullOrUndefined (PortList), healthCheckPath :: NullOrUndefined (NonEmptyString), instancePort :: NullOrUndefined (Int), instanceHealthSummary :: NullOrUndefined (InstanceHealthSummaryList), tlsCertificateSummaries :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList), configurationOptions :: NullOrUndefined (LoadBalancerConfigurationOptions) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), dnsName :: NullOrUndefined (NonEmptyString), state :: NullOrUndefined (LoadBalancerState), protocol :: NullOrUndefined (LoadBalancerProtocol), publicPorts :: NullOrUndefined (PortList), healthCheckPath :: NullOrUndefined (NonEmptyString), instancePort :: NullOrUndefined (Int), instanceHealthSummary :: NullOrUndefined (InstanceHealthSummaryList), tlsCertificateSummaries :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList), configurationOptions :: NullOrUndefined (LoadBalancerConfigurationOptions) }) -> LoadBalancer
+newLoadBalancer' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), dnsName :: Maybe (NonEmptyString), state :: Maybe (LoadBalancerState), protocol :: Maybe (LoadBalancerProtocol), publicPorts :: Maybe (PortList), healthCheckPath :: Maybe (NonEmptyString), instancePort :: Maybe (Int), instanceHealthSummary :: Maybe (InstanceHealthSummaryList), tlsCertificateSummaries :: Maybe (LoadBalancerTlsCertificateSummaryList), configurationOptions :: Maybe (LoadBalancerConfigurationOptions) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), dnsName :: Maybe (NonEmptyString), state :: Maybe (LoadBalancerState), protocol :: Maybe (LoadBalancerProtocol), publicPorts :: Maybe (PortList), healthCheckPath :: Maybe (NonEmptyString), instancePort :: Maybe (Int), instanceHealthSummary :: Maybe (InstanceHealthSummaryList), tlsCertificateSummaries :: Maybe (LoadBalancerTlsCertificateSummaryList), configurationOptions :: Maybe (LoadBalancerConfigurationOptions) }) -> LoadBalancer
 ```
 
 Constructs LoadBalancer's fields from required parameters
@@ -5286,7 +5286,7 @@ Encode LoadBalancerState
 
 ``` purescript
 newtype LoadBalancerTlsCertificate
-  = LoadBalancerTlsCertificate { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), loadBalancerName :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), status :: NullOrUndefined (LoadBalancerTlsCertificateStatus), domainName :: NullOrUndefined (DomainName), domainValidationRecords :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason), issuedAt :: NullOrUndefined (IsoDate), issuer :: NullOrUndefined (NonEmptyString), keyAlgorithm :: NullOrUndefined (NonEmptyString), notAfter :: NullOrUndefined (IsoDate), notBefore :: NullOrUndefined (IsoDate), renewalSummary :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason), revokedAt :: NullOrUndefined (IsoDate), serial :: NullOrUndefined (NonEmptyString), signatureAlgorithm :: NullOrUndefined (NonEmptyString), subject :: NullOrUndefined (NonEmptyString), subjectAlternativeNames :: NullOrUndefined (StringList) }
+  = LoadBalancerTlsCertificate { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), loadBalancerName :: Maybe (ResourceName), isAttached :: Maybe (Boolean), status :: Maybe (LoadBalancerTlsCertificateStatus), domainName :: Maybe (DomainName), domainValidationRecords :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: Maybe (LoadBalancerTlsCertificateFailureReason), issuedAt :: Maybe (IsoDate), issuer :: Maybe (NonEmptyString), keyAlgorithm :: Maybe (NonEmptyString), notAfter :: Maybe (IsoDate), notBefore :: Maybe (IsoDate), renewalSummary :: Maybe (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: Maybe (LoadBalancerTlsCertificateRevocationReason), revokedAt :: Maybe (IsoDate), serial :: Maybe (NonEmptyString), signatureAlgorithm :: Maybe (NonEmptyString), subject :: Maybe (NonEmptyString), subjectAlternativeNames :: Maybe (StringList) }
 ```
 
 <p>Describes a load balancer TLS/SSL certificate.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
@@ -5311,7 +5311,7 @@ Constructs LoadBalancerTlsCertificate from required parameters
 #### `newLoadBalancerTlsCertificate'`
 
 ``` purescript
-newLoadBalancerTlsCertificate' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), loadBalancerName :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), status :: NullOrUndefined (LoadBalancerTlsCertificateStatus), domainName :: NullOrUndefined (DomainName), domainValidationRecords :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason), issuedAt :: NullOrUndefined (IsoDate), issuer :: NullOrUndefined (NonEmptyString), keyAlgorithm :: NullOrUndefined (NonEmptyString), notAfter :: NullOrUndefined (IsoDate), notBefore :: NullOrUndefined (IsoDate), renewalSummary :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason), revokedAt :: NullOrUndefined (IsoDate), serial :: NullOrUndefined (NonEmptyString), signatureAlgorithm :: NullOrUndefined (NonEmptyString), subject :: NullOrUndefined (NonEmptyString), subjectAlternativeNames :: NullOrUndefined (StringList) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), loadBalancerName :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean), status :: NullOrUndefined (LoadBalancerTlsCertificateStatus), domainName :: NullOrUndefined (DomainName), domainValidationRecords :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason), issuedAt :: NullOrUndefined (IsoDate), issuer :: NullOrUndefined (NonEmptyString), keyAlgorithm :: NullOrUndefined (NonEmptyString), notAfter :: NullOrUndefined (IsoDate), notBefore :: NullOrUndefined (IsoDate), renewalSummary :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason), revokedAt :: NullOrUndefined (IsoDate), serial :: NullOrUndefined (NonEmptyString), signatureAlgorithm :: NullOrUndefined (NonEmptyString), subject :: NullOrUndefined (NonEmptyString), subjectAlternativeNames :: NullOrUndefined (StringList) }) -> LoadBalancerTlsCertificate
+newLoadBalancerTlsCertificate' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), loadBalancerName :: Maybe (ResourceName), isAttached :: Maybe (Boolean), status :: Maybe (LoadBalancerTlsCertificateStatus), domainName :: Maybe (DomainName), domainValidationRecords :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: Maybe (LoadBalancerTlsCertificateFailureReason), issuedAt :: Maybe (IsoDate), issuer :: Maybe (NonEmptyString), keyAlgorithm :: Maybe (NonEmptyString), notAfter :: Maybe (IsoDate), notBefore :: Maybe (IsoDate), renewalSummary :: Maybe (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: Maybe (LoadBalancerTlsCertificateRevocationReason), revokedAt :: Maybe (IsoDate), serial :: Maybe (NonEmptyString), signatureAlgorithm :: Maybe (NonEmptyString), subject :: Maybe (NonEmptyString), subjectAlternativeNames :: Maybe (StringList) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), loadBalancerName :: Maybe (ResourceName), isAttached :: Maybe (Boolean), status :: Maybe (LoadBalancerTlsCertificateStatus), domainName :: Maybe (DomainName), domainValidationRecords :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList), failureReason :: Maybe (LoadBalancerTlsCertificateFailureReason), issuedAt :: Maybe (IsoDate), issuer :: Maybe (NonEmptyString), keyAlgorithm :: Maybe (NonEmptyString), notAfter :: Maybe (IsoDate), notBefore :: Maybe (IsoDate), renewalSummary :: Maybe (LoadBalancerTlsCertificateRenewalSummary), revocationReason :: Maybe (LoadBalancerTlsCertificateRevocationReason), revokedAt :: Maybe (IsoDate), serial :: Maybe (NonEmptyString), signatureAlgorithm :: Maybe (NonEmptyString), subject :: Maybe (NonEmptyString), subjectAlternativeNames :: Maybe (StringList) }) -> LoadBalancerTlsCertificate
 ```
 
 Constructs LoadBalancerTlsCertificate's fields from required parameters
@@ -5336,7 +5336,7 @@ Encode LoadBalancerTlsCertificateDomainStatus
 
 ``` purescript
 newtype LoadBalancerTlsCertificateDomainValidationOption
-  = LoadBalancerTlsCertificateDomainValidationOption { domainName :: NullOrUndefined (DomainName), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) }
+  = LoadBalancerTlsCertificateDomainValidationOption { domainName :: Maybe (DomainName), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus) }
 ```
 
 <p>Contains information about the domain names on a TLS/SSL certificate that you will use to validate domain ownership.</p>
@@ -5361,7 +5361,7 @@ Constructs LoadBalancerTlsCertificateDomainValidationOption from required parame
 #### `newLoadBalancerTlsCertificateDomainValidationOption'`
 
 ``` purescript
-newLoadBalancerTlsCertificateDomainValidationOption' :: ({ domainName :: NullOrUndefined (DomainName), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) } -> { domainName :: NullOrUndefined (DomainName), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) }) -> LoadBalancerTlsCertificateDomainValidationOption
+newLoadBalancerTlsCertificateDomainValidationOption' :: ({ domainName :: Maybe (DomainName), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus) } -> { domainName :: Maybe (DomainName), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus) }) -> LoadBalancerTlsCertificateDomainValidationOption
 ```
 
 Constructs LoadBalancerTlsCertificateDomainValidationOption's fields from required parameters
@@ -5386,7 +5386,7 @@ Encode LoadBalancerTlsCertificateDomainValidationOptionList
 
 ``` purescript
 newtype LoadBalancerTlsCertificateDomainValidationRecord
-  = LoadBalancerTlsCertificateDomainValidationRecord { name :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (NonEmptyString), value :: NullOrUndefined (NonEmptyString), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus), domainName :: NullOrUndefined (DomainName) }
+  = LoadBalancerTlsCertificateDomainValidationRecord { name :: Maybe (NonEmptyString), "type" :: Maybe (NonEmptyString), value :: Maybe (NonEmptyString), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus), domainName :: Maybe (DomainName) }
 ```
 
 <p>Describes the validation record of each domain name in the TLS/SSL certificate.</p>
@@ -5411,7 +5411,7 @@ Constructs LoadBalancerTlsCertificateDomainValidationRecord from required parame
 #### `newLoadBalancerTlsCertificateDomainValidationRecord'`
 
 ``` purescript
-newLoadBalancerTlsCertificateDomainValidationRecord' :: ({ name :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (NonEmptyString), value :: NullOrUndefined (NonEmptyString), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus), domainName :: NullOrUndefined (DomainName) } -> { name :: NullOrUndefined (NonEmptyString), "type" :: NullOrUndefined (NonEmptyString), value :: NullOrUndefined (NonEmptyString), validationStatus :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus), domainName :: NullOrUndefined (DomainName) }) -> LoadBalancerTlsCertificateDomainValidationRecord
+newLoadBalancerTlsCertificateDomainValidationRecord' :: ({ name :: Maybe (NonEmptyString), "type" :: Maybe (NonEmptyString), value :: Maybe (NonEmptyString), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus), domainName :: Maybe (DomainName) } -> { name :: Maybe (NonEmptyString), "type" :: Maybe (NonEmptyString), value :: Maybe (NonEmptyString), validationStatus :: Maybe (LoadBalancerTlsCertificateDomainStatus), domainName :: Maybe (DomainName) }) -> LoadBalancerTlsCertificateDomainValidationRecord
 ```
 
 Constructs LoadBalancerTlsCertificateDomainValidationRecord's fields from required parameters
@@ -5484,7 +5484,7 @@ Encode LoadBalancerTlsCertificateRenewalStatus
 
 ``` purescript
 newtype LoadBalancerTlsCertificateRenewalSummary
-  = LoadBalancerTlsCertificateRenewalSummary { renewalStatus :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList) }
+  = LoadBalancerTlsCertificateRenewalSummary { renewalStatus :: Maybe (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList) }
 ```
 
 <p>Contains information about the status of Lightsail's managed renewal for the certificate.</p>
@@ -5509,7 +5509,7 @@ Constructs LoadBalancerTlsCertificateRenewalSummary from required parameters
 #### `newLoadBalancerTlsCertificateRenewalSummary'`
 
 ``` purescript
-newLoadBalancerTlsCertificateRenewalSummary' :: ({ renewalStatus :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList) } -> { renewalStatus :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList) }) -> LoadBalancerTlsCertificateRenewalSummary
+newLoadBalancerTlsCertificateRenewalSummary' :: ({ renewalStatus :: Maybe (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList) } -> { renewalStatus :: Maybe (LoadBalancerTlsCertificateRenewalStatus), domainValidationOptions :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList) }) -> LoadBalancerTlsCertificateRenewalSummary
 ```
 
 Constructs LoadBalancerTlsCertificateRenewalSummary's fields from required parameters
@@ -5550,7 +5550,7 @@ Encode LoadBalancerTlsCertificateStatus
 
 ``` purescript
 newtype LoadBalancerTlsCertificateSummary
-  = LoadBalancerTlsCertificateSummary { name :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) }
+  = LoadBalancerTlsCertificateSummary { name :: Maybe (ResourceName), isAttached :: Maybe (Boolean) }
 ```
 
 <p>Provides a summary of TLS/SSL certificate metadata.</p>
@@ -5575,7 +5575,7 @@ Constructs LoadBalancerTlsCertificateSummary from required parameters
 #### `newLoadBalancerTlsCertificateSummary'`
 
 ``` purescript
-newLoadBalancerTlsCertificateSummary' :: ({ name :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) } -> { name :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) }) -> LoadBalancerTlsCertificateSummary
+newLoadBalancerTlsCertificateSummary' :: ({ name :: Maybe (ResourceName), isAttached :: Maybe (Boolean) } -> { name :: Maybe (ResourceName), isAttached :: Maybe (Boolean) }) -> LoadBalancerTlsCertificateSummary
 ```
 
 Constructs LoadBalancerTlsCertificateSummary's fields from required parameters
@@ -5600,7 +5600,7 @@ Encode LoadBalancerTlsCertificateSummaryList
 
 ``` purescript
 newtype MetricDatapoint
-  = MetricDatapoint { average :: NullOrUndefined (Number), maximum :: NullOrUndefined (Number), minimum :: NullOrUndefined (Number), sampleCount :: NullOrUndefined (Number), sum :: NullOrUndefined (Number), timestamp :: NullOrUndefined (Timestamp), unit :: NullOrUndefined (MetricUnit) }
+  = MetricDatapoint { average :: Maybe (Number), maximum :: Maybe (Number), minimum :: Maybe (Number), sampleCount :: Maybe (Number), sum :: Maybe (Number), timestamp :: Maybe (Timestamp), unit :: Maybe (MetricUnit) }
 ```
 
 <p>Describes the metric data point.</p>
@@ -5625,7 +5625,7 @@ Constructs MetricDatapoint from required parameters
 #### `newMetricDatapoint'`
 
 ``` purescript
-newMetricDatapoint' :: ({ average :: NullOrUndefined (Number), maximum :: NullOrUndefined (Number), minimum :: NullOrUndefined (Number), sampleCount :: NullOrUndefined (Number), sum :: NullOrUndefined (Number), timestamp :: NullOrUndefined (Timestamp), unit :: NullOrUndefined (MetricUnit) } -> { average :: NullOrUndefined (Number), maximum :: NullOrUndefined (Number), minimum :: NullOrUndefined (Number), sampleCount :: NullOrUndefined (Number), sum :: NullOrUndefined (Number), timestamp :: NullOrUndefined (Timestamp), unit :: NullOrUndefined (MetricUnit) }) -> MetricDatapoint
+newMetricDatapoint' :: ({ average :: Maybe (Number), maximum :: Maybe (Number), minimum :: Maybe (Number), sampleCount :: Maybe (Number), sum :: Maybe (Number), timestamp :: Maybe (Timestamp), unit :: Maybe (MetricUnit) } -> { average :: Maybe (Number), maximum :: Maybe (Number), minimum :: Maybe (Number), sampleCount :: Maybe (Number), sum :: Maybe (Number), timestamp :: Maybe (Timestamp), unit :: Maybe (MetricUnit) }) -> MetricDatapoint
 ```
 
 Constructs MetricDatapoint's fields from required parameters
@@ -5714,7 +5714,7 @@ Encode MetricUnit
 
 ``` purescript
 newtype MonthlyTransfer
-  = MonthlyTransfer { gbPerMonthAllocated :: NullOrUndefined (Int) }
+  = MonthlyTransfer { gbPerMonthAllocated :: Maybe (Int) }
 ```
 
 <p>Describes the monthly data transfer in and out of your virtual private server (or <i>instance</i>).</p>
@@ -5739,7 +5739,7 @@ Constructs MonthlyTransfer from required parameters
 #### `newMonthlyTransfer'`
 
 ``` purescript
-newMonthlyTransfer' :: ({ gbPerMonthAllocated :: NullOrUndefined (Int) } -> { gbPerMonthAllocated :: NullOrUndefined (Int) }) -> MonthlyTransfer
+newMonthlyTransfer' :: ({ gbPerMonthAllocated :: Maybe (Int) } -> { gbPerMonthAllocated :: Maybe (Int) }) -> MonthlyTransfer
 ```
 
 Constructs MonthlyTransfer's fields from required parameters
@@ -5780,7 +5780,7 @@ Encode NonEmptyString
 
 ``` purescript
 newtype NotFoundException
-  = NotFoundException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = NotFoundException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when it cannot find a resource.</p>
@@ -5805,7 +5805,7 @@ Constructs NotFoundException from required parameters
 #### `newNotFoundException'`
 
 ``` purescript
-newNotFoundException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> NotFoundException
+newNotFoundException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> NotFoundException
 ```
 
 Constructs NotFoundException's fields from required parameters
@@ -5846,7 +5846,7 @@ Constructs OpenInstancePublicPortsRequest's fields from required parameters
 
 ``` purescript
 newtype OpenInstancePublicPortsResult
-  = OpenInstancePublicPortsResult { operation :: NullOrUndefined (Operation) }
+  = OpenInstancePublicPortsResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -5869,7 +5869,7 @@ Constructs OpenInstancePublicPortsResult from required parameters
 #### `newOpenInstancePublicPortsResult'`
 
 ``` purescript
-newOpenInstancePublicPortsResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> OpenInstancePublicPortsResult
+newOpenInstancePublicPortsResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> OpenInstancePublicPortsResult
 ```
 
 Constructs OpenInstancePublicPortsResult's fields from required parameters
@@ -5878,7 +5878,7 @@ Constructs OpenInstancePublicPortsResult's fields from required parameters
 
 ``` purescript
 newtype Operation
-  = Operation { id :: NullOrUndefined (NonEmptyString), resourceName :: NullOrUndefined (ResourceName), resourceType :: NullOrUndefined (ResourceType), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), isTerminal :: NullOrUndefined (Boolean), operationDetails :: NullOrUndefined (String), operationType :: NullOrUndefined (OperationType), status :: NullOrUndefined (OperationStatus), statusChangedAt :: NullOrUndefined (IsoDate), errorCode :: NullOrUndefined (String), errorDetails :: NullOrUndefined (String) }
+  = Operation { id :: Maybe (NonEmptyString), resourceName :: Maybe (ResourceName), resourceType :: Maybe (ResourceType), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), isTerminal :: Maybe (Boolean), operationDetails :: Maybe (String), operationType :: Maybe (OperationType), status :: Maybe (OperationStatus), statusChangedAt :: Maybe (IsoDate), errorCode :: Maybe (String), errorDetails :: Maybe (String) }
 ```
 
 <p>Describes the API operation.</p>
@@ -5903,7 +5903,7 @@ Constructs Operation from required parameters
 #### `newOperation'`
 
 ``` purescript
-newOperation' :: ({ id :: NullOrUndefined (NonEmptyString), resourceName :: NullOrUndefined (ResourceName), resourceType :: NullOrUndefined (ResourceType), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), isTerminal :: NullOrUndefined (Boolean), operationDetails :: NullOrUndefined (String), operationType :: NullOrUndefined (OperationType), status :: NullOrUndefined (OperationStatus), statusChangedAt :: NullOrUndefined (IsoDate), errorCode :: NullOrUndefined (String), errorDetails :: NullOrUndefined (String) } -> { id :: NullOrUndefined (NonEmptyString), resourceName :: NullOrUndefined (ResourceName), resourceType :: NullOrUndefined (ResourceType), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), isTerminal :: NullOrUndefined (Boolean), operationDetails :: NullOrUndefined (String), operationType :: NullOrUndefined (OperationType), status :: NullOrUndefined (OperationStatus), statusChangedAt :: NullOrUndefined (IsoDate), errorCode :: NullOrUndefined (String), errorDetails :: NullOrUndefined (String) }) -> Operation
+newOperation' :: ({ id :: Maybe (NonEmptyString), resourceName :: Maybe (ResourceName), resourceType :: Maybe (ResourceType), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), isTerminal :: Maybe (Boolean), operationDetails :: Maybe (String), operationType :: Maybe (OperationType), status :: Maybe (OperationStatus), statusChangedAt :: Maybe (IsoDate), errorCode :: Maybe (String), errorDetails :: Maybe (String) } -> { id :: Maybe (NonEmptyString), resourceName :: Maybe (ResourceName), resourceType :: Maybe (ResourceType), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), isTerminal :: Maybe (Boolean), operationDetails :: Maybe (String), operationType :: Maybe (OperationType), status :: Maybe (OperationStatus), statusChangedAt :: Maybe (IsoDate), errorCode :: Maybe (String), errorDetails :: Maybe (String) }) -> Operation
 ```
 
 Constructs Operation's fields from required parameters
@@ -5912,7 +5912,7 @@ Constructs Operation's fields from required parameters
 
 ``` purescript
 newtype OperationFailureException
-  = OperationFailureException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = OperationFailureException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when an operation fails to execute.</p>
@@ -5937,7 +5937,7 @@ Constructs OperationFailureException from required parameters
 #### `newOperationFailureException'`
 
 ``` purescript
-newOperationFailureException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> OperationFailureException
+newOperationFailureException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> OperationFailureException
 ```
 
 Constructs OperationFailureException's fields from required parameters
@@ -5994,7 +5994,7 @@ Encode OperationType
 
 ``` purescript
 newtype PasswordData
-  = PasswordData { ciphertext :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }
+  = PasswordData { ciphertext :: Maybe (String), keyPairName :: Maybe (ResourceName) }
 ```
 
 <p>The password data for the Windows Server-based instance, including the ciphertext and the key pair name.</p>
@@ -6019,7 +6019,7 @@ Constructs PasswordData from required parameters
 #### `newPasswordData'`
 
 ``` purescript
-newPasswordData' :: ({ ciphertext :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) } -> { ciphertext :: NullOrUndefined (String), keyPairName :: NullOrUndefined (ResourceName) }) -> PasswordData
+newPasswordData' :: ({ ciphertext :: Maybe (String), keyPairName :: Maybe (ResourceName) } -> { ciphertext :: Maybe (String), keyPairName :: Maybe (ResourceName) }) -> PasswordData
 ```
 
 Constructs PasswordData's fields from required parameters
@@ -6044,7 +6044,7 @@ Encode PeerVpcRequest
 
 ``` purescript
 newtype PeerVpcResult
-  = PeerVpcResult { operation :: NullOrUndefined (Operation) }
+  = PeerVpcResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -6067,7 +6067,7 @@ Constructs PeerVpcResult from required parameters
 #### `newPeerVpcResult'`
 
 ``` purescript
-newPeerVpcResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> PeerVpcResult
+newPeerVpcResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> PeerVpcResult
 ```
 
 Constructs PeerVpcResult's fields from required parameters
@@ -6108,7 +6108,7 @@ Encode PortAccessType
 
 ``` purescript
 newtype PortInfo
-  = PortInfo { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol) }
+  = PortInfo { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol) }
 ```
 
 <p>Describes information about the ports on your virtual private server (or <i>instance</i>).</p>
@@ -6133,7 +6133,7 @@ Constructs PortInfo from required parameters
 #### `newPortInfo'`
 
 ``` purescript
-newPortInfo' :: ({ fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol) } -> { fromPort :: NullOrUndefined (Port), toPort :: NullOrUndefined (Port), protocol :: NullOrUndefined (NetworkProtocol) }) -> PortInfo
+newPortInfo' :: ({ fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol) } -> { fromPort :: Maybe (Port), toPort :: Maybe (Port), protocol :: Maybe (NetworkProtocol) }) -> PortInfo
 ```
 
 Constructs PortInfo's fields from required parameters
@@ -6222,7 +6222,7 @@ Constructs PutInstancePublicPortsRequest's fields from required parameters
 
 ``` purescript
 newtype PutInstancePublicPortsResult
-  = PutInstancePublicPortsResult { operation :: NullOrUndefined (Operation) }
+  = PutInstancePublicPortsResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -6245,7 +6245,7 @@ Constructs PutInstancePublicPortsResult from required parameters
 #### `newPutInstancePublicPortsResult'`
 
 ``` purescript
-newPutInstancePublicPortsResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> PutInstancePublicPortsResult
+newPutInstancePublicPortsResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> PutInstancePublicPortsResult
 ```
 
 Constructs PutInstancePublicPortsResult's fields from required parameters
@@ -6286,7 +6286,7 @@ Constructs RebootInstanceRequest's fields from required parameters
 
 ``` purescript
 newtype RebootInstanceResult
-  = RebootInstanceResult { operations :: NullOrUndefined (OperationList) }
+  = RebootInstanceResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6309,7 +6309,7 @@ Constructs RebootInstanceResult from required parameters
 #### `newRebootInstanceResult'`
 
 ``` purescript
-newRebootInstanceResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> RebootInstanceResult
+newRebootInstanceResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> RebootInstanceResult
 ```
 
 Constructs RebootInstanceResult's fields from required parameters
@@ -6318,7 +6318,7 @@ Constructs RebootInstanceResult's fields from required parameters
 
 ``` purescript
 newtype Region
-  = Region { continentCode :: NullOrUndefined (String), description :: NullOrUndefined (String), displayName :: NullOrUndefined (String), name :: NullOrUndefined (RegionName), availabilityZones :: NullOrUndefined (AvailabilityZoneList) }
+  = Region { continentCode :: Maybe (String), description :: Maybe (String), displayName :: Maybe (String), name :: Maybe (RegionName), availabilityZones :: Maybe (AvailabilityZoneList) }
 ```
 
 <p>Describes the AWS Region.</p>
@@ -6343,7 +6343,7 @@ Constructs Region from required parameters
 #### `newRegion'`
 
 ``` purescript
-newRegion' :: ({ continentCode :: NullOrUndefined (String), description :: NullOrUndefined (String), displayName :: NullOrUndefined (String), name :: NullOrUndefined (RegionName), availabilityZones :: NullOrUndefined (AvailabilityZoneList) } -> { continentCode :: NullOrUndefined (String), description :: NullOrUndefined (String), displayName :: NullOrUndefined (String), name :: NullOrUndefined (RegionName), availabilityZones :: NullOrUndefined (AvailabilityZoneList) }) -> Region
+newRegion' :: ({ continentCode :: Maybe (String), description :: Maybe (String), displayName :: Maybe (String), name :: Maybe (RegionName), availabilityZones :: Maybe (AvailabilityZoneList) } -> { continentCode :: Maybe (String), description :: Maybe (String), displayName :: Maybe (String), name :: Maybe (RegionName), availabilityZones :: Maybe (AvailabilityZoneList) }) -> Region
 ```
 
 Constructs Region's fields from required parameters
@@ -6416,7 +6416,7 @@ Constructs ReleaseStaticIpRequest's fields from required parameters
 
 ``` purescript
 newtype ReleaseStaticIpResult
-  = ReleaseStaticIpResult { operations :: NullOrUndefined (OperationList) }
+  = ReleaseStaticIpResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6439,7 +6439,7 @@ Constructs ReleaseStaticIpResult from required parameters
 #### `newReleaseStaticIpResult'`
 
 ``` purescript
-newReleaseStaticIpResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> ReleaseStaticIpResult
+newReleaseStaticIpResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> ReleaseStaticIpResult
 ```
 
 Constructs ReleaseStaticIpResult's fields from required parameters
@@ -6448,7 +6448,7 @@ Constructs ReleaseStaticIpResult's fields from required parameters
 
 ``` purescript
 newtype ResourceLocation
-  = ResourceLocation { availabilityZone :: NullOrUndefined (String), regionName :: NullOrUndefined (RegionName) }
+  = ResourceLocation { availabilityZone :: Maybe (String), regionName :: Maybe (RegionName) }
 ```
 
 <p>Describes the resource location.</p>
@@ -6473,7 +6473,7 @@ Constructs ResourceLocation from required parameters
 #### `newResourceLocation'`
 
 ``` purescript
-newResourceLocation' :: ({ availabilityZone :: NullOrUndefined (String), regionName :: NullOrUndefined (RegionName) } -> { availabilityZone :: NullOrUndefined (String), regionName :: NullOrUndefined (RegionName) }) -> ResourceLocation
+newResourceLocation' :: ({ availabilityZone :: Maybe (String), regionName :: Maybe (RegionName) } -> { availabilityZone :: Maybe (String), regionName :: Maybe (RegionName) }) -> ResourceLocation
 ```
 
 Constructs ResourceLocation's fields from required parameters
@@ -6530,7 +6530,7 @@ Encode ResourceType
 
 ``` purescript
 newtype ServiceException
-  = ServiceException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = ServiceException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>A general service exception.</p>
@@ -6555,7 +6555,7 @@ Constructs ServiceException from required parameters
 #### `newServiceException'`
 
 ``` purescript
-newServiceException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> ServiceException
+newServiceException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> ServiceException
 ```
 
 Constructs ServiceException's fields from required parameters
@@ -6596,7 +6596,7 @@ Constructs StartInstanceRequest's fields from required parameters
 
 ``` purescript
 newtype StartInstanceResult
-  = StartInstanceResult { operations :: NullOrUndefined (OperationList) }
+  = StartInstanceResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6619,7 +6619,7 @@ Constructs StartInstanceResult from required parameters
 #### `newStartInstanceResult'`
 
 ``` purescript
-newStartInstanceResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> StartInstanceResult
+newStartInstanceResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> StartInstanceResult
 ```
 
 Constructs StartInstanceResult's fields from required parameters
@@ -6628,7 +6628,7 @@ Constructs StartInstanceResult's fields from required parameters
 
 ``` purescript
 newtype StaticIp
-  = StaticIp { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), ipAddress :: NullOrUndefined (IpAddress), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) }
+  = StaticIp { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), ipAddress :: Maybe (IpAddress), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean) }
 ```
 
 <p>Describes the static IP.</p>
@@ -6653,7 +6653,7 @@ Constructs StaticIp from required parameters
 #### `newStaticIp'`
 
 ``` purescript
-newStaticIp' :: ({ name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), ipAddress :: NullOrUndefined (IpAddress), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) } -> { name :: NullOrUndefined (ResourceName), arn :: NullOrUndefined (NonEmptyString), supportCode :: NullOrUndefined (String), createdAt :: NullOrUndefined (IsoDate), location :: NullOrUndefined (ResourceLocation), resourceType :: NullOrUndefined (ResourceType), ipAddress :: NullOrUndefined (IpAddress), attachedTo :: NullOrUndefined (ResourceName), isAttached :: NullOrUndefined (Boolean) }) -> StaticIp
+newStaticIp' :: ({ name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), ipAddress :: Maybe (IpAddress), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean) } -> { name :: Maybe (ResourceName), arn :: Maybe (NonEmptyString), supportCode :: Maybe (String), createdAt :: Maybe (IsoDate), location :: Maybe (ResourceLocation), resourceType :: Maybe (ResourceType), ipAddress :: Maybe (IpAddress), attachedTo :: Maybe (ResourceName), isAttached :: Maybe (Boolean) }) -> StaticIp
 ```
 
 Constructs StaticIp's fields from required parameters
@@ -6678,7 +6678,7 @@ Encode StaticIpList
 
 ``` purescript
 newtype StopInstanceRequest
-  = StopInstanceRequest { instanceName :: ResourceName, force :: NullOrUndefined (Boolean) }
+  = StopInstanceRequest { instanceName :: ResourceName, force :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -6701,7 +6701,7 @@ Constructs StopInstanceRequest from required parameters
 #### `newStopInstanceRequest'`
 
 ``` purescript
-newStopInstanceRequest' :: ResourceName -> ({ instanceName :: ResourceName, force :: NullOrUndefined (Boolean) } -> { instanceName :: ResourceName, force :: NullOrUndefined (Boolean) }) -> StopInstanceRequest
+newStopInstanceRequest' :: ResourceName -> ({ instanceName :: ResourceName, force :: Maybe (Boolean) } -> { instanceName :: ResourceName, force :: Maybe (Boolean) }) -> StopInstanceRequest
 ```
 
 Constructs StopInstanceRequest's fields from required parameters
@@ -6710,7 +6710,7 @@ Constructs StopInstanceRequest's fields from required parameters
 
 ``` purescript
 newtype StopInstanceResult
-  = StopInstanceResult { operations :: NullOrUndefined (OperationList) }
+  = StopInstanceResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6733,7 +6733,7 @@ Constructs StopInstanceResult from required parameters
 #### `newStopInstanceResult'`
 
 ``` purescript
-newStopInstanceResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> StopInstanceResult
+newStopInstanceResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> StopInstanceResult
 ```
 
 Constructs StopInstanceResult's fields from required parameters
@@ -6774,7 +6774,7 @@ Encode StringMax256
 
 ``` purescript
 newtype UnauthenticatedException
-  = UnauthenticatedException { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }
+  = UnauthenticatedException { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }
 ```
 
 <p>Lightsail throws this exception when the user has not been authenticated.</p>
@@ -6799,7 +6799,7 @@ Constructs UnauthenticatedException from required parameters
 #### `newUnauthenticatedException'`
 
 ``` purescript
-newUnauthenticatedException' :: ({ code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) } -> { code :: NullOrUndefined (String), docs :: NullOrUndefined (String), message :: NullOrUndefined (String), tip :: NullOrUndefined (String) }) -> UnauthenticatedException
+newUnauthenticatedException' :: ({ code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) } -> { code :: Maybe (String), docs :: Maybe (String), message :: Maybe (String), tip :: Maybe (String) }) -> UnauthenticatedException
 ```
 
 Constructs UnauthenticatedException's fields from required parameters
@@ -6824,7 +6824,7 @@ Encode UnpeerVpcRequest
 
 ``` purescript
 newtype UnpeerVpcResult
-  = UnpeerVpcResult { operation :: NullOrUndefined (Operation) }
+  = UnpeerVpcResult { operation :: Maybe (Operation) }
 ```
 
 ##### Instances
@@ -6847,7 +6847,7 @@ Constructs UnpeerVpcResult from required parameters
 #### `newUnpeerVpcResult'`
 
 ``` purescript
-newUnpeerVpcResult' :: ({ operation :: NullOrUndefined (Operation) } -> { operation :: NullOrUndefined (Operation) }) -> UnpeerVpcResult
+newUnpeerVpcResult' :: ({ operation :: Maybe (Operation) } -> { operation :: Maybe (Operation) }) -> UnpeerVpcResult
 ```
 
 Constructs UnpeerVpcResult's fields from required parameters
@@ -6888,7 +6888,7 @@ Constructs UpdateDomainEntryRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateDomainEntryResult
-  = UpdateDomainEntryResult { operations :: NullOrUndefined (OperationList) }
+  = UpdateDomainEntryResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6911,7 +6911,7 @@ Constructs UpdateDomainEntryResult from required parameters
 #### `newUpdateDomainEntryResult'`
 
 ``` purescript
-newUpdateDomainEntryResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> UpdateDomainEntryResult
+newUpdateDomainEntryResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> UpdateDomainEntryResult
 ```
 
 Constructs UpdateDomainEntryResult's fields from required parameters
@@ -6952,7 +6952,7 @@ Constructs UpdateLoadBalancerAttributeRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateLoadBalancerAttributeResult
-  = UpdateLoadBalancerAttributeResult { operations :: NullOrUndefined (OperationList) }
+  = UpdateLoadBalancerAttributeResult { operations :: Maybe (OperationList) }
 ```
 
 ##### Instances
@@ -6975,7 +6975,7 @@ Constructs UpdateLoadBalancerAttributeResult from required parameters
 #### `newUpdateLoadBalancerAttributeResult'`
 
 ``` purescript
-newUpdateLoadBalancerAttributeResult' :: ({ operations :: NullOrUndefined (OperationList) } -> { operations :: NullOrUndefined (OperationList) }) -> UpdateLoadBalancerAttributeResult
+newUpdateLoadBalancerAttributeResult' :: ({ operations :: Maybe (OperationList) } -> { operations :: Maybe (OperationList) }) -> UpdateLoadBalancerAttributeResult
 ```
 
 Constructs UpdateLoadBalancerAttributeResult's fields from required parameters

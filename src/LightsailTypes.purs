@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -20,10 +19,10 @@ options = defaultOptions { unwrapSingleConstructors = true }
 
 -- | <p>Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to access a resource.</p>
 newtype AccessDeniedException = AccessDeniedException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeAccessDeniedException :: Newtype AccessDeniedException _
 derive instance repGenericAccessDeniedException :: Generic AccessDeniedException _
@@ -33,12 +32,12 @@ instance encodeAccessDeniedException :: Encode AccessDeniedException where encod
 
 -- | Constructs AccessDeniedException from required parameters
 newAccessDeniedException :: AccessDeniedException
-newAccessDeniedException  = AccessDeniedException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newAccessDeniedException  = AccessDeniedException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs AccessDeniedException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAccessDeniedException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> AccessDeniedException
-newAccessDeniedException'  customize = (AccessDeniedException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newAccessDeniedException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> AccessDeniedException
+newAccessDeniedException'  customize = (AccessDeniedException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -53,10 +52,10 @@ instance encodeAccessDirection :: Encode AccessDirection where encode = genericE
 
 -- | <p>Lightsail throws this exception when an account is still in the setup in progress state.</p>
 newtype AccountSetupInProgressException = AccountSetupInProgressException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeAccountSetupInProgressException :: Newtype AccountSetupInProgressException _
 derive instance repGenericAccountSetupInProgressException :: Generic AccountSetupInProgressException _
@@ -66,12 +65,12 @@ instance encodeAccountSetupInProgressException :: Encode AccountSetupInProgressE
 
 -- | Constructs AccountSetupInProgressException from required parameters
 newAccountSetupInProgressException :: AccountSetupInProgressException
-newAccountSetupInProgressException  = AccountSetupInProgressException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newAccountSetupInProgressException  = AccountSetupInProgressException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs AccountSetupInProgressException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAccountSetupInProgressException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> AccountSetupInProgressException
-newAccountSetupInProgressException'  customize = (AccountSetupInProgressException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newAccountSetupInProgressException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> AccountSetupInProgressException
+newAccountSetupInProgressException'  customize = (AccountSetupInProgressException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -96,7 +95,7 @@ newAllocateStaticIpRequest' _staticIpName customize = (AllocateStaticIpRequest <
 
 
 newtype AllocateStaticIpResult = AllocateStaticIpResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeAllocateStaticIpResult :: Newtype AllocateStaticIpResult _
 derive instance repGenericAllocateStaticIpResult :: Generic AllocateStaticIpResult _
@@ -106,12 +105,12 @@ instance encodeAllocateStaticIpResult :: Encode AllocateStaticIpResult where enc
 
 -- | Constructs AllocateStaticIpResult from required parameters
 newAllocateStaticIpResult :: AllocateStaticIpResult
-newAllocateStaticIpResult  = AllocateStaticIpResult { "operations": (NullOrUndefined Nothing) }
+newAllocateStaticIpResult  = AllocateStaticIpResult { "operations": Nothing }
 
 -- | Constructs AllocateStaticIpResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAllocateStaticIpResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> AllocateStaticIpResult
-newAllocateStaticIpResult'  customize = (AllocateStaticIpResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newAllocateStaticIpResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> AllocateStaticIpResult
+newAllocateStaticIpResult'  customize = (AllocateStaticIpResult <<< customize) { "operations": Nothing }
 
 
 
@@ -138,7 +137,7 @@ newAttachDiskRequest' _diskName _diskPath _instanceName customize = (AttachDiskR
 
 
 newtype AttachDiskResult = AttachDiskResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeAttachDiskResult :: Newtype AttachDiskResult _
 derive instance repGenericAttachDiskResult :: Generic AttachDiskResult _
@@ -148,12 +147,12 @@ instance encodeAttachDiskResult :: Encode AttachDiskResult where encode = generi
 
 -- | Constructs AttachDiskResult from required parameters
 newAttachDiskResult :: AttachDiskResult
-newAttachDiskResult  = AttachDiskResult { "operations": (NullOrUndefined Nothing) }
+newAttachDiskResult  = AttachDiskResult { "operations": Nothing }
 
 -- | Constructs AttachDiskResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAttachDiskResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> AttachDiskResult
-newAttachDiskResult'  customize = (AttachDiskResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newAttachDiskResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> AttachDiskResult
+newAttachDiskResult'  customize = (AttachDiskResult <<< customize) { "operations": Nothing }
 
 
 
@@ -179,7 +178,7 @@ newAttachInstancesToLoadBalancerRequest' _instanceNames _loadBalancerName custom
 
 
 newtype AttachInstancesToLoadBalancerResult = AttachInstancesToLoadBalancerResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeAttachInstancesToLoadBalancerResult :: Newtype AttachInstancesToLoadBalancerResult _
 derive instance repGenericAttachInstancesToLoadBalancerResult :: Generic AttachInstancesToLoadBalancerResult _
@@ -189,12 +188,12 @@ instance encodeAttachInstancesToLoadBalancerResult :: Encode AttachInstancesToLo
 
 -- | Constructs AttachInstancesToLoadBalancerResult from required parameters
 newAttachInstancesToLoadBalancerResult :: AttachInstancesToLoadBalancerResult
-newAttachInstancesToLoadBalancerResult  = AttachInstancesToLoadBalancerResult { "operations": (NullOrUndefined Nothing) }
+newAttachInstancesToLoadBalancerResult  = AttachInstancesToLoadBalancerResult { "operations": Nothing }
 
 -- | Constructs AttachInstancesToLoadBalancerResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAttachInstancesToLoadBalancerResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> AttachInstancesToLoadBalancerResult
-newAttachInstancesToLoadBalancerResult'  customize = (AttachInstancesToLoadBalancerResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newAttachInstancesToLoadBalancerResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> AttachInstancesToLoadBalancerResult
+newAttachInstancesToLoadBalancerResult'  customize = (AttachInstancesToLoadBalancerResult <<< customize) { "operations": Nothing }
 
 
 
@@ -220,7 +219,7 @@ newAttachLoadBalancerTlsCertificateRequest' _certificateName _loadBalancerName c
 
 
 newtype AttachLoadBalancerTlsCertificateResult = AttachLoadBalancerTlsCertificateResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeAttachLoadBalancerTlsCertificateResult :: Newtype AttachLoadBalancerTlsCertificateResult _
 derive instance repGenericAttachLoadBalancerTlsCertificateResult :: Generic AttachLoadBalancerTlsCertificateResult _
@@ -230,12 +229,12 @@ instance encodeAttachLoadBalancerTlsCertificateResult :: Encode AttachLoadBalanc
 
 -- | Constructs AttachLoadBalancerTlsCertificateResult from required parameters
 newAttachLoadBalancerTlsCertificateResult :: AttachLoadBalancerTlsCertificateResult
-newAttachLoadBalancerTlsCertificateResult  = AttachLoadBalancerTlsCertificateResult { "operations": (NullOrUndefined Nothing) }
+newAttachLoadBalancerTlsCertificateResult  = AttachLoadBalancerTlsCertificateResult { "operations": Nothing }
 
 -- | Constructs AttachLoadBalancerTlsCertificateResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAttachLoadBalancerTlsCertificateResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> AttachLoadBalancerTlsCertificateResult
-newAttachLoadBalancerTlsCertificateResult'  customize = (AttachLoadBalancerTlsCertificateResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newAttachLoadBalancerTlsCertificateResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> AttachLoadBalancerTlsCertificateResult
+newAttachLoadBalancerTlsCertificateResult'  customize = (AttachLoadBalancerTlsCertificateResult <<< customize) { "operations": Nothing }
 
 
 
@@ -261,7 +260,7 @@ newAttachStaticIpRequest' _instanceName _staticIpName customize = (AttachStaticI
 
 
 newtype AttachStaticIpResult = AttachStaticIpResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeAttachStaticIpResult :: Newtype AttachStaticIpResult _
 derive instance repGenericAttachStaticIpResult :: Generic AttachStaticIpResult _
@@ -271,12 +270,12 @@ instance encodeAttachStaticIpResult :: Encode AttachStaticIpResult where encode 
 
 -- | Constructs AttachStaticIpResult from required parameters
 newAttachStaticIpResult :: AttachStaticIpResult
-newAttachStaticIpResult  = AttachStaticIpResult { "operations": (NullOrUndefined Nothing) }
+newAttachStaticIpResult  = AttachStaticIpResult { "operations": Nothing }
 
 -- | Constructs AttachStaticIpResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAttachStaticIpResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> AttachStaticIpResult
-newAttachStaticIpResult'  customize = (AttachStaticIpResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newAttachStaticIpResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> AttachStaticIpResult
+newAttachStaticIpResult'  customize = (AttachStaticIpResult <<< customize) { "operations": Nothing }
 
 
 
@@ -291,8 +290,8 @@ instance encodeAttachedDiskMap :: Encode AttachedDiskMap where encode = genericE
 
 -- | <p>Describes an Availability Zone.</p>
 newtype AvailabilityZone = AvailabilityZone 
-  { "zoneName" :: NullOrUndefined (NonEmptyString)
-  , "state" :: NullOrUndefined (NonEmptyString)
+  { "zoneName" :: Maybe (NonEmptyString)
+  , "state" :: Maybe (NonEmptyString)
   }
 derive instance newtypeAvailabilityZone :: Newtype AvailabilityZone _
 derive instance repGenericAvailabilityZone :: Generic AvailabilityZone _
@@ -302,12 +301,12 @@ instance encodeAvailabilityZone :: Encode AvailabilityZone where encode = generi
 
 -- | Constructs AvailabilityZone from required parameters
 newAvailabilityZone :: AvailabilityZone
-newAvailabilityZone  = AvailabilityZone { "state": (NullOrUndefined Nothing), "zoneName": (NullOrUndefined Nothing) }
+newAvailabilityZone  = AvailabilityZone { "state": Nothing, "zoneName": Nothing }
 
 -- | Constructs AvailabilityZone's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAvailabilityZone' :: ( { "zoneName" :: NullOrUndefined (NonEmptyString) , "state" :: NullOrUndefined (NonEmptyString) } -> {"zoneName" :: NullOrUndefined (NonEmptyString) , "state" :: NullOrUndefined (NonEmptyString) } ) -> AvailabilityZone
-newAvailabilityZone'  customize = (AvailabilityZone <<< customize) { "state": (NullOrUndefined Nothing), "zoneName": (NullOrUndefined Nothing) }
+newAvailabilityZone' :: ( { "zoneName" :: Maybe (NonEmptyString) , "state" :: Maybe (NonEmptyString) } -> {"zoneName" :: Maybe (NonEmptyString) , "state" :: Maybe (NonEmptyString) } ) -> AvailabilityZone
+newAvailabilityZone'  customize = (AvailabilityZone <<< customize) { "state": Nothing, "zoneName": Nothing }
 
 
 
@@ -331,18 +330,18 @@ instance encodeBase64 :: Encode Base64 where encode = genericEncode options
 
 -- | <p>Describes a blueprint (a virtual private server image).</p>
 newtype Blueprint = Blueprint 
-  { "blueprintId" :: NullOrUndefined (NonEmptyString)
-  , "name" :: NullOrUndefined (ResourceName)
-  , "group" :: NullOrUndefined (NonEmptyString)
-  , "type" :: NullOrUndefined (BlueprintType)
-  , "description" :: NullOrUndefined (String)
-  , "isActive" :: NullOrUndefined (Boolean)
-  , "minPower" :: NullOrUndefined (Int)
-  , "version" :: NullOrUndefined (String)
-  , "versionCode" :: NullOrUndefined (String)
-  , "productUrl" :: NullOrUndefined (String)
-  , "licenseUrl" :: NullOrUndefined (String)
-  , "platform" :: NullOrUndefined (InstancePlatform)
+  { "blueprintId" :: Maybe (NonEmptyString)
+  , "name" :: Maybe (ResourceName)
+  , "group" :: Maybe (NonEmptyString)
+  , "type" :: Maybe (BlueprintType)
+  , "description" :: Maybe (String)
+  , "isActive" :: Maybe (Boolean)
+  , "minPower" :: Maybe (Int)
+  , "version" :: Maybe (String)
+  , "versionCode" :: Maybe (String)
+  , "productUrl" :: Maybe (String)
+  , "licenseUrl" :: Maybe (String)
+  , "platform" :: Maybe (InstancePlatform)
   }
 derive instance newtypeBlueprint :: Newtype Blueprint _
 derive instance repGenericBlueprint :: Generic Blueprint _
@@ -352,12 +351,12 @@ instance encodeBlueprint :: Encode Blueprint where encode = genericEncode option
 
 -- | Constructs Blueprint from required parameters
 newBlueprint :: Blueprint
-newBlueprint  = Blueprint { "blueprintId": (NullOrUndefined Nothing), "description": (NullOrUndefined Nothing), "group": (NullOrUndefined Nothing), "isActive": (NullOrUndefined Nothing), "licenseUrl": (NullOrUndefined Nothing), "minPower": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "platform": (NullOrUndefined Nothing), "productUrl": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing), "version": (NullOrUndefined Nothing), "versionCode": (NullOrUndefined Nothing) }
+newBlueprint  = Blueprint { "blueprintId": Nothing, "description": Nothing, "group": Nothing, "isActive": Nothing, "licenseUrl": Nothing, "minPower": Nothing, "name": Nothing, "platform": Nothing, "productUrl": Nothing, "type": Nothing, "version": Nothing, "versionCode": Nothing }
 
 -- | Constructs Blueprint's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBlueprint' :: ( { "blueprintId" :: NullOrUndefined (NonEmptyString) , "name" :: NullOrUndefined (ResourceName) , "group" :: NullOrUndefined (NonEmptyString) , "type" :: NullOrUndefined (BlueprintType) , "description" :: NullOrUndefined (String) , "isActive" :: NullOrUndefined (Boolean) , "minPower" :: NullOrUndefined (Int) , "version" :: NullOrUndefined (String) , "versionCode" :: NullOrUndefined (String) , "productUrl" :: NullOrUndefined (String) , "licenseUrl" :: NullOrUndefined (String) , "platform" :: NullOrUndefined (InstancePlatform) } -> {"blueprintId" :: NullOrUndefined (NonEmptyString) , "name" :: NullOrUndefined (ResourceName) , "group" :: NullOrUndefined (NonEmptyString) , "type" :: NullOrUndefined (BlueprintType) , "description" :: NullOrUndefined (String) , "isActive" :: NullOrUndefined (Boolean) , "minPower" :: NullOrUndefined (Int) , "version" :: NullOrUndefined (String) , "versionCode" :: NullOrUndefined (String) , "productUrl" :: NullOrUndefined (String) , "licenseUrl" :: NullOrUndefined (String) , "platform" :: NullOrUndefined (InstancePlatform) } ) -> Blueprint
-newBlueprint'  customize = (Blueprint <<< customize) { "blueprintId": (NullOrUndefined Nothing), "description": (NullOrUndefined Nothing), "group": (NullOrUndefined Nothing), "isActive": (NullOrUndefined Nothing), "licenseUrl": (NullOrUndefined Nothing), "minPower": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "platform": (NullOrUndefined Nothing), "productUrl": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing), "version": (NullOrUndefined Nothing), "versionCode": (NullOrUndefined Nothing) }
+newBlueprint' :: ( { "blueprintId" :: Maybe (NonEmptyString) , "name" :: Maybe (ResourceName) , "group" :: Maybe (NonEmptyString) , "type" :: Maybe (BlueprintType) , "description" :: Maybe (String) , "isActive" :: Maybe (Boolean) , "minPower" :: Maybe (Int) , "version" :: Maybe (String) , "versionCode" :: Maybe (String) , "productUrl" :: Maybe (String) , "licenseUrl" :: Maybe (String) , "platform" :: Maybe (InstancePlatform) } -> {"blueprintId" :: Maybe (NonEmptyString) , "name" :: Maybe (ResourceName) , "group" :: Maybe (NonEmptyString) , "type" :: Maybe (BlueprintType) , "description" :: Maybe (String) , "isActive" :: Maybe (Boolean) , "minPower" :: Maybe (Int) , "version" :: Maybe (String) , "versionCode" :: Maybe (String) , "productUrl" :: Maybe (String) , "licenseUrl" :: Maybe (String) , "platform" :: Maybe (InstancePlatform) } ) -> Blueprint
+newBlueprint'  customize = (Blueprint <<< customize) { "blueprintId": Nothing, "description": Nothing, "group": Nothing, "isActive": Nothing, "licenseUrl": Nothing, "minPower": Nothing, "name": Nothing, "platform": Nothing, "productUrl": Nothing, "type": Nothing, "version": Nothing, "versionCode": Nothing }
 
 
 
@@ -381,17 +380,17 @@ instance encodeBlueprintType :: Encode BlueprintType where encode = genericEncod
 
 -- | <p>Describes a bundle, which is a set of specs describing your virtual private server (or <i>instance</i>).</p>
 newtype Bundle = Bundle 
-  { "price" :: NullOrUndefined (Number)
-  , "cpuCount" :: NullOrUndefined (Int)
-  , "diskSizeInGb" :: NullOrUndefined (Int)
-  , "bundleId" :: NullOrUndefined (NonEmptyString)
-  , "instanceType" :: NullOrUndefined (String)
-  , "isActive" :: NullOrUndefined (Boolean)
-  , "name" :: NullOrUndefined (String)
-  , "power" :: NullOrUndefined (Int)
-  , "ramSizeInGb" :: NullOrUndefined (Number)
-  , "transferPerMonthInGb" :: NullOrUndefined (Int)
-  , "supportedPlatforms" :: NullOrUndefined (InstancePlatformList)
+  { "price" :: Maybe (Number)
+  , "cpuCount" :: Maybe (Int)
+  , "diskSizeInGb" :: Maybe (Int)
+  , "bundleId" :: Maybe (NonEmptyString)
+  , "instanceType" :: Maybe (String)
+  , "isActive" :: Maybe (Boolean)
+  , "name" :: Maybe (String)
+  , "power" :: Maybe (Int)
+  , "ramSizeInGb" :: Maybe (Number)
+  , "transferPerMonthInGb" :: Maybe (Int)
+  , "supportedPlatforms" :: Maybe (InstancePlatformList)
   }
 derive instance newtypeBundle :: Newtype Bundle _
 derive instance repGenericBundle :: Generic Bundle _
@@ -401,12 +400,12 @@ instance encodeBundle :: Encode Bundle where encode = genericEncode options
 
 -- | Constructs Bundle from required parameters
 newBundle :: Bundle
-newBundle  = Bundle { "bundleId": (NullOrUndefined Nothing), "cpuCount": (NullOrUndefined Nothing), "diskSizeInGb": (NullOrUndefined Nothing), "instanceType": (NullOrUndefined Nothing), "isActive": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "power": (NullOrUndefined Nothing), "price": (NullOrUndefined Nothing), "ramSizeInGb": (NullOrUndefined Nothing), "supportedPlatforms": (NullOrUndefined Nothing), "transferPerMonthInGb": (NullOrUndefined Nothing) }
+newBundle  = Bundle { "bundleId": Nothing, "cpuCount": Nothing, "diskSizeInGb": Nothing, "instanceType": Nothing, "isActive": Nothing, "name": Nothing, "power": Nothing, "price": Nothing, "ramSizeInGb": Nothing, "supportedPlatforms": Nothing, "transferPerMonthInGb": Nothing }
 
 -- | Constructs Bundle's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBundle' :: ( { "price" :: NullOrUndefined (Number) , "cpuCount" :: NullOrUndefined (Int) , "diskSizeInGb" :: NullOrUndefined (Int) , "bundleId" :: NullOrUndefined (NonEmptyString) , "instanceType" :: NullOrUndefined (String) , "isActive" :: NullOrUndefined (Boolean) , "name" :: NullOrUndefined (String) , "power" :: NullOrUndefined (Int) , "ramSizeInGb" :: NullOrUndefined (Number) , "transferPerMonthInGb" :: NullOrUndefined (Int) , "supportedPlatforms" :: NullOrUndefined (InstancePlatformList) } -> {"price" :: NullOrUndefined (Number) , "cpuCount" :: NullOrUndefined (Int) , "diskSizeInGb" :: NullOrUndefined (Int) , "bundleId" :: NullOrUndefined (NonEmptyString) , "instanceType" :: NullOrUndefined (String) , "isActive" :: NullOrUndefined (Boolean) , "name" :: NullOrUndefined (String) , "power" :: NullOrUndefined (Int) , "ramSizeInGb" :: NullOrUndefined (Number) , "transferPerMonthInGb" :: NullOrUndefined (Int) , "supportedPlatforms" :: NullOrUndefined (InstancePlatformList) } ) -> Bundle
-newBundle'  customize = (Bundle <<< customize) { "bundleId": (NullOrUndefined Nothing), "cpuCount": (NullOrUndefined Nothing), "diskSizeInGb": (NullOrUndefined Nothing), "instanceType": (NullOrUndefined Nothing), "isActive": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "power": (NullOrUndefined Nothing), "price": (NullOrUndefined Nothing), "ramSizeInGb": (NullOrUndefined Nothing), "supportedPlatforms": (NullOrUndefined Nothing), "transferPerMonthInGb": (NullOrUndefined Nothing) }
+newBundle' :: ( { "price" :: Maybe (Number) , "cpuCount" :: Maybe (Int) , "diskSizeInGb" :: Maybe (Int) , "bundleId" :: Maybe (NonEmptyString) , "instanceType" :: Maybe (String) , "isActive" :: Maybe (Boolean) , "name" :: Maybe (String) , "power" :: Maybe (Int) , "ramSizeInGb" :: Maybe (Number) , "transferPerMonthInGb" :: Maybe (Int) , "supportedPlatforms" :: Maybe (InstancePlatformList) } -> {"price" :: Maybe (Number) , "cpuCount" :: Maybe (Int) , "diskSizeInGb" :: Maybe (Int) , "bundleId" :: Maybe (NonEmptyString) , "instanceType" :: Maybe (String) , "isActive" :: Maybe (Boolean) , "name" :: Maybe (String) , "power" :: Maybe (Int) , "ramSizeInGb" :: Maybe (Number) , "transferPerMonthInGb" :: Maybe (Int) , "supportedPlatforms" :: Maybe (InstancePlatformList) } ) -> Bundle
+newBundle'  customize = (Bundle <<< customize) { "bundleId": Nothing, "cpuCount": Nothing, "diskSizeInGb": Nothing, "instanceType": Nothing, "isActive": Nothing, "name": Nothing, "power": Nothing, "price": Nothing, "ramSizeInGb": Nothing, "supportedPlatforms": Nothing, "transferPerMonthInGb": Nothing }
 
 
 
@@ -441,7 +440,7 @@ newCloseInstancePublicPortsRequest' _instanceName _portInfo customize = (CloseIn
 
 
 newtype CloseInstancePublicPortsResult = CloseInstancePublicPortsResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeCloseInstancePublicPortsResult :: Newtype CloseInstancePublicPortsResult _
 derive instance repGenericCloseInstancePublicPortsResult :: Generic CloseInstancePublicPortsResult _
@@ -451,12 +450,12 @@ instance encodeCloseInstancePublicPortsResult :: Encode CloseInstancePublicPorts
 
 -- | Constructs CloseInstancePublicPortsResult from required parameters
 newCloseInstancePublicPortsResult :: CloseInstancePublicPortsResult
-newCloseInstancePublicPortsResult  = CloseInstancePublicPortsResult { "operation": (NullOrUndefined Nothing) }
+newCloseInstancePublicPortsResult  = CloseInstancePublicPortsResult { "operation": Nothing }
 
 -- | Constructs CloseInstancePublicPortsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCloseInstancePublicPortsResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> CloseInstancePublicPortsResult
-newCloseInstancePublicPortsResult'  customize = (CloseInstancePublicPortsResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newCloseInstancePublicPortsResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> CloseInstancePublicPortsResult
+newCloseInstancePublicPortsResult'  customize = (CloseInstancePublicPortsResult <<< customize) { "operation": Nothing }
 
 
 
@@ -484,7 +483,7 @@ newCreateDiskFromSnapshotRequest' _availabilityZone _diskName _diskSnapshotName 
 
 
 newtype CreateDiskFromSnapshotResult = CreateDiskFromSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateDiskFromSnapshotResult :: Newtype CreateDiskFromSnapshotResult _
 derive instance repGenericCreateDiskFromSnapshotResult :: Generic CreateDiskFromSnapshotResult _
@@ -494,12 +493,12 @@ instance encodeCreateDiskFromSnapshotResult :: Encode CreateDiskFromSnapshotResu
 
 -- | Constructs CreateDiskFromSnapshotResult from required parameters
 newCreateDiskFromSnapshotResult :: CreateDiskFromSnapshotResult
-newCreateDiskFromSnapshotResult  = CreateDiskFromSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newCreateDiskFromSnapshotResult  = CreateDiskFromSnapshotResult { "operations": Nothing }
 
 -- | Constructs CreateDiskFromSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDiskFromSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateDiskFromSnapshotResult
-newCreateDiskFromSnapshotResult'  customize = (CreateDiskFromSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateDiskFromSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateDiskFromSnapshotResult
+newCreateDiskFromSnapshotResult'  customize = (CreateDiskFromSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
@@ -526,7 +525,7 @@ newCreateDiskRequest' _availabilityZone _diskName _sizeInGb customize = (CreateD
 
 
 newtype CreateDiskResult = CreateDiskResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateDiskResult :: Newtype CreateDiskResult _
 derive instance repGenericCreateDiskResult :: Generic CreateDiskResult _
@@ -536,12 +535,12 @@ instance encodeCreateDiskResult :: Encode CreateDiskResult where encode = generi
 
 -- | Constructs CreateDiskResult from required parameters
 newCreateDiskResult :: CreateDiskResult
-newCreateDiskResult  = CreateDiskResult { "operations": (NullOrUndefined Nothing) }
+newCreateDiskResult  = CreateDiskResult { "operations": Nothing }
 
 -- | Constructs CreateDiskResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDiskResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateDiskResult
-newCreateDiskResult'  customize = (CreateDiskResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateDiskResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateDiskResult
+newCreateDiskResult'  customize = (CreateDiskResult <<< customize) { "operations": Nothing }
 
 
 
@@ -567,7 +566,7 @@ newCreateDiskSnapshotRequest' _diskName _diskSnapshotName customize = (CreateDis
 
 
 newtype CreateDiskSnapshotResult = CreateDiskSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateDiskSnapshotResult :: Newtype CreateDiskSnapshotResult _
 derive instance repGenericCreateDiskSnapshotResult :: Generic CreateDiskSnapshotResult _
@@ -577,12 +576,12 @@ instance encodeCreateDiskSnapshotResult :: Encode CreateDiskSnapshotResult where
 
 -- | Constructs CreateDiskSnapshotResult from required parameters
 newCreateDiskSnapshotResult :: CreateDiskSnapshotResult
-newCreateDiskSnapshotResult  = CreateDiskSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newCreateDiskSnapshotResult  = CreateDiskSnapshotResult { "operations": Nothing }
 
 -- | Constructs CreateDiskSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDiskSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateDiskSnapshotResult
-newCreateDiskSnapshotResult'  customize = (CreateDiskSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateDiskSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateDiskSnapshotResult
+newCreateDiskSnapshotResult'  customize = (CreateDiskSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
@@ -608,7 +607,7 @@ newCreateDomainEntryRequest' _domainEntry _domainName customize = (CreateDomainE
 
 
 newtype CreateDomainEntryResult = CreateDomainEntryResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeCreateDomainEntryResult :: Newtype CreateDomainEntryResult _
 derive instance repGenericCreateDomainEntryResult :: Generic CreateDomainEntryResult _
@@ -618,12 +617,12 @@ instance encodeCreateDomainEntryResult :: Encode CreateDomainEntryResult where e
 
 -- | Constructs CreateDomainEntryResult from required parameters
 newCreateDomainEntryResult :: CreateDomainEntryResult
-newCreateDomainEntryResult  = CreateDomainEntryResult { "operation": (NullOrUndefined Nothing) }
+newCreateDomainEntryResult  = CreateDomainEntryResult { "operation": Nothing }
 
 -- | Constructs CreateDomainEntryResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDomainEntryResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> CreateDomainEntryResult
-newCreateDomainEntryResult'  customize = (CreateDomainEntryResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newCreateDomainEntryResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> CreateDomainEntryResult
+newCreateDomainEntryResult'  customize = (CreateDomainEntryResult <<< customize) { "operation": Nothing }
 
 
 
@@ -648,7 +647,7 @@ newCreateDomainRequest' _domainName customize = (CreateDomainRequest <<< customi
 
 
 newtype CreateDomainResult = CreateDomainResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeCreateDomainResult :: Newtype CreateDomainResult _
 derive instance repGenericCreateDomainResult :: Generic CreateDomainResult _
@@ -658,12 +657,12 @@ instance encodeCreateDomainResult :: Encode CreateDomainResult where encode = ge
 
 -- | Constructs CreateDomainResult from required parameters
 newCreateDomainResult :: CreateDomainResult
-newCreateDomainResult  = CreateDomainResult { "operation": (NullOrUndefined Nothing) }
+newCreateDomainResult  = CreateDomainResult { "operation": Nothing }
 
 -- | Constructs CreateDomainResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDomainResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> CreateDomainResult
-newCreateDomainResult'  customize = (CreateDomainResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newCreateDomainResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> CreateDomainResult
+newCreateDomainResult'  customize = (CreateDomainResult <<< customize) { "operation": Nothing }
 
 
 
@@ -689,7 +688,7 @@ newCreateInstanceSnapshotRequest' _instanceName _instanceSnapshotName customize 
 
 
 newtype CreateInstanceSnapshotResult = CreateInstanceSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateInstanceSnapshotResult :: Newtype CreateInstanceSnapshotResult _
 derive instance repGenericCreateInstanceSnapshotResult :: Generic CreateInstanceSnapshotResult _
@@ -699,23 +698,23 @@ instance encodeCreateInstanceSnapshotResult :: Encode CreateInstanceSnapshotResu
 
 -- | Constructs CreateInstanceSnapshotResult from required parameters
 newCreateInstanceSnapshotResult :: CreateInstanceSnapshotResult
-newCreateInstanceSnapshotResult  = CreateInstanceSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newCreateInstanceSnapshotResult  = CreateInstanceSnapshotResult { "operations": Nothing }
 
 -- | Constructs CreateInstanceSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateInstanceSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateInstanceSnapshotResult
-newCreateInstanceSnapshotResult'  customize = (CreateInstanceSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateInstanceSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateInstanceSnapshotResult
+newCreateInstanceSnapshotResult'  customize = (CreateInstanceSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
 newtype CreateInstancesFromSnapshotRequest = CreateInstancesFromSnapshotRequest 
   { "instanceNames" :: (StringList)
-  , "attachedDiskMapping" :: NullOrUndefined (AttachedDiskMap)
+  , "attachedDiskMapping" :: Maybe (AttachedDiskMap)
   , "availabilityZone" :: (String)
   , "instanceSnapshotName" :: (ResourceName)
   , "bundleId" :: (NonEmptyString)
-  , "userData" :: NullOrUndefined (String)
-  , "keyPairName" :: NullOrUndefined (ResourceName)
+  , "userData" :: Maybe (String)
+  , "keyPairName" :: Maybe (ResourceName)
   }
 derive instance newtypeCreateInstancesFromSnapshotRequest :: Newtype CreateInstancesFromSnapshotRequest _
 derive instance repGenericCreateInstancesFromSnapshotRequest :: Generic CreateInstancesFromSnapshotRequest _
@@ -725,17 +724,17 @@ instance encodeCreateInstancesFromSnapshotRequest :: Encode CreateInstancesFromS
 
 -- | Constructs CreateInstancesFromSnapshotRequest from required parameters
 newCreateInstancesFromSnapshotRequest :: String -> NonEmptyString -> StringList -> ResourceName -> CreateInstancesFromSnapshotRequest
-newCreateInstancesFromSnapshotRequest _availabilityZone _bundleId _instanceNames _instanceSnapshotName = CreateInstancesFromSnapshotRequest { "availabilityZone": _availabilityZone, "bundleId": _bundleId, "instanceNames": _instanceNames, "instanceSnapshotName": _instanceSnapshotName, "attachedDiskMapping": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing), "userData": (NullOrUndefined Nothing) }
+newCreateInstancesFromSnapshotRequest _availabilityZone _bundleId _instanceNames _instanceSnapshotName = CreateInstancesFromSnapshotRequest { "availabilityZone": _availabilityZone, "bundleId": _bundleId, "instanceNames": _instanceNames, "instanceSnapshotName": _instanceSnapshotName, "attachedDiskMapping": Nothing, "keyPairName": Nothing, "userData": Nothing }
 
 -- | Constructs CreateInstancesFromSnapshotRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateInstancesFromSnapshotRequest' :: String -> NonEmptyString -> StringList -> ResourceName -> ( { "instanceNames" :: (StringList) , "attachedDiskMapping" :: NullOrUndefined (AttachedDiskMap) , "availabilityZone" :: (String) , "instanceSnapshotName" :: (ResourceName) , "bundleId" :: (NonEmptyString) , "userData" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } -> {"instanceNames" :: (StringList) , "attachedDiskMapping" :: NullOrUndefined (AttachedDiskMap) , "availabilityZone" :: (String) , "instanceSnapshotName" :: (ResourceName) , "bundleId" :: (NonEmptyString) , "userData" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } ) -> CreateInstancesFromSnapshotRequest
-newCreateInstancesFromSnapshotRequest' _availabilityZone _bundleId _instanceNames _instanceSnapshotName customize = (CreateInstancesFromSnapshotRequest <<< customize) { "availabilityZone": _availabilityZone, "bundleId": _bundleId, "instanceNames": _instanceNames, "instanceSnapshotName": _instanceSnapshotName, "attachedDiskMapping": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing), "userData": (NullOrUndefined Nothing) }
+newCreateInstancesFromSnapshotRequest' :: String -> NonEmptyString -> StringList -> ResourceName -> ( { "instanceNames" :: (StringList) , "attachedDiskMapping" :: Maybe (AttachedDiskMap) , "availabilityZone" :: (String) , "instanceSnapshotName" :: (ResourceName) , "bundleId" :: (NonEmptyString) , "userData" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } -> {"instanceNames" :: (StringList) , "attachedDiskMapping" :: Maybe (AttachedDiskMap) , "availabilityZone" :: (String) , "instanceSnapshotName" :: (ResourceName) , "bundleId" :: (NonEmptyString) , "userData" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } ) -> CreateInstancesFromSnapshotRequest
+newCreateInstancesFromSnapshotRequest' _availabilityZone _bundleId _instanceNames _instanceSnapshotName customize = (CreateInstancesFromSnapshotRequest <<< customize) { "availabilityZone": _availabilityZone, "bundleId": _bundleId, "instanceNames": _instanceNames, "instanceSnapshotName": _instanceSnapshotName, "attachedDiskMapping": Nothing, "keyPairName": Nothing, "userData": Nothing }
 
 
 
 newtype CreateInstancesFromSnapshotResult = CreateInstancesFromSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateInstancesFromSnapshotResult :: Newtype CreateInstancesFromSnapshotResult _
 derive instance repGenericCreateInstancesFromSnapshotResult :: Generic CreateInstancesFromSnapshotResult _
@@ -745,23 +744,23 @@ instance encodeCreateInstancesFromSnapshotResult :: Encode CreateInstancesFromSn
 
 -- | Constructs CreateInstancesFromSnapshotResult from required parameters
 newCreateInstancesFromSnapshotResult :: CreateInstancesFromSnapshotResult
-newCreateInstancesFromSnapshotResult  = CreateInstancesFromSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newCreateInstancesFromSnapshotResult  = CreateInstancesFromSnapshotResult { "operations": Nothing }
 
 -- | Constructs CreateInstancesFromSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateInstancesFromSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateInstancesFromSnapshotResult
-newCreateInstancesFromSnapshotResult'  customize = (CreateInstancesFromSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateInstancesFromSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateInstancesFromSnapshotResult
+newCreateInstancesFromSnapshotResult'  customize = (CreateInstancesFromSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
 newtype CreateInstancesRequest = CreateInstancesRequest 
   { "instanceNames" :: (StringList)
   , "availabilityZone" :: (String)
-  , "customImageName" :: NullOrUndefined (ResourceName)
+  , "customImageName" :: Maybe (ResourceName)
   , "blueprintId" :: (NonEmptyString)
   , "bundleId" :: (NonEmptyString)
-  , "userData" :: NullOrUndefined (String)
-  , "keyPairName" :: NullOrUndefined (ResourceName)
+  , "userData" :: Maybe (String)
+  , "keyPairName" :: Maybe (ResourceName)
   }
 derive instance newtypeCreateInstancesRequest :: Newtype CreateInstancesRequest _
 derive instance repGenericCreateInstancesRequest :: Generic CreateInstancesRequest _
@@ -771,17 +770,17 @@ instance encodeCreateInstancesRequest :: Encode CreateInstancesRequest where enc
 
 -- | Constructs CreateInstancesRequest from required parameters
 newCreateInstancesRequest :: String -> NonEmptyString -> NonEmptyString -> StringList -> CreateInstancesRequest
-newCreateInstancesRequest _availabilityZone _blueprintId _bundleId _instanceNames = CreateInstancesRequest { "availabilityZone": _availabilityZone, "blueprintId": _blueprintId, "bundleId": _bundleId, "instanceNames": _instanceNames, "customImageName": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing), "userData": (NullOrUndefined Nothing) }
+newCreateInstancesRequest _availabilityZone _blueprintId _bundleId _instanceNames = CreateInstancesRequest { "availabilityZone": _availabilityZone, "blueprintId": _blueprintId, "bundleId": _bundleId, "instanceNames": _instanceNames, "customImageName": Nothing, "keyPairName": Nothing, "userData": Nothing }
 
 -- | Constructs CreateInstancesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateInstancesRequest' :: String -> NonEmptyString -> NonEmptyString -> StringList -> ( { "instanceNames" :: (StringList) , "availabilityZone" :: (String) , "customImageName" :: NullOrUndefined (ResourceName) , "blueprintId" :: (NonEmptyString) , "bundleId" :: (NonEmptyString) , "userData" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } -> {"instanceNames" :: (StringList) , "availabilityZone" :: (String) , "customImageName" :: NullOrUndefined (ResourceName) , "blueprintId" :: (NonEmptyString) , "bundleId" :: (NonEmptyString) , "userData" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } ) -> CreateInstancesRequest
-newCreateInstancesRequest' _availabilityZone _blueprintId _bundleId _instanceNames customize = (CreateInstancesRequest <<< customize) { "availabilityZone": _availabilityZone, "blueprintId": _blueprintId, "bundleId": _bundleId, "instanceNames": _instanceNames, "customImageName": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing), "userData": (NullOrUndefined Nothing) }
+newCreateInstancesRequest' :: String -> NonEmptyString -> NonEmptyString -> StringList -> ( { "instanceNames" :: (StringList) , "availabilityZone" :: (String) , "customImageName" :: Maybe (ResourceName) , "blueprintId" :: (NonEmptyString) , "bundleId" :: (NonEmptyString) , "userData" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } -> {"instanceNames" :: (StringList) , "availabilityZone" :: (String) , "customImageName" :: Maybe (ResourceName) , "blueprintId" :: (NonEmptyString) , "bundleId" :: (NonEmptyString) , "userData" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } ) -> CreateInstancesRequest
+newCreateInstancesRequest' _availabilityZone _blueprintId _bundleId _instanceNames customize = (CreateInstancesRequest <<< customize) { "availabilityZone": _availabilityZone, "blueprintId": _blueprintId, "bundleId": _bundleId, "instanceNames": _instanceNames, "customImageName": Nothing, "keyPairName": Nothing, "userData": Nothing }
 
 
 
 newtype CreateInstancesResult = CreateInstancesResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateInstancesResult :: Newtype CreateInstancesResult _
 derive instance repGenericCreateInstancesResult :: Generic CreateInstancesResult _
@@ -791,12 +790,12 @@ instance encodeCreateInstancesResult :: Encode CreateInstancesResult where encod
 
 -- | Constructs CreateInstancesResult from required parameters
 newCreateInstancesResult :: CreateInstancesResult
-newCreateInstancesResult  = CreateInstancesResult { "operations": (NullOrUndefined Nothing) }
+newCreateInstancesResult  = CreateInstancesResult { "operations": Nothing }
 
 -- | Constructs CreateInstancesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateInstancesResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateInstancesResult
-newCreateInstancesResult'  customize = (CreateInstancesResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateInstancesResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateInstancesResult
+newCreateInstancesResult'  customize = (CreateInstancesResult <<< customize) { "operations": Nothing }
 
 
 
@@ -821,10 +820,10 @@ newCreateKeyPairRequest' _keyPairName customize = (CreateKeyPairRequest <<< cust
 
 
 newtype CreateKeyPairResult = CreateKeyPairResult 
-  { "keyPair" :: NullOrUndefined (KeyPair)
-  , "publicKeyBase64" :: NullOrUndefined (Base64)
-  , "privateKeyBase64" :: NullOrUndefined (Base64)
-  , "operation" :: NullOrUndefined (Operation)
+  { "keyPair" :: Maybe (KeyPair)
+  , "publicKeyBase64" :: Maybe (Base64)
+  , "privateKeyBase64" :: Maybe (Base64)
+  , "operation" :: Maybe (Operation)
   }
 derive instance newtypeCreateKeyPairResult :: Newtype CreateKeyPairResult _
 derive instance repGenericCreateKeyPairResult :: Generic CreateKeyPairResult _
@@ -834,22 +833,22 @@ instance encodeCreateKeyPairResult :: Encode CreateKeyPairResult where encode = 
 
 -- | Constructs CreateKeyPairResult from required parameters
 newCreateKeyPairResult :: CreateKeyPairResult
-newCreateKeyPairResult  = CreateKeyPairResult { "keyPair": (NullOrUndefined Nothing), "operation": (NullOrUndefined Nothing), "privateKeyBase64": (NullOrUndefined Nothing), "publicKeyBase64": (NullOrUndefined Nothing) }
+newCreateKeyPairResult  = CreateKeyPairResult { "keyPair": Nothing, "operation": Nothing, "privateKeyBase64": Nothing, "publicKeyBase64": Nothing }
 
 -- | Constructs CreateKeyPairResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateKeyPairResult' :: ( { "keyPair" :: NullOrUndefined (KeyPair) , "publicKeyBase64" :: NullOrUndefined (Base64) , "privateKeyBase64" :: NullOrUndefined (Base64) , "operation" :: NullOrUndefined (Operation) } -> {"keyPair" :: NullOrUndefined (KeyPair) , "publicKeyBase64" :: NullOrUndefined (Base64) , "privateKeyBase64" :: NullOrUndefined (Base64) , "operation" :: NullOrUndefined (Operation) } ) -> CreateKeyPairResult
-newCreateKeyPairResult'  customize = (CreateKeyPairResult <<< customize) { "keyPair": (NullOrUndefined Nothing), "operation": (NullOrUndefined Nothing), "privateKeyBase64": (NullOrUndefined Nothing), "publicKeyBase64": (NullOrUndefined Nothing) }
+newCreateKeyPairResult' :: ( { "keyPair" :: Maybe (KeyPair) , "publicKeyBase64" :: Maybe (Base64) , "privateKeyBase64" :: Maybe (Base64) , "operation" :: Maybe (Operation) } -> {"keyPair" :: Maybe (KeyPair) , "publicKeyBase64" :: Maybe (Base64) , "privateKeyBase64" :: Maybe (Base64) , "operation" :: Maybe (Operation) } ) -> CreateKeyPairResult
+newCreateKeyPairResult'  customize = (CreateKeyPairResult <<< customize) { "keyPair": Nothing, "operation": Nothing, "privateKeyBase64": Nothing, "publicKeyBase64": Nothing }
 
 
 
 newtype CreateLoadBalancerRequest = CreateLoadBalancerRequest 
   { "loadBalancerName" :: (ResourceName)
   , "instancePort" :: (Port)
-  , "healthCheckPath" :: NullOrUndefined (String)
-  , "certificateName" :: NullOrUndefined (ResourceName)
-  , "certificateDomainName" :: NullOrUndefined (DomainName)
-  , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList)
+  , "healthCheckPath" :: Maybe (String)
+  , "certificateName" :: Maybe (ResourceName)
+  , "certificateDomainName" :: Maybe (DomainName)
+  , "certificateAlternativeNames" :: Maybe (DomainNameList)
   }
 derive instance newtypeCreateLoadBalancerRequest :: Newtype CreateLoadBalancerRequest _
 derive instance repGenericCreateLoadBalancerRequest :: Generic CreateLoadBalancerRequest _
@@ -859,17 +858,17 @@ instance encodeCreateLoadBalancerRequest :: Encode CreateLoadBalancerRequest whe
 
 -- | Constructs CreateLoadBalancerRequest from required parameters
 newCreateLoadBalancerRequest :: Port -> ResourceName -> CreateLoadBalancerRequest
-newCreateLoadBalancerRequest _instancePort _loadBalancerName = CreateLoadBalancerRequest { "instancePort": _instancePort, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": (NullOrUndefined Nothing), "certificateDomainName": (NullOrUndefined Nothing), "certificateName": (NullOrUndefined Nothing), "healthCheckPath": (NullOrUndefined Nothing) }
+newCreateLoadBalancerRequest _instancePort _loadBalancerName = CreateLoadBalancerRequest { "instancePort": _instancePort, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": Nothing, "certificateDomainName": Nothing, "certificateName": Nothing, "healthCheckPath": Nothing }
 
 -- | Constructs CreateLoadBalancerRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoadBalancerRequest' :: Port -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "instancePort" :: (Port) , "healthCheckPath" :: NullOrUndefined (String) , "certificateName" :: NullOrUndefined (ResourceName) , "certificateDomainName" :: NullOrUndefined (DomainName) , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList) } -> {"loadBalancerName" :: (ResourceName) , "instancePort" :: (Port) , "healthCheckPath" :: NullOrUndefined (String) , "certificateName" :: NullOrUndefined (ResourceName) , "certificateDomainName" :: NullOrUndefined (DomainName) , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList) } ) -> CreateLoadBalancerRequest
-newCreateLoadBalancerRequest' _instancePort _loadBalancerName customize = (CreateLoadBalancerRequest <<< customize) { "instancePort": _instancePort, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": (NullOrUndefined Nothing), "certificateDomainName": (NullOrUndefined Nothing), "certificateName": (NullOrUndefined Nothing), "healthCheckPath": (NullOrUndefined Nothing) }
+newCreateLoadBalancerRequest' :: Port -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "instancePort" :: (Port) , "healthCheckPath" :: Maybe (String) , "certificateName" :: Maybe (ResourceName) , "certificateDomainName" :: Maybe (DomainName) , "certificateAlternativeNames" :: Maybe (DomainNameList) } -> {"loadBalancerName" :: (ResourceName) , "instancePort" :: (Port) , "healthCheckPath" :: Maybe (String) , "certificateName" :: Maybe (ResourceName) , "certificateDomainName" :: Maybe (DomainName) , "certificateAlternativeNames" :: Maybe (DomainNameList) } ) -> CreateLoadBalancerRequest
+newCreateLoadBalancerRequest' _instancePort _loadBalancerName customize = (CreateLoadBalancerRequest <<< customize) { "instancePort": _instancePort, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": Nothing, "certificateDomainName": Nothing, "certificateName": Nothing, "healthCheckPath": Nothing }
 
 
 
 newtype CreateLoadBalancerResult = CreateLoadBalancerResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateLoadBalancerResult :: Newtype CreateLoadBalancerResult _
 derive instance repGenericCreateLoadBalancerResult :: Generic CreateLoadBalancerResult _
@@ -879,12 +878,12 @@ instance encodeCreateLoadBalancerResult :: Encode CreateLoadBalancerResult where
 
 -- | Constructs CreateLoadBalancerResult from required parameters
 newCreateLoadBalancerResult :: CreateLoadBalancerResult
-newCreateLoadBalancerResult  = CreateLoadBalancerResult { "operations": (NullOrUndefined Nothing) }
+newCreateLoadBalancerResult  = CreateLoadBalancerResult { "operations": Nothing }
 
 -- | Constructs CreateLoadBalancerResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoadBalancerResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateLoadBalancerResult
-newCreateLoadBalancerResult'  customize = (CreateLoadBalancerResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateLoadBalancerResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateLoadBalancerResult
+newCreateLoadBalancerResult'  customize = (CreateLoadBalancerResult <<< customize) { "operations": Nothing }
 
 
 
@@ -892,7 +891,7 @@ newtype CreateLoadBalancerTlsCertificateRequest = CreateLoadBalancerTlsCertifica
   { "loadBalancerName" :: (ResourceName)
   , "certificateName" :: (ResourceName)
   , "certificateDomainName" :: (DomainName)
-  , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList)
+  , "certificateAlternativeNames" :: Maybe (DomainNameList)
   }
 derive instance newtypeCreateLoadBalancerTlsCertificateRequest :: Newtype CreateLoadBalancerTlsCertificateRequest _
 derive instance repGenericCreateLoadBalancerTlsCertificateRequest :: Generic CreateLoadBalancerTlsCertificateRequest _
@@ -902,17 +901,17 @@ instance encodeCreateLoadBalancerTlsCertificateRequest :: Encode CreateLoadBalan
 
 -- | Constructs CreateLoadBalancerTlsCertificateRequest from required parameters
 newCreateLoadBalancerTlsCertificateRequest :: DomainName -> ResourceName -> ResourceName -> CreateLoadBalancerTlsCertificateRequest
-newCreateLoadBalancerTlsCertificateRequest _certificateDomainName _certificateName _loadBalancerName = CreateLoadBalancerTlsCertificateRequest { "certificateDomainName": _certificateDomainName, "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": (NullOrUndefined Nothing) }
+newCreateLoadBalancerTlsCertificateRequest _certificateDomainName _certificateName _loadBalancerName = CreateLoadBalancerTlsCertificateRequest { "certificateDomainName": _certificateDomainName, "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": Nothing }
 
 -- | Constructs CreateLoadBalancerTlsCertificateRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoadBalancerTlsCertificateRequest' :: DomainName -> ResourceName -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "certificateDomainName" :: (DomainName) , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList) } -> {"loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "certificateDomainName" :: (DomainName) , "certificateAlternativeNames" :: NullOrUndefined (DomainNameList) } ) -> CreateLoadBalancerTlsCertificateRequest
-newCreateLoadBalancerTlsCertificateRequest' _certificateDomainName _certificateName _loadBalancerName customize = (CreateLoadBalancerTlsCertificateRequest <<< customize) { "certificateDomainName": _certificateDomainName, "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": (NullOrUndefined Nothing) }
+newCreateLoadBalancerTlsCertificateRequest' :: DomainName -> ResourceName -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "certificateDomainName" :: (DomainName) , "certificateAlternativeNames" :: Maybe (DomainNameList) } -> {"loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "certificateDomainName" :: (DomainName) , "certificateAlternativeNames" :: Maybe (DomainNameList) } ) -> CreateLoadBalancerTlsCertificateRequest
+newCreateLoadBalancerTlsCertificateRequest' _certificateDomainName _certificateName _loadBalancerName customize = (CreateLoadBalancerTlsCertificateRequest <<< customize) { "certificateDomainName": _certificateDomainName, "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "certificateAlternativeNames": Nothing }
 
 
 
 newtype CreateLoadBalancerTlsCertificateResult = CreateLoadBalancerTlsCertificateResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeCreateLoadBalancerTlsCertificateResult :: Newtype CreateLoadBalancerTlsCertificateResult _
 derive instance repGenericCreateLoadBalancerTlsCertificateResult :: Generic CreateLoadBalancerTlsCertificateResult _
@@ -922,12 +921,12 @@ instance encodeCreateLoadBalancerTlsCertificateResult :: Encode CreateLoadBalanc
 
 -- | Constructs CreateLoadBalancerTlsCertificateResult from required parameters
 newCreateLoadBalancerTlsCertificateResult :: CreateLoadBalancerTlsCertificateResult
-newCreateLoadBalancerTlsCertificateResult  = CreateLoadBalancerTlsCertificateResult { "operations": (NullOrUndefined Nothing) }
+newCreateLoadBalancerTlsCertificateResult  = CreateLoadBalancerTlsCertificateResult { "operations": Nothing }
 
 -- | Constructs CreateLoadBalancerTlsCertificateResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoadBalancerTlsCertificateResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> CreateLoadBalancerTlsCertificateResult
-newCreateLoadBalancerTlsCertificateResult'  customize = (CreateLoadBalancerTlsCertificateResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newCreateLoadBalancerTlsCertificateResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> CreateLoadBalancerTlsCertificateResult
+newCreateLoadBalancerTlsCertificateResult'  customize = (CreateLoadBalancerTlsCertificateResult <<< customize) { "operations": Nothing }
 
 
 
@@ -952,7 +951,7 @@ newDeleteDiskRequest' _diskName customize = (DeleteDiskRequest <<< customize) { 
 
 
 newtype DeleteDiskResult = DeleteDiskResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteDiskResult :: Newtype DeleteDiskResult _
 derive instance repGenericDeleteDiskResult :: Generic DeleteDiskResult _
@@ -962,12 +961,12 @@ instance encodeDeleteDiskResult :: Encode DeleteDiskResult where encode = generi
 
 -- | Constructs DeleteDiskResult from required parameters
 newDeleteDiskResult :: DeleteDiskResult
-newDeleteDiskResult  = DeleteDiskResult { "operations": (NullOrUndefined Nothing) }
+newDeleteDiskResult  = DeleteDiskResult { "operations": Nothing }
 
 -- | Constructs DeleteDiskResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDiskResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteDiskResult
-newDeleteDiskResult'  customize = (DeleteDiskResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteDiskResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteDiskResult
+newDeleteDiskResult'  customize = (DeleteDiskResult <<< customize) { "operations": Nothing }
 
 
 
@@ -992,7 +991,7 @@ newDeleteDiskSnapshotRequest' _diskSnapshotName customize = (DeleteDiskSnapshotR
 
 
 newtype DeleteDiskSnapshotResult = DeleteDiskSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteDiskSnapshotResult :: Newtype DeleteDiskSnapshotResult _
 derive instance repGenericDeleteDiskSnapshotResult :: Generic DeleteDiskSnapshotResult _
@@ -1002,12 +1001,12 @@ instance encodeDeleteDiskSnapshotResult :: Encode DeleteDiskSnapshotResult where
 
 -- | Constructs DeleteDiskSnapshotResult from required parameters
 newDeleteDiskSnapshotResult :: DeleteDiskSnapshotResult
-newDeleteDiskSnapshotResult  = DeleteDiskSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newDeleteDiskSnapshotResult  = DeleteDiskSnapshotResult { "operations": Nothing }
 
 -- | Constructs DeleteDiskSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDiskSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteDiskSnapshotResult
-newDeleteDiskSnapshotResult'  customize = (DeleteDiskSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteDiskSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteDiskSnapshotResult
+newDeleteDiskSnapshotResult'  customize = (DeleteDiskSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1033,7 +1032,7 @@ newDeleteDomainEntryRequest' _domainEntry _domainName customize = (DeleteDomainE
 
 
 newtype DeleteDomainEntryResult = DeleteDomainEntryResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeDeleteDomainEntryResult :: Newtype DeleteDomainEntryResult _
 derive instance repGenericDeleteDomainEntryResult :: Generic DeleteDomainEntryResult _
@@ -1043,12 +1042,12 @@ instance encodeDeleteDomainEntryResult :: Encode DeleteDomainEntryResult where e
 
 -- | Constructs DeleteDomainEntryResult from required parameters
 newDeleteDomainEntryResult :: DeleteDomainEntryResult
-newDeleteDomainEntryResult  = DeleteDomainEntryResult { "operation": (NullOrUndefined Nothing) }
+newDeleteDomainEntryResult  = DeleteDomainEntryResult { "operation": Nothing }
 
 -- | Constructs DeleteDomainEntryResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDomainEntryResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> DeleteDomainEntryResult
-newDeleteDomainEntryResult'  customize = (DeleteDomainEntryResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newDeleteDomainEntryResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> DeleteDomainEntryResult
+newDeleteDomainEntryResult'  customize = (DeleteDomainEntryResult <<< customize) { "operation": Nothing }
 
 
 
@@ -1073,7 +1072,7 @@ newDeleteDomainRequest' _domainName customize = (DeleteDomainRequest <<< customi
 
 
 newtype DeleteDomainResult = DeleteDomainResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeDeleteDomainResult :: Newtype DeleteDomainResult _
 derive instance repGenericDeleteDomainResult :: Generic DeleteDomainResult _
@@ -1083,12 +1082,12 @@ instance encodeDeleteDomainResult :: Encode DeleteDomainResult where encode = ge
 
 -- | Constructs DeleteDomainResult from required parameters
 newDeleteDomainResult :: DeleteDomainResult
-newDeleteDomainResult  = DeleteDomainResult { "operation": (NullOrUndefined Nothing) }
+newDeleteDomainResult  = DeleteDomainResult { "operation": Nothing }
 
 -- | Constructs DeleteDomainResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDomainResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> DeleteDomainResult
-newDeleteDomainResult'  customize = (DeleteDomainResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newDeleteDomainResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> DeleteDomainResult
+newDeleteDomainResult'  customize = (DeleteDomainResult <<< customize) { "operation": Nothing }
 
 
 
@@ -1113,7 +1112,7 @@ newDeleteInstanceRequest' _instanceName customize = (DeleteInstanceRequest <<< c
 
 
 newtype DeleteInstanceResult = DeleteInstanceResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteInstanceResult :: Newtype DeleteInstanceResult _
 derive instance repGenericDeleteInstanceResult :: Generic DeleteInstanceResult _
@@ -1123,12 +1122,12 @@ instance encodeDeleteInstanceResult :: Encode DeleteInstanceResult where encode 
 
 -- | Constructs DeleteInstanceResult from required parameters
 newDeleteInstanceResult :: DeleteInstanceResult
-newDeleteInstanceResult  = DeleteInstanceResult { "operations": (NullOrUndefined Nothing) }
+newDeleteInstanceResult  = DeleteInstanceResult { "operations": Nothing }
 
 -- | Constructs DeleteInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteInstanceResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteInstanceResult
-newDeleteInstanceResult'  customize = (DeleteInstanceResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteInstanceResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteInstanceResult
+newDeleteInstanceResult'  customize = (DeleteInstanceResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1153,7 +1152,7 @@ newDeleteInstanceSnapshotRequest' _instanceSnapshotName customize = (DeleteInsta
 
 
 newtype DeleteInstanceSnapshotResult = DeleteInstanceSnapshotResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteInstanceSnapshotResult :: Newtype DeleteInstanceSnapshotResult _
 derive instance repGenericDeleteInstanceSnapshotResult :: Generic DeleteInstanceSnapshotResult _
@@ -1163,12 +1162,12 @@ instance encodeDeleteInstanceSnapshotResult :: Encode DeleteInstanceSnapshotResu
 
 -- | Constructs DeleteInstanceSnapshotResult from required parameters
 newDeleteInstanceSnapshotResult :: DeleteInstanceSnapshotResult
-newDeleteInstanceSnapshotResult  = DeleteInstanceSnapshotResult { "operations": (NullOrUndefined Nothing) }
+newDeleteInstanceSnapshotResult  = DeleteInstanceSnapshotResult { "operations": Nothing }
 
 -- | Constructs DeleteInstanceSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteInstanceSnapshotResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteInstanceSnapshotResult
-newDeleteInstanceSnapshotResult'  customize = (DeleteInstanceSnapshotResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteInstanceSnapshotResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteInstanceSnapshotResult
+newDeleteInstanceSnapshotResult'  customize = (DeleteInstanceSnapshotResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1193,7 +1192,7 @@ newDeleteKeyPairRequest' _keyPairName customize = (DeleteKeyPairRequest <<< cust
 
 
 newtype DeleteKeyPairResult = DeleteKeyPairResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeDeleteKeyPairResult :: Newtype DeleteKeyPairResult _
 derive instance repGenericDeleteKeyPairResult :: Generic DeleteKeyPairResult _
@@ -1203,12 +1202,12 @@ instance encodeDeleteKeyPairResult :: Encode DeleteKeyPairResult where encode = 
 
 -- | Constructs DeleteKeyPairResult from required parameters
 newDeleteKeyPairResult :: DeleteKeyPairResult
-newDeleteKeyPairResult  = DeleteKeyPairResult { "operation": (NullOrUndefined Nothing) }
+newDeleteKeyPairResult  = DeleteKeyPairResult { "operation": Nothing }
 
 -- | Constructs DeleteKeyPairResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteKeyPairResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> DeleteKeyPairResult
-newDeleteKeyPairResult'  customize = (DeleteKeyPairResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newDeleteKeyPairResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> DeleteKeyPairResult
+newDeleteKeyPairResult'  customize = (DeleteKeyPairResult <<< customize) { "operation": Nothing }
 
 
 
@@ -1233,7 +1232,7 @@ newDeleteLoadBalancerRequest' _loadBalancerName customize = (DeleteLoadBalancerR
 
 
 newtype DeleteLoadBalancerResult = DeleteLoadBalancerResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteLoadBalancerResult :: Newtype DeleteLoadBalancerResult _
 derive instance repGenericDeleteLoadBalancerResult :: Generic DeleteLoadBalancerResult _
@@ -1243,19 +1242,19 @@ instance encodeDeleteLoadBalancerResult :: Encode DeleteLoadBalancerResult where
 
 -- | Constructs DeleteLoadBalancerResult from required parameters
 newDeleteLoadBalancerResult :: DeleteLoadBalancerResult
-newDeleteLoadBalancerResult  = DeleteLoadBalancerResult { "operations": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerResult  = DeleteLoadBalancerResult { "operations": Nothing }
 
 -- | Constructs DeleteLoadBalancerResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteLoadBalancerResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteLoadBalancerResult
-newDeleteLoadBalancerResult'  customize = (DeleteLoadBalancerResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteLoadBalancerResult
+newDeleteLoadBalancerResult'  customize = (DeleteLoadBalancerResult <<< customize) { "operations": Nothing }
 
 
 
 newtype DeleteLoadBalancerTlsCertificateRequest = DeleteLoadBalancerTlsCertificateRequest 
   { "loadBalancerName" :: (ResourceName)
   , "certificateName" :: (ResourceName)
-  , "force" :: NullOrUndefined (Boolean)
+  , "force" :: Maybe (Boolean)
   }
 derive instance newtypeDeleteLoadBalancerTlsCertificateRequest :: Newtype DeleteLoadBalancerTlsCertificateRequest _
 derive instance repGenericDeleteLoadBalancerTlsCertificateRequest :: Generic DeleteLoadBalancerTlsCertificateRequest _
@@ -1265,17 +1264,17 @@ instance encodeDeleteLoadBalancerTlsCertificateRequest :: Encode DeleteLoadBalan
 
 -- | Constructs DeleteLoadBalancerTlsCertificateRequest from required parameters
 newDeleteLoadBalancerTlsCertificateRequest :: ResourceName -> ResourceName -> DeleteLoadBalancerTlsCertificateRequest
-newDeleteLoadBalancerTlsCertificateRequest _certificateName _loadBalancerName = DeleteLoadBalancerTlsCertificateRequest { "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "force": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerTlsCertificateRequest _certificateName _loadBalancerName = DeleteLoadBalancerTlsCertificateRequest { "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "force": Nothing }
 
 -- | Constructs DeleteLoadBalancerTlsCertificateRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteLoadBalancerTlsCertificateRequest' :: ResourceName -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "force" :: NullOrUndefined (Boolean) } -> {"loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "force" :: NullOrUndefined (Boolean) } ) -> DeleteLoadBalancerTlsCertificateRequest
-newDeleteLoadBalancerTlsCertificateRequest' _certificateName _loadBalancerName customize = (DeleteLoadBalancerTlsCertificateRequest <<< customize) { "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "force": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerTlsCertificateRequest' :: ResourceName -> ResourceName -> ( { "loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "force" :: Maybe (Boolean) } -> {"loadBalancerName" :: (ResourceName) , "certificateName" :: (ResourceName) , "force" :: Maybe (Boolean) } ) -> DeleteLoadBalancerTlsCertificateRequest
+newDeleteLoadBalancerTlsCertificateRequest' _certificateName _loadBalancerName customize = (DeleteLoadBalancerTlsCertificateRequest <<< customize) { "certificateName": _certificateName, "loadBalancerName": _loadBalancerName, "force": Nothing }
 
 
 
 newtype DeleteLoadBalancerTlsCertificateResult = DeleteLoadBalancerTlsCertificateResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDeleteLoadBalancerTlsCertificateResult :: Newtype DeleteLoadBalancerTlsCertificateResult _
 derive instance repGenericDeleteLoadBalancerTlsCertificateResult :: Generic DeleteLoadBalancerTlsCertificateResult _
@@ -1285,12 +1284,12 @@ instance encodeDeleteLoadBalancerTlsCertificateResult :: Encode DeleteLoadBalanc
 
 -- | Constructs DeleteLoadBalancerTlsCertificateResult from required parameters
 newDeleteLoadBalancerTlsCertificateResult :: DeleteLoadBalancerTlsCertificateResult
-newDeleteLoadBalancerTlsCertificateResult  = DeleteLoadBalancerTlsCertificateResult { "operations": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerTlsCertificateResult  = DeleteLoadBalancerTlsCertificateResult { "operations": Nothing }
 
 -- | Constructs DeleteLoadBalancerTlsCertificateResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteLoadBalancerTlsCertificateResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DeleteLoadBalancerTlsCertificateResult
-newDeleteLoadBalancerTlsCertificateResult'  customize = (DeleteLoadBalancerTlsCertificateResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDeleteLoadBalancerTlsCertificateResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DeleteLoadBalancerTlsCertificateResult
+newDeleteLoadBalancerTlsCertificateResult'  customize = (DeleteLoadBalancerTlsCertificateResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1315,7 +1314,7 @@ newDetachDiskRequest' _diskName customize = (DetachDiskRequest <<< customize) { 
 
 
 newtype DetachDiskResult = DetachDiskResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDetachDiskResult :: Newtype DetachDiskResult _
 derive instance repGenericDetachDiskResult :: Generic DetachDiskResult _
@@ -1325,12 +1324,12 @@ instance encodeDetachDiskResult :: Encode DetachDiskResult where encode = generi
 
 -- | Constructs DetachDiskResult from required parameters
 newDetachDiskResult :: DetachDiskResult
-newDetachDiskResult  = DetachDiskResult { "operations": (NullOrUndefined Nothing) }
+newDetachDiskResult  = DetachDiskResult { "operations": Nothing }
 
 -- | Constructs DetachDiskResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetachDiskResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DetachDiskResult
-newDetachDiskResult'  customize = (DetachDiskResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDetachDiskResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DetachDiskResult
+newDetachDiskResult'  customize = (DetachDiskResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1356,7 +1355,7 @@ newDetachInstancesFromLoadBalancerRequest' _instanceNames _loadBalancerName cust
 
 
 newtype DetachInstancesFromLoadBalancerResult = DetachInstancesFromLoadBalancerResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDetachInstancesFromLoadBalancerResult :: Newtype DetachInstancesFromLoadBalancerResult _
 derive instance repGenericDetachInstancesFromLoadBalancerResult :: Generic DetachInstancesFromLoadBalancerResult _
@@ -1366,12 +1365,12 @@ instance encodeDetachInstancesFromLoadBalancerResult :: Encode DetachInstancesFr
 
 -- | Constructs DetachInstancesFromLoadBalancerResult from required parameters
 newDetachInstancesFromLoadBalancerResult :: DetachInstancesFromLoadBalancerResult
-newDetachInstancesFromLoadBalancerResult  = DetachInstancesFromLoadBalancerResult { "operations": (NullOrUndefined Nothing) }
+newDetachInstancesFromLoadBalancerResult  = DetachInstancesFromLoadBalancerResult { "operations": Nothing }
 
 -- | Constructs DetachInstancesFromLoadBalancerResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetachInstancesFromLoadBalancerResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DetachInstancesFromLoadBalancerResult
-newDetachInstancesFromLoadBalancerResult'  customize = (DetachInstancesFromLoadBalancerResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDetachInstancesFromLoadBalancerResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DetachInstancesFromLoadBalancerResult
+newDetachInstancesFromLoadBalancerResult'  customize = (DetachInstancesFromLoadBalancerResult <<< customize) { "operations": Nothing }
 
 
 
@@ -1396,7 +1395,7 @@ newDetachStaticIpRequest' _staticIpName customize = (DetachStaticIpRequest <<< c
 
 
 newtype DetachStaticIpResult = DetachStaticIpResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeDetachStaticIpResult :: Newtype DetachStaticIpResult _
 derive instance repGenericDetachStaticIpResult :: Generic DetachStaticIpResult _
@@ -1406,32 +1405,32 @@ instance encodeDetachStaticIpResult :: Encode DetachStaticIpResult where encode 
 
 -- | Constructs DetachStaticIpResult from required parameters
 newDetachStaticIpResult :: DetachStaticIpResult
-newDetachStaticIpResult  = DetachStaticIpResult { "operations": (NullOrUndefined Nothing) }
+newDetachStaticIpResult  = DetachStaticIpResult { "operations": Nothing }
 
 -- | Constructs DetachStaticIpResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetachStaticIpResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> DetachStaticIpResult
-newDetachStaticIpResult'  customize = (DetachStaticIpResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newDetachStaticIpResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> DetachStaticIpResult
+newDetachStaticIpResult'  customize = (DetachStaticIpResult <<< customize) { "operations": Nothing }
 
 
 
 -- | <p>Describes a system disk or an block storage disk.</p>
 newtype Disk = Disk 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "sizeInGb" :: NullOrUndefined (Int)
-  , "isSystemDisk" :: NullOrUndefined (Boolean)
-  , "iops" :: NullOrUndefined (Int)
-  , "path" :: NullOrUndefined (String)
-  , "state" :: NullOrUndefined (DiskState)
-  , "attachedTo" :: NullOrUndefined (ResourceName)
-  , "isAttached" :: NullOrUndefined (Boolean)
-  , "attachmentState" :: NullOrUndefined (String)
-  , "gbInUse" :: NullOrUndefined (Int)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "sizeInGb" :: Maybe (Int)
+  , "isSystemDisk" :: Maybe (Boolean)
+  , "iops" :: Maybe (Int)
+  , "path" :: Maybe (String)
+  , "state" :: Maybe (DiskState)
+  , "attachedTo" :: Maybe (ResourceName)
+  , "isAttached" :: Maybe (Boolean)
+  , "attachmentState" :: Maybe (String)
+  , "gbInUse" :: Maybe (Int)
   }
 derive instance newtypeDisk :: Newtype Disk _
 derive instance repGenericDisk :: Generic Disk _
@@ -1441,12 +1440,12 @@ instance encodeDisk :: Encode Disk where encode = genericEncode options
 
 -- | Constructs Disk from required parameters
 newDisk :: Disk
-newDisk  = Disk { "arn": (NullOrUndefined Nothing), "attachedTo": (NullOrUndefined Nothing), "attachmentState": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "gbInUse": (NullOrUndefined Nothing), "iops": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "isSystemDisk": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "path": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDisk  = Disk { "arn": Nothing, "attachedTo": Nothing, "attachmentState": Nothing, "createdAt": Nothing, "gbInUse": Nothing, "iops": Nothing, "isAttached": Nothing, "isSystemDisk": Nothing, "location": Nothing, "name": Nothing, "path": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 -- | Constructs Disk's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisk' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "sizeInGb" :: NullOrUndefined (Int) , "isSystemDisk" :: NullOrUndefined (Boolean) , "iops" :: NullOrUndefined (Int) , "path" :: NullOrUndefined (String) , "state" :: NullOrUndefined (DiskState) , "attachedTo" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) , "attachmentState" :: NullOrUndefined (String) , "gbInUse" :: NullOrUndefined (Int) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "sizeInGb" :: NullOrUndefined (Int) , "isSystemDisk" :: NullOrUndefined (Boolean) , "iops" :: NullOrUndefined (Int) , "path" :: NullOrUndefined (String) , "state" :: NullOrUndefined (DiskState) , "attachedTo" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) , "attachmentState" :: NullOrUndefined (String) , "gbInUse" :: NullOrUndefined (Int) } ) -> Disk
-newDisk'  customize = (Disk <<< customize) { "arn": (NullOrUndefined Nothing), "attachedTo": (NullOrUndefined Nothing), "attachmentState": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "gbInUse": (NullOrUndefined Nothing), "iops": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "isSystemDisk": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "path": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDisk' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "sizeInGb" :: Maybe (Int) , "isSystemDisk" :: Maybe (Boolean) , "iops" :: Maybe (Int) , "path" :: Maybe (String) , "state" :: Maybe (DiskState) , "attachedTo" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) , "attachmentState" :: Maybe (String) , "gbInUse" :: Maybe (Int) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "sizeInGb" :: Maybe (Int) , "isSystemDisk" :: Maybe (Boolean) , "iops" :: Maybe (Int) , "path" :: Maybe (String) , "state" :: Maybe (DiskState) , "attachedTo" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) , "attachmentState" :: Maybe (String) , "gbInUse" :: Maybe (Int) } ) -> Disk
+newDisk'  customize = (Disk <<< customize) { "arn": Nothing, "attachedTo": Nothing, "attachmentState": Nothing, "createdAt": Nothing, "gbInUse": Nothing, "iops": Nothing, "isAttached": Nothing, "isSystemDisk": Nothing, "location": Nothing, "name": Nothing, "path": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 
 
@@ -1461,8 +1460,8 @@ instance encodeDiskList :: Encode DiskList where encode = genericEncode options
 
 -- | <p>Describes a block storage disk mapping.</p>
 newtype DiskMap = DiskMap 
-  { "originalDiskPath" :: NullOrUndefined (NonEmptyString)
-  , "newDiskName" :: NullOrUndefined (ResourceName)
+  { "originalDiskPath" :: Maybe (NonEmptyString)
+  , "newDiskName" :: Maybe (ResourceName)
   }
 derive instance newtypeDiskMap :: Newtype DiskMap _
 derive instance repGenericDiskMap :: Generic DiskMap _
@@ -1472,12 +1471,12 @@ instance encodeDiskMap :: Encode DiskMap where encode = genericEncode options
 
 -- | Constructs DiskMap from required parameters
 newDiskMap :: DiskMap
-newDiskMap  = DiskMap { "newDiskName": (NullOrUndefined Nothing), "originalDiskPath": (NullOrUndefined Nothing) }
+newDiskMap  = DiskMap { "newDiskName": Nothing, "originalDiskPath": Nothing }
 
 -- | Constructs DiskMap's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDiskMap' :: ( { "originalDiskPath" :: NullOrUndefined (NonEmptyString) , "newDiskName" :: NullOrUndefined (ResourceName) } -> {"originalDiskPath" :: NullOrUndefined (NonEmptyString) , "newDiskName" :: NullOrUndefined (ResourceName) } ) -> DiskMap
-newDiskMap'  customize = (DiskMap <<< customize) { "newDiskName": (NullOrUndefined Nothing), "originalDiskPath": (NullOrUndefined Nothing) }
+newDiskMap' :: ( { "originalDiskPath" :: Maybe (NonEmptyString) , "newDiskName" :: Maybe (ResourceName) } -> {"originalDiskPath" :: Maybe (NonEmptyString) , "newDiskName" :: Maybe (ResourceName) } ) -> DiskMap
+newDiskMap'  customize = (DiskMap <<< customize) { "newDiskName": Nothing, "originalDiskPath": Nothing }
 
 
 
@@ -1492,17 +1491,17 @@ instance encodeDiskMapList :: Encode DiskMapList where encode = genericEncode op
 
 -- | <p>Describes a block storage disk snapshot.</p>
 newtype DiskSnapshot = DiskSnapshot 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "sizeInGb" :: NullOrUndefined (Int)
-  , "state" :: NullOrUndefined (DiskSnapshotState)
-  , "progress" :: NullOrUndefined (String)
-  , "fromDiskName" :: NullOrUndefined (ResourceName)
-  , "fromDiskArn" :: NullOrUndefined (NonEmptyString)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "sizeInGb" :: Maybe (Int)
+  , "state" :: Maybe (DiskSnapshotState)
+  , "progress" :: Maybe (String)
+  , "fromDiskName" :: Maybe (ResourceName)
+  , "fromDiskArn" :: Maybe (NonEmptyString)
   }
 derive instance newtypeDiskSnapshot :: Newtype DiskSnapshot _
 derive instance repGenericDiskSnapshot :: Generic DiskSnapshot _
@@ -1512,12 +1511,12 @@ instance encodeDiskSnapshot :: Encode DiskSnapshot where encode = genericEncode 
 
 -- | Constructs DiskSnapshot from required parameters
 newDiskSnapshot :: DiskSnapshot
-newDiskSnapshot  = DiskSnapshot { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fromDiskArn": (NullOrUndefined Nothing), "fromDiskName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "progress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDiskSnapshot  = DiskSnapshot { "arn": Nothing, "createdAt": Nothing, "fromDiskArn": Nothing, "fromDiskName": Nothing, "location": Nothing, "name": Nothing, "progress": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 -- | Constructs DiskSnapshot's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDiskSnapshot' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "sizeInGb" :: NullOrUndefined (Int) , "state" :: NullOrUndefined (DiskSnapshotState) , "progress" :: NullOrUndefined (String) , "fromDiskName" :: NullOrUndefined (ResourceName) , "fromDiskArn" :: NullOrUndefined (NonEmptyString) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "sizeInGb" :: NullOrUndefined (Int) , "state" :: NullOrUndefined (DiskSnapshotState) , "progress" :: NullOrUndefined (String) , "fromDiskName" :: NullOrUndefined (ResourceName) , "fromDiskArn" :: NullOrUndefined (NonEmptyString) } ) -> DiskSnapshot
-newDiskSnapshot'  customize = (DiskSnapshot <<< customize) { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fromDiskArn": (NullOrUndefined Nothing), "fromDiskName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "progress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDiskSnapshot' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "sizeInGb" :: Maybe (Int) , "state" :: Maybe (DiskSnapshotState) , "progress" :: Maybe (String) , "fromDiskName" :: Maybe (ResourceName) , "fromDiskArn" :: Maybe (NonEmptyString) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "sizeInGb" :: Maybe (Int) , "state" :: Maybe (DiskSnapshotState) , "progress" :: Maybe (String) , "fromDiskName" :: Maybe (ResourceName) , "fromDiskArn" :: Maybe (NonEmptyString) } ) -> DiskSnapshot
+newDiskSnapshot'  customize = (DiskSnapshot <<< customize) { "arn": Nothing, "createdAt": Nothing, "fromDiskArn": Nothing, "fromDiskName": Nothing, "location": Nothing, "name": Nothing, "progress": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 
 
@@ -1550,13 +1549,13 @@ instance encodeDiskState :: Encode DiskState where encode = genericEncode option
 
 -- | <p>Describes a domain where you are storing recordsets in Lightsail.</p>
 newtype Domain = Domain 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "domainEntries" :: NullOrUndefined (DomainEntryList)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "domainEntries" :: Maybe (DomainEntryList)
   }
 derive instance newtypeDomain :: Newtype Domain _
 derive instance repGenericDomain :: Generic Domain _
@@ -1566,23 +1565,23 @@ instance encodeDomain :: Encode Domain where encode = genericEncode options
 
 -- | Constructs Domain from required parameters
 newDomain :: Domain
-newDomain  = Domain { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "domainEntries": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDomain  = Domain { "arn": Nothing, "createdAt": Nothing, "domainEntries": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 -- | Constructs Domain's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDomain' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "domainEntries" :: NullOrUndefined (DomainEntryList) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "domainEntries" :: NullOrUndefined (DomainEntryList) } ) -> Domain
-newDomain'  customize = (Domain <<< customize) { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "domainEntries": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newDomain' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "domainEntries" :: Maybe (DomainEntryList) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "domainEntries" :: Maybe (DomainEntryList) } ) -> Domain
+newDomain'  customize = (Domain <<< customize) { "arn": Nothing, "createdAt": Nothing, "domainEntries": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 
 
 -- | <p>Describes a domain recordset entry.</p>
 newtype DomainEntry = DomainEntry 
-  { "id" :: NullOrUndefined (NonEmptyString)
-  , "name" :: NullOrUndefined (DomainName)
-  , "target" :: NullOrUndefined (String)
-  , "isAlias" :: NullOrUndefined (Boolean)
-  , "type" :: NullOrUndefined (DomainEntryType)
-  , "options" :: NullOrUndefined (DomainEntryOptions)
+  { "id" :: Maybe (NonEmptyString)
+  , "name" :: Maybe (DomainName)
+  , "target" :: Maybe (String)
+  , "isAlias" :: Maybe (Boolean)
+  , "type" :: Maybe (DomainEntryType)
+  , "options" :: Maybe (DomainEntryOptions)
   }
 derive instance newtypeDomainEntry :: Newtype DomainEntry _
 derive instance repGenericDomainEntry :: Generic DomainEntry _
@@ -1592,12 +1591,12 @@ instance encodeDomainEntry :: Encode DomainEntry where encode = genericEncode op
 
 -- | Constructs DomainEntry from required parameters
 newDomainEntry :: DomainEntry
-newDomainEntry  = DomainEntry { "id": (NullOrUndefined Nothing), "isAlias": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "options": (NullOrUndefined Nothing), "target": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing) }
+newDomainEntry  = DomainEntry { "id": Nothing, "isAlias": Nothing, "name": Nothing, "options": Nothing, "target": Nothing, "type": Nothing }
 
 -- | Constructs DomainEntry's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDomainEntry' :: ( { "id" :: NullOrUndefined (NonEmptyString) , "name" :: NullOrUndefined (DomainName) , "target" :: NullOrUndefined (String) , "isAlias" :: NullOrUndefined (Boolean) , "type" :: NullOrUndefined (DomainEntryType) , "options" :: NullOrUndefined (DomainEntryOptions) } -> {"id" :: NullOrUndefined (NonEmptyString) , "name" :: NullOrUndefined (DomainName) , "target" :: NullOrUndefined (String) , "isAlias" :: NullOrUndefined (Boolean) , "type" :: NullOrUndefined (DomainEntryType) , "options" :: NullOrUndefined (DomainEntryOptions) } ) -> DomainEntry
-newDomainEntry'  customize = (DomainEntry <<< customize) { "id": (NullOrUndefined Nothing), "isAlias": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "options": (NullOrUndefined Nothing), "target": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing) }
+newDomainEntry' :: ( { "id" :: Maybe (NonEmptyString) , "name" :: Maybe (DomainName) , "target" :: Maybe (String) , "isAlias" :: Maybe (Boolean) , "type" :: Maybe (DomainEntryType) , "options" :: Maybe (DomainEntryOptions) } -> {"id" :: Maybe (NonEmptyString) , "name" :: Maybe (DomainName) , "target" :: Maybe (String) , "isAlias" :: Maybe (Boolean) , "type" :: Maybe (DomainEntryType) , "options" :: Maybe (DomainEntryOptions) } ) -> DomainEntry
+newDomainEntry'  customize = (DomainEntry <<< customize) { "id": Nothing, "isAlias": Nothing, "name": Nothing, "options": Nothing, "target": Nothing, "type": Nothing }
 
 
 
@@ -1674,8 +1673,8 @@ instance encodeDownloadDefaultKeyPairRequest :: Encode DownloadDefaultKeyPairReq
 
 
 newtype DownloadDefaultKeyPairResult = DownloadDefaultKeyPairResult 
-  { "publicKeyBase64" :: NullOrUndefined (Base64)
-  , "privateKeyBase64" :: NullOrUndefined (Base64)
+  { "publicKeyBase64" :: Maybe (Base64)
+  , "privateKeyBase64" :: Maybe (Base64)
   }
 derive instance newtypeDownloadDefaultKeyPairResult :: Newtype DownloadDefaultKeyPairResult _
 derive instance repGenericDownloadDefaultKeyPairResult :: Generic DownloadDefaultKeyPairResult _
@@ -1685,17 +1684,17 @@ instance encodeDownloadDefaultKeyPairResult :: Encode DownloadDefaultKeyPairResu
 
 -- | Constructs DownloadDefaultKeyPairResult from required parameters
 newDownloadDefaultKeyPairResult :: DownloadDefaultKeyPairResult
-newDownloadDefaultKeyPairResult  = DownloadDefaultKeyPairResult { "privateKeyBase64": (NullOrUndefined Nothing), "publicKeyBase64": (NullOrUndefined Nothing) }
+newDownloadDefaultKeyPairResult  = DownloadDefaultKeyPairResult { "privateKeyBase64": Nothing, "publicKeyBase64": Nothing }
 
 -- | Constructs DownloadDefaultKeyPairResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDownloadDefaultKeyPairResult' :: ( { "publicKeyBase64" :: NullOrUndefined (Base64) , "privateKeyBase64" :: NullOrUndefined (Base64) } -> {"publicKeyBase64" :: NullOrUndefined (Base64) , "privateKeyBase64" :: NullOrUndefined (Base64) } ) -> DownloadDefaultKeyPairResult
-newDownloadDefaultKeyPairResult'  customize = (DownloadDefaultKeyPairResult <<< customize) { "privateKeyBase64": (NullOrUndefined Nothing), "publicKeyBase64": (NullOrUndefined Nothing) }
+newDownloadDefaultKeyPairResult' :: ( { "publicKeyBase64" :: Maybe (Base64) , "privateKeyBase64" :: Maybe (Base64) } -> {"publicKeyBase64" :: Maybe (Base64) , "privateKeyBase64" :: Maybe (Base64) } ) -> DownloadDefaultKeyPairResult
+newDownloadDefaultKeyPairResult'  customize = (DownloadDefaultKeyPairResult <<< customize) { "privateKeyBase64": Nothing, "publicKeyBase64": Nothing }
 
 
 
 newtype GetActiveNamesRequest = GetActiveNamesRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetActiveNamesRequest :: Newtype GetActiveNamesRequest _
 derive instance repGenericGetActiveNamesRequest :: Generic GetActiveNamesRequest _
@@ -1705,18 +1704,18 @@ instance encodeGetActiveNamesRequest :: Encode GetActiveNamesRequest where encod
 
 -- | Constructs GetActiveNamesRequest from required parameters
 newGetActiveNamesRequest :: GetActiveNamesRequest
-newGetActiveNamesRequest  = GetActiveNamesRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetActiveNamesRequest  = GetActiveNamesRequest { "pageToken": Nothing }
 
 -- | Constructs GetActiveNamesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetActiveNamesRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetActiveNamesRequest
-newGetActiveNamesRequest'  customize = (GetActiveNamesRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetActiveNamesRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetActiveNamesRequest
+newGetActiveNamesRequest'  customize = (GetActiveNamesRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetActiveNamesResult = GetActiveNamesResult 
-  { "activeNames" :: NullOrUndefined (StringList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "activeNames" :: Maybe (StringList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetActiveNamesResult :: Newtype GetActiveNamesResult _
 derive instance repGenericGetActiveNamesResult :: Generic GetActiveNamesResult _
@@ -1726,18 +1725,18 @@ instance encodeGetActiveNamesResult :: Encode GetActiveNamesResult where encode 
 
 -- | Constructs GetActiveNamesResult from required parameters
 newGetActiveNamesResult :: GetActiveNamesResult
-newGetActiveNamesResult  = GetActiveNamesResult { "activeNames": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetActiveNamesResult  = GetActiveNamesResult { "activeNames": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetActiveNamesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetActiveNamesResult' :: ( { "activeNames" :: NullOrUndefined (StringList) , "nextPageToken" :: NullOrUndefined (String) } -> {"activeNames" :: NullOrUndefined (StringList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetActiveNamesResult
-newGetActiveNamesResult'  customize = (GetActiveNamesResult <<< customize) { "activeNames": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetActiveNamesResult' :: ( { "activeNames" :: Maybe (StringList) , "nextPageToken" :: Maybe (String) } -> {"activeNames" :: Maybe (StringList) , "nextPageToken" :: Maybe (String) } ) -> GetActiveNamesResult
+newGetActiveNamesResult'  customize = (GetActiveNamesResult <<< customize) { "activeNames": Nothing, "nextPageToken": Nothing }
 
 
 
 newtype GetBlueprintsRequest = GetBlueprintsRequest 
-  { "includeInactive" :: NullOrUndefined (Boolean)
-  , "pageToken" :: NullOrUndefined (String)
+  { "includeInactive" :: Maybe (Boolean)
+  , "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetBlueprintsRequest :: Newtype GetBlueprintsRequest _
 derive instance repGenericGetBlueprintsRequest :: Generic GetBlueprintsRequest _
@@ -1747,18 +1746,18 @@ instance encodeGetBlueprintsRequest :: Encode GetBlueprintsRequest where encode 
 
 -- | Constructs GetBlueprintsRequest from required parameters
 newGetBlueprintsRequest :: GetBlueprintsRequest
-newGetBlueprintsRequest  = GetBlueprintsRequest { "includeInactive": (NullOrUndefined Nothing), "pageToken": (NullOrUndefined Nothing) }
+newGetBlueprintsRequest  = GetBlueprintsRequest { "includeInactive": Nothing, "pageToken": Nothing }
 
 -- | Constructs GetBlueprintsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetBlueprintsRequest' :: ( { "includeInactive" :: NullOrUndefined (Boolean) , "pageToken" :: NullOrUndefined (String) } -> {"includeInactive" :: NullOrUndefined (Boolean) , "pageToken" :: NullOrUndefined (String) } ) -> GetBlueprintsRequest
-newGetBlueprintsRequest'  customize = (GetBlueprintsRequest <<< customize) { "includeInactive": (NullOrUndefined Nothing), "pageToken": (NullOrUndefined Nothing) }
+newGetBlueprintsRequest' :: ( { "includeInactive" :: Maybe (Boolean) , "pageToken" :: Maybe (String) } -> {"includeInactive" :: Maybe (Boolean) , "pageToken" :: Maybe (String) } ) -> GetBlueprintsRequest
+newGetBlueprintsRequest'  customize = (GetBlueprintsRequest <<< customize) { "includeInactive": Nothing, "pageToken": Nothing }
 
 
 
 newtype GetBlueprintsResult = GetBlueprintsResult 
-  { "blueprints" :: NullOrUndefined (BlueprintList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "blueprints" :: Maybe (BlueprintList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetBlueprintsResult :: Newtype GetBlueprintsResult _
 derive instance repGenericGetBlueprintsResult :: Generic GetBlueprintsResult _
@@ -1768,18 +1767,18 @@ instance encodeGetBlueprintsResult :: Encode GetBlueprintsResult where encode = 
 
 -- | Constructs GetBlueprintsResult from required parameters
 newGetBlueprintsResult :: GetBlueprintsResult
-newGetBlueprintsResult  = GetBlueprintsResult { "blueprints": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetBlueprintsResult  = GetBlueprintsResult { "blueprints": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetBlueprintsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetBlueprintsResult' :: ( { "blueprints" :: NullOrUndefined (BlueprintList) , "nextPageToken" :: NullOrUndefined (String) } -> {"blueprints" :: NullOrUndefined (BlueprintList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetBlueprintsResult
-newGetBlueprintsResult'  customize = (GetBlueprintsResult <<< customize) { "blueprints": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetBlueprintsResult' :: ( { "blueprints" :: Maybe (BlueprintList) , "nextPageToken" :: Maybe (String) } -> {"blueprints" :: Maybe (BlueprintList) , "nextPageToken" :: Maybe (String) } ) -> GetBlueprintsResult
+newGetBlueprintsResult'  customize = (GetBlueprintsResult <<< customize) { "blueprints": Nothing, "nextPageToken": Nothing }
 
 
 
 newtype GetBundlesRequest = GetBundlesRequest 
-  { "includeInactive" :: NullOrUndefined (Boolean)
-  , "pageToken" :: NullOrUndefined (String)
+  { "includeInactive" :: Maybe (Boolean)
+  , "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetBundlesRequest :: Newtype GetBundlesRequest _
 derive instance repGenericGetBundlesRequest :: Generic GetBundlesRequest _
@@ -1789,18 +1788,18 @@ instance encodeGetBundlesRequest :: Encode GetBundlesRequest where encode = gene
 
 -- | Constructs GetBundlesRequest from required parameters
 newGetBundlesRequest :: GetBundlesRequest
-newGetBundlesRequest  = GetBundlesRequest { "includeInactive": (NullOrUndefined Nothing), "pageToken": (NullOrUndefined Nothing) }
+newGetBundlesRequest  = GetBundlesRequest { "includeInactive": Nothing, "pageToken": Nothing }
 
 -- | Constructs GetBundlesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetBundlesRequest' :: ( { "includeInactive" :: NullOrUndefined (Boolean) , "pageToken" :: NullOrUndefined (String) } -> {"includeInactive" :: NullOrUndefined (Boolean) , "pageToken" :: NullOrUndefined (String) } ) -> GetBundlesRequest
-newGetBundlesRequest'  customize = (GetBundlesRequest <<< customize) { "includeInactive": (NullOrUndefined Nothing), "pageToken": (NullOrUndefined Nothing) }
+newGetBundlesRequest' :: ( { "includeInactive" :: Maybe (Boolean) , "pageToken" :: Maybe (String) } -> {"includeInactive" :: Maybe (Boolean) , "pageToken" :: Maybe (String) } ) -> GetBundlesRequest
+newGetBundlesRequest'  customize = (GetBundlesRequest <<< customize) { "includeInactive": Nothing, "pageToken": Nothing }
 
 
 
 newtype GetBundlesResult = GetBundlesResult 
-  { "bundles" :: NullOrUndefined (BundleList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "bundles" :: Maybe (BundleList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetBundlesResult :: Newtype GetBundlesResult _
 derive instance repGenericGetBundlesResult :: Generic GetBundlesResult _
@@ -1810,12 +1809,12 @@ instance encodeGetBundlesResult :: Encode GetBundlesResult where encode = generi
 
 -- | Constructs GetBundlesResult from required parameters
 newGetBundlesResult :: GetBundlesResult
-newGetBundlesResult  = GetBundlesResult { "bundles": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetBundlesResult  = GetBundlesResult { "bundles": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetBundlesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetBundlesResult' :: ( { "bundles" :: NullOrUndefined (BundleList) , "nextPageToken" :: NullOrUndefined (String) } -> {"bundles" :: NullOrUndefined (BundleList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetBundlesResult
-newGetBundlesResult'  customize = (GetBundlesResult <<< customize) { "bundles": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetBundlesResult' :: ( { "bundles" :: Maybe (BundleList) , "nextPageToken" :: Maybe (String) } -> {"bundles" :: Maybe (BundleList) , "nextPageToken" :: Maybe (String) } ) -> GetBundlesResult
+newGetBundlesResult'  customize = (GetBundlesResult <<< customize) { "bundles": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -1840,7 +1839,7 @@ newGetDiskRequest' _diskName customize = (GetDiskRequest <<< customize) { "diskN
 
 
 newtype GetDiskResult = GetDiskResult 
-  { "disk" :: NullOrUndefined (Disk)
+  { "disk" :: Maybe (Disk)
   }
 derive instance newtypeGetDiskResult :: Newtype GetDiskResult _
 derive instance repGenericGetDiskResult :: Generic GetDiskResult _
@@ -1850,12 +1849,12 @@ instance encodeGetDiskResult :: Encode GetDiskResult where encode = genericEncod
 
 -- | Constructs GetDiskResult from required parameters
 newGetDiskResult :: GetDiskResult
-newGetDiskResult  = GetDiskResult { "disk": (NullOrUndefined Nothing) }
+newGetDiskResult  = GetDiskResult { "disk": Nothing }
 
 -- | Constructs GetDiskResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDiskResult' :: ( { "disk" :: NullOrUndefined (Disk) } -> {"disk" :: NullOrUndefined (Disk) } ) -> GetDiskResult
-newGetDiskResult'  customize = (GetDiskResult <<< customize) { "disk": (NullOrUndefined Nothing) }
+newGetDiskResult' :: ( { "disk" :: Maybe (Disk) } -> {"disk" :: Maybe (Disk) } ) -> GetDiskResult
+newGetDiskResult'  customize = (GetDiskResult <<< customize) { "disk": Nothing }
 
 
 
@@ -1880,7 +1879,7 @@ newGetDiskSnapshotRequest' _diskSnapshotName customize = (GetDiskSnapshotRequest
 
 
 newtype GetDiskSnapshotResult = GetDiskSnapshotResult 
-  { "diskSnapshot" :: NullOrUndefined (DiskSnapshot)
+  { "diskSnapshot" :: Maybe (DiskSnapshot)
   }
 derive instance newtypeGetDiskSnapshotResult :: Newtype GetDiskSnapshotResult _
 derive instance repGenericGetDiskSnapshotResult :: Generic GetDiskSnapshotResult _
@@ -1890,17 +1889,17 @@ instance encodeGetDiskSnapshotResult :: Encode GetDiskSnapshotResult where encod
 
 -- | Constructs GetDiskSnapshotResult from required parameters
 newGetDiskSnapshotResult :: GetDiskSnapshotResult
-newGetDiskSnapshotResult  = GetDiskSnapshotResult { "diskSnapshot": (NullOrUndefined Nothing) }
+newGetDiskSnapshotResult  = GetDiskSnapshotResult { "diskSnapshot": Nothing }
 
 -- | Constructs GetDiskSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDiskSnapshotResult' :: ( { "diskSnapshot" :: NullOrUndefined (DiskSnapshot) } -> {"diskSnapshot" :: NullOrUndefined (DiskSnapshot) } ) -> GetDiskSnapshotResult
-newGetDiskSnapshotResult'  customize = (GetDiskSnapshotResult <<< customize) { "diskSnapshot": (NullOrUndefined Nothing) }
+newGetDiskSnapshotResult' :: ( { "diskSnapshot" :: Maybe (DiskSnapshot) } -> {"diskSnapshot" :: Maybe (DiskSnapshot) } ) -> GetDiskSnapshotResult
+newGetDiskSnapshotResult'  customize = (GetDiskSnapshotResult <<< customize) { "diskSnapshot": Nothing }
 
 
 
 newtype GetDiskSnapshotsRequest = GetDiskSnapshotsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetDiskSnapshotsRequest :: Newtype GetDiskSnapshotsRequest _
 derive instance repGenericGetDiskSnapshotsRequest :: Generic GetDiskSnapshotsRequest _
@@ -1910,18 +1909,18 @@ instance encodeGetDiskSnapshotsRequest :: Encode GetDiskSnapshotsRequest where e
 
 -- | Constructs GetDiskSnapshotsRequest from required parameters
 newGetDiskSnapshotsRequest :: GetDiskSnapshotsRequest
-newGetDiskSnapshotsRequest  = GetDiskSnapshotsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetDiskSnapshotsRequest  = GetDiskSnapshotsRequest { "pageToken": Nothing }
 
 -- | Constructs GetDiskSnapshotsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDiskSnapshotsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetDiskSnapshotsRequest
-newGetDiskSnapshotsRequest'  customize = (GetDiskSnapshotsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetDiskSnapshotsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetDiskSnapshotsRequest
+newGetDiskSnapshotsRequest'  customize = (GetDiskSnapshotsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetDiskSnapshotsResult = GetDiskSnapshotsResult 
-  { "diskSnapshots" :: NullOrUndefined (DiskSnapshotList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "diskSnapshots" :: Maybe (DiskSnapshotList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetDiskSnapshotsResult :: Newtype GetDiskSnapshotsResult _
 derive instance repGenericGetDiskSnapshotsResult :: Generic GetDiskSnapshotsResult _
@@ -1931,17 +1930,17 @@ instance encodeGetDiskSnapshotsResult :: Encode GetDiskSnapshotsResult where enc
 
 -- | Constructs GetDiskSnapshotsResult from required parameters
 newGetDiskSnapshotsResult :: GetDiskSnapshotsResult
-newGetDiskSnapshotsResult  = GetDiskSnapshotsResult { "diskSnapshots": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDiskSnapshotsResult  = GetDiskSnapshotsResult { "diskSnapshots": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetDiskSnapshotsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDiskSnapshotsResult' :: ( { "diskSnapshots" :: NullOrUndefined (DiskSnapshotList) , "nextPageToken" :: NullOrUndefined (String) } -> {"diskSnapshots" :: NullOrUndefined (DiskSnapshotList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetDiskSnapshotsResult
-newGetDiskSnapshotsResult'  customize = (GetDiskSnapshotsResult <<< customize) { "diskSnapshots": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDiskSnapshotsResult' :: ( { "diskSnapshots" :: Maybe (DiskSnapshotList) , "nextPageToken" :: Maybe (String) } -> {"diskSnapshots" :: Maybe (DiskSnapshotList) , "nextPageToken" :: Maybe (String) } ) -> GetDiskSnapshotsResult
+newGetDiskSnapshotsResult'  customize = (GetDiskSnapshotsResult <<< customize) { "diskSnapshots": Nothing, "nextPageToken": Nothing }
 
 
 
 newtype GetDisksRequest = GetDisksRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetDisksRequest :: Newtype GetDisksRequest _
 derive instance repGenericGetDisksRequest :: Generic GetDisksRequest _
@@ -1951,18 +1950,18 @@ instance encodeGetDisksRequest :: Encode GetDisksRequest where encode = genericE
 
 -- | Constructs GetDisksRequest from required parameters
 newGetDisksRequest :: GetDisksRequest
-newGetDisksRequest  = GetDisksRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetDisksRequest  = GetDisksRequest { "pageToken": Nothing }
 
 -- | Constructs GetDisksRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDisksRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetDisksRequest
-newGetDisksRequest'  customize = (GetDisksRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetDisksRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetDisksRequest
+newGetDisksRequest'  customize = (GetDisksRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetDisksResult = GetDisksResult 
-  { "disks" :: NullOrUndefined (DiskList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "disks" :: Maybe (DiskList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetDisksResult :: Newtype GetDisksResult _
 derive instance repGenericGetDisksResult :: Generic GetDisksResult _
@@ -1972,12 +1971,12 @@ instance encodeGetDisksResult :: Encode GetDisksResult where encode = genericEnc
 
 -- | Constructs GetDisksResult from required parameters
 newGetDisksResult :: GetDisksResult
-newGetDisksResult  = GetDisksResult { "disks": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDisksResult  = GetDisksResult { "disks": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetDisksResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDisksResult' :: ( { "disks" :: NullOrUndefined (DiskList) , "nextPageToken" :: NullOrUndefined (String) } -> {"disks" :: NullOrUndefined (DiskList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetDisksResult
-newGetDisksResult'  customize = (GetDisksResult <<< customize) { "disks": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDisksResult' :: ( { "disks" :: Maybe (DiskList) , "nextPageToken" :: Maybe (String) } -> {"disks" :: Maybe (DiskList) , "nextPageToken" :: Maybe (String) } ) -> GetDisksResult
+newGetDisksResult'  customize = (GetDisksResult <<< customize) { "disks": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -2002,7 +2001,7 @@ newGetDomainRequest' _domainName customize = (GetDomainRequest <<< customize) { 
 
 
 newtype GetDomainResult = GetDomainResult 
-  { "domain" :: NullOrUndefined (Domain)
+  { "domain" :: Maybe (Domain)
   }
 derive instance newtypeGetDomainResult :: Newtype GetDomainResult _
 derive instance repGenericGetDomainResult :: Generic GetDomainResult _
@@ -2012,17 +2011,17 @@ instance encodeGetDomainResult :: Encode GetDomainResult where encode = genericE
 
 -- | Constructs GetDomainResult from required parameters
 newGetDomainResult :: GetDomainResult
-newGetDomainResult  = GetDomainResult { "domain": (NullOrUndefined Nothing) }
+newGetDomainResult  = GetDomainResult { "domain": Nothing }
 
 -- | Constructs GetDomainResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDomainResult' :: ( { "domain" :: NullOrUndefined (Domain) } -> {"domain" :: NullOrUndefined (Domain) } ) -> GetDomainResult
-newGetDomainResult'  customize = (GetDomainResult <<< customize) { "domain": (NullOrUndefined Nothing) }
+newGetDomainResult' :: ( { "domain" :: Maybe (Domain) } -> {"domain" :: Maybe (Domain) } ) -> GetDomainResult
+newGetDomainResult'  customize = (GetDomainResult <<< customize) { "domain": Nothing }
 
 
 
 newtype GetDomainsRequest = GetDomainsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetDomainsRequest :: Newtype GetDomainsRequest _
 derive instance repGenericGetDomainsRequest :: Generic GetDomainsRequest _
@@ -2032,18 +2031,18 @@ instance encodeGetDomainsRequest :: Encode GetDomainsRequest where encode = gene
 
 -- | Constructs GetDomainsRequest from required parameters
 newGetDomainsRequest :: GetDomainsRequest
-newGetDomainsRequest  = GetDomainsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetDomainsRequest  = GetDomainsRequest { "pageToken": Nothing }
 
 -- | Constructs GetDomainsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDomainsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetDomainsRequest
-newGetDomainsRequest'  customize = (GetDomainsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetDomainsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetDomainsRequest
+newGetDomainsRequest'  customize = (GetDomainsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetDomainsResult = GetDomainsResult 
-  { "domains" :: NullOrUndefined (DomainList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "domains" :: Maybe (DomainList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetDomainsResult :: Newtype GetDomainsResult _
 derive instance repGenericGetDomainsResult :: Generic GetDomainsResult _
@@ -2053,18 +2052,18 @@ instance encodeGetDomainsResult :: Encode GetDomainsResult where encode = generi
 
 -- | Constructs GetDomainsResult from required parameters
 newGetDomainsResult :: GetDomainsResult
-newGetDomainsResult  = GetDomainsResult { "domains": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDomainsResult  = GetDomainsResult { "domains": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetDomainsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDomainsResult' :: ( { "domains" :: NullOrUndefined (DomainList) , "nextPageToken" :: NullOrUndefined (String) } -> {"domains" :: NullOrUndefined (DomainList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetDomainsResult
-newGetDomainsResult'  customize = (GetDomainsResult <<< customize) { "domains": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetDomainsResult' :: ( { "domains" :: Maybe (DomainList) , "nextPageToken" :: Maybe (String) } -> {"domains" :: Maybe (DomainList) , "nextPageToken" :: Maybe (String) } ) -> GetDomainsResult
+newGetDomainsResult'  customize = (GetDomainsResult <<< customize) { "domains": Nothing, "nextPageToken": Nothing }
 
 
 
 newtype GetInstanceAccessDetailsRequest = GetInstanceAccessDetailsRequest 
   { "instanceName" :: (ResourceName)
-  , "protocol" :: NullOrUndefined (InstanceAccessProtocol)
+  , "protocol" :: Maybe (InstanceAccessProtocol)
   }
 derive instance newtypeGetInstanceAccessDetailsRequest :: Newtype GetInstanceAccessDetailsRequest _
 derive instance repGenericGetInstanceAccessDetailsRequest :: Generic GetInstanceAccessDetailsRequest _
@@ -2074,17 +2073,17 @@ instance encodeGetInstanceAccessDetailsRequest :: Encode GetInstanceAccessDetail
 
 -- | Constructs GetInstanceAccessDetailsRequest from required parameters
 newGetInstanceAccessDetailsRequest :: ResourceName -> GetInstanceAccessDetailsRequest
-newGetInstanceAccessDetailsRequest _instanceName = GetInstanceAccessDetailsRequest { "instanceName": _instanceName, "protocol": (NullOrUndefined Nothing) }
+newGetInstanceAccessDetailsRequest _instanceName = GetInstanceAccessDetailsRequest { "instanceName": _instanceName, "protocol": Nothing }
 
 -- | Constructs GetInstanceAccessDetailsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceAccessDetailsRequest' :: ResourceName -> ( { "instanceName" :: (ResourceName) , "protocol" :: NullOrUndefined (InstanceAccessProtocol) } -> {"instanceName" :: (ResourceName) , "protocol" :: NullOrUndefined (InstanceAccessProtocol) } ) -> GetInstanceAccessDetailsRequest
-newGetInstanceAccessDetailsRequest' _instanceName customize = (GetInstanceAccessDetailsRequest <<< customize) { "instanceName": _instanceName, "protocol": (NullOrUndefined Nothing) }
+newGetInstanceAccessDetailsRequest' :: ResourceName -> ( { "instanceName" :: (ResourceName) , "protocol" :: Maybe (InstanceAccessProtocol) } -> {"instanceName" :: (ResourceName) , "protocol" :: Maybe (InstanceAccessProtocol) } ) -> GetInstanceAccessDetailsRequest
+newGetInstanceAccessDetailsRequest' _instanceName customize = (GetInstanceAccessDetailsRequest <<< customize) { "instanceName": _instanceName, "protocol": Nothing }
 
 
 
 newtype GetInstanceAccessDetailsResult = GetInstanceAccessDetailsResult 
-  { "accessDetails" :: NullOrUndefined (InstanceAccessDetails)
+  { "accessDetails" :: Maybe (InstanceAccessDetails)
   }
 derive instance newtypeGetInstanceAccessDetailsResult :: Newtype GetInstanceAccessDetailsResult _
 derive instance repGenericGetInstanceAccessDetailsResult :: Generic GetInstanceAccessDetailsResult _
@@ -2094,12 +2093,12 @@ instance encodeGetInstanceAccessDetailsResult :: Encode GetInstanceAccessDetails
 
 -- | Constructs GetInstanceAccessDetailsResult from required parameters
 newGetInstanceAccessDetailsResult :: GetInstanceAccessDetailsResult
-newGetInstanceAccessDetailsResult  = GetInstanceAccessDetailsResult { "accessDetails": (NullOrUndefined Nothing) }
+newGetInstanceAccessDetailsResult  = GetInstanceAccessDetailsResult { "accessDetails": Nothing }
 
 -- | Constructs GetInstanceAccessDetailsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceAccessDetailsResult' :: ( { "accessDetails" :: NullOrUndefined (InstanceAccessDetails) } -> {"accessDetails" :: NullOrUndefined (InstanceAccessDetails) } ) -> GetInstanceAccessDetailsResult
-newGetInstanceAccessDetailsResult'  customize = (GetInstanceAccessDetailsResult <<< customize) { "accessDetails": (NullOrUndefined Nothing) }
+newGetInstanceAccessDetailsResult' :: ( { "accessDetails" :: Maybe (InstanceAccessDetails) } -> {"accessDetails" :: Maybe (InstanceAccessDetails) } ) -> GetInstanceAccessDetailsResult
+newGetInstanceAccessDetailsResult'  customize = (GetInstanceAccessDetailsResult <<< customize) { "accessDetails": Nothing }
 
 
 
@@ -2130,8 +2129,8 @@ newGetInstanceMetricDataRequest' _endTime _instanceName _metricName _period _sta
 
 
 newtype GetInstanceMetricDataResult = GetInstanceMetricDataResult 
-  { "metricName" :: NullOrUndefined (InstanceMetricName)
-  , "metricData" :: NullOrUndefined (MetricDatapointList)
+  { "metricName" :: Maybe (InstanceMetricName)
+  , "metricData" :: Maybe (MetricDatapointList)
   }
 derive instance newtypeGetInstanceMetricDataResult :: Newtype GetInstanceMetricDataResult _
 derive instance repGenericGetInstanceMetricDataResult :: Generic GetInstanceMetricDataResult _
@@ -2141,12 +2140,12 @@ instance encodeGetInstanceMetricDataResult :: Encode GetInstanceMetricDataResult
 
 -- | Constructs GetInstanceMetricDataResult from required parameters
 newGetInstanceMetricDataResult :: GetInstanceMetricDataResult
-newGetInstanceMetricDataResult  = GetInstanceMetricDataResult { "metricData": (NullOrUndefined Nothing), "metricName": (NullOrUndefined Nothing) }
+newGetInstanceMetricDataResult  = GetInstanceMetricDataResult { "metricData": Nothing, "metricName": Nothing }
 
 -- | Constructs GetInstanceMetricDataResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceMetricDataResult' :: ( { "metricName" :: NullOrUndefined (InstanceMetricName) , "metricData" :: NullOrUndefined (MetricDatapointList) } -> {"metricName" :: NullOrUndefined (InstanceMetricName) , "metricData" :: NullOrUndefined (MetricDatapointList) } ) -> GetInstanceMetricDataResult
-newGetInstanceMetricDataResult'  customize = (GetInstanceMetricDataResult <<< customize) { "metricData": (NullOrUndefined Nothing), "metricName": (NullOrUndefined Nothing) }
+newGetInstanceMetricDataResult' :: ( { "metricName" :: Maybe (InstanceMetricName) , "metricData" :: Maybe (MetricDatapointList) } -> {"metricName" :: Maybe (InstanceMetricName) , "metricData" :: Maybe (MetricDatapointList) } ) -> GetInstanceMetricDataResult
+newGetInstanceMetricDataResult'  customize = (GetInstanceMetricDataResult <<< customize) { "metricData": Nothing, "metricName": Nothing }
 
 
 
@@ -2171,7 +2170,7 @@ newGetInstancePortStatesRequest' _instanceName customize = (GetInstancePortState
 
 
 newtype GetInstancePortStatesResult = GetInstancePortStatesResult 
-  { "portStates" :: NullOrUndefined (InstancePortStateList)
+  { "portStates" :: Maybe (InstancePortStateList)
   }
 derive instance newtypeGetInstancePortStatesResult :: Newtype GetInstancePortStatesResult _
 derive instance repGenericGetInstancePortStatesResult :: Generic GetInstancePortStatesResult _
@@ -2181,12 +2180,12 @@ instance encodeGetInstancePortStatesResult :: Encode GetInstancePortStatesResult
 
 -- | Constructs GetInstancePortStatesResult from required parameters
 newGetInstancePortStatesResult :: GetInstancePortStatesResult
-newGetInstancePortStatesResult  = GetInstancePortStatesResult { "portStates": (NullOrUndefined Nothing) }
+newGetInstancePortStatesResult  = GetInstancePortStatesResult { "portStates": Nothing }
 
 -- | Constructs GetInstancePortStatesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstancePortStatesResult' :: ( { "portStates" :: NullOrUndefined (InstancePortStateList) } -> {"portStates" :: NullOrUndefined (InstancePortStateList) } ) -> GetInstancePortStatesResult
-newGetInstancePortStatesResult'  customize = (GetInstancePortStatesResult <<< customize) { "portStates": (NullOrUndefined Nothing) }
+newGetInstancePortStatesResult' :: ( { "portStates" :: Maybe (InstancePortStateList) } -> {"portStates" :: Maybe (InstancePortStateList) } ) -> GetInstancePortStatesResult
+newGetInstancePortStatesResult'  customize = (GetInstancePortStatesResult <<< customize) { "portStates": Nothing }
 
 
 
@@ -2211,7 +2210,7 @@ newGetInstanceRequest' _instanceName customize = (GetInstanceRequest <<< customi
 
 
 newtype GetInstanceResult = GetInstanceResult 
-  { "instance" :: NullOrUndefined (Instance)
+  { "instance" :: Maybe (Instance)
   }
 derive instance newtypeGetInstanceResult :: Newtype GetInstanceResult _
 derive instance repGenericGetInstanceResult :: Generic GetInstanceResult _
@@ -2221,12 +2220,12 @@ instance encodeGetInstanceResult :: Encode GetInstanceResult where encode = gene
 
 -- | Constructs GetInstanceResult from required parameters
 newGetInstanceResult :: GetInstanceResult
-newGetInstanceResult  = GetInstanceResult { "instance": (NullOrUndefined Nothing) }
+newGetInstanceResult  = GetInstanceResult { "instance": Nothing }
 
 -- | Constructs GetInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceResult' :: ( { "instance" :: NullOrUndefined (Instance) } -> {"instance" :: NullOrUndefined (Instance) } ) -> GetInstanceResult
-newGetInstanceResult'  customize = (GetInstanceResult <<< customize) { "instance": (NullOrUndefined Nothing) }
+newGetInstanceResult' :: ( { "instance" :: Maybe (Instance) } -> {"instance" :: Maybe (Instance) } ) -> GetInstanceResult
+newGetInstanceResult'  customize = (GetInstanceResult <<< customize) { "instance": Nothing }
 
 
 
@@ -2251,7 +2250,7 @@ newGetInstanceSnapshotRequest' _instanceSnapshotName customize = (GetInstanceSna
 
 
 newtype GetInstanceSnapshotResult = GetInstanceSnapshotResult 
-  { "instanceSnapshot" :: NullOrUndefined (InstanceSnapshot)
+  { "instanceSnapshot" :: Maybe (InstanceSnapshot)
   }
 derive instance newtypeGetInstanceSnapshotResult :: Newtype GetInstanceSnapshotResult _
 derive instance repGenericGetInstanceSnapshotResult :: Generic GetInstanceSnapshotResult _
@@ -2261,17 +2260,17 @@ instance encodeGetInstanceSnapshotResult :: Encode GetInstanceSnapshotResult whe
 
 -- | Constructs GetInstanceSnapshotResult from required parameters
 newGetInstanceSnapshotResult :: GetInstanceSnapshotResult
-newGetInstanceSnapshotResult  = GetInstanceSnapshotResult { "instanceSnapshot": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotResult  = GetInstanceSnapshotResult { "instanceSnapshot": Nothing }
 
 -- | Constructs GetInstanceSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceSnapshotResult' :: ( { "instanceSnapshot" :: NullOrUndefined (InstanceSnapshot) } -> {"instanceSnapshot" :: NullOrUndefined (InstanceSnapshot) } ) -> GetInstanceSnapshotResult
-newGetInstanceSnapshotResult'  customize = (GetInstanceSnapshotResult <<< customize) { "instanceSnapshot": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotResult' :: ( { "instanceSnapshot" :: Maybe (InstanceSnapshot) } -> {"instanceSnapshot" :: Maybe (InstanceSnapshot) } ) -> GetInstanceSnapshotResult
+newGetInstanceSnapshotResult'  customize = (GetInstanceSnapshotResult <<< customize) { "instanceSnapshot": Nothing }
 
 
 
 newtype GetInstanceSnapshotsRequest = GetInstanceSnapshotsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetInstanceSnapshotsRequest :: Newtype GetInstanceSnapshotsRequest _
 derive instance repGenericGetInstanceSnapshotsRequest :: Generic GetInstanceSnapshotsRequest _
@@ -2281,18 +2280,18 @@ instance encodeGetInstanceSnapshotsRequest :: Encode GetInstanceSnapshotsRequest
 
 -- | Constructs GetInstanceSnapshotsRequest from required parameters
 newGetInstanceSnapshotsRequest :: GetInstanceSnapshotsRequest
-newGetInstanceSnapshotsRequest  = GetInstanceSnapshotsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotsRequest  = GetInstanceSnapshotsRequest { "pageToken": Nothing }
 
 -- | Constructs GetInstanceSnapshotsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceSnapshotsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetInstanceSnapshotsRequest
-newGetInstanceSnapshotsRequest'  customize = (GetInstanceSnapshotsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetInstanceSnapshotsRequest
+newGetInstanceSnapshotsRequest'  customize = (GetInstanceSnapshotsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetInstanceSnapshotsResult = GetInstanceSnapshotsResult 
-  { "instanceSnapshots" :: NullOrUndefined (InstanceSnapshotList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "instanceSnapshots" :: Maybe (InstanceSnapshotList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetInstanceSnapshotsResult :: Newtype GetInstanceSnapshotsResult _
 derive instance repGenericGetInstanceSnapshotsResult :: Generic GetInstanceSnapshotsResult _
@@ -2302,12 +2301,12 @@ instance encodeGetInstanceSnapshotsResult :: Encode GetInstanceSnapshotsResult w
 
 -- | Constructs GetInstanceSnapshotsResult from required parameters
 newGetInstanceSnapshotsResult :: GetInstanceSnapshotsResult
-newGetInstanceSnapshotsResult  = GetInstanceSnapshotsResult { "instanceSnapshots": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotsResult  = GetInstanceSnapshotsResult { "instanceSnapshots": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetInstanceSnapshotsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceSnapshotsResult' :: ( { "instanceSnapshots" :: NullOrUndefined (InstanceSnapshotList) , "nextPageToken" :: NullOrUndefined (String) } -> {"instanceSnapshots" :: NullOrUndefined (InstanceSnapshotList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetInstanceSnapshotsResult
-newGetInstanceSnapshotsResult'  customize = (GetInstanceSnapshotsResult <<< customize) { "instanceSnapshots": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetInstanceSnapshotsResult' :: ( { "instanceSnapshots" :: Maybe (InstanceSnapshotList) , "nextPageToken" :: Maybe (String) } -> {"instanceSnapshots" :: Maybe (InstanceSnapshotList) , "nextPageToken" :: Maybe (String) } ) -> GetInstanceSnapshotsResult
+newGetInstanceSnapshotsResult'  customize = (GetInstanceSnapshotsResult <<< customize) { "instanceSnapshots": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -2332,7 +2331,7 @@ newGetInstanceStateRequest' _instanceName customize = (GetInstanceStateRequest <
 
 
 newtype GetInstanceStateResult = GetInstanceStateResult 
-  { "state" :: NullOrUndefined (InstanceState)
+  { "state" :: Maybe (InstanceState)
   }
 derive instance newtypeGetInstanceStateResult :: Newtype GetInstanceStateResult _
 derive instance repGenericGetInstanceStateResult :: Generic GetInstanceStateResult _
@@ -2342,17 +2341,17 @@ instance encodeGetInstanceStateResult :: Encode GetInstanceStateResult where enc
 
 -- | Constructs GetInstanceStateResult from required parameters
 newGetInstanceStateResult :: GetInstanceStateResult
-newGetInstanceStateResult  = GetInstanceStateResult { "state": (NullOrUndefined Nothing) }
+newGetInstanceStateResult  = GetInstanceStateResult { "state": Nothing }
 
 -- | Constructs GetInstanceStateResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstanceStateResult' :: ( { "state" :: NullOrUndefined (InstanceState) } -> {"state" :: NullOrUndefined (InstanceState) } ) -> GetInstanceStateResult
-newGetInstanceStateResult'  customize = (GetInstanceStateResult <<< customize) { "state": (NullOrUndefined Nothing) }
+newGetInstanceStateResult' :: ( { "state" :: Maybe (InstanceState) } -> {"state" :: Maybe (InstanceState) } ) -> GetInstanceStateResult
+newGetInstanceStateResult'  customize = (GetInstanceStateResult <<< customize) { "state": Nothing }
 
 
 
 newtype GetInstancesRequest = GetInstancesRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetInstancesRequest :: Newtype GetInstancesRequest _
 derive instance repGenericGetInstancesRequest :: Generic GetInstancesRequest _
@@ -2362,18 +2361,18 @@ instance encodeGetInstancesRequest :: Encode GetInstancesRequest where encode = 
 
 -- | Constructs GetInstancesRequest from required parameters
 newGetInstancesRequest :: GetInstancesRequest
-newGetInstancesRequest  = GetInstancesRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetInstancesRequest  = GetInstancesRequest { "pageToken": Nothing }
 
 -- | Constructs GetInstancesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstancesRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetInstancesRequest
-newGetInstancesRequest'  customize = (GetInstancesRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetInstancesRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetInstancesRequest
+newGetInstancesRequest'  customize = (GetInstancesRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetInstancesResult = GetInstancesResult 
-  { "instances" :: NullOrUndefined (InstanceList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "instances" :: Maybe (InstanceList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetInstancesResult :: Newtype GetInstancesResult _
 derive instance repGenericGetInstancesResult :: Generic GetInstancesResult _
@@ -2383,12 +2382,12 @@ instance encodeGetInstancesResult :: Encode GetInstancesResult where encode = ge
 
 -- | Constructs GetInstancesResult from required parameters
 newGetInstancesResult :: GetInstancesResult
-newGetInstancesResult  = GetInstancesResult { "instances": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetInstancesResult  = GetInstancesResult { "instances": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetInstancesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetInstancesResult' :: ( { "instances" :: NullOrUndefined (InstanceList) , "nextPageToken" :: NullOrUndefined (String) } -> {"instances" :: NullOrUndefined (InstanceList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetInstancesResult
-newGetInstancesResult'  customize = (GetInstancesResult <<< customize) { "instances": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetInstancesResult' :: ( { "instances" :: Maybe (InstanceList) , "nextPageToken" :: Maybe (String) } -> {"instances" :: Maybe (InstanceList) , "nextPageToken" :: Maybe (String) } ) -> GetInstancesResult
+newGetInstancesResult'  customize = (GetInstancesResult <<< customize) { "instances": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -2413,7 +2412,7 @@ newGetKeyPairRequest' _keyPairName customize = (GetKeyPairRequest <<< customize)
 
 
 newtype GetKeyPairResult = GetKeyPairResult 
-  { "keyPair" :: NullOrUndefined (KeyPair)
+  { "keyPair" :: Maybe (KeyPair)
   }
 derive instance newtypeGetKeyPairResult :: Newtype GetKeyPairResult _
 derive instance repGenericGetKeyPairResult :: Generic GetKeyPairResult _
@@ -2423,17 +2422,17 @@ instance encodeGetKeyPairResult :: Encode GetKeyPairResult where encode = generi
 
 -- | Constructs GetKeyPairResult from required parameters
 newGetKeyPairResult :: GetKeyPairResult
-newGetKeyPairResult  = GetKeyPairResult { "keyPair": (NullOrUndefined Nothing) }
+newGetKeyPairResult  = GetKeyPairResult { "keyPair": Nothing }
 
 -- | Constructs GetKeyPairResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetKeyPairResult' :: ( { "keyPair" :: NullOrUndefined (KeyPair) } -> {"keyPair" :: NullOrUndefined (KeyPair) } ) -> GetKeyPairResult
-newGetKeyPairResult'  customize = (GetKeyPairResult <<< customize) { "keyPair": (NullOrUndefined Nothing) }
+newGetKeyPairResult' :: ( { "keyPair" :: Maybe (KeyPair) } -> {"keyPair" :: Maybe (KeyPair) } ) -> GetKeyPairResult
+newGetKeyPairResult'  customize = (GetKeyPairResult <<< customize) { "keyPair": Nothing }
 
 
 
 newtype GetKeyPairsRequest = GetKeyPairsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetKeyPairsRequest :: Newtype GetKeyPairsRequest _
 derive instance repGenericGetKeyPairsRequest :: Generic GetKeyPairsRequest _
@@ -2443,18 +2442,18 @@ instance encodeGetKeyPairsRequest :: Encode GetKeyPairsRequest where encode = ge
 
 -- | Constructs GetKeyPairsRequest from required parameters
 newGetKeyPairsRequest :: GetKeyPairsRequest
-newGetKeyPairsRequest  = GetKeyPairsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetKeyPairsRequest  = GetKeyPairsRequest { "pageToken": Nothing }
 
 -- | Constructs GetKeyPairsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetKeyPairsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetKeyPairsRequest
-newGetKeyPairsRequest'  customize = (GetKeyPairsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetKeyPairsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetKeyPairsRequest
+newGetKeyPairsRequest'  customize = (GetKeyPairsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetKeyPairsResult = GetKeyPairsResult 
-  { "keyPairs" :: NullOrUndefined (KeyPairList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "keyPairs" :: Maybe (KeyPairList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetKeyPairsResult :: Newtype GetKeyPairsResult _
 derive instance repGenericGetKeyPairsResult :: Generic GetKeyPairsResult _
@@ -2464,12 +2463,12 @@ instance encodeGetKeyPairsResult :: Encode GetKeyPairsResult where encode = gene
 
 -- | Constructs GetKeyPairsResult from required parameters
 newGetKeyPairsResult :: GetKeyPairsResult
-newGetKeyPairsResult  = GetKeyPairsResult { "keyPairs": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetKeyPairsResult  = GetKeyPairsResult { "keyPairs": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetKeyPairsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetKeyPairsResult' :: ( { "keyPairs" :: NullOrUndefined (KeyPairList) , "nextPageToken" :: NullOrUndefined (String) } -> {"keyPairs" :: NullOrUndefined (KeyPairList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetKeyPairsResult
-newGetKeyPairsResult'  customize = (GetKeyPairsResult <<< customize) { "keyPairs": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetKeyPairsResult' :: ( { "keyPairs" :: Maybe (KeyPairList) , "nextPageToken" :: Maybe (String) } -> {"keyPairs" :: Maybe (KeyPairList) , "nextPageToken" :: Maybe (String) } ) -> GetKeyPairsResult
+newGetKeyPairsResult'  customize = (GetKeyPairsResult <<< customize) { "keyPairs": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -2500,8 +2499,8 @@ newGetLoadBalancerMetricDataRequest' _endTime _loadBalancerName _metricName _per
 
 
 newtype GetLoadBalancerMetricDataResult = GetLoadBalancerMetricDataResult 
-  { "metricName" :: NullOrUndefined (LoadBalancerMetricName)
-  , "metricData" :: NullOrUndefined (MetricDatapointList)
+  { "metricName" :: Maybe (LoadBalancerMetricName)
+  , "metricData" :: Maybe (MetricDatapointList)
   }
 derive instance newtypeGetLoadBalancerMetricDataResult :: Newtype GetLoadBalancerMetricDataResult _
 derive instance repGenericGetLoadBalancerMetricDataResult :: Generic GetLoadBalancerMetricDataResult _
@@ -2511,12 +2510,12 @@ instance encodeGetLoadBalancerMetricDataResult :: Encode GetLoadBalancerMetricDa
 
 -- | Constructs GetLoadBalancerMetricDataResult from required parameters
 newGetLoadBalancerMetricDataResult :: GetLoadBalancerMetricDataResult
-newGetLoadBalancerMetricDataResult  = GetLoadBalancerMetricDataResult { "metricData": (NullOrUndefined Nothing), "metricName": (NullOrUndefined Nothing) }
+newGetLoadBalancerMetricDataResult  = GetLoadBalancerMetricDataResult { "metricData": Nothing, "metricName": Nothing }
 
 -- | Constructs GetLoadBalancerMetricDataResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoadBalancerMetricDataResult' :: ( { "metricName" :: NullOrUndefined (LoadBalancerMetricName) , "metricData" :: NullOrUndefined (MetricDatapointList) } -> {"metricName" :: NullOrUndefined (LoadBalancerMetricName) , "metricData" :: NullOrUndefined (MetricDatapointList) } ) -> GetLoadBalancerMetricDataResult
-newGetLoadBalancerMetricDataResult'  customize = (GetLoadBalancerMetricDataResult <<< customize) { "metricData": (NullOrUndefined Nothing), "metricName": (NullOrUndefined Nothing) }
+newGetLoadBalancerMetricDataResult' :: ( { "metricName" :: Maybe (LoadBalancerMetricName) , "metricData" :: Maybe (MetricDatapointList) } -> {"metricName" :: Maybe (LoadBalancerMetricName) , "metricData" :: Maybe (MetricDatapointList) } ) -> GetLoadBalancerMetricDataResult
+newGetLoadBalancerMetricDataResult'  customize = (GetLoadBalancerMetricDataResult <<< customize) { "metricData": Nothing, "metricName": Nothing }
 
 
 
@@ -2541,7 +2540,7 @@ newGetLoadBalancerRequest' _loadBalancerName customize = (GetLoadBalancerRequest
 
 
 newtype GetLoadBalancerResult = GetLoadBalancerResult 
-  { "loadBalancer" :: NullOrUndefined (LoadBalancer)
+  { "loadBalancer" :: Maybe (LoadBalancer)
   }
 derive instance newtypeGetLoadBalancerResult :: Newtype GetLoadBalancerResult _
 derive instance repGenericGetLoadBalancerResult :: Generic GetLoadBalancerResult _
@@ -2551,12 +2550,12 @@ instance encodeGetLoadBalancerResult :: Encode GetLoadBalancerResult where encod
 
 -- | Constructs GetLoadBalancerResult from required parameters
 newGetLoadBalancerResult :: GetLoadBalancerResult
-newGetLoadBalancerResult  = GetLoadBalancerResult { "loadBalancer": (NullOrUndefined Nothing) }
+newGetLoadBalancerResult  = GetLoadBalancerResult { "loadBalancer": Nothing }
 
 -- | Constructs GetLoadBalancerResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoadBalancerResult' :: ( { "loadBalancer" :: NullOrUndefined (LoadBalancer) } -> {"loadBalancer" :: NullOrUndefined (LoadBalancer) } ) -> GetLoadBalancerResult
-newGetLoadBalancerResult'  customize = (GetLoadBalancerResult <<< customize) { "loadBalancer": (NullOrUndefined Nothing) }
+newGetLoadBalancerResult' :: ( { "loadBalancer" :: Maybe (LoadBalancer) } -> {"loadBalancer" :: Maybe (LoadBalancer) } ) -> GetLoadBalancerResult
+newGetLoadBalancerResult'  customize = (GetLoadBalancerResult <<< customize) { "loadBalancer": Nothing }
 
 
 
@@ -2581,7 +2580,7 @@ newGetLoadBalancerTlsCertificatesRequest' _loadBalancerName customize = (GetLoad
 
 
 newtype GetLoadBalancerTlsCertificatesResult = GetLoadBalancerTlsCertificatesResult 
-  { "tlsCertificates" :: NullOrUndefined (LoadBalancerTlsCertificateList)
+  { "tlsCertificates" :: Maybe (LoadBalancerTlsCertificateList)
   }
 derive instance newtypeGetLoadBalancerTlsCertificatesResult :: Newtype GetLoadBalancerTlsCertificatesResult _
 derive instance repGenericGetLoadBalancerTlsCertificatesResult :: Generic GetLoadBalancerTlsCertificatesResult _
@@ -2591,17 +2590,17 @@ instance encodeGetLoadBalancerTlsCertificatesResult :: Encode GetLoadBalancerTls
 
 -- | Constructs GetLoadBalancerTlsCertificatesResult from required parameters
 newGetLoadBalancerTlsCertificatesResult :: GetLoadBalancerTlsCertificatesResult
-newGetLoadBalancerTlsCertificatesResult  = GetLoadBalancerTlsCertificatesResult { "tlsCertificates": (NullOrUndefined Nothing) }
+newGetLoadBalancerTlsCertificatesResult  = GetLoadBalancerTlsCertificatesResult { "tlsCertificates": Nothing }
 
 -- | Constructs GetLoadBalancerTlsCertificatesResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoadBalancerTlsCertificatesResult' :: ( { "tlsCertificates" :: NullOrUndefined (LoadBalancerTlsCertificateList) } -> {"tlsCertificates" :: NullOrUndefined (LoadBalancerTlsCertificateList) } ) -> GetLoadBalancerTlsCertificatesResult
-newGetLoadBalancerTlsCertificatesResult'  customize = (GetLoadBalancerTlsCertificatesResult <<< customize) { "tlsCertificates": (NullOrUndefined Nothing) }
+newGetLoadBalancerTlsCertificatesResult' :: ( { "tlsCertificates" :: Maybe (LoadBalancerTlsCertificateList) } -> {"tlsCertificates" :: Maybe (LoadBalancerTlsCertificateList) } ) -> GetLoadBalancerTlsCertificatesResult
+newGetLoadBalancerTlsCertificatesResult'  customize = (GetLoadBalancerTlsCertificatesResult <<< customize) { "tlsCertificates": Nothing }
 
 
 
 newtype GetLoadBalancersRequest = GetLoadBalancersRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetLoadBalancersRequest :: Newtype GetLoadBalancersRequest _
 derive instance repGenericGetLoadBalancersRequest :: Generic GetLoadBalancersRequest _
@@ -2611,18 +2610,18 @@ instance encodeGetLoadBalancersRequest :: Encode GetLoadBalancersRequest where e
 
 -- | Constructs GetLoadBalancersRequest from required parameters
 newGetLoadBalancersRequest :: GetLoadBalancersRequest
-newGetLoadBalancersRequest  = GetLoadBalancersRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetLoadBalancersRequest  = GetLoadBalancersRequest { "pageToken": Nothing }
 
 -- | Constructs GetLoadBalancersRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoadBalancersRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetLoadBalancersRequest
-newGetLoadBalancersRequest'  customize = (GetLoadBalancersRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetLoadBalancersRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetLoadBalancersRequest
+newGetLoadBalancersRequest'  customize = (GetLoadBalancersRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetLoadBalancersResult = GetLoadBalancersResult 
-  { "loadBalancers" :: NullOrUndefined (LoadBalancerList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "loadBalancers" :: Maybe (LoadBalancerList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetLoadBalancersResult :: Newtype GetLoadBalancersResult _
 derive instance repGenericGetLoadBalancersResult :: Generic GetLoadBalancersResult _
@@ -2632,12 +2631,12 @@ instance encodeGetLoadBalancersResult :: Encode GetLoadBalancersResult where enc
 
 -- | Constructs GetLoadBalancersResult from required parameters
 newGetLoadBalancersResult :: GetLoadBalancersResult
-newGetLoadBalancersResult  = GetLoadBalancersResult { "loadBalancers": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetLoadBalancersResult  = GetLoadBalancersResult { "loadBalancers": Nothing, "nextPageToken": Nothing }
 
 -- | Constructs GetLoadBalancersResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoadBalancersResult' :: ( { "loadBalancers" :: NullOrUndefined (LoadBalancerList) , "nextPageToken" :: NullOrUndefined (String) } -> {"loadBalancers" :: NullOrUndefined (LoadBalancerList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetLoadBalancersResult
-newGetLoadBalancersResult'  customize = (GetLoadBalancersResult <<< customize) { "loadBalancers": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing) }
+newGetLoadBalancersResult' :: ( { "loadBalancers" :: Maybe (LoadBalancerList) , "nextPageToken" :: Maybe (String) } -> {"loadBalancers" :: Maybe (LoadBalancerList) , "nextPageToken" :: Maybe (String) } ) -> GetLoadBalancersResult
+newGetLoadBalancersResult'  customize = (GetLoadBalancersResult <<< customize) { "loadBalancers": Nothing, "nextPageToken": Nothing }
 
 
 
@@ -2662,7 +2661,7 @@ newGetOperationRequest' _operationId customize = (GetOperationRequest <<< custom
 
 
 newtype GetOperationResult = GetOperationResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeGetOperationResult :: Newtype GetOperationResult _
 derive instance repGenericGetOperationResult :: Generic GetOperationResult _
@@ -2672,18 +2671,18 @@ instance encodeGetOperationResult :: Encode GetOperationResult where encode = ge
 
 -- | Constructs GetOperationResult from required parameters
 newGetOperationResult :: GetOperationResult
-newGetOperationResult  = GetOperationResult { "operation": (NullOrUndefined Nothing) }
+newGetOperationResult  = GetOperationResult { "operation": Nothing }
 
 -- | Constructs GetOperationResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetOperationResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> GetOperationResult
-newGetOperationResult'  customize = (GetOperationResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newGetOperationResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> GetOperationResult
+newGetOperationResult'  customize = (GetOperationResult <<< customize) { "operation": Nothing }
 
 
 
 newtype GetOperationsForResourceRequest = GetOperationsForResourceRequest 
   { "resourceName" :: (ResourceName)
-  , "pageToken" :: NullOrUndefined (String)
+  , "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetOperationsForResourceRequest :: Newtype GetOperationsForResourceRequest _
 derive instance repGenericGetOperationsForResourceRequest :: Generic GetOperationsForResourceRequest _
@@ -2693,19 +2692,19 @@ instance encodeGetOperationsForResourceRequest :: Encode GetOperationsForResourc
 
 -- | Constructs GetOperationsForResourceRequest from required parameters
 newGetOperationsForResourceRequest :: ResourceName -> GetOperationsForResourceRequest
-newGetOperationsForResourceRequest _resourceName = GetOperationsForResourceRequest { "resourceName": _resourceName, "pageToken": (NullOrUndefined Nothing) }
+newGetOperationsForResourceRequest _resourceName = GetOperationsForResourceRequest { "resourceName": _resourceName, "pageToken": Nothing }
 
 -- | Constructs GetOperationsForResourceRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetOperationsForResourceRequest' :: ResourceName -> ( { "resourceName" :: (ResourceName) , "pageToken" :: NullOrUndefined (String) } -> {"resourceName" :: (ResourceName) , "pageToken" :: NullOrUndefined (String) } ) -> GetOperationsForResourceRequest
-newGetOperationsForResourceRequest' _resourceName customize = (GetOperationsForResourceRequest <<< customize) { "resourceName": _resourceName, "pageToken": (NullOrUndefined Nothing) }
+newGetOperationsForResourceRequest' :: ResourceName -> ( { "resourceName" :: (ResourceName) , "pageToken" :: Maybe (String) } -> {"resourceName" :: (ResourceName) , "pageToken" :: Maybe (String) } ) -> GetOperationsForResourceRequest
+newGetOperationsForResourceRequest' _resourceName customize = (GetOperationsForResourceRequest <<< customize) { "resourceName": _resourceName, "pageToken": Nothing }
 
 
 
 newtype GetOperationsForResourceResult = GetOperationsForResourceResult 
-  { "operations" :: NullOrUndefined (OperationList)
-  , "nextPageCount" :: NullOrUndefined (String)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "operations" :: Maybe (OperationList)
+  , "nextPageCount" :: Maybe (String)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetOperationsForResourceResult :: Newtype GetOperationsForResourceResult _
 derive instance repGenericGetOperationsForResourceResult :: Generic GetOperationsForResourceResult _
@@ -2715,17 +2714,17 @@ instance encodeGetOperationsForResourceResult :: Encode GetOperationsForResource
 
 -- | Constructs GetOperationsForResourceResult from required parameters
 newGetOperationsForResourceResult :: GetOperationsForResourceResult
-newGetOperationsForResourceResult  = GetOperationsForResourceResult { "nextPageCount": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing), "operations": (NullOrUndefined Nothing) }
+newGetOperationsForResourceResult  = GetOperationsForResourceResult { "nextPageCount": Nothing, "nextPageToken": Nothing, "operations": Nothing }
 
 -- | Constructs GetOperationsForResourceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetOperationsForResourceResult' :: ( { "operations" :: NullOrUndefined (OperationList) , "nextPageCount" :: NullOrUndefined (String) , "nextPageToken" :: NullOrUndefined (String) } -> {"operations" :: NullOrUndefined (OperationList) , "nextPageCount" :: NullOrUndefined (String) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetOperationsForResourceResult
-newGetOperationsForResourceResult'  customize = (GetOperationsForResourceResult <<< customize) { "nextPageCount": (NullOrUndefined Nothing), "nextPageToken": (NullOrUndefined Nothing), "operations": (NullOrUndefined Nothing) }
+newGetOperationsForResourceResult' :: ( { "operations" :: Maybe (OperationList) , "nextPageCount" :: Maybe (String) , "nextPageToken" :: Maybe (String) } -> {"operations" :: Maybe (OperationList) , "nextPageCount" :: Maybe (String) , "nextPageToken" :: Maybe (String) } ) -> GetOperationsForResourceResult
+newGetOperationsForResourceResult'  customize = (GetOperationsForResourceResult <<< customize) { "nextPageCount": Nothing, "nextPageToken": Nothing, "operations": Nothing }
 
 
 
 newtype GetOperationsRequest = GetOperationsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetOperationsRequest :: Newtype GetOperationsRequest _
 derive instance repGenericGetOperationsRequest :: Generic GetOperationsRequest _
@@ -2735,18 +2734,18 @@ instance encodeGetOperationsRequest :: Encode GetOperationsRequest where encode 
 
 -- | Constructs GetOperationsRequest from required parameters
 newGetOperationsRequest :: GetOperationsRequest
-newGetOperationsRequest  = GetOperationsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetOperationsRequest  = GetOperationsRequest { "pageToken": Nothing }
 
 -- | Constructs GetOperationsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetOperationsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetOperationsRequest
-newGetOperationsRequest'  customize = (GetOperationsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetOperationsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetOperationsRequest
+newGetOperationsRequest'  customize = (GetOperationsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetOperationsResult = GetOperationsResult 
-  { "operations" :: NullOrUndefined (OperationList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "operations" :: Maybe (OperationList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetOperationsResult :: Newtype GetOperationsResult _
 derive instance repGenericGetOperationsResult :: Generic GetOperationsResult _
@@ -2756,17 +2755,17 @@ instance encodeGetOperationsResult :: Encode GetOperationsResult where encode = 
 
 -- | Constructs GetOperationsResult from required parameters
 newGetOperationsResult :: GetOperationsResult
-newGetOperationsResult  = GetOperationsResult { "nextPageToken": (NullOrUndefined Nothing), "operations": (NullOrUndefined Nothing) }
+newGetOperationsResult  = GetOperationsResult { "nextPageToken": Nothing, "operations": Nothing }
 
 -- | Constructs GetOperationsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetOperationsResult' :: ( { "operations" :: NullOrUndefined (OperationList) , "nextPageToken" :: NullOrUndefined (String) } -> {"operations" :: NullOrUndefined (OperationList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetOperationsResult
-newGetOperationsResult'  customize = (GetOperationsResult <<< customize) { "nextPageToken": (NullOrUndefined Nothing), "operations": (NullOrUndefined Nothing) }
+newGetOperationsResult' :: ( { "operations" :: Maybe (OperationList) , "nextPageToken" :: Maybe (String) } -> {"operations" :: Maybe (OperationList) , "nextPageToken" :: Maybe (String) } ) -> GetOperationsResult
+newGetOperationsResult'  customize = (GetOperationsResult <<< customize) { "nextPageToken": Nothing, "operations": Nothing }
 
 
 
 newtype GetRegionsRequest = GetRegionsRequest 
-  { "includeAvailabilityZones" :: NullOrUndefined (Boolean)
+  { "includeAvailabilityZones" :: Maybe (Boolean)
   }
 derive instance newtypeGetRegionsRequest :: Newtype GetRegionsRequest _
 derive instance repGenericGetRegionsRequest :: Generic GetRegionsRequest _
@@ -2776,17 +2775,17 @@ instance encodeGetRegionsRequest :: Encode GetRegionsRequest where encode = gene
 
 -- | Constructs GetRegionsRequest from required parameters
 newGetRegionsRequest :: GetRegionsRequest
-newGetRegionsRequest  = GetRegionsRequest { "includeAvailabilityZones": (NullOrUndefined Nothing) }
+newGetRegionsRequest  = GetRegionsRequest { "includeAvailabilityZones": Nothing }
 
 -- | Constructs GetRegionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRegionsRequest' :: ( { "includeAvailabilityZones" :: NullOrUndefined (Boolean) } -> {"includeAvailabilityZones" :: NullOrUndefined (Boolean) } ) -> GetRegionsRequest
-newGetRegionsRequest'  customize = (GetRegionsRequest <<< customize) { "includeAvailabilityZones": (NullOrUndefined Nothing) }
+newGetRegionsRequest' :: ( { "includeAvailabilityZones" :: Maybe (Boolean) } -> {"includeAvailabilityZones" :: Maybe (Boolean) } ) -> GetRegionsRequest
+newGetRegionsRequest'  customize = (GetRegionsRequest <<< customize) { "includeAvailabilityZones": Nothing }
 
 
 
 newtype GetRegionsResult = GetRegionsResult 
-  { "regions" :: NullOrUndefined (RegionList)
+  { "regions" :: Maybe (RegionList)
   }
 derive instance newtypeGetRegionsResult :: Newtype GetRegionsResult _
 derive instance repGenericGetRegionsResult :: Generic GetRegionsResult _
@@ -2796,12 +2795,12 @@ instance encodeGetRegionsResult :: Encode GetRegionsResult where encode = generi
 
 -- | Constructs GetRegionsResult from required parameters
 newGetRegionsResult :: GetRegionsResult
-newGetRegionsResult  = GetRegionsResult { "regions": (NullOrUndefined Nothing) }
+newGetRegionsResult  = GetRegionsResult { "regions": Nothing }
 
 -- | Constructs GetRegionsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRegionsResult' :: ( { "regions" :: NullOrUndefined (RegionList) } -> {"regions" :: NullOrUndefined (RegionList) } ) -> GetRegionsResult
-newGetRegionsResult'  customize = (GetRegionsResult <<< customize) { "regions": (NullOrUndefined Nothing) }
+newGetRegionsResult' :: ( { "regions" :: Maybe (RegionList) } -> {"regions" :: Maybe (RegionList) } ) -> GetRegionsResult
+newGetRegionsResult'  customize = (GetRegionsResult <<< customize) { "regions": Nothing }
 
 
 
@@ -2826,7 +2825,7 @@ newGetStaticIpRequest' _staticIpName customize = (GetStaticIpRequest <<< customi
 
 
 newtype GetStaticIpResult = GetStaticIpResult 
-  { "staticIp" :: NullOrUndefined (StaticIp)
+  { "staticIp" :: Maybe (StaticIp)
   }
 derive instance newtypeGetStaticIpResult :: Newtype GetStaticIpResult _
 derive instance repGenericGetStaticIpResult :: Generic GetStaticIpResult _
@@ -2836,17 +2835,17 @@ instance encodeGetStaticIpResult :: Encode GetStaticIpResult where encode = gene
 
 -- | Constructs GetStaticIpResult from required parameters
 newGetStaticIpResult :: GetStaticIpResult
-newGetStaticIpResult  = GetStaticIpResult { "staticIp": (NullOrUndefined Nothing) }
+newGetStaticIpResult  = GetStaticIpResult { "staticIp": Nothing }
 
 -- | Constructs GetStaticIpResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetStaticIpResult' :: ( { "staticIp" :: NullOrUndefined (StaticIp) } -> {"staticIp" :: NullOrUndefined (StaticIp) } ) -> GetStaticIpResult
-newGetStaticIpResult'  customize = (GetStaticIpResult <<< customize) { "staticIp": (NullOrUndefined Nothing) }
+newGetStaticIpResult' :: ( { "staticIp" :: Maybe (StaticIp) } -> {"staticIp" :: Maybe (StaticIp) } ) -> GetStaticIpResult
+newGetStaticIpResult'  customize = (GetStaticIpResult <<< customize) { "staticIp": Nothing }
 
 
 
 newtype GetStaticIpsRequest = GetStaticIpsRequest 
-  { "pageToken" :: NullOrUndefined (String)
+  { "pageToken" :: Maybe (String)
   }
 derive instance newtypeGetStaticIpsRequest :: Newtype GetStaticIpsRequest _
 derive instance repGenericGetStaticIpsRequest :: Generic GetStaticIpsRequest _
@@ -2856,18 +2855,18 @@ instance encodeGetStaticIpsRequest :: Encode GetStaticIpsRequest where encode = 
 
 -- | Constructs GetStaticIpsRequest from required parameters
 newGetStaticIpsRequest :: GetStaticIpsRequest
-newGetStaticIpsRequest  = GetStaticIpsRequest { "pageToken": (NullOrUndefined Nothing) }
+newGetStaticIpsRequest  = GetStaticIpsRequest { "pageToken": Nothing }
 
 -- | Constructs GetStaticIpsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetStaticIpsRequest' :: ( { "pageToken" :: NullOrUndefined (String) } -> {"pageToken" :: NullOrUndefined (String) } ) -> GetStaticIpsRequest
-newGetStaticIpsRequest'  customize = (GetStaticIpsRequest <<< customize) { "pageToken": (NullOrUndefined Nothing) }
+newGetStaticIpsRequest' :: ( { "pageToken" :: Maybe (String) } -> {"pageToken" :: Maybe (String) } ) -> GetStaticIpsRequest
+newGetStaticIpsRequest'  customize = (GetStaticIpsRequest <<< customize) { "pageToken": Nothing }
 
 
 
 newtype GetStaticIpsResult = GetStaticIpsResult 
-  { "staticIps" :: NullOrUndefined (StaticIpList)
-  , "nextPageToken" :: NullOrUndefined (String)
+  { "staticIps" :: Maybe (StaticIpList)
+  , "nextPageToken" :: Maybe (String)
   }
 derive instance newtypeGetStaticIpsResult :: Newtype GetStaticIpsResult _
 derive instance repGenericGetStaticIpsResult :: Generic GetStaticIpsResult _
@@ -2877,12 +2876,12 @@ instance encodeGetStaticIpsResult :: Encode GetStaticIpsResult where encode = ge
 
 -- | Constructs GetStaticIpsResult from required parameters
 newGetStaticIpsResult :: GetStaticIpsResult
-newGetStaticIpsResult  = GetStaticIpsResult { "nextPageToken": (NullOrUndefined Nothing), "staticIps": (NullOrUndefined Nothing) }
+newGetStaticIpsResult  = GetStaticIpsResult { "nextPageToken": Nothing, "staticIps": Nothing }
 
 -- | Constructs GetStaticIpsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetStaticIpsResult' :: ( { "staticIps" :: NullOrUndefined (StaticIpList) , "nextPageToken" :: NullOrUndefined (String) } -> {"staticIps" :: NullOrUndefined (StaticIpList) , "nextPageToken" :: NullOrUndefined (String) } ) -> GetStaticIpsResult
-newGetStaticIpsResult'  customize = (GetStaticIpsResult <<< customize) { "nextPageToken": (NullOrUndefined Nothing), "staticIps": (NullOrUndefined Nothing) }
+newGetStaticIpsResult' :: ( { "staticIps" :: Maybe (StaticIpList) , "nextPageToken" :: Maybe (String) } -> {"staticIps" :: Maybe (StaticIpList) , "nextPageToken" :: Maybe (String) } ) -> GetStaticIpsResult
+newGetStaticIpsResult'  customize = (GetStaticIpsResult <<< customize) { "nextPageToken": Nothing, "staticIps": Nothing }
 
 
 
@@ -2908,7 +2907,7 @@ newImportKeyPairRequest' _keyPairName _publicKeyBase64 customize = (ImportKeyPai
 
 
 newtype ImportKeyPairResult = ImportKeyPairResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeImportKeyPairResult :: Newtype ImportKeyPairResult _
 derive instance repGenericImportKeyPairResult :: Generic ImportKeyPairResult _
@@ -2918,35 +2917,35 @@ instance encodeImportKeyPairResult :: Encode ImportKeyPairResult where encode = 
 
 -- | Constructs ImportKeyPairResult from required parameters
 newImportKeyPairResult :: ImportKeyPairResult
-newImportKeyPairResult  = ImportKeyPairResult { "operation": (NullOrUndefined Nothing) }
+newImportKeyPairResult  = ImportKeyPairResult { "operation": Nothing }
 
 -- | Constructs ImportKeyPairResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newImportKeyPairResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> ImportKeyPairResult
-newImportKeyPairResult'  customize = (ImportKeyPairResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newImportKeyPairResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> ImportKeyPairResult
+newImportKeyPairResult'  customize = (ImportKeyPairResult <<< customize) { "operation": Nothing }
 
 
 
 -- | <p>Describes an instance (a virtual private server).</p>
 newtype Instance = Instance 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "blueprintId" :: NullOrUndefined (NonEmptyString)
-  , "blueprintName" :: NullOrUndefined (NonEmptyString)
-  , "bundleId" :: NullOrUndefined (NonEmptyString)
-  , "isStaticIp" :: NullOrUndefined (Boolean)
-  , "privateIpAddress" :: NullOrUndefined (IpAddress)
-  , "publicIpAddress" :: NullOrUndefined (IpAddress)
-  , "ipv6Address" :: NullOrUndefined (IpV6Address)
-  , "hardware" :: NullOrUndefined (InstanceHardware)
-  , "networking" :: NullOrUndefined (InstanceNetworking)
-  , "state" :: NullOrUndefined (InstanceState)
-  , "username" :: NullOrUndefined (NonEmptyString)
-  , "sshKeyName" :: NullOrUndefined (ResourceName)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "blueprintId" :: Maybe (NonEmptyString)
+  , "blueprintName" :: Maybe (NonEmptyString)
+  , "bundleId" :: Maybe (NonEmptyString)
+  , "isStaticIp" :: Maybe (Boolean)
+  , "privateIpAddress" :: Maybe (IpAddress)
+  , "publicIpAddress" :: Maybe (IpAddress)
+  , "ipv6Address" :: Maybe (IpV6Address)
+  , "hardware" :: Maybe (InstanceHardware)
+  , "networking" :: Maybe (InstanceNetworking)
+  , "state" :: Maybe (InstanceState)
+  , "username" :: Maybe (NonEmptyString)
+  , "sshKeyName" :: Maybe (ResourceName)
   }
 derive instance newtypeInstance :: Newtype Instance _
 derive instance repGenericInstance :: Generic Instance _
@@ -2956,26 +2955,26 @@ instance encodeInstance :: Encode Instance where encode = genericEncode options
 
 -- | Constructs Instance from required parameters
 newInstance :: Instance
-newInstance  = Instance { "arn": (NullOrUndefined Nothing), "blueprintId": (NullOrUndefined Nothing), "blueprintName": (NullOrUndefined Nothing), "bundleId": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "hardware": (NullOrUndefined Nothing), "ipv6Address": (NullOrUndefined Nothing), "isStaticIp": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "networking": (NullOrUndefined Nothing), "privateIpAddress": (NullOrUndefined Nothing), "publicIpAddress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sshKeyName": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing), "username": (NullOrUndefined Nothing) }
+newInstance  = Instance { "arn": Nothing, "blueprintId": Nothing, "blueprintName": Nothing, "bundleId": Nothing, "createdAt": Nothing, "hardware": Nothing, "ipv6Address": Nothing, "isStaticIp": Nothing, "location": Nothing, "name": Nothing, "networking": Nothing, "privateIpAddress": Nothing, "publicIpAddress": Nothing, "resourceType": Nothing, "sshKeyName": Nothing, "state": Nothing, "supportCode": Nothing, "username": Nothing }
 
 -- | Constructs Instance's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstance' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "blueprintId" :: NullOrUndefined (NonEmptyString) , "blueprintName" :: NullOrUndefined (NonEmptyString) , "bundleId" :: NullOrUndefined (NonEmptyString) , "isStaticIp" :: NullOrUndefined (Boolean) , "privateIpAddress" :: NullOrUndefined (IpAddress) , "publicIpAddress" :: NullOrUndefined (IpAddress) , "ipv6Address" :: NullOrUndefined (IpV6Address) , "hardware" :: NullOrUndefined (InstanceHardware) , "networking" :: NullOrUndefined (InstanceNetworking) , "state" :: NullOrUndefined (InstanceState) , "username" :: NullOrUndefined (NonEmptyString) , "sshKeyName" :: NullOrUndefined (ResourceName) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "blueprintId" :: NullOrUndefined (NonEmptyString) , "blueprintName" :: NullOrUndefined (NonEmptyString) , "bundleId" :: NullOrUndefined (NonEmptyString) , "isStaticIp" :: NullOrUndefined (Boolean) , "privateIpAddress" :: NullOrUndefined (IpAddress) , "publicIpAddress" :: NullOrUndefined (IpAddress) , "ipv6Address" :: NullOrUndefined (IpV6Address) , "hardware" :: NullOrUndefined (InstanceHardware) , "networking" :: NullOrUndefined (InstanceNetworking) , "state" :: NullOrUndefined (InstanceState) , "username" :: NullOrUndefined (NonEmptyString) , "sshKeyName" :: NullOrUndefined (ResourceName) } ) -> Instance
-newInstance'  customize = (Instance <<< customize) { "arn": (NullOrUndefined Nothing), "blueprintId": (NullOrUndefined Nothing), "blueprintName": (NullOrUndefined Nothing), "bundleId": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "hardware": (NullOrUndefined Nothing), "ipv6Address": (NullOrUndefined Nothing), "isStaticIp": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "networking": (NullOrUndefined Nothing), "privateIpAddress": (NullOrUndefined Nothing), "publicIpAddress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sshKeyName": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing), "username": (NullOrUndefined Nothing) }
+newInstance' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "blueprintId" :: Maybe (NonEmptyString) , "blueprintName" :: Maybe (NonEmptyString) , "bundleId" :: Maybe (NonEmptyString) , "isStaticIp" :: Maybe (Boolean) , "privateIpAddress" :: Maybe (IpAddress) , "publicIpAddress" :: Maybe (IpAddress) , "ipv6Address" :: Maybe (IpV6Address) , "hardware" :: Maybe (InstanceHardware) , "networking" :: Maybe (InstanceNetworking) , "state" :: Maybe (InstanceState) , "username" :: Maybe (NonEmptyString) , "sshKeyName" :: Maybe (ResourceName) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "blueprintId" :: Maybe (NonEmptyString) , "blueprintName" :: Maybe (NonEmptyString) , "bundleId" :: Maybe (NonEmptyString) , "isStaticIp" :: Maybe (Boolean) , "privateIpAddress" :: Maybe (IpAddress) , "publicIpAddress" :: Maybe (IpAddress) , "ipv6Address" :: Maybe (IpV6Address) , "hardware" :: Maybe (InstanceHardware) , "networking" :: Maybe (InstanceNetworking) , "state" :: Maybe (InstanceState) , "username" :: Maybe (NonEmptyString) , "sshKeyName" :: Maybe (ResourceName) } ) -> Instance
+newInstance'  customize = (Instance <<< customize) { "arn": Nothing, "blueprintId": Nothing, "blueprintName": Nothing, "bundleId": Nothing, "createdAt": Nothing, "hardware": Nothing, "ipv6Address": Nothing, "isStaticIp": Nothing, "location": Nothing, "name": Nothing, "networking": Nothing, "privateIpAddress": Nothing, "publicIpAddress": Nothing, "resourceType": Nothing, "sshKeyName": Nothing, "state": Nothing, "supportCode": Nothing, "username": Nothing }
 
 
 
 -- | <p>The parameters for gaining temporary access to one of your Amazon Lightsail instances.</p>
 newtype InstanceAccessDetails = InstanceAccessDetails 
-  { "certKey" :: NullOrUndefined (String)
-  , "expiresAt" :: NullOrUndefined (IsoDate)
-  , "ipAddress" :: NullOrUndefined (IpAddress)
-  , "password" :: NullOrUndefined (String)
-  , "passwordData" :: NullOrUndefined (PasswordData)
-  , "privateKey" :: NullOrUndefined (String)
-  , "protocol" :: NullOrUndefined (InstanceAccessProtocol)
-  , "instanceName" :: NullOrUndefined (ResourceName)
-  , "username" :: NullOrUndefined (String)
+  { "certKey" :: Maybe (String)
+  , "expiresAt" :: Maybe (IsoDate)
+  , "ipAddress" :: Maybe (IpAddress)
+  , "password" :: Maybe (String)
+  , "passwordData" :: Maybe (PasswordData)
+  , "privateKey" :: Maybe (String)
+  , "protocol" :: Maybe (InstanceAccessProtocol)
+  , "instanceName" :: Maybe (ResourceName)
+  , "username" :: Maybe (String)
   }
 derive instance newtypeInstanceAccessDetails :: Newtype InstanceAccessDetails _
 derive instance repGenericInstanceAccessDetails :: Generic InstanceAccessDetails _
@@ -2985,12 +2984,12 @@ instance encodeInstanceAccessDetails :: Encode InstanceAccessDetails where encod
 
 -- | Constructs InstanceAccessDetails from required parameters
 newInstanceAccessDetails :: InstanceAccessDetails
-newInstanceAccessDetails  = InstanceAccessDetails { "certKey": (NullOrUndefined Nothing), "expiresAt": (NullOrUndefined Nothing), "instanceName": (NullOrUndefined Nothing), "ipAddress": (NullOrUndefined Nothing), "password": (NullOrUndefined Nothing), "passwordData": (NullOrUndefined Nothing), "privateKey": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "username": (NullOrUndefined Nothing) }
+newInstanceAccessDetails  = InstanceAccessDetails { "certKey": Nothing, "expiresAt": Nothing, "instanceName": Nothing, "ipAddress": Nothing, "password": Nothing, "passwordData": Nothing, "privateKey": Nothing, "protocol": Nothing, "username": Nothing }
 
 -- | Constructs InstanceAccessDetails's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceAccessDetails' :: ( { "certKey" :: NullOrUndefined (String) , "expiresAt" :: NullOrUndefined (IsoDate) , "ipAddress" :: NullOrUndefined (IpAddress) , "password" :: NullOrUndefined (String) , "passwordData" :: NullOrUndefined (PasswordData) , "privateKey" :: NullOrUndefined (String) , "protocol" :: NullOrUndefined (InstanceAccessProtocol) , "instanceName" :: NullOrUndefined (ResourceName) , "username" :: NullOrUndefined (String) } -> {"certKey" :: NullOrUndefined (String) , "expiresAt" :: NullOrUndefined (IsoDate) , "ipAddress" :: NullOrUndefined (IpAddress) , "password" :: NullOrUndefined (String) , "passwordData" :: NullOrUndefined (PasswordData) , "privateKey" :: NullOrUndefined (String) , "protocol" :: NullOrUndefined (InstanceAccessProtocol) , "instanceName" :: NullOrUndefined (ResourceName) , "username" :: NullOrUndefined (String) } ) -> InstanceAccessDetails
-newInstanceAccessDetails'  customize = (InstanceAccessDetails <<< customize) { "certKey": (NullOrUndefined Nothing), "expiresAt": (NullOrUndefined Nothing), "instanceName": (NullOrUndefined Nothing), "ipAddress": (NullOrUndefined Nothing), "password": (NullOrUndefined Nothing), "passwordData": (NullOrUndefined Nothing), "privateKey": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "username": (NullOrUndefined Nothing) }
+newInstanceAccessDetails' :: ( { "certKey" :: Maybe (String) , "expiresAt" :: Maybe (IsoDate) , "ipAddress" :: Maybe (IpAddress) , "password" :: Maybe (String) , "passwordData" :: Maybe (PasswordData) , "privateKey" :: Maybe (String) , "protocol" :: Maybe (InstanceAccessProtocol) , "instanceName" :: Maybe (ResourceName) , "username" :: Maybe (String) } -> {"certKey" :: Maybe (String) , "expiresAt" :: Maybe (IsoDate) , "ipAddress" :: Maybe (IpAddress) , "password" :: Maybe (String) , "passwordData" :: Maybe (PasswordData) , "privateKey" :: Maybe (String) , "protocol" :: Maybe (InstanceAccessProtocol) , "instanceName" :: Maybe (ResourceName) , "username" :: Maybe (String) } ) -> InstanceAccessDetails
+newInstanceAccessDetails'  customize = (InstanceAccessDetails <<< customize) { "certKey": Nothing, "expiresAt": Nothing, "instanceName": Nothing, "ipAddress": Nothing, "password": Nothing, "passwordData": Nothing, "privateKey": Nothing, "protocol": Nothing, "username": Nothing }
 
 
 
@@ -3005,9 +3004,9 @@ instance encodeInstanceAccessProtocol :: Encode InstanceAccessProtocol where enc
 
 -- | <p>Describes the hardware for the instance.</p>
 newtype InstanceHardware = InstanceHardware 
-  { "cpuCount" :: NullOrUndefined (Int)
-  , "disks" :: NullOrUndefined (DiskList)
-  , "ramSizeInGb" :: NullOrUndefined (Number)
+  { "cpuCount" :: Maybe (Int)
+  , "disks" :: Maybe (DiskList)
+  , "ramSizeInGb" :: Maybe (Number)
   }
 derive instance newtypeInstanceHardware :: Newtype InstanceHardware _
 derive instance repGenericInstanceHardware :: Generic InstanceHardware _
@@ -3017,12 +3016,12 @@ instance encodeInstanceHardware :: Encode InstanceHardware where encode = generi
 
 -- | Constructs InstanceHardware from required parameters
 newInstanceHardware :: InstanceHardware
-newInstanceHardware  = InstanceHardware { "cpuCount": (NullOrUndefined Nothing), "disks": (NullOrUndefined Nothing), "ramSizeInGb": (NullOrUndefined Nothing) }
+newInstanceHardware  = InstanceHardware { "cpuCount": Nothing, "disks": Nothing, "ramSizeInGb": Nothing }
 
 -- | Constructs InstanceHardware's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceHardware' :: ( { "cpuCount" :: NullOrUndefined (Int) , "disks" :: NullOrUndefined (DiskList) , "ramSizeInGb" :: NullOrUndefined (Number) } -> {"cpuCount" :: NullOrUndefined (Int) , "disks" :: NullOrUndefined (DiskList) , "ramSizeInGb" :: NullOrUndefined (Number) } ) -> InstanceHardware
-newInstanceHardware'  customize = (InstanceHardware <<< customize) { "cpuCount": (NullOrUndefined Nothing), "disks": (NullOrUndefined Nothing), "ramSizeInGb": (NullOrUndefined Nothing) }
+newInstanceHardware' :: ( { "cpuCount" :: Maybe (Int) , "disks" :: Maybe (DiskList) , "ramSizeInGb" :: Maybe (Number) } -> {"cpuCount" :: Maybe (Int) , "disks" :: Maybe (DiskList) , "ramSizeInGb" :: Maybe (Number) } ) -> InstanceHardware
+newInstanceHardware'  customize = (InstanceHardware <<< customize) { "cpuCount": Nothing, "disks": Nothing, "ramSizeInGb": Nothing }
 
 
 
@@ -3046,9 +3045,9 @@ instance encodeInstanceHealthState :: Encode InstanceHealthState where encode = 
 
 -- | <p>Describes information about the health of the instance.</p>
 newtype InstanceHealthSummary = InstanceHealthSummary 
-  { "instanceName" :: NullOrUndefined (ResourceName)
-  , "instanceHealth" :: NullOrUndefined (InstanceHealthState)
-  , "instanceHealthReason" :: NullOrUndefined (InstanceHealthReason)
+  { "instanceName" :: Maybe (ResourceName)
+  , "instanceHealth" :: Maybe (InstanceHealthState)
+  , "instanceHealthReason" :: Maybe (InstanceHealthReason)
   }
 derive instance newtypeInstanceHealthSummary :: Newtype InstanceHealthSummary _
 derive instance repGenericInstanceHealthSummary :: Generic InstanceHealthSummary _
@@ -3058,12 +3057,12 @@ instance encodeInstanceHealthSummary :: Encode InstanceHealthSummary where encod
 
 -- | Constructs InstanceHealthSummary from required parameters
 newInstanceHealthSummary :: InstanceHealthSummary
-newInstanceHealthSummary  = InstanceHealthSummary { "instanceHealth": (NullOrUndefined Nothing), "instanceHealthReason": (NullOrUndefined Nothing), "instanceName": (NullOrUndefined Nothing) }
+newInstanceHealthSummary  = InstanceHealthSummary { "instanceHealth": Nothing, "instanceHealthReason": Nothing, "instanceName": Nothing }
 
 -- | Constructs InstanceHealthSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceHealthSummary' :: ( { "instanceName" :: NullOrUndefined (ResourceName) , "instanceHealth" :: NullOrUndefined (InstanceHealthState) , "instanceHealthReason" :: NullOrUndefined (InstanceHealthReason) } -> {"instanceName" :: NullOrUndefined (ResourceName) , "instanceHealth" :: NullOrUndefined (InstanceHealthState) , "instanceHealthReason" :: NullOrUndefined (InstanceHealthReason) } ) -> InstanceHealthSummary
-newInstanceHealthSummary'  customize = (InstanceHealthSummary <<< customize) { "instanceHealth": (NullOrUndefined Nothing), "instanceHealthReason": (NullOrUndefined Nothing), "instanceName": (NullOrUndefined Nothing) }
+newInstanceHealthSummary' :: ( { "instanceName" :: Maybe (ResourceName) , "instanceHealth" :: Maybe (InstanceHealthState) , "instanceHealthReason" :: Maybe (InstanceHealthReason) } -> {"instanceName" :: Maybe (ResourceName) , "instanceHealth" :: Maybe (InstanceHealthState) , "instanceHealthReason" :: Maybe (InstanceHealthReason) } ) -> InstanceHealthSummary
+newInstanceHealthSummary'  customize = (InstanceHealthSummary <<< customize) { "instanceHealth": Nothing, "instanceHealthReason": Nothing, "instanceName": Nothing }
 
 
 
@@ -3096,8 +3095,8 @@ instance encodeInstanceMetricName :: Encode InstanceMetricName where encode = ge
 
 -- | <p>Describes monthly data transfer rates and port information for an instance.</p>
 newtype InstanceNetworking = InstanceNetworking 
-  { "monthlyTransfer" :: NullOrUndefined (MonthlyTransfer)
-  , "ports" :: NullOrUndefined (InstancePortInfoList)
+  { "monthlyTransfer" :: Maybe (MonthlyTransfer)
+  , "ports" :: Maybe (InstancePortInfoList)
   }
 derive instance newtypeInstanceNetworking :: Newtype InstanceNetworking _
 derive instance repGenericInstanceNetworking :: Generic InstanceNetworking _
@@ -3107,12 +3106,12 @@ instance encodeInstanceNetworking :: Encode InstanceNetworking where encode = ge
 
 -- | Constructs InstanceNetworking from required parameters
 newInstanceNetworking :: InstanceNetworking
-newInstanceNetworking  = InstanceNetworking { "monthlyTransfer": (NullOrUndefined Nothing), "ports": (NullOrUndefined Nothing) }
+newInstanceNetworking  = InstanceNetworking { "monthlyTransfer": Nothing, "ports": Nothing }
 
 -- | Constructs InstanceNetworking's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceNetworking' :: ( { "monthlyTransfer" :: NullOrUndefined (MonthlyTransfer) , "ports" :: NullOrUndefined (InstancePortInfoList) } -> {"monthlyTransfer" :: NullOrUndefined (MonthlyTransfer) , "ports" :: NullOrUndefined (InstancePortInfoList) } ) -> InstanceNetworking
-newInstanceNetworking'  customize = (InstanceNetworking <<< customize) { "monthlyTransfer": (NullOrUndefined Nothing), "ports": (NullOrUndefined Nothing) }
+newInstanceNetworking' :: ( { "monthlyTransfer" :: Maybe (MonthlyTransfer) , "ports" :: Maybe (InstancePortInfoList) } -> {"monthlyTransfer" :: Maybe (MonthlyTransfer) , "ports" :: Maybe (InstancePortInfoList) } ) -> InstanceNetworking
+newInstanceNetworking'  customize = (InstanceNetworking <<< customize) { "monthlyTransfer": Nothing, "ports": Nothing }
 
 
 
@@ -3136,13 +3135,13 @@ instance encodeInstancePlatformList :: Encode InstancePlatformList where encode 
 
 -- | <p>Describes information about the instance ports.</p>
 newtype InstancePortInfo = InstancePortInfo 
-  { "fromPort" :: NullOrUndefined (Port)
-  , "toPort" :: NullOrUndefined (Port)
-  , "protocol" :: NullOrUndefined (NetworkProtocol)
-  , "accessFrom" :: NullOrUndefined (String)
-  , "accessType" :: NullOrUndefined (PortAccessType)
-  , "commonName" :: NullOrUndefined (String)
-  , "accessDirection" :: NullOrUndefined (AccessDirection)
+  { "fromPort" :: Maybe (Port)
+  , "toPort" :: Maybe (Port)
+  , "protocol" :: Maybe (NetworkProtocol)
+  , "accessFrom" :: Maybe (String)
+  , "accessType" :: Maybe (PortAccessType)
+  , "commonName" :: Maybe (String)
+  , "accessDirection" :: Maybe (AccessDirection)
   }
 derive instance newtypeInstancePortInfo :: Newtype InstancePortInfo _
 derive instance repGenericInstancePortInfo :: Generic InstancePortInfo _
@@ -3152,12 +3151,12 @@ instance encodeInstancePortInfo :: Encode InstancePortInfo where encode = generi
 
 -- | Constructs InstancePortInfo from required parameters
 newInstancePortInfo :: InstancePortInfo
-newInstancePortInfo  = InstancePortInfo { "accessDirection": (NullOrUndefined Nothing), "accessFrom": (NullOrUndefined Nothing), "accessType": (NullOrUndefined Nothing), "commonName": (NullOrUndefined Nothing), "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newInstancePortInfo  = InstancePortInfo { "accessDirection": Nothing, "accessFrom": Nothing, "accessType": Nothing, "commonName": Nothing, "fromPort": Nothing, "protocol": Nothing, "toPort": Nothing }
 
 -- | Constructs InstancePortInfo's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstancePortInfo' :: ( { "fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) , "accessFrom" :: NullOrUndefined (String) , "accessType" :: NullOrUndefined (PortAccessType) , "commonName" :: NullOrUndefined (String) , "accessDirection" :: NullOrUndefined (AccessDirection) } -> {"fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) , "accessFrom" :: NullOrUndefined (String) , "accessType" :: NullOrUndefined (PortAccessType) , "commonName" :: NullOrUndefined (String) , "accessDirection" :: NullOrUndefined (AccessDirection) } ) -> InstancePortInfo
-newInstancePortInfo'  customize = (InstancePortInfo <<< customize) { "accessDirection": (NullOrUndefined Nothing), "accessFrom": (NullOrUndefined Nothing), "accessType": (NullOrUndefined Nothing), "commonName": (NullOrUndefined Nothing), "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newInstancePortInfo' :: ( { "fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) , "accessFrom" :: Maybe (String) , "accessType" :: Maybe (PortAccessType) , "commonName" :: Maybe (String) , "accessDirection" :: Maybe (AccessDirection) } -> {"fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) , "accessFrom" :: Maybe (String) , "accessType" :: Maybe (PortAccessType) , "commonName" :: Maybe (String) , "accessDirection" :: Maybe (AccessDirection) } ) -> InstancePortInfo
+newInstancePortInfo'  customize = (InstancePortInfo <<< customize) { "accessDirection": Nothing, "accessFrom": Nothing, "accessType": Nothing, "commonName": Nothing, "fromPort": Nothing, "protocol": Nothing, "toPort": Nothing }
 
 
 
@@ -3172,10 +3171,10 @@ instance encodeInstancePortInfoList :: Encode InstancePortInfoList where encode 
 
 -- | <p>Describes the port state.</p>
 newtype InstancePortState = InstancePortState 
-  { "fromPort" :: NullOrUndefined (Port)
-  , "toPort" :: NullOrUndefined (Port)
-  , "protocol" :: NullOrUndefined (NetworkProtocol)
-  , "state" :: NullOrUndefined (PortState)
+  { "fromPort" :: Maybe (Port)
+  , "toPort" :: Maybe (Port)
+  , "protocol" :: Maybe (NetworkProtocol)
+  , "state" :: Maybe (PortState)
   }
 derive instance newtypeInstancePortState :: Newtype InstancePortState _
 derive instance repGenericInstancePortState :: Generic InstancePortState _
@@ -3185,12 +3184,12 @@ instance encodeInstancePortState :: Encode InstancePortState where encode = gene
 
 -- | Constructs InstancePortState from required parameters
 newInstancePortState :: InstancePortState
-newInstancePortState  = InstancePortState { "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newInstancePortState  = InstancePortState { "fromPort": Nothing, "protocol": Nothing, "state": Nothing, "toPort": Nothing }
 
 -- | Constructs InstancePortState's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstancePortState' :: ( { "fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) , "state" :: NullOrUndefined (PortState) } -> {"fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) , "state" :: NullOrUndefined (PortState) } ) -> InstancePortState
-newInstancePortState'  customize = (InstancePortState <<< customize) { "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newInstancePortState' :: ( { "fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) , "state" :: Maybe (PortState) } -> {"fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) , "state" :: Maybe (PortState) } ) -> InstancePortState
+newInstancePortState'  customize = (InstancePortState <<< customize) { "fromPort": Nothing, "protocol": Nothing, "state": Nothing, "toPort": Nothing }
 
 
 
@@ -3205,20 +3204,20 @@ instance encodeInstancePortStateList :: Encode InstancePortStateList where encod
 
 -- | <p>Describes the snapshot of the virtual private server, or <i>instance</i>.</p>
 newtype InstanceSnapshot = InstanceSnapshot 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "state" :: NullOrUndefined (InstanceSnapshotState)
-  , "progress" :: NullOrUndefined (String)
-  , "fromAttachedDisks" :: NullOrUndefined (DiskList)
-  , "fromInstanceName" :: NullOrUndefined (ResourceName)
-  , "fromInstanceArn" :: NullOrUndefined (NonEmptyString)
-  , "fromBlueprintId" :: NullOrUndefined (String)
-  , "fromBundleId" :: NullOrUndefined (String)
-  , "sizeInGb" :: NullOrUndefined (Int)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "state" :: Maybe (InstanceSnapshotState)
+  , "progress" :: Maybe (String)
+  , "fromAttachedDisks" :: Maybe (DiskList)
+  , "fromInstanceName" :: Maybe (ResourceName)
+  , "fromInstanceArn" :: Maybe (NonEmptyString)
+  , "fromBlueprintId" :: Maybe (String)
+  , "fromBundleId" :: Maybe (String)
+  , "sizeInGb" :: Maybe (Int)
   }
 derive instance newtypeInstanceSnapshot :: Newtype InstanceSnapshot _
 derive instance repGenericInstanceSnapshot :: Generic InstanceSnapshot _
@@ -3228,12 +3227,12 @@ instance encodeInstanceSnapshot :: Encode InstanceSnapshot where encode = generi
 
 -- | Constructs InstanceSnapshot from required parameters
 newInstanceSnapshot :: InstanceSnapshot
-newInstanceSnapshot  = InstanceSnapshot { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fromAttachedDisks": (NullOrUndefined Nothing), "fromBlueprintId": (NullOrUndefined Nothing), "fromBundleId": (NullOrUndefined Nothing), "fromInstanceArn": (NullOrUndefined Nothing), "fromInstanceName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "progress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newInstanceSnapshot  = InstanceSnapshot { "arn": Nothing, "createdAt": Nothing, "fromAttachedDisks": Nothing, "fromBlueprintId": Nothing, "fromBundleId": Nothing, "fromInstanceArn": Nothing, "fromInstanceName": Nothing, "location": Nothing, "name": Nothing, "progress": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 -- | Constructs InstanceSnapshot's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceSnapshot' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "state" :: NullOrUndefined (InstanceSnapshotState) , "progress" :: NullOrUndefined (String) , "fromAttachedDisks" :: NullOrUndefined (DiskList) , "fromInstanceName" :: NullOrUndefined (ResourceName) , "fromInstanceArn" :: NullOrUndefined (NonEmptyString) , "fromBlueprintId" :: NullOrUndefined (String) , "fromBundleId" :: NullOrUndefined (String) , "sizeInGb" :: NullOrUndefined (Int) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "state" :: NullOrUndefined (InstanceSnapshotState) , "progress" :: NullOrUndefined (String) , "fromAttachedDisks" :: NullOrUndefined (DiskList) , "fromInstanceName" :: NullOrUndefined (ResourceName) , "fromInstanceArn" :: NullOrUndefined (NonEmptyString) , "fromBlueprintId" :: NullOrUndefined (String) , "fromBundleId" :: NullOrUndefined (String) , "sizeInGb" :: NullOrUndefined (Int) } ) -> InstanceSnapshot
-newInstanceSnapshot'  customize = (InstanceSnapshot <<< customize) { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fromAttachedDisks": (NullOrUndefined Nothing), "fromBlueprintId": (NullOrUndefined Nothing), "fromBundleId": (NullOrUndefined Nothing), "fromInstanceArn": (NullOrUndefined Nothing), "fromInstanceName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "progress": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "sizeInGb": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newInstanceSnapshot' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "state" :: Maybe (InstanceSnapshotState) , "progress" :: Maybe (String) , "fromAttachedDisks" :: Maybe (DiskList) , "fromInstanceName" :: Maybe (ResourceName) , "fromInstanceArn" :: Maybe (NonEmptyString) , "fromBlueprintId" :: Maybe (String) , "fromBundleId" :: Maybe (String) , "sizeInGb" :: Maybe (Int) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "state" :: Maybe (InstanceSnapshotState) , "progress" :: Maybe (String) , "fromAttachedDisks" :: Maybe (DiskList) , "fromInstanceName" :: Maybe (ResourceName) , "fromInstanceArn" :: Maybe (NonEmptyString) , "fromBlueprintId" :: Maybe (String) , "fromBundleId" :: Maybe (String) , "sizeInGb" :: Maybe (Int) } ) -> InstanceSnapshot
+newInstanceSnapshot'  customize = (InstanceSnapshot <<< customize) { "arn": Nothing, "createdAt": Nothing, "fromAttachedDisks": Nothing, "fromBlueprintId": Nothing, "fromBundleId": Nothing, "fromInstanceArn": Nothing, "fromInstanceName": Nothing, "location": Nothing, "name": Nothing, "progress": Nothing, "resourceType": Nothing, "sizeInGb": Nothing, "state": Nothing, "supportCode": Nothing }
 
 
 
@@ -3257,8 +3256,8 @@ instance encodeInstanceSnapshotState :: Encode InstanceSnapshotState where encod
 
 -- | <p>Describes the virtual private server (or <i>instance</i>) status.</p>
 newtype InstanceState = InstanceState 
-  { "code" :: NullOrUndefined (Int)
-  , "name" :: NullOrUndefined (String)
+  { "code" :: Maybe (Int)
+  , "name" :: Maybe (String)
   }
 derive instance newtypeInstanceState :: Newtype InstanceState _
 derive instance repGenericInstanceState :: Generic InstanceState _
@@ -3268,21 +3267,21 @@ instance encodeInstanceState :: Encode InstanceState where encode = genericEncod
 
 -- | Constructs InstanceState from required parameters
 newInstanceState :: InstanceState
-newInstanceState  = InstanceState { "code": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newInstanceState  = InstanceState { "code": Nothing, "name": Nothing }
 
 -- | Constructs InstanceState's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceState' :: ( { "code" :: NullOrUndefined (Int) , "name" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (Int) , "name" :: NullOrUndefined (String) } ) -> InstanceState
-newInstanceState'  customize = (InstanceState <<< customize) { "code": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newInstanceState' :: ( { "code" :: Maybe (Int) , "name" :: Maybe (String) } -> {"code" :: Maybe (Int) , "name" :: Maybe (String) } ) -> InstanceState
+newInstanceState'  customize = (InstanceState <<< customize) { "code": Nothing, "name": Nothing }
 
 
 
 -- | <p>Lightsail throws this exception when user input does not conform to the validation rules of an input field.</p> <note> <p>Domain-related APIs are only available in the N. Virginia (us-east-1) Region. Please set your Region configuration to us-east-1 to create, view, or edit these resources.</p> </note>
 newtype InvalidInputException = InvalidInputException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeInvalidInputException :: Newtype InvalidInputException _
 derive instance repGenericInvalidInputException :: Generic InvalidInputException _
@@ -3292,12 +3291,12 @@ instance encodeInvalidInputException :: Encode InvalidInputException where encod
 
 -- | Constructs InvalidInputException from required parameters
 newInvalidInputException :: InvalidInputException
-newInvalidInputException  = InvalidInputException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newInvalidInputException  = InvalidInputException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs InvalidInputException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidInputException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> InvalidInputException
-newInvalidInputException'  customize = (InvalidInputException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newInvalidInputException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> InvalidInputException
+newInvalidInputException'  customize = (InvalidInputException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -3329,7 +3328,7 @@ instance encodeIsVpcPeeredRequest :: Encode IsVpcPeeredRequest where encode = ge
 
 
 newtype IsVpcPeeredResult = IsVpcPeeredResult 
-  { "isPeered" :: NullOrUndefined (Boolean)
+  { "isPeered" :: Maybe (Boolean)
   }
 derive instance newtypeIsVpcPeeredResult :: Newtype IsVpcPeeredResult _
 derive instance repGenericIsVpcPeeredResult :: Generic IsVpcPeeredResult _
@@ -3339,12 +3338,12 @@ instance encodeIsVpcPeeredResult :: Encode IsVpcPeeredResult where encode = gene
 
 -- | Constructs IsVpcPeeredResult from required parameters
 newIsVpcPeeredResult :: IsVpcPeeredResult
-newIsVpcPeeredResult  = IsVpcPeeredResult { "isPeered": (NullOrUndefined Nothing) }
+newIsVpcPeeredResult  = IsVpcPeeredResult { "isPeered": Nothing }
 
 -- | Constructs IsVpcPeeredResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newIsVpcPeeredResult' :: ( { "isPeered" :: NullOrUndefined (Boolean) } -> {"isPeered" :: NullOrUndefined (Boolean) } ) -> IsVpcPeeredResult
-newIsVpcPeeredResult'  customize = (IsVpcPeeredResult <<< customize) { "isPeered": (NullOrUndefined Nothing) }
+newIsVpcPeeredResult' :: ( { "isPeered" :: Maybe (Boolean) } -> {"isPeered" :: Maybe (Boolean) } ) -> IsVpcPeeredResult
+newIsVpcPeeredResult'  customize = (IsVpcPeeredResult <<< customize) { "isPeered": Nothing }
 
 
 
@@ -3359,13 +3358,13 @@ instance encodeIsoDate :: Encode IsoDate where encode = genericEncode options
 
 -- | <p>Describes the SSH key pair.</p>
 newtype KeyPair = KeyPair 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "fingerprint" :: NullOrUndefined (Base64)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "fingerprint" :: Maybe (Base64)
   }
 derive instance newtypeKeyPair :: Newtype KeyPair _
 derive instance repGenericKeyPair :: Generic KeyPair _
@@ -3375,12 +3374,12 @@ instance encodeKeyPair :: Encode KeyPair where encode = genericEncode options
 
 -- | Constructs KeyPair from required parameters
 newKeyPair :: KeyPair
-newKeyPair  = KeyPair { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fingerprint": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newKeyPair  = KeyPair { "arn": Nothing, "createdAt": Nothing, "fingerprint": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 -- | Constructs KeyPair's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newKeyPair' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "fingerprint" :: NullOrUndefined (Base64) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "fingerprint" :: NullOrUndefined (Base64) } ) -> KeyPair
-newKeyPair'  customize = (KeyPair <<< customize) { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "fingerprint": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newKeyPair' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "fingerprint" :: Maybe (Base64) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "fingerprint" :: Maybe (Base64) } ) -> KeyPair
+newKeyPair'  customize = (KeyPair <<< customize) { "arn": Nothing, "createdAt": Nothing, "fingerprint": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 
 
@@ -3395,21 +3394,21 @@ instance encodeKeyPairList :: Encode KeyPairList where encode = genericEncode op
 
 -- | <p>Describes the Lightsail load balancer.</p>
 newtype LoadBalancer = LoadBalancer 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "dnsName" :: NullOrUndefined (NonEmptyString)
-  , "state" :: NullOrUndefined (LoadBalancerState)
-  , "protocol" :: NullOrUndefined (LoadBalancerProtocol)
-  , "publicPorts" :: NullOrUndefined (PortList)
-  , "healthCheckPath" :: NullOrUndefined (NonEmptyString)
-  , "instancePort" :: NullOrUndefined (Int)
-  , "instanceHealthSummary" :: NullOrUndefined (InstanceHealthSummaryList)
-  , "tlsCertificateSummaries" :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList)
-  , "configurationOptions" :: NullOrUndefined (LoadBalancerConfigurationOptions)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "dnsName" :: Maybe (NonEmptyString)
+  , "state" :: Maybe (LoadBalancerState)
+  , "protocol" :: Maybe (LoadBalancerProtocol)
+  , "publicPorts" :: Maybe (PortList)
+  , "healthCheckPath" :: Maybe (NonEmptyString)
+  , "instancePort" :: Maybe (Int)
+  , "instanceHealthSummary" :: Maybe (InstanceHealthSummaryList)
+  , "tlsCertificateSummaries" :: Maybe (LoadBalancerTlsCertificateSummaryList)
+  , "configurationOptions" :: Maybe (LoadBalancerConfigurationOptions)
   }
 derive instance newtypeLoadBalancer :: Newtype LoadBalancer _
 derive instance repGenericLoadBalancer :: Generic LoadBalancer _
@@ -3419,12 +3418,12 @@ instance encodeLoadBalancer :: Encode LoadBalancer where encode = genericEncode 
 
 -- | Constructs LoadBalancer from required parameters
 newLoadBalancer :: LoadBalancer
-newLoadBalancer  = LoadBalancer { "arn": (NullOrUndefined Nothing), "configurationOptions": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "dnsName": (NullOrUndefined Nothing), "healthCheckPath": (NullOrUndefined Nothing), "instanceHealthSummary": (NullOrUndefined Nothing), "instancePort": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "publicPorts": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing), "tlsCertificateSummaries": (NullOrUndefined Nothing) }
+newLoadBalancer  = LoadBalancer { "arn": Nothing, "configurationOptions": Nothing, "createdAt": Nothing, "dnsName": Nothing, "healthCheckPath": Nothing, "instanceHealthSummary": Nothing, "instancePort": Nothing, "location": Nothing, "name": Nothing, "protocol": Nothing, "publicPorts": Nothing, "resourceType": Nothing, "state": Nothing, "supportCode": Nothing, "tlsCertificateSummaries": Nothing }
 
 -- | Constructs LoadBalancer's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancer' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "dnsName" :: NullOrUndefined (NonEmptyString) , "state" :: NullOrUndefined (LoadBalancerState) , "protocol" :: NullOrUndefined (LoadBalancerProtocol) , "publicPorts" :: NullOrUndefined (PortList) , "healthCheckPath" :: NullOrUndefined (NonEmptyString) , "instancePort" :: NullOrUndefined (Int) , "instanceHealthSummary" :: NullOrUndefined (InstanceHealthSummaryList) , "tlsCertificateSummaries" :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList) , "configurationOptions" :: NullOrUndefined (LoadBalancerConfigurationOptions) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "dnsName" :: NullOrUndefined (NonEmptyString) , "state" :: NullOrUndefined (LoadBalancerState) , "protocol" :: NullOrUndefined (LoadBalancerProtocol) , "publicPorts" :: NullOrUndefined (PortList) , "healthCheckPath" :: NullOrUndefined (NonEmptyString) , "instancePort" :: NullOrUndefined (Int) , "instanceHealthSummary" :: NullOrUndefined (InstanceHealthSummaryList) , "tlsCertificateSummaries" :: NullOrUndefined (LoadBalancerTlsCertificateSummaryList) , "configurationOptions" :: NullOrUndefined (LoadBalancerConfigurationOptions) } ) -> LoadBalancer
-newLoadBalancer'  customize = (LoadBalancer <<< customize) { "arn": (NullOrUndefined Nothing), "configurationOptions": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "dnsName": (NullOrUndefined Nothing), "healthCheckPath": (NullOrUndefined Nothing), "instanceHealthSummary": (NullOrUndefined Nothing), "instancePort": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "publicPorts": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "state": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing), "tlsCertificateSummaries": (NullOrUndefined Nothing) }
+newLoadBalancer' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "dnsName" :: Maybe (NonEmptyString) , "state" :: Maybe (LoadBalancerState) , "protocol" :: Maybe (LoadBalancerProtocol) , "publicPorts" :: Maybe (PortList) , "healthCheckPath" :: Maybe (NonEmptyString) , "instancePort" :: Maybe (Int) , "instanceHealthSummary" :: Maybe (InstanceHealthSummaryList) , "tlsCertificateSummaries" :: Maybe (LoadBalancerTlsCertificateSummaryList) , "configurationOptions" :: Maybe (LoadBalancerConfigurationOptions) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "dnsName" :: Maybe (NonEmptyString) , "state" :: Maybe (LoadBalancerState) , "protocol" :: Maybe (LoadBalancerProtocol) , "publicPorts" :: Maybe (PortList) , "healthCheckPath" :: Maybe (NonEmptyString) , "instancePort" :: Maybe (Int) , "instanceHealthSummary" :: Maybe (InstanceHealthSummaryList) , "tlsCertificateSummaries" :: Maybe (LoadBalancerTlsCertificateSummaryList) , "configurationOptions" :: Maybe (LoadBalancerConfigurationOptions) } ) -> LoadBalancer
+newLoadBalancer'  customize = (LoadBalancer <<< customize) { "arn": Nothing, "configurationOptions": Nothing, "createdAt": Nothing, "dnsName": Nothing, "healthCheckPath": Nothing, "instanceHealthSummary": Nothing, "instancePort": Nothing, "location": Nothing, "name": Nothing, "protocol": Nothing, "publicPorts": Nothing, "resourceType": Nothing, "state": Nothing, "supportCode": Nothing, "tlsCertificateSummaries": Nothing }
 
 
 
@@ -3484,30 +3483,30 @@ instance encodeLoadBalancerState :: Encode LoadBalancerState where encode = gene
 
 -- | <p>Describes a load balancer TLS/SSL certificate.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
 newtype LoadBalancerTlsCertificate = LoadBalancerTlsCertificate 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "loadBalancerName" :: NullOrUndefined (ResourceName)
-  , "isAttached" :: NullOrUndefined (Boolean)
-  , "status" :: NullOrUndefined (LoadBalancerTlsCertificateStatus)
-  , "domainName" :: NullOrUndefined (DomainName)
-  , "domainValidationRecords" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList)
-  , "failureReason" :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason)
-  , "issuedAt" :: NullOrUndefined (IsoDate)
-  , "issuer" :: NullOrUndefined (NonEmptyString)
-  , "keyAlgorithm" :: NullOrUndefined (NonEmptyString)
-  , "notAfter" :: NullOrUndefined (IsoDate)
-  , "notBefore" :: NullOrUndefined (IsoDate)
-  , "renewalSummary" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary)
-  , "revocationReason" :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason)
-  , "revokedAt" :: NullOrUndefined (IsoDate)
-  , "serial" :: NullOrUndefined (NonEmptyString)
-  , "signatureAlgorithm" :: NullOrUndefined (NonEmptyString)
-  , "subject" :: NullOrUndefined (NonEmptyString)
-  , "subjectAlternativeNames" :: NullOrUndefined (StringList)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "loadBalancerName" :: Maybe (ResourceName)
+  , "isAttached" :: Maybe (Boolean)
+  , "status" :: Maybe (LoadBalancerTlsCertificateStatus)
+  , "domainName" :: Maybe (DomainName)
+  , "domainValidationRecords" :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList)
+  , "failureReason" :: Maybe (LoadBalancerTlsCertificateFailureReason)
+  , "issuedAt" :: Maybe (IsoDate)
+  , "issuer" :: Maybe (NonEmptyString)
+  , "keyAlgorithm" :: Maybe (NonEmptyString)
+  , "notAfter" :: Maybe (IsoDate)
+  , "notBefore" :: Maybe (IsoDate)
+  , "renewalSummary" :: Maybe (LoadBalancerTlsCertificateRenewalSummary)
+  , "revocationReason" :: Maybe (LoadBalancerTlsCertificateRevocationReason)
+  , "revokedAt" :: Maybe (IsoDate)
+  , "serial" :: Maybe (NonEmptyString)
+  , "signatureAlgorithm" :: Maybe (NonEmptyString)
+  , "subject" :: Maybe (NonEmptyString)
+  , "subjectAlternativeNames" :: Maybe (StringList)
   }
 derive instance newtypeLoadBalancerTlsCertificate :: Newtype LoadBalancerTlsCertificate _
 derive instance repGenericLoadBalancerTlsCertificate :: Generic LoadBalancerTlsCertificate _
@@ -3517,12 +3516,12 @@ instance encodeLoadBalancerTlsCertificate :: Encode LoadBalancerTlsCertificate w
 
 -- | Constructs LoadBalancerTlsCertificate from required parameters
 newLoadBalancerTlsCertificate :: LoadBalancerTlsCertificate
-newLoadBalancerTlsCertificate  = LoadBalancerTlsCertificate { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "domainName": (NullOrUndefined Nothing), "domainValidationRecords": (NullOrUndefined Nothing), "failureReason": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "issuedAt": (NullOrUndefined Nothing), "issuer": (NullOrUndefined Nothing), "keyAlgorithm": (NullOrUndefined Nothing), "loadBalancerName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "notAfter": (NullOrUndefined Nothing), "notBefore": (NullOrUndefined Nothing), "renewalSummary": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "revocationReason": (NullOrUndefined Nothing), "revokedAt": (NullOrUndefined Nothing), "serial": (NullOrUndefined Nothing), "signatureAlgorithm": (NullOrUndefined Nothing), "status": (NullOrUndefined Nothing), "subject": (NullOrUndefined Nothing), "subjectAlternativeNames": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificate  = LoadBalancerTlsCertificate { "arn": Nothing, "createdAt": Nothing, "domainName": Nothing, "domainValidationRecords": Nothing, "failureReason": Nothing, "isAttached": Nothing, "issuedAt": Nothing, "issuer": Nothing, "keyAlgorithm": Nothing, "loadBalancerName": Nothing, "location": Nothing, "name": Nothing, "notAfter": Nothing, "notBefore": Nothing, "renewalSummary": Nothing, "resourceType": Nothing, "revocationReason": Nothing, "revokedAt": Nothing, "serial": Nothing, "signatureAlgorithm": Nothing, "status": Nothing, "subject": Nothing, "subjectAlternativeNames": Nothing, "supportCode": Nothing }
 
 -- | Constructs LoadBalancerTlsCertificate's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerTlsCertificate' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "loadBalancerName" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) , "status" :: NullOrUndefined (LoadBalancerTlsCertificateStatus) , "domainName" :: NullOrUndefined (DomainName) , "domainValidationRecords" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList) , "failureReason" :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason) , "issuedAt" :: NullOrUndefined (IsoDate) , "issuer" :: NullOrUndefined (NonEmptyString) , "keyAlgorithm" :: NullOrUndefined (NonEmptyString) , "notAfter" :: NullOrUndefined (IsoDate) , "notBefore" :: NullOrUndefined (IsoDate) , "renewalSummary" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary) , "revocationReason" :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason) , "revokedAt" :: NullOrUndefined (IsoDate) , "serial" :: NullOrUndefined (NonEmptyString) , "signatureAlgorithm" :: NullOrUndefined (NonEmptyString) , "subject" :: NullOrUndefined (NonEmptyString) , "subjectAlternativeNames" :: NullOrUndefined (StringList) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "loadBalancerName" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) , "status" :: NullOrUndefined (LoadBalancerTlsCertificateStatus) , "domainName" :: NullOrUndefined (DomainName) , "domainValidationRecords" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationRecordList) , "failureReason" :: NullOrUndefined (LoadBalancerTlsCertificateFailureReason) , "issuedAt" :: NullOrUndefined (IsoDate) , "issuer" :: NullOrUndefined (NonEmptyString) , "keyAlgorithm" :: NullOrUndefined (NonEmptyString) , "notAfter" :: NullOrUndefined (IsoDate) , "notBefore" :: NullOrUndefined (IsoDate) , "renewalSummary" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalSummary) , "revocationReason" :: NullOrUndefined (LoadBalancerTlsCertificateRevocationReason) , "revokedAt" :: NullOrUndefined (IsoDate) , "serial" :: NullOrUndefined (NonEmptyString) , "signatureAlgorithm" :: NullOrUndefined (NonEmptyString) , "subject" :: NullOrUndefined (NonEmptyString) , "subjectAlternativeNames" :: NullOrUndefined (StringList) } ) -> LoadBalancerTlsCertificate
-newLoadBalancerTlsCertificate'  customize = (LoadBalancerTlsCertificate <<< customize) { "arn": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "domainName": (NullOrUndefined Nothing), "domainValidationRecords": (NullOrUndefined Nothing), "failureReason": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "issuedAt": (NullOrUndefined Nothing), "issuer": (NullOrUndefined Nothing), "keyAlgorithm": (NullOrUndefined Nothing), "loadBalancerName": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "notAfter": (NullOrUndefined Nothing), "notBefore": (NullOrUndefined Nothing), "renewalSummary": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "revocationReason": (NullOrUndefined Nothing), "revokedAt": (NullOrUndefined Nothing), "serial": (NullOrUndefined Nothing), "signatureAlgorithm": (NullOrUndefined Nothing), "status": (NullOrUndefined Nothing), "subject": (NullOrUndefined Nothing), "subjectAlternativeNames": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificate' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "loadBalancerName" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) , "status" :: Maybe (LoadBalancerTlsCertificateStatus) , "domainName" :: Maybe (DomainName) , "domainValidationRecords" :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList) , "failureReason" :: Maybe (LoadBalancerTlsCertificateFailureReason) , "issuedAt" :: Maybe (IsoDate) , "issuer" :: Maybe (NonEmptyString) , "keyAlgorithm" :: Maybe (NonEmptyString) , "notAfter" :: Maybe (IsoDate) , "notBefore" :: Maybe (IsoDate) , "renewalSummary" :: Maybe (LoadBalancerTlsCertificateRenewalSummary) , "revocationReason" :: Maybe (LoadBalancerTlsCertificateRevocationReason) , "revokedAt" :: Maybe (IsoDate) , "serial" :: Maybe (NonEmptyString) , "signatureAlgorithm" :: Maybe (NonEmptyString) , "subject" :: Maybe (NonEmptyString) , "subjectAlternativeNames" :: Maybe (StringList) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "loadBalancerName" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) , "status" :: Maybe (LoadBalancerTlsCertificateStatus) , "domainName" :: Maybe (DomainName) , "domainValidationRecords" :: Maybe (LoadBalancerTlsCertificateDomainValidationRecordList) , "failureReason" :: Maybe (LoadBalancerTlsCertificateFailureReason) , "issuedAt" :: Maybe (IsoDate) , "issuer" :: Maybe (NonEmptyString) , "keyAlgorithm" :: Maybe (NonEmptyString) , "notAfter" :: Maybe (IsoDate) , "notBefore" :: Maybe (IsoDate) , "renewalSummary" :: Maybe (LoadBalancerTlsCertificateRenewalSummary) , "revocationReason" :: Maybe (LoadBalancerTlsCertificateRevocationReason) , "revokedAt" :: Maybe (IsoDate) , "serial" :: Maybe (NonEmptyString) , "signatureAlgorithm" :: Maybe (NonEmptyString) , "subject" :: Maybe (NonEmptyString) , "subjectAlternativeNames" :: Maybe (StringList) } ) -> LoadBalancerTlsCertificate
+newLoadBalancerTlsCertificate'  customize = (LoadBalancerTlsCertificate <<< customize) { "arn": Nothing, "createdAt": Nothing, "domainName": Nothing, "domainValidationRecords": Nothing, "failureReason": Nothing, "isAttached": Nothing, "issuedAt": Nothing, "issuer": Nothing, "keyAlgorithm": Nothing, "loadBalancerName": Nothing, "location": Nothing, "name": Nothing, "notAfter": Nothing, "notBefore": Nothing, "renewalSummary": Nothing, "resourceType": Nothing, "revocationReason": Nothing, "revokedAt": Nothing, "serial": Nothing, "signatureAlgorithm": Nothing, "status": Nothing, "subject": Nothing, "subjectAlternativeNames": Nothing, "supportCode": Nothing }
 
 
 
@@ -3537,8 +3536,8 @@ instance encodeLoadBalancerTlsCertificateDomainStatus :: Encode LoadBalancerTlsC
 
 -- | <p>Contains information about the domain names on a TLS/SSL certificate that you will use to validate domain ownership.</p>
 newtype LoadBalancerTlsCertificateDomainValidationOption = LoadBalancerTlsCertificateDomainValidationOption 
-  { "domainName" :: NullOrUndefined (DomainName)
-  , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus)
+  { "domainName" :: Maybe (DomainName)
+  , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus)
   }
 derive instance newtypeLoadBalancerTlsCertificateDomainValidationOption :: Newtype LoadBalancerTlsCertificateDomainValidationOption _
 derive instance repGenericLoadBalancerTlsCertificateDomainValidationOption :: Generic LoadBalancerTlsCertificateDomainValidationOption _
@@ -3548,12 +3547,12 @@ instance encodeLoadBalancerTlsCertificateDomainValidationOption :: Encode LoadBa
 
 -- | Constructs LoadBalancerTlsCertificateDomainValidationOption from required parameters
 newLoadBalancerTlsCertificateDomainValidationOption :: LoadBalancerTlsCertificateDomainValidationOption
-newLoadBalancerTlsCertificateDomainValidationOption  = LoadBalancerTlsCertificateDomainValidationOption { "domainName": (NullOrUndefined Nothing), "validationStatus": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateDomainValidationOption  = LoadBalancerTlsCertificateDomainValidationOption { "domainName": Nothing, "validationStatus": Nothing }
 
 -- | Constructs LoadBalancerTlsCertificateDomainValidationOption's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerTlsCertificateDomainValidationOption' :: ( { "domainName" :: NullOrUndefined (DomainName) , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) } -> {"domainName" :: NullOrUndefined (DomainName) , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) } ) -> LoadBalancerTlsCertificateDomainValidationOption
-newLoadBalancerTlsCertificateDomainValidationOption'  customize = (LoadBalancerTlsCertificateDomainValidationOption <<< customize) { "domainName": (NullOrUndefined Nothing), "validationStatus": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateDomainValidationOption' :: ( { "domainName" :: Maybe (DomainName) , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus) } -> {"domainName" :: Maybe (DomainName) , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus) } ) -> LoadBalancerTlsCertificateDomainValidationOption
+newLoadBalancerTlsCertificateDomainValidationOption'  customize = (LoadBalancerTlsCertificateDomainValidationOption <<< customize) { "domainName": Nothing, "validationStatus": Nothing }
 
 
 
@@ -3568,11 +3567,11 @@ instance encodeLoadBalancerTlsCertificateDomainValidationOptionList :: Encode Lo
 
 -- | <p>Describes the validation record of each domain name in the TLS/SSL certificate.</p>
 newtype LoadBalancerTlsCertificateDomainValidationRecord = LoadBalancerTlsCertificateDomainValidationRecord 
-  { "name" :: NullOrUndefined (NonEmptyString)
-  , "type" :: NullOrUndefined (NonEmptyString)
-  , "value" :: NullOrUndefined (NonEmptyString)
-  , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus)
-  , "domainName" :: NullOrUndefined (DomainName)
+  { "name" :: Maybe (NonEmptyString)
+  , "type" :: Maybe (NonEmptyString)
+  , "value" :: Maybe (NonEmptyString)
+  , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus)
+  , "domainName" :: Maybe (DomainName)
   }
 derive instance newtypeLoadBalancerTlsCertificateDomainValidationRecord :: Newtype LoadBalancerTlsCertificateDomainValidationRecord _
 derive instance repGenericLoadBalancerTlsCertificateDomainValidationRecord :: Generic LoadBalancerTlsCertificateDomainValidationRecord _
@@ -3582,12 +3581,12 @@ instance encodeLoadBalancerTlsCertificateDomainValidationRecord :: Encode LoadBa
 
 -- | Constructs LoadBalancerTlsCertificateDomainValidationRecord from required parameters
 newLoadBalancerTlsCertificateDomainValidationRecord :: LoadBalancerTlsCertificateDomainValidationRecord
-newLoadBalancerTlsCertificateDomainValidationRecord  = LoadBalancerTlsCertificateDomainValidationRecord { "domainName": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing), "validationStatus": (NullOrUndefined Nothing), "value": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateDomainValidationRecord  = LoadBalancerTlsCertificateDomainValidationRecord { "domainName": Nothing, "name": Nothing, "type": Nothing, "validationStatus": Nothing, "value": Nothing }
 
 -- | Constructs LoadBalancerTlsCertificateDomainValidationRecord's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerTlsCertificateDomainValidationRecord' :: ( { "name" :: NullOrUndefined (NonEmptyString) , "type" :: NullOrUndefined (NonEmptyString) , "value" :: NullOrUndefined (NonEmptyString) , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) , "domainName" :: NullOrUndefined (DomainName) } -> {"name" :: NullOrUndefined (NonEmptyString) , "type" :: NullOrUndefined (NonEmptyString) , "value" :: NullOrUndefined (NonEmptyString) , "validationStatus" :: NullOrUndefined (LoadBalancerTlsCertificateDomainStatus) , "domainName" :: NullOrUndefined (DomainName) } ) -> LoadBalancerTlsCertificateDomainValidationRecord
-newLoadBalancerTlsCertificateDomainValidationRecord'  customize = (LoadBalancerTlsCertificateDomainValidationRecord <<< customize) { "domainName": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "type": (NullOrUndefined Nothing), "validationStatus": (NullOrUndefined Nothing), "value": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateDomainValidationRecord' :: ( { "name" :: Maybe (NonEmptyString) , "type" :: Maybe (NonEmptyString) , "value" :: Maybe (NonEmptyString) , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus) , "domainName" :: Maybe (DomainName) } -> {"name" :: Maybe (NonEmptyString) , "type" :: Maybe (NonEmptyString) , "value" :: Maybe (NonEmptyString) , "validationStatus" :: Maybe (LoadBalancerTlsCertificateDomainStatus) , "domainName" :: Maybe (DomainName) } ) -> LoadBalancerTlsCertificateDomainValidationRecord
+newLoadBalancerTlsCertificateDomainValidationRecord'  customize = (LoadBalancerTlsCertificateDomainValidationRecord <<< customize) { "domainName": Nothing, "name": Nothing, "type": Nothing, "validationStatus": Nothing, "value": Nothing }
 
 
 
@@ -3629,8 +3628,8 @@ instance encodeLoadBalancerTlsCertificateRenewalStatus :: Encode LoadBalancerTls
 
 -- | <p>Contains information about the status of Lightsail's managed renewal for the certificate.</p>
 newtype LoadBalancerTlsCertificateRenewalSummary = LoadBalancerTlsCertificateRenewalSummary 
-  { "renewalStatus" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus)
-  , "domainValidationOptions" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList)
+  { "renewalStatus" :: Maybe (LoadBalancerTlsCertificateRenewalStatus)
+  , "domainValidationOptions" :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList)
   }
 derive instance newtypeLoadBalancerTlsCertificateRenewalSummary :: Newtype LoadBalancerTlsCertificateRenewalSummary _
 derive instance repGenericLoadBalancerTlsCertificateRenewalSummary :: Generic LoadBalancerTlsCertificateRenewalSummary _
@@ -3640,12 +3639,12 @@ instance encodeLoadBalancerTlsCertificateRenewalSummary :: Encode LoadBalancerTl
 
 -- | Constructs LoadBalancerTlsCertificateRenewalSummary from required parameters
 newLoadBalancerTlsCertificateRenewalSummary :: LoadBalancerTlsCertificateRenewalSummary
-newLoadBalancerTlsCertificateRenewalSummary  = LoadBalancerTlsCertificateRenewalSummary { "domainValidationOptions": (NullOrUndefined Nothing), "renewalStatus": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateRenewalSummary  = LoadBalancerTlsCertificateRenewalSummary { "domainValidationOptions": Nothing, "renewalStatus": Nothing }
 
 -- | Constructs LoadBalancerTlsCertificateRenewalSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerTlsCertificateRenewalSummary' :: ( { "renewalStatus" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus) , "domainValidationOptions" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList) } -> {"renewalStatus" :: NullOrUndefined (LoadBalancerTlsCertificateRenewalStatus) , "domainValidationOptions" :: NullOrUndefined (LoadBalancerTlsCertificateDomainValidationOptionList) } ) -> LoadBalancerTlsCertificateRenewalSummary
-newLoadBalancerTlsCertificateRenewalSummary'  customize = (LoadBalancerTlsCertificateRenewalSummary <<< customize) { "domainValidationOptions": (NullOrUndefined Nothing), "renewalStatus": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateRenewalSummary' :: ( { "renewalStatus" :: Maybe (LoadBalancerTlsCertificateRenewalStatus) , "domainValidationOptions" :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList) } -> {"renewalStatus" :: Maybe (LoadBalancerTlsCertificateRenewalStatus) , "domainValidationOptions" :: Maybe (LoadBalancerTlsCertificateDomainValidationOptionList) } ) -> LoadBalancerTlsCertificateRenewalSummary
+newLoadBalancerTlsCertificateRenewalSummary'  customize = (LoadBalancerTlsCertificateRenewalSummary <<< customize) { "domainValidationOptions": Nothing, "renewalStatus": Nothing }
 
 
 
@@ -3669,8 +3668,8 @@ instance encodeLoadBalancerTlsCertificateStatus :: Encode LoadBalancerTlsCertifi
 
 -- | <p>Provides a summary of TLS/SSL certificate metadata.</p>
 newtype LoadBalancerTlsCertificateSummary = LoadBalancerTlsCertificateSummary 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "isAttached" :: NullOrUndefined (Boolean)
+  { "name" :: Maybe (ResourceName)
+  , "isAttached" :: Maybe (Boolean)
   }
 derive instance newtypeLoadBalancerTlsCertificateSummary :: Newtype LoadBalancerTlsCertificateSummary _
 derive instance repGenericLoadBalancerTlsCertificateSummary :: Generic LoadBalancerTlsCertificateSummary _
@@ -3680,12 +3679,12 @@ instance encodeLoadBalancerTlsCertificateSummary :: Encode LoadBalancerTlsCertif
 
 -- | Constructs LoadBalancerTlsCertificateSummary from required parameters
 newLoadBalancerTlsCertificateSummary :: LoadBalancerTlsCertificateSummary
-newLoadBalancerTlsCertificateSummary  = LoadBalancerTlsCertificateSummary { "isAttached": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateSummary  = LoadBalancerTlsCertificateSummary { "isAttached": Nothing, "name": Nothing }
 
 -- | Constructs LoadBalancerTlsCertificateSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerTlsCertificateSummary' :: ( { "name" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) } -> {"name" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) } ) -> LoadBalancerTlsCertificateSummary
-newLoadBalancerTlsCertificateSummary'  customize = (LoadBalancerTlsCertificateSummary <<< customize) { "isAttached": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newLoadBalancerTlsCertificateSummary' :: ( { "name" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) } -> {"name" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) } ) -> LoadBalancerTlsCertificateSummary
+newLoadBalancerTlsCertificateSummary'  customize = (LoadBalancerTlsCertificateSummary <<< customize) { "isAttached": Nothing, "name": Nothing }
 
 
 
@@ -3700,13 +3699,13 @@ instance encodeLoadBalancerTlsCertificateSummaryList :: Encode LoadBalancerTlsCe
 
 -- | <p>Describes the metric data point.</p>
 newtype MetricDatapoint = MetricDatapoint 
-  { "average" :: NullOrUndefined (Number)
-  , "maximum" :: NullOrUndefined (Number)
-  , "minimum" :: NullOrUndefined (Number)
-  , "sampleCount" :: NullOrUndefined (Number)
-  , "sum" :: NullOrUndefined (Number)
-  , "timestamp" :: NullOrUndefined (Types.Timestamp)
-  , "unit" :: NullOrUndefined (MetricUnit)
+  { "average" :: Maybe (Number)
+  , "maximum" :: Maybe (Number)
+  , "minimum" :: Maybe (Number)
+  , "sampleCount" :: Maybe (Number)
+  , "sum" :: Maybe (Number)
+  , "timestamp" :: Maybe (Types.Timestamp)
+  , "unit" :: Maybe (MetricUnit)
   }
 derive instance newtypeMetricDatapoint :: Newtype MetricDatapoint _
 derive instance repGenericMetricDatapoint :: Generic MetricDatapoint _
@@ -3716,12 +3715,12 @@ instance encodeMetricDatapoint :: Encode MetricDatapoint where encode = genericE
 
 -- | Constructs MetricDatapoint from required parameters
 newMetricDatapoint :: MetricDatapoint
-newMetricDatapoint  = MetricDatapoint { "average": (NullOrUndefined Nothing), "maximum": (NullOrUndefined Nothing), "minimum": (NullOrUndefined Nothing), "sampleCount": (NullOrUndefined Nothing), "sum": (NullOrUndefined Nothing), "timestamp": (NullOrUndefined Nothing), "unit": (NullOrUndefined Nothing) }
+newMetricDatapoint  = MetricDatapoint { "average": Nothing, "maximum": Nothing, "minimum": Nothing, "sampleCount": Nothing, "sum": Nothing, "timestamp": Nothing, "unit": Nothing }
 
 -- | Constructs MetricDatapoint's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMetricDatapoint' :: ( { "average" :: NullOrUndefined (Number) , "maximum" :: NullOrUndefined (Number) , "minimum" :: NullOrUndefined (Number) , "sampleCount" :: NullOrUndefined (Number) , "sum" :: NullOrUndefined (Number) , "timestamp" :: NullOrUndefined (Types.Timestamp) , "unit" :: NullOrUndefined (MetricUnit) } -> {"average" :: NullOrUndefined (Number) , "maximum" :: NullOrUndefined (Number) , "minimum" :: NullOrUndefined (Number) , "sampleCount" :: NullOrUndefined (Number) , "sum" :: NullOrUndefined (Number) , "timestamp" :: NullOrUndefined (Types.Timestamp) , "unit" :: NullOrUndefined (MetricUnit) } ) -> MetricDatapoint
-newMetricDatapoint'  customize = (MetricDatapoint <<< customize) { "average": (NullOrUndefined Nothing), "maximum": (NullOrUndefined Nothing), "minimum": (NullOrUndefined Nothing), "sampleCount": (NullOrUndefined Nothing), "sum": (NullOrUndefined Nothing), "timestamp": (NullOrUndefined Nothing), "unit": (NullOrUndefined Nothing) }
+newMetricDatapoint' :: ( { "average" :: Maybe (Number) , "maximum" :: Maybe (Number) , "minimum" :: Maybe (Number) , "sampleCount" :: Maybe (Number) , "sum" :: Maybe (Number) , "timestamp" :: Maybe (Types.Timestamp) , "unit" :: Maybe (MetricUnit) } -> {"average" :: Maybe (Number) , "maximum" :: Maybe (Number) , "minimum" :: Maybe (Number) , "sampleCount" :: Maybe (Number) , "sum" :: Maybe (Number) , "timestamp" :: Maybe (Types.Timestamp) , "unit" :: Maybe (MetricUnit) } ) -> MetricDatapoint
+newMetricDatapoint'  customize = (MetricDatapoint <<< customize) { "average": Nothing, "maximum": Nothing, "minimum": Nothing, "sampleCount": Nothing, "sum": Nothing, "timestamp": Nothing, "unit": Nothing }
 
 
 
@@ -3772,7 +3771,7 @@ instance encodeMetricUnit :: Encode MetricUnit where encode = genericEncode opti
 
 -- | <p>Describes the monthly data transfer in and out of your virtual private server (or <i>instance</i>).</p>
 newtype MonthlyTransfer = MonthlyTransfer 
-  { "gbPerMonthAllocated" :: NullOrUndefined (Int)
+  { "gbPerMonthAllocated" :: Maybe (Int)
   }
 derive instance newtypeMonthlyTransfer :: Newtype MonthlyTransfer _
 derive instance repGenericMonthlyTransfer :: Generic MonthlyTransfer _
@@ -3782,12 +3781,12 @@ instance encodeMonthlyTransfer :: Encode MonthlyTransfer where encode = genericE
 
 -- | Constructs MonthlyTransfer from required parameters
 newMonthlyTransfer :: MonthlyTransfer
-newMonthlyTransfer  = MonthlyTransfer { "gbPerMonthAllocated": (NullOrUndefined Nothing) }
+newMonthlyTransfer  = MonthlyTransfer { "gbPerMonthAllocated": Nothing }
 
 -- | Constructs MonthlyTransfer's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMonthlyTransfer' :: ( { "gbPerMonthAllocated" :: NullOrUndefined (Int) } -> {"gbPerMonthAllocated" :: NullOrUndefined (Int) } ) -> MonthlyTransfer
-newMonthlyTransfer'  customize = (MonthlyTransfer <<< customize) { "gbPerMonthAllocated": (NullOrUndefined Nothing) }
+newMonthlyTransfer' :: ( { "gbPerMonthAllocated" :: Maybe (Int) } -> {"gbPerMonthAllocated" :: Maybe (Int) } ) -> MonthlyTransfer
+newMonthlyTransfer'  customize = (MonthlyTransfer <<< customize) { "gbPerMonthAllocated": Nothing }
 
 
 
@@ -3811,10 +3810,10 @@ instance encodeNonEmptyString :: Encode NonEmptyString where encode = genericEnc
 
 -- | <p>Lightsail throws this exception when it cannot find a resource.</p>
 newtype NotFoundException = NotFoundException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeNotFoundException :: Newtype NotFoundException _
 derive instance repGenericNotFoundException :: Generic NotFoundException _
@@ -3824,12 +3823,12 @@ instance encodeNotFoundException :: Encode NotFoundException where encode = gene
 
 -- | Constructs NotFoundException from required parameters
 newNotFoundException :: NotFoundException
-newNotFoundException  = NotFoundException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newNotFoundException  = NotFoundException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs NotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newNotFoundException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> NotFoundException
-newNotFoundException'  customize = (NotFoundException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newNotFoundException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> NotFoundException
+newNotFoundException'  customize = (NotFoundException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -3855,7 +3854,7 @@ newOpenInstancePublicPortsRequest' _instanceName _portInfo customize = (OpenInst
 
 
 newtype OpenInstancePublicPortsResult = OpenInstancePublicPortsResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeOpenInstancePublicPortsResult :: Newtype OpenInstancePublicPortsResult _
 derive instance repGenericOpenInstancePublicPortsResult :: Generic OpenInstancePublicPortsResult _
@@ -3865,29 +3864,29 @@ instance encodeOpenInstancePublicPortsResult :: Encode OpenInstancePublicPortsRe
 
 -- | Constructs OpenInstancePublicPortsResult from required parameters
 newOpenInstancePublicPortsResult :: OpenInstancePublicPortsResult
-newOpenInstancePublicPortsResult  = OpenInstancePublicPortsResult { "operation": (NullOrUndefined Nothing) }
+newOpenInstancePublicPortsResult  = OpenInstancePublicPortsResult { "operation": Nothing }
 
 -- | Constructs OpenInstancePublicPortsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOpenInstancePublicPortsResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> OpenInstancePublicPortsResult
-newOpenInstancePublicPortsResult'  customize = (OpenInstancePublicPortsResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newOpenInstancePublicPortsResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> OpenInstancePublicPortsResult
+newOpenInstancePublicPortsResult'  customize = (OpenInstancePublicPortsResult <<< customize) { "operation": Nothing }
 
 
 
 -- | <p>Describes the API operation.</p>
 newtype Operation = Operation 
-  { "id" :: NullOrUndefined (NonEmptyString)
-  , "resourceName" :: NullOrUndefined (ResourceName)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "isTerminal" :: NullOrUndefined (Boolean)
-  , "operationDetails" :: NullOrUndefined (String)
-  , "operationType" :: NullOrUndefined (OperationType)
-  , "status" :: NullOrUndefined (OperationStatus)
-  , "statusChangedAt" :: NullOrUndefined (IsoDate)
-  , "errorCode" :: NullOrUndefined (String)
-  , "errorDetails" :: NullOrUndefined (String)
+  { "id" :: Maybe (NonEmptyString)
+  , "resourceName" :: Maybe (ResourceName)
+  , "resourceType" :: Maybe (ResourceType)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "isTerminal" :: Maybe (Boolean)
+  , "operationDetails" :: Maybe (String)
+  , "operationType" :: Maybe (OperationType)
+  , "status" :: Maybe (OperationStatus)
+  , "statusChangedAt" :: Maybe (IsoDate)
+  , "errorCode" :: Maybe (String)
+  , "errorDetails" :: Maybe (String)
   }
 derive instance newtypeOperation :: Newtype Operation _
 derive instance repGenericOperation :: Generic Operation _
@@ -3897,21 +3896,21 @@ instance encodeOperation :: Encode Operation where encode = genericEncode option
 
 -- | Constructs Operation from required parameters
 newOperation :: Operation
-newOperation  = Operation { "createdAt": (NullOrUndefined Nothing), "errorCode": (NullOrUndefined Nothing), "errorDetails": (NullOrUndefined Nothing), "id": (NullOrUndefined Nothing), "isTerminal": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "operationDetails": (NullOrUndefined Nothing), "operationType": (NullOrUndefined Nothing), "resourceName": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "status": (NullOrUndefined Nothing), "statusChangedAt": (NullOrUndefined Nothing) }
+newOperation  = Operation { "createdAt": Nothing, "errorCode": Nothing, "errorDetails": Nothing, "id": Nothing, "isTerminal": Nothing, "location": Nothing, "operationDetails": Nothing, "operationType": Nothing, "resourceName": Nothing, "resourceType": Nothing, "status": Nothing, "statusChangedAt": Nothing }
 
 -- | Constructs Operation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOperation' :: ( { "id" :: NullOrUndefined (NonEmptyString) , "resourceName" :: NullOrUndefined (ResourceName) , "resourceType" :: NullOrUndefined (ResourceType) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "isTerminal" :: NullOrUndefined (Boolean) , "operationDetails" :: NullOrUndefined (String) , "operationType" :: NullOrUndefined (OperationType) , "status" :: NullOrUndefined (OperationStatus) , "statusChangedAt" :: NullOrUndefined (IsoDate) , "errorCode" :: NullOrUndefined (String) , "errorDetails" :: NullOrUndefined (String) } -> {"id" :: NullOrUndefined (NonEmptyString) , "resourceName" :: NullOrUndefined (ResourceName) , "resourceType" :: NullOrUndefined (ResourceType) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "isTerminal" :: NullOrUndefined (Boolean) , "operationDetails" :: NullOrUndefined (String) , "operationType" :: NullOrUndefined (OperationType) , "status" :: NullOrUndefined (OperationStatus) , "statusChangedAt" :: NullOrUndefined (IsoDate) , "errorCode" :: NullOrUndefined (String) , "errorDetails" :: NullOrUndefined (String) } ) -> Operation
-newOperation'  customize = (Operation <<< customize) { "createdAt": (NullOrUndefined Nothing), "errorCode": (NullOrUndefined Nothing), "errorDetails": (NullOrUndefined Nothing), "id": (NullOrUndefined Nothing), "isTerminal": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "operationDetails": (NullOrUndefined Nothing), "operationType": (NullOrUndefined Nothing), "resourceName": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "status": (NullOrUndefined Nothing), "statusChangedAt": (NullOrUndefined Nothing) }
+newOperation' :: ( { "id" :: Maybe (NonEmptyString) , "resourceName" :: Maybe (ResourceName) , "resourceType" :: Maybe (ResourceType) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "isTerminal" :: Maybe (Boolean) , "operationDetails" :: Maybe (String) , "operationType" :: Maybe (OperationType) , "status" :: Maybe (OperationStatus) , "statusChangedAt" :: Maybe (IsoDate) , "errorCode" :: Maybe (String) , "errorDetails" :: Maybe (String) } -> {"id" :: Maybe (NonEmptyString) , "resourceName" :: Maybe (ResourceName) , "resourceType" :: Maybe (ResourceType) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "isTerminal" :: Maybe (Boolean) , "operationDetails" :: Maybe (String) , "operationType" :: Maybe (OperationType) , "status" :: Maybe (OperationStatus) , "statusChangedAt" :: Maybe (IsoDate) , "errorCode" :: Maybe (String) , "errorDetails" :: Maybe (String) } ) -> Operation
+newOperation'  customize = (Operation <<< customize) { "createdAt": Nothing, "errorCode": Nothing, "errorDetails": Nothing, "id": Nothing, "isTerminal": Nothing, "location": Nothing, "operationDetails": Nothing, "operationType": Nothing, "resourceName": Nothing, "resourceType": Nothing, "status": Nothing, "statusChangedAt": Nothing }
 
 
 
 -- | <p>Lightsail throws this exception when an operation fails to execute.</p>
 newtype OperationFailureException = OperationFailureException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeOperationFailureException :: Newtype OperationFailureException _
 derive instance repGenericOperationFailureException :: Generic OperationFailureException _
@@ -3921,12 +3920,12 @@ instance encodeOperationFailureException :: Encode OperationFailureException whe
 
 -- | Constructs OperationFailureException from required parameters
 newOperationFailureException :: OperationFailureException
-newOperationFailureException  = OperationFailureException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newOperationFailureException  = OperationFailureException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs OperationFailureException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOperationFailureException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> OperationFailureException
-newOperationFailureException'  customize = (OperationFailureException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newOperationFailureException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> OperationFailureException
+newOperationFailureException'  customize = (OperationFailureException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -3959,8 +3958,8 @@ instance encodeOperationType :: Encode OperationType where encode = genericEncod
 
 -- | <p>The password data for the Windows Server-based instance, including the ciphertext and the key pair name.</p>
 newtype PasswordData = PasswordData 
-  { "ciphertext" :: NullOrUndefined (String)
-  , "keyPairName" :: NullOrUndefined (ResourceName)
+  { "ciphertext" :: Maybe (String)
+  , "keyPairName" :: Maybe (ResourceName)
   }
 derive instance newtypePasswordData :: Newtype PasswordData _
 derive instance repGenericPasswordData :: Generic PasswordData _
@@ -3970,12 +3969,12 @@ instance encodePasswordData :: Encode PasswordData where encode = genericEncode 
 
 -- | Constructs PasswordData from required parameters
 newPasswordData :: PasswordData
-newPasswordData  = PasswordData { "ciphertext": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing) }
+newPasswordData  = PasswordData { "ciphertext": Nothing, "keyPairName": Nothing }
 
 -- | Constructs PasswordData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPasswordData' :: ( { "ciphertext" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } -> {"ciphertext" :: NullOrUndefined (String) , "keyPairName" :: NullOrUndefined (ResourceName) } ) -> PasswordData
-newPasswordData'  customize = (PasswordData <<< customize) { "ciphertext": (NullOrUndefined Nothing), "keyPairName": (NullOrUndefined Nothing) }
+newPasswordData' :: ( { "ciphertext" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } -> {"ciphertext" :: Maybe (String) , "keyPairName" :: Maybe (ResourceName) } ) -> PasswordData
+newPasswordData'  customize = (PasswordData <<< customize) { "ciphertext": Nothing, "keyPairName": Nothing }
 
 
 
@@ -3989,7 +3988,7 @@ instance encodePeerVpcRequest :: Encode PeerVpcRequest where encode = genericEnc
 
 
 newtype PeerVpcResult = PeerVpcResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypePeerVpcResult :: Newtype PeerVpcResult _
 derive instance repGenericPeerVpcResult :: Generic PeerVpcResult _
@@ -3999,12 +3998,12 @@ instance encodePeerVpcResult :: Encode PeerVpcResult where encode = genericEncod
 
 -- | Constructs PeerVpcResult from required parameters
 newPeerVpcResult :: PeerVpcResult
-newPeerVpcResult  = PeerVpcResult { "operation": (NullOrUndefined Nothing) }
+newPeerVpcResult  = PeerVpcResult { "operation": Nothing }
 
 -- | Constructs PeerVpcResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPeerVpcResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> PeerVpcResult
-newPeerVpcResult'  customize = (PeerVpcResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newPeerVpcResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> PeerVpcResult
+newPeerVpcResult'  customize = (PeerVpcResult <<< customize) { "operation": Nothing }
 
 
 
@@ -4028,9 +4027,9 @@ instance encodePortAccessType :: Encode PortAccessType where encode = genericEnc
 
 -- | <p>Describes information about the ports on your virtual private server (or <i>instance</i>).</p>
 newtype PortInfo = PortInfo 
-  { "fromPort" :: NullOrUndefined (Port)
-  , "toPort" :: NullOrUndefined (Port)
-  , "protocol" :: NullOrUndefined (NetworkProtocol)
+  { "fromPort" :: Maybe (Port)
+  , "toPort" :: Maybe (Port)
+  , "protocol" :: Maybe (NetworkProtocol)
   }
 derive instance newtypePortInfo :: Newtype PortInfo _
 derive instance repGenericPortInfo :: Generic PortInfo _
@@ -4040,12 +4039,12 @@ instance encodePortInfo :: Encode PortInfo where encode = genericEncode options
 
 -- | Constructs PortInfo from required parameters
 newPortInfo :: PortInfo
-newPortInfo  = PortInfo { "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newPortInfo  = PortInfo { "fromPort": Nothing, "protocol": Nothing, "toPort": Nothing }
 
 -- | Constructs PortInfo's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPortInfo' :: ( { "fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) } -> {"fromPort" :: NullOrUndefined (Port) , "toPort" :: NullOrUndefined (Port) , "protocol" :: NullOrUndefined (NetworkProtocol) } ) -> PortInfo
-newPortInfo'  customize = (PortInfo <<< customize) { "fromPort": (NullOrUndefined Nothing), "protocol": (NullOrUndefined Nothing), "toPort": (NullOrUndefined Nothing) }
+newPortInfo' :: ( { "fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) } -> {"fromPort" :: Maybe (Port) , "toPort" :: Maybe (Port) , "protocol" :: Maybe (NetworkProtocol) } ) -> PortInfo
+newPortInfo'  customize = (PortInfo <<< customize) { "fromPort": Nothing, "protocol": Nothing, "toPort": Nothing }
 
 
 
@@ -4098,7 +4097,7 @@ newPutInstancePublicPortsRequest' _instanceName _portInfos customize = (PutInsta
 
 
 newtype PutInstancePublicPortsResult = PutInstancePublicPortsResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypePutInstancePublicPortsResult :: Newtype PutInstancePublicPortsResult _
 derive instance repGenericPutInstancePublicPortsResult :: Generic PutInstancePublicPortsResult _
@@ -4108,12 +4107,12 @@ instance encodePutInstancePublicPortsResult :: Encode PutInstancePublicPortsResu
 
 -- | Constructs PutInstancePublicPortsResult from required parameters
 newPutInstancePublicPortsResult :: PutInstancePublicPortsResult
-newPutInstancePublicPortsResult  = PutInstancePublicPortsResult { "operation": (NullOrUndefined Nothing) }
+newPutInstancePublicPortsResult  = PutInstancePublicPortsResult { "operation": Nothing }
 
 -- | Constructs PutInstancePublicPortsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPutInstancePublicPortsResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> PutInstancePublicPortsResult
-newPutInstancePublicPortsResult'  customize = (PutInstancePublicPortsResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newPutInstancePublicPortsResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> PutInstancePublicPortsResult
+newPutInstancePublicPortsResult'  customize = (PutInstancePublicPortsResult <<< customize) { "operation": Nothing }
 
 
 
@@ -4138,7 +4137,7 @@ newRebootInstanceRequest' _instanceName customize = (RebootInstanceRequest <<< c
 
 
 newtype RebootInstanceResult = RebootInstanceResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeRebootInstanceResult :: Newtype RebootInstanceResult _
 derive instance repGenericRebootInstanceResult :: Generic RebootInstanceResult _
@@ -4148,22 +4147,22 @@ instance encodeRebootInstanceResult :: Encode RebootInstanceResult where encode 
 
 -- | Constructs RebootInstanceResult from required parameters
 newRebootInstanceResult :: RebootInstanceResult
-newRebootInstanceResult  = RebootInstanceResult { "operations": (NullOrUndefined Nothing) }
+newRebootInstanceResult  = RebootInstanceResult { "operations": Nothing }
 
 -- | Constructs RebootInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRebootInstanceResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> RebootInstanceResult
-newRebootInstanceResult'  customize = (RebootInstanceResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newRebootInstanceResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> RebootInstanceResult
+newRebootInstanceResult'  customize = (RebootInstanceResult <<< customize) { "operations": Nothing }
 
 
 
 -- | <p>Describes the AWS Region.</p>
 newtype Region = Region 
-  { "continentCode" :: NullOrUndefined (String)
-  , "description" :: NullOrUndefined (String)
-  , "displayName" :: NullOrUndefined (String)
-  , "name" :: NullOrUndefined (RegionName)
-  , "availabilityZones" :: NullOrUndefined (AvailabilityZoneList)
+  { "continentCode" :: Maybe (String)
+  , "description" :: Maybe (String)
+  , "displayName" :: Maybe (String)
+  , "name" :: Maybe (RegionName)
+  , "availabilityZones" :: Maybe (AvailabilityZoneList)
   }
 derive instance newtypeRegion :: Newtype Region _
 derive instance repGenericRegion :: Generic Region _
@@ -4173,12 +4172,12 @@ instance encodeRegion :: Encode Region where encode = genericEncode options
 
 -- | Constructs Region from required parameters
 newRegion :: Region
-newRegion  = Region { "availabilityZones": (NullOrUndefined Nothing), "continentCode": (NullOrUndefined Nothing), "description": (NullOrUndefined Nothing), "displayName": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newRegion  = Region { "availabilityZones": Nothing, "continentCode": Nothing, "description": Nothing, "displayName": Nothing, "name": Nothing }
 
 -- | Constructs Region's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRegion' :: ( { "continentCode" :: NullOrUndefined (String) , "description" :: NullOrUndefined (String) , "displayName" :: NullOrUndefined (String) , "name" :: NullOrUndefined (RegionName) , "availabilityZones" :: NullOrUndefined (AvailabilityZoneList) } -> {"continentCode" :: NullOrUndefined (String) , "description" :: NullOrUndefined (String) , "displayName" :: NullOrUndefined (String) , "name" :: NullOrUndefined (RegionName) , "availabilityZones" :: NullOrUndefined (AvailabilityZoneList) } ) -> Region
-newRegion'  customize = (Region <<< customize) { "availabilityZones": (NullOrUndefined Nothing), "continentCode": (NullOrUndefined Nothing), "description": (NullOrUndefined Nothing), "displayName": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing) }
+newRegion' :: ( { "continentCode" :: Maybe (String) , "description" :: Maybe (String) , "displayName" :: Maybe (String) , "name" :: Maybe (RegionName) , "availabilityZones" :: Maybe (AvailabilityZoneList) } -> {"continentCode" :: Maybe (String) , "description" :: Maybe (String) , "displayName" :: Maybe (String) , "name" :: Maybe (RegionName) , "availabilityZones" :: Maybe (AvailabilityZoneList) } ) -> Region
+newRegion'  customize = (Region <<< customize) { "availabilityZones": Nothing, "continentCode": Nothing, "description": Nothing, "displayName": Nothing, "name": Nothing }
 
 
 
@@ -4221,7 +4220,7 @@ newReleaseStaticIpRequest' _staticIpName customize = (ReleaseStaticIpRequest <<<
 
 
 newtype ReleaseStaticIpResult = ReleaseStaticIpResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeReleaseStaticIpResult :: Newtype ReleaseStaticIpResult _
 derive instance repGenericReleaseStaticIpResult :: Generic ReleaseStaticIpResult _
@@ -4231,19 +4230,19 @@ instance encodeReleaseStaticIpResult :: Encode ReleaseStaticIpResult where encod
 
 -- | Constructs ReleaseStaticIpResult from required parameters
 newReleaseStaticIpResult :: ReleaseStaticIpResult
-newReleaseStaticIpResult  = ReleaseStaticIpResult { "operations": (NullOrUndefined Nothing) }
+newReleaseStaticIpResult  = ReleaseStaticIpResult { "operations": Nothing }
 
 -- | Constructs ReleaseStaticIpResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newReleaseStaticIpResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> ReleaseStaticIpResult
-newReleaseStaticIpResult'  customize = (ReleaseStaticIpResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newReleaseStaticIpResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> ReleaseStaticIpResult
+newReleaseStaticIpResult'  customize = (ReleaseStaticIpResult <<< customize) { "operations": Nothing }
 
 
 
 -- | <p>Describes the resource location.</p>
 newtype ResourceLocation = ResourceLocation 
-  { "availabilityZone" :: NullOrUndefined (String)
-  , "regionName" :: NullOrUndefined (RegionName)
+  { "availabilityZone" :: Maybe (String)
+  , "regionName" :: Maybe (RegionName)
   }
 derive instance newtypeResourceLocation :: Newtype ResourceLocation _
 derive instance repGenericResourceLocation :: Generic ResourceLocation _
@@ -4253,12 +4252,12 @@ instance encodeResourceLocation :: Encode ResourceLocation where encode = generi
 
 -- | Constructs ResourceLocation from required parameters
 newResourceLocation :: ResourceLocation
-newResourceLocation  = ResourceLocation { "availabilityZone": (NullOrUndefined Nothing), "regionName": (NullOrUndefined Nothing) }
+newResourceLocation  = ResourceLocation { "availabilityZone": Nothing, "regionName": Nothing }
 
 -- | Constructs ResourceLocation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceLocation' :: ( { "availabilityZone" :: NullOrUndefined (String) , "regionName" :: NullOrUndefined (RegionName) } -> {"availabilityZone" :: NullOrUndefined (String) , "regionName" :: NullOrUndefined (RegionName) } ) -> ResourceLocation
-newResourceLocation'  customize = (ResourceLocation <<< customize) { "availabilityZone": (NullOrUndefined Nothing), "regionName": (NullOrUndefined Nothing) }
+newResourceLocation' :: ( { "availabilityZone" :: Maybe (String) , "regionName" :: Maybe (RegionName) } -> {"availabilityZone" :: Maybe (String) , "regionName" :: Maybe (RegionName) } ) -> ResourceLocation
+newResourceLocation'  customize = (ResourceLocation <<< customize) { "availabilityZone": Nothing, "regionName": Nothing }
 
 
 
@@ -4291,10 +4290,10 @@ instance encodeResourceType :: Encode ResourceType where encode = genericEncode 
 
 -- | <p>A general service exception.</p>
 newtype ServiceException = ServiceException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeServiceException :: Newtype ServiceException _
 derive instance repGenericServiceException :: Generic ServiceException _
@@ -4304,12 +4303,12 @@ instance encodeServiceException :: Encode ServiceException where encode = generi
 
 -- | Constructs ServiceException from required parameters
 newServiceException :: ServiceException
-newServiceException  = ServiceException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newServiceException  = ServiceException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs ServiceException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newServiceException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> ServiceException
-newServiceException'  customize = (ServiceException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newServiceException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> ServiceException
+newServiceException'  customize = (ServiceException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -4334,7 +4333,7 @@ newStartInstanceRequest' _instanceName customize = (StartInstanceRequest <<< cus
 
 
 newtype StartInstanceResult = StartInstanceResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeStartInstanceResult :: Newtype StartInstanceResult _
 derive instance repGenericStartInstanceResult :: Generic StartInstanceResult _
@@ -4344,26 +4343,26 @@ instance encodeStartInstanceResult :: Encode StartInstanceResult where encode = 
 
 -- | Constructs StartInstanceResult from required parameters
 newStartInstanceResult :: StartInstanceResult
-newStartInstanceResult  = StartInstanceResult { "operations": (NullOrUndefined Nothing) }
+newStartInstanceResult  = StartInstanceResult { "operations": Nothing }
 
 -- | Constructs StartInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStartInstanceResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> StartInstanceResult
-newStartInstanceResult'  customize = (StartInstanceResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newStartInstanceResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> StartInstanceResult
+newStartInstanceResult'  customize = (StartInstanceResult <<< customize) { "operations": Nothing }
 
 
 
 -- | <p>Describes the static IP.</p>
 newtype StaticIp = StaticIp 
-  { "name" :: NullOrUndefined (ResourceName)
-  , "arn" :: NullOrUndefined (NonEmptyString)
-  , "supportCode" :: NullOrUndefined (String)
-  , "createdAt" :: NullOrUndefined (IsoDate)
-  , "location" :: NullOrUndefined (ResourceLocation)
-  , "resourceType" :: NullOrUndefined (ResourceType)
-  , "ipAddress" :: NullOrUndefined (IpAddress)
-  , "attachedTo" :: NullOrUndefined (ResourceName)
-  , "isAttached" :: NullOrUndefined (Boolean)
+  { "name" :: Maybe (ResourceName)
+  , "arn" :: Maybe (NonEmptyString)
+  , "supportCode" :: Maybe (String)
+  , "createdAt" :: Maybe (IsoDate)
+  , "location" :: Maybe (ResourceLocation)
+  , "resourceType" :: Maybe (ResourceType)
+  , "ipAddress" :: Maybe (IpAddress)
+  , "attachedTo" :: Maybe (ResourceName)
+  , "isAttached" :: Maybe (Boolean)
   }
 derive instance newtypeStaticIp :: Newtype StaticIp _
 derive instance repGenericStaticIp :: Generic StaticIp _
@@ -4373,12 +4372,12 @@ instance encodeStaticIp :: Encode StaticIp where encode = genericEncode options
 
 -- | Constructs StaticIp from required parameters
 newStaticIp :: StaticIp
-newStaticIp  = StaticIp { "arn": (NullOrUndefined Nothing), "attachedTo": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "ipAddress": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newStaticIp  = StaticIp { "arn": Nothing, "attachedTo": Nothing, "createdAt": Nothing, "ipAddress": Nothing, "isAttached": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 -- | Constructs StaticIp's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStaticIp' :: ( { "name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "ipAddress" :: NullOrUndefined (IpAddress) , "attachedTo" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) } -> {"name" :: NullOrUndefined (ResourceName) , "arn" :: NullOrUndefined (NonEmptyString) , "supportCode" :: NullOrUndefined (String) , "createdAt" :: NullOrUndefined (IsoDate) , "location" :: NullOrUndefined (ResourceLocation) , "resourceType" :: NullOrUndefined (ResourceType) , "ipAddress" :: NullOrUndefined (IpAddress) , "attachedTo" :: NullOrUndefined (ResourceName) , "isAttached" :: NullOrUndefined (Boolean) } ) -> StaticIp
-newStaticIp'  customize = (StaticIp <<< customize) { "arn": (NullOrUndefined Nothing), "attachedTo": (NullOrUndefined Nothing), "createdAt": (NullOrUndefined Nothing), "ipAddress": (NullOrUndefined Nothing), "isAttached": (NullOrUndefined Nothing), "location": (NullOrUndefined Nothing), "name": (NullOrUndefined Nothing), "resourceType": (NullOrUndefined Nothing), "supportCode": (NullOrUndefined Nothing) }
+newStaticIp' :: ( { "name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "ipAddress" :: Maybe (IpAddress) , "attachedTo" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) } -> {"name" :: Maybe (ResourceName) , "arn" :: Maybe (NonEmptyString) , "supportCode" :: Maybe (String) , "createdAt" :: Maybe (IsoDate) , "location" :: Maybe (ResourceLocation) , "resourceType" :: Maybe (ResourceType) , "ipAddress" :: Maybe (IpAddress) , "attachedTo" :: Maybe (ResourceName) , "isAttached" :: Maybe (Boolean) } ) -> StaticIp
+newStaticIp'  customize = (StaticIp <<< customize) { "arn": Nothing, "attachedTo": Nothing, "createdAt": Nothing, "ipAddress": Nothing, "isAttached": Nothing, "location": Nothing, "name": Nothing, "resourceType": Nothing, "supportCode": Nothing }
 
 
 
@@ -4393,7 +4392,7 @@ instance encodeStaticIpList :: Encode StaticIpList where encode = genericEncode 
 
 newtype StopInstanceRequest = StopInstanceRequest 
   { "instanceName" :: (ResourceName)
-  , "force" :: NullOrUndefined (Boolean)
+  , "force" :: Maybe (Boolean)
   }
 derive instance newtypeStopInstanceRequest :: Newtype StopInstanceRequest _
 derive instance repGenericStopInstanceRequest :: Generic StopInstanceRequest _
@@ -4403,17 +4402,17 @@ instance encodeStopInstanceRequest :: Encode StopInstanceRequest where encode = 
 
 -- | Constructs StopInstanceRequest from required parameters
 newStopInstanceRequest :: ResourceName -> StopInstanceRequest
-newStopInstanceRequest _instanceName = StopInstanceRequest { "instanceName": _instanceName, "force": (NullOrUndefined Nothing) }
+newStopInstanceRequest _instanceName = StopInstanceRequest { "instanceName": _instanceName, "force": Nothing }
 
 -- | Constructs StopInstanceRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStopInstanceRequest' :: ResourceName -> ( { "instanceName" :: (ResourceName) , "force" :: NullOrUndefined (Boolean) } -> {"instanceName" :: (ResourceName) , "force" :: NullOrUndefined (Boolean) } ) -> StopInstanceRequest
-newStopInstanceRequest' _instanceName customize = (StopInstanceRequest <<< customize) { "instanceName": _instanceName, "force": (NullOrUndefined Nothing) }
+newStopInstanceRequest' :: ResourceName -> ( { "instanceName" :: (ResourceName) , "force" :: Maybe (Boolean) } -> {"instanceName" :: (ResourceName) , "force" :: Maybe (Boolean) } ) -> StopInstanceRequest
+newStopInstanceRequest' _instanceName customize = (StopInstanceRequest <<< customize) { "instanceName": _instanceName, "force": Nothing }
 
 
 
 newtype StopInstanceResult = StopInstanceResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeStopInstanceResult :: Newtype StopInstanceResult _
 derive instance repGenericStopInstanceResult :: Generic StopInstanceResult _
@@ -4423,12 +4422,12 @@ instance encodeStopInstanceResult :: Encode StopInstanceResult where encode = ge
 
 -- | Constructs StopInstanceResult from required parameters
 newStopInstanceResult :: StopInstanceResult
-newStopInstanceResult  = StopInstanceResult { "operations": (NullOrUndefined Nothing) }
+newStopInstanceResult  = StopInstanceResult { "operations": Nothing }
 
 -- | Constructs StopInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStopInstanceResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> StopInstanceResult
-newStopInstanceResult'  customize = (StopInstanceResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newStopInstanceResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> StopInstanceResult
+newStopInstanceResult'  customize = (StopInstanceResult <<< customize) { "operations": Nothing }
 
 
 
@@ -4452,10 +4451,10 @@ instance encodeStringMax256 :: Encode StringMax256 where encode = genericEncode 
 
 -- | <p>Lightsail throws this exception when the user has not been authenticated.</p>
 newtype UnauthenticatedException = UnauthenticatedException 
-  { "code" :: NullOrUndefined (String)
-  , "docs" :: NullOrUndefined (String)
-  , "message" :: NullOrUndefined (String)
-  , "tip" :: NullOrUndefined (String)
+  { "code" :: Maybe (String)
+  , "docs" :: Maybe (String)
+  , "message" :: Maybe (String)
+  , "tip" :: Maybe (String)
   }
 derive instance newtypeUnauthenticatedException :: Newtype UnauthenticatedException _
 derive instance repGenericUnauthenticatedException :: Generic UnauthenticatedException _
@@ -4465,12 +4464,12 @@ instance encodeUnauthenticatedException :: Encode UnauthenticatedException where
 
 -- | Constructs UnauthenticatedException from required parameters
 newUnauthenticatedException :: UnauthenticatedException
-newUnauthenticatedException  = UnauthenticatedException { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newUnauthenticatedException  = UnauthenticatedException { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 -- | Constructs UnauthenticatedException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnauthenticatedException' :: ( { "code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } -> {"code" :: NullOrUndefined (String) , "docs" :: NullOrUndefined (String) , "message" :: NullOrUndefined (String) , "tip" :: NullOrUndefined (String) } ) -> UnauthenticatedException
-newUnauthenticatedException'  customize = (UnauthenticatedException <<< customize) { "code": (NullOrUndefined Nothing), "docs": (NullOrUndefined Nothing), "message": (NullOrUndefined Nothing), "tip": (NullOrUndefined Nothing) }
+newUnauthenticatedException' :: ( { "code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } -> {"code" :: Maybe (String) , "docs" :: Maybe (String) , "message" :: Maybe (String) , "tip" :: Maybe (String) } ) -> UnauthenticatedException
+newUnauthenticatedException'  customize = (UnauthenticatedException <<< customize) { "code": Nothing, "docs": Nothing, "message": Nothing, "tip": Nothing }
 
 
 
@@ -4484,7 +4483,7 @@ instance encodeUnpeerVpcRequest :: Encode UnpeerVpcRequest where encode = generi
 
 
 newtype UnpeerVpcResult = UnpeerVpcResult 
-  { "operation" :: NullOrUndefined (Operation)
+  { "operation" :: Maybe (Operation)
   }
 derive instance newtypeUnpeerVpcResult :: Newtype UnpeerVpcResult _
 derive instance repGenericUnpeerVpcResult :: Generic UnpeerVpcResult _
@@ -4494,12 +4493,12 @@ instance encodeUnpeerVpcResult :: Encode UnpeerVpcResult where encode = genericE
 
 -- | Constructs UnpeerVpcResult from required parameters
 newUnpeerVpcResult :: UnpeerVpcResult
-newUnpeerVpcResult  = UnpeerVpcResult { "operation": (NullOrUndefined Nothing) }
+newUnpeerVpcResult  = UnpeerVpcResult { "operation": Nothing }
 
 -- | Constructs UnpeerVpcResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnpeerVpcResult' :: ( { "operation" :: NullOrUndefined (Operation) } -> {"operation" :: NullOrUndefined (Operation) } ) -> UnpeerVpcResult
-newUnpeerVpcResult'  customize = (UnpeerVpcResult <<< customize) { "operation": (NullOrUndefined Nothing) }
+newUnpeerVpcResult' :: ( { "operation" :: Maybe (Operation) } -> {"operation" :: Maybe (Operation) } ) -> UnpeerVpcResult
+newUnpeerVpcResult'  customize = (UnpeerVpcResult <<< customize) { "operation": Nothing }
 
 
 
@@ -4525,7 +4524,7 @@ newUpdateDomainEntryRequest' _domainEntry _domainName customize = (UpdateDomainE
 
 
 newtype UpdateDomainEntryResult = UpdateDomainEntryResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeUpdateDomainEntryResult :: Newtype UpdateDomainEntryResult _
 derive instance repGenericUpdateDomainEntryResult :: Generic UpdateDomainEntryResult _
@@ -4535,12 +4534,12 @@ instance encodeUpdateDomainEntryResult :: Encode UpdateDomainEntryResult where e
 
 -- | Constructs UpdateDomainEntryResult from required parameters
 newUpdateDomainEntryResult :: UpdateDomainEntryResult
-newUpdateDomainEntryResult  = UpdateDomainEntryResult { "operations": (NullOrUndefined Nothing) }
+newUpdateDomainEntryResult  = UpdateDomainEntryResult { "operations": Nothing }
 
 -- | Constructs UpdateDomainEntryResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateDomainEntryResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> UpdateDomainEntryResult
-newUpdateDomainEntryResult'  customize = (UpdateDomainEntryResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newUpdateDomainEntryResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> UpdateDomainEntryResult
+newUpdateDomainEntryResult'  customize = (UpdateDomainEntryResult <<< customize) { "operations": Nothing }
 
 
 
@@ -4567,7 +4566,7 @@ newUpdateLoadBalancerAttributeRequest' _attributeName _attributeValue _loadBalan
 
 
 newtype UpdateLoadBalancerAttributeResult = UpdateLoadBalancerAttributeResult 
-  { "operations" :: NullOrUndefined (OperationList)
+  { "operations" :: Maybe (OperationList)
   }
 derive instance newtypeUpdateLoadBalancerAttributeResult :: Newtype UpdateLoadBalancerAttributeResult _
 derive instance repGenericUpdateLoadBalancerAttributeResult :: Generic UpdateLoadBalancerAttributeResult _
@@ -4577,10 +4576,10 @@ instance encodeUpdateLoadBalancerAttributeResult :: Encode UpdateLoadBalancerAtt
 
 -- | Constructs UpdateLoadBalancerAttributeResult from required parameters
 newUpdateLoadBalancerAttributeResult :: UpdateLoadBalancerAttributeResult
-newUpdateLoadBalancerAttributeResult  = UpdateLoadBalancerAttributeResult { "operations": (NullOrUndefined Nothing) }
+newUpdateLoadBalancerAttributeResult  = UpdateLoadBalancerAttributeResult { "operations": Nothing }
 
 -- | Constructs UpdateLoadBalancerAttributeResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateLoadBalancerAttributeResult' :: ( { "operations" :: NullOrUndefined (OperationList) } -> {"operations" :: NullOrUndefined (OperationList) } ) -> UpdateLoadBalancerAttributeResult
-newUpdateLoadBalancerAttributeResult'  customize = (UpdateLoadBalancerAttributeResult <<< customize) { "operations": (NullOrUndefined Nothing) }
+newUpdateLoadBalancerAttributeResult' :: ( { "operations" :: Maybe (OperationList) } -> {"operations" :: Maybe (OperationList) } ) -> UpdateLoadBalancerAttributeResult
+newUpdateLoadBalancerAttributeResult'  customize = (UpdateLoadBalancerAttributeResult <<< customize) { "operations": Nothing }
 
